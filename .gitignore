@@ -3,3 +3,4 @@ api_metadata.json
 google-cloud-account.json
 .venv/
 model-weights/
+.env
