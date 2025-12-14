@@ -5,9 +5,9 @@
 #SBATCH --output=slurm-%x.%j.out
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=8
+#SBATCH --cpus-per-task=16
 #SBATCH --partition=gpu
-#SBATCH --gres=gpu:tesla:1
+#SBATCH --gres=gpu:a100:1
 #SBATCH --mem=64G
 #SBATCH -t 02:00:00
 
@@ -20,17 +20,21 @@ module load python/3.10.10
 source ~/transformers-venv/bin/activate
 
 # Change this to the absolute path of the repo on the cluster.
-PROJECT_DIR="$HOME/projects/transformers-project/binding"
+PROJECT_DIR="$HOME/binding-open-vlm"
 cd "$PROJECT_DIR"
 
-# Point caches to $SCRATCH (faster + avoids filling home).
-export HF_HOME="${HF_HOME:-$SCRATCH/.cache/huggingface}"
+# Point caches to $SCRATCH when available (falls back to $HOME otherwise).
+SCRATCH_DIR="${SCRATCH:-$HOME}"
+export HF_HOME="${HF_HOME:-$SCRATCH_DIR/.cache/huggingface}"
 export HF_HUB_CACHE="${HF_HUB_CACHE:-$HF_HOME}"
-export LMDEPLOY_CACHE="${LMDEPLOY_CACHE:-$SCRATCH/.cache/lmdeploy}"
+export LMDEPLOY_CACHE="${LMDEPLOY_CACHE:-$SCRATCH_DIR/.cache/lmdeploy}"
 
 # Optional: set your Hugging Face token if the model is gated
 # export HUGGING_FACE_HUB_TOKEN="hf_xxx"
 
-python examples/test_qwen3_vl.py \
+# Pick which runner to call. Use the Transformers-based script by default.
+RUNNER=${RUNNER:-examples/test_qwen3_vl_transformers.py}
+
+python "$RUNNER" \
   --image "$PROJECT_DIR/examples/sample-task.jpg" \
   --output "$PROJECT_DIR/qwen3_job_output.txt"
