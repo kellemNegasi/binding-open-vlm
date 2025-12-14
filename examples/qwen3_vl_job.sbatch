@@ -3,11 +3,10 @@
 # Customize SBATCH directives below to match your quota and runtime needs.
 #SBATCH -J qwen3_vl_job
 #SBATCH --output=slurm-%x.%j.out
-#SBATCH -N 1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=16
 #SBATCH --partition=gpu
-#SBATCH --gres=gpu:a100-80g:1
+#SBATCH --gres=gpu:a100-80g:2
 #SBATCH --mem=64G
 #SBATCH -t 02:00:00
 

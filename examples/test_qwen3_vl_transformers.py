@@ -13,7 +13,7 @@ from transformers import AutoModelForVision2Seq, AutoProcessor
 
 DEFAULT_MODEL_ID = "Qwen/Qwen3-VL-30B-A3B-Instruct"
 DEFAULT_MODEL_DIR = (
-    Path(__file__).resolve().parents[1] / "models" / "Qwen3-VL-30B-A3B-Instruct"
+    Path(__file__).resolve().parents[1] / "model-weights" / "Qwen3-VL-30B-A3B-Instruct"
 )
 
 
