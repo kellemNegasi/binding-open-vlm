@@ -8,7 +8,7 @@
 #SBATCH --partition=gpu
 #SBATCH --gres=gpu:a100-80g:2
 #SBATCH --mem=64G
-#SBATCH -t 02:00:00
+#SBATCH -t 06:00:00
 
 
 set -euo pipefail
@@ -41,10 +41,11 @@ cd "$PROJECT_DIR"
 #   --output "$PROJECT_DIR/qwen3_job_output_openvlm.txt"
 
 # Run scene description with the local Qwen3-VL-30B model via Hydra.
+export HYDRA_FULL_ERROR=1
 export PROJECT_ROOT="$PROJECT_DIR"
 python run_vlm.py \
   model=qwen3_vl_30b \
-  task=scene_description \
+  task=conjunctive_search \
   paths.root_dir="$PROJECT_DIR" \
   paths.data_dir="$PROJECT_DIR/data" \
   paths.output_dir="$PROJECT_DIR/output"

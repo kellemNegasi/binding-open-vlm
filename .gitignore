@@ -7,3 +7,8 @@ model-weights/
 # ignore all pycache files
 **/*.pyc
 # ignore dataset cache
+*.out
+output/
+data/
+data/vlm/2D/scene_description/images/*
+**/*.png
