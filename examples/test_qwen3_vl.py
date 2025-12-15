@@ -78,9 +78,12 @@ def main():
     result = pipe([(args.prompt, Image.open(image_path))])
 
     print("Saving output...")
-    Path(args.output).write_text(result[0])
+    response = result[0]
+    response_text = response.text if hasattr(response, "text") else str(response)
+    Path(args.output).write_text(response_text)
     print(f"Response written to {args.output}")
-    print("Generated text:\n", result[0])
+    print("Generated text:\n", response_text)
+
 
 
 if __name__ == "__main__":
