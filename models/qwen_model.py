@@ -13,7 +13,13 @@ class QwenModel(LocalVLModel):
         image_paths = batch.path.values
         prompts = [(self.task.prompt, Image.open(image_path)) for image_path in image_paths]
         generated_texts = self.pipe(prompts)
-        batch['response'] = generated_texts
+        responses = []
+        for output in generated_texts:
+            if hasattr(output, 'text'):
+                responses.append(output.text)
+            else:
+                responses.append(str(output))
+        batch['response'] = responses
         return batch
 
     def get_gpu_memory(self):

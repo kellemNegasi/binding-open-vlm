@@ -1,3 +1,14 @@
 output/*
 api_metadata.json
 google-cloud-account.json
+.venv/
+model-weights/
+.env
+# ignore all pycache files
+**/*.pyc
+# ignore dataset cache
+*.out
+output/
+data/
+data/vlm/2D/scene_description/images/*
+**/*.png

@@ -242,11 +242,26 @@ class LocalVLModel(Model):
                 self.task.results_df = self.task.results_df.sample(frac=1)
 
     def run(self):
-        results = []
-        batches = np.array_split(self.task.results_df, np.ceil(len(self.task.results_df)/self.batch_size))
-        for i, batch in tqdm(enumerate(batches)): 
-            batch = self.run_batch(batch)
-            results.append(batch)
+        if 'response' not in self.task.results_df.columns:
+            self.task.results_df['response'] = np.nan
+
+        remaining = self.task.results_df[self.task.results_df['response'].isna()]
+        if remaining.empty:
+            return
+
+        batches = np.array_split(
+            remaining,
+            np.ceil(len(remaining) / self.batch_size)
+        )
+        for i, batch in tqdm(
+            enumerate(batches),
+            total=len(batches)
+        ):
+            processed = self.run_batch(batch)
+            # Write processed columns back into the main results DataFrame.
+            for col in processed.columns:
+                if col in self.task.results_df.columns:
+                    self.task.results_df.loc[processed.index, col] = processed[col]
             if i % 10 == 0:
-                self.task.results_df = pd.concat(batches[i:]+results)
                 self.save_results(self.results_file)
+        self.save_results(self.results_file)
