@@ -11,4 +11,4 @@ color_names: ['red', 'green', 'blue', 'darkorange', 'purple', 'gray']
 shape_names: ['triangle', 'cloud', 'cross', 'heart', 'circle', 'square']
 shape_inds: [9, 21, 24, 96, 100, 101]
 prompt_path: '${.root_dir}/prompts/rmts/${.condition}/${.subtask}.txt'
-font_path: '/usr/share/fonts/dejavu/DejaVuSansMono.ttf'
+font_path: '${.root_dir}/assets/fonts/DejaVuSansMono.ttf'
