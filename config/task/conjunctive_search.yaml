@@ -7,4 +7,4 @@ n_trials: 100 # Number of trials to generate per condition
 size: 22
 color_names: ['red', 'green']
 prompt_path: '${.root_dir}/prompts/conjunctive_search_${.task_variant}.txt'
-font_path: '/usr/share/fonts/dejavu/DejaVuSansMono.ttf' #'/System/Library/Fonts/Supplemental/Arial Black.ttf' #
+font_path: '${.root_dir}/assets/fonts/DejaVuSansMono.ttf' #'/System/Library/Fonts/Supplemental/Arial Black.ttf' #
