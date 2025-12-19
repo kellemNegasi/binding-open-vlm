@@ -10,7 +10,7 @@ class QwenModel(LocalVLModel):
         self.pipe = pipeline(model_path=self.weights_path)
         
     def run_batch(self, batch):
-        image_paths = batch.path.values
+        image_paths = self.get_image_paths(batch)
         prompts = [(self.task.prompt, Image.open(image_path)) for image_path in image_paths]
         generated_texts = self.pipe(prompts)
         responses = []

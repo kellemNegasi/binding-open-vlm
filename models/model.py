@@ -191,6 +191,42 @@ class LocalLanguageModel(Model):
         self.tokenizer.padding_side = 'left'
         self.tokenizer.pad_token_id = self.tokenizer.eos_token_id
         self.target_column = 'response'
+    
+    def _select_image_column(self, batch: pd.DataFrame) -> str:
+        """Return the column name containing image paths for the current task."""
+        candidate_columns = ['path', 'unified_path']
+        for column in candidate_columns:
+            if column in batch.columns:
+                return column
+        fallback_columns = [
+            column for column in batch.columns
+            if 'path' in column.lower() and 'decomposed' not in column.lower()
+        ]
+        if fallback_columns:
+            return fallback_columns[0]
+        raise KeyError(
+            'Unable to find an image path column in batch. '
+            f'Available columns: {list(batch.columns)}'
+        )
+
+    def _normalize_image_path(self, image_path: str) -> str:
+        """Convert relative paths to absolute ones anchored at the task root."""
+        if not isinstance(image_path, str):
+            return image_path
+        image_path = image_path.strip()
+        if os.path.isabs(image_path):
+            return image_path
+        if getattr(self.task, 'root_dir', None):
+            candidate = os.path.join(self.task.root_dir, image_path)
+            if os.path.exists(candidate):
+                return candidate
+        return image_path
+
+    def get_image_paths(self, batch: pd.DataFrame):
+        """Resolve the correct set of image paths for this batch."""
+        column = self._select_image_column(batch)
+        raw_paths = batch[column].tolist()
+        return [self._normalize_image_path(path) for path in raw_paths]
 
     def run_batch(self, batch):
         prompts = [p.format(text_to_parse=t) for p, t in zip([self.prompt]*len(batch), batch[self.target_column])]
