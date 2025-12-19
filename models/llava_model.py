@@ -1,6 +1,5 @@
 from models.model import LocalVLModel
 from transformers import LlavaNextProcessor, LlavaNextForConditionalGeneration
-from PIL import Image
 import subprocess as sp
 import torch
 
@@ -17,10 +16,15 @@ class LlavaModel(LocalVLModel):
         self.model.eval()
         
     def run_batch(self, batch):
-        image_paths = batch.path.values
+        image_paths = self.get_image_paths(batch)
+        text_prompts = []
+        trial_images = []
+        for (_, row), image_path in zip(batch.iterrows(), image_paths):
+            text_prompts.append(self.format_prompt(row))
+            trial_images.append(self.compose_images(self.get_trial_images(row, image_path)))
         inputs_batched = self.processor(
-            [self.task.prompt] * len(image_paths),
-            images=[Image.open(image_path) for image_path in image_paths],
+            text_prompts,
+            images=trial_images,
             return_tensors='pt',
             padding=True)
         inputs_batched.to(self.device)

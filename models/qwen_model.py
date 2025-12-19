@@ -1,6 +1,5 @@
 from models.model import LocalVLModel
 from lmdeploy import pipeline
-from PIL import Image
 import subprocess as sp
 
 class QwenModel(LocalVLModel):
@@ -11,7 +10,11 @@ class QwenModel(LocalVLModel):
         
     def run_batch(self, batch):
         image_paths = self.get_image_paths(batch)
-        prompts = [(self.task.prompt, Image.open(image_path)) for image_path in image_paths]
+        prompts = []
+        for (_, row), image_path in zip(batch.iterrows(), image_paths):
+            prompt_text = self.format_prompt(row)
+            trial_images = self.get_trial_images(row, image_path)
+            prompts.append((prompt_text, trial_images))
         generated_texts = self.pipe(prompts)
         responses = []
         for output in generated_texts:

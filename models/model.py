@@ -1,3 +1,4 @@
+import ast
 import json
 import os
 from utils import get_header
@@ -10,6 +11,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 import warnings
 from typing import Dict
+from PIL import Image
 warnings.filterwarnings('ignore')
 
 
@@ -240,6 +242,7 @@ class LocalVLModel(Model):
                 self.task.results_df = self.task.results_df.sample(n=self.n_trials)
             else:
                 self.task.results_df = self.task.results_df.sample(frac=1)
+
     def _select_image_column(self, batch: pd.DataFrame) -> str:
         """Return the column name containing image paths for the current task."""
         candidate_columns = ['path', 'unified_path']
@@ -248,7 +251,7 @@ class LocalVLModel(Model):
                 return column
         fallback_columns = [
             column for column in batch.columns
-            if 'path' in column.lower() and 'decomposed' not in column.lower()
+            if isinstance(column, str) and 'path' in column.lower() and 'decomposed' not in column.lower()
         ]
         if fallback_columns:
             return fallback_columns[0]
@@ -270,11 +273,85 @@ class LocalVLModel(Model):
                 return candidate
         return image_path
 
+    def _is_missing(self, value):
+        return value is None or (isinstance(value, float) and np.isnan(value))
+
     def get_image_paths(self, batch: pd.DataFrame):
         """Resolve the correct set of image paths for this batch."""
         column = self._select_image_column(batch)
         raw_paths = batch[column].tolist()
         return [self._normalize_image_path(path) for path in raw_paths]
+
+    def get_decomposed_paths(self, row: pd.Series):
+        """Return normalized decomposed image paths for a trial, if available."""
+        if not isinstance(row, pd.Series) or 'decomposed_paths' not in row:
+            return []
+        value = row['decomposed_paths']
+        if self._is_missing(value):
+            return []
+        if isinstance(value, str):
+            try:
+                paths = ast.literal_eval(value)
+            except (ValueError, SyntaxError):
+                paths = []
+        elif isinstance(value, (list, tuple, np.ndarray)):
+            paths = list(value)
+        else:
+            paths = []
+        normalized = [
+            self._normalize_image_path(path)
+            for path in paths
+            if isinstance(path, str)
+        ]
+        return normalized
+
+    def format_prompt(self, row: pd.Series) -> str:
+        """Format task prompt with trial-specific metadata when applicable."""
+        prompt = self.task.prompt
+        if getattr(self.task, 'task_name', None) != 'rmts':
+            return prompt
+        replacements = {}
+        for key in ['feature', 'object_loc', 'object_ind', 'pair', 'pair_loc', 'relation']:
+            if key in row and not self._is_missing(row[key]):
+                replacements[key] = row[key]
+        if not replacements:
+            return prompt
+        try:
+            return prompt.format(**replacements)
+        except KeyError:
+            return prompt
+
+    def get_trial_images(self, row: pd.Series, default_path: str):
+        """Return the list of PIL.Images to feed to the VLM for this trial."""
+        default_path = self._normalize_image_path(default_path)
+        condition = getattr(self.task, 'condition', None)
+        if condition == 'decomposed':
+            decomposed_paths = self.get_decomposed_paths(row)
+            images = []
+            for path in decomposed_paths:
+                try:
+                    images.append(Image.open(path).convert('RGB'))
+                except (FileNotFoundError, OSError):
+                    continue
+            if images:
+                return images
+        return [Image.open(default_path).convert('RGB')]
+
+    def compose_images(self, images):
+        """Combine multiple images horizontally for models that need a single canvas."""
+        if not images:
+            raise ValueError('No images provided to compose.')
+        if len(images) == 1:
+            return images[0]
+        width = sum(img.width for img in images)
+        height = max(img.height for img in images)
+        canvas = Image.new('RGB', (width, height), (255, 255, 255))
+        offset = 0
+        for img in images:
+            canvas.paste(img, (offset, 0))
+            offset += img.width
+        return canvas
+
     def run(self):
         if 'response' not in self.task.results_df.columns:
             self.task.results_df['response'] = np.nan
