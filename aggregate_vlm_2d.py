@@ -8,11 +8,12 @@ from __future__ import annotations
 import argparse
 import ast
 import json
+import math
 import re
 from collections import Counter
 from itertools import combinations
 from pathlib import Path
-from typing import Dict, Iterable, List, Optional, Tuple
+from typing import Any, Dict, Iterable, List, Optional, Tuple
 
 import numpy as np
 import pandas as pd
@@ -66,6 +67,51 @@ def count_object_errors(gt_objs: List[Dict[str, str]], pred_objs: List[Dict[str,
     return len(gt_objs) + len(pred_objs) - 2 * shared
 
 
+def _safe_literal_eval(text: str) -> Any:
+    """Literal-eval helper that tolerates stray whitespace."""
+    try:
+        return ast.literal_eval(text)
+    except (ValueError, SyntaxError):
+        return None
+
+
+def parse_feature_sequence(value: Any) -> List[Dict[str, str]]:
+    """Parse a list[dict(color, shape)] representation from CSV."""
+    if isinstance(value, list):
+        return value
+    if isinstance(value, float) and math.isnan(value):
+        return []
+    if not isinstance(value, str):
+        return []
+    snippet = value.strip()
+    if not snippet:
+        return []
+    if "[" in snippet and "]" in snippet:
+        snippet = snippet[snippet.find("[") : snippet.rfind("]") + 1]
+    # Try JSON first, then fall back to literal_eval.
+    try:
+        data = json.loads(snippet)
+    except json.JSONDecodeError:
+        data = _safe_literal_eval(snippet)
+    if data is None:
+        return []
+    iterable: Iterable[Any]
+    if isinstance(data, dict):
+        iterable = data.values()
+    else:
+        iterable = data
+    parsed: List[Dict[str, str]] = []
+    for item in iterable:
+        if not isinstance(item, dict):
+            continue
+        normalized = {str(k).strip().lower(): v for k, v in item.items()}
+        color = normalize_label(normalized.get("color"))
+        shape = normalize_label(normalized.get("shape"))
+        if color and shape:
+            parsed.append({"color": color, "shape": shape})
+    return parsed
+
+
 def parse_sequence_payload(text: Optional[str]) -> List[Dict[str, str]]:
     if not isinstance(text, str):
         return []
@@ -75,14 +121,10 @@ def parse_sequence_payload(text: Optional[str]) -> List[Dict[str, str]]:
     try:
         data = json.loads(snippet)
     except json.JSONDecodeError:
-        try:
-            data = ast.literal_eval(snippet)
-        except (ValueError, SyntaxError):
-            return []
-    if isinstance(data, dict):
-        iterable = data.values()
-    else:
-        iterable = data
+        data = _safe_literal_eval(snippet)
+    if data is None:
+        return []
+    iterable = data.values() if isinstance(data, dict) else data
     parsed = []
     for item in iterable:
         if not isinstance(item, dict):
@@ -95,27 +137,27 @@ def parse_sequence_payload(text: Optional[str]) -> List[Dict[str, str]]:
     return parsed
 
 
-def parse_rmts_dict(text: Optional[str]) -> Dict[str, Dict[str, Dict[str, str]]]:
-    if not isinstance(text, str):
+def parse_rmts_dict(text: Optional[Any]) -> Dict[str, Dict[str, Dict[str, str]]]:
+    if isinstance(text, dict):
+        data = text
+    elif not isinstance(text, str):
         return {}
-    snippet = text[text.find("{") : text.rfind("}") + 1] if "{" in text else text
-    try:
-        data = json.loads(snippet)
-    except json.JSONDecodeError:
+    else:
+        snippet = text[text.find("{") : text.rfind("}") + 1] if "{" in text else text
         try:
-            data = ast.literal_eval(snippet)
-        except (ValueError, SyntaxError):
-            return {}
+            data = json.loads(snippet)
+        except json.JSONDecodeError:
+            data = _safe_literal_eval(snippet)
     if not isinstance(data, dict):
         return {}
     parsed: Dict[str, Dict[str, Dict[str, str]]] = {}
     for pair_name, objs in data.items():
-        pair_key = pair_name.strip().lower()
+        pair_key = str(pair_name).strip().lower()
         parsed[pair_key] = {}
         if isinstance(objs, dict):
             for obj_name, feat in objs.items():
                 if isinstance(feat, dict):
-                    parsed[pair_key][obj_name.strip().lower()] = {
+                    parsed[pair_key][str(obj_name).strip().lower()] = {
                         "color": normalize_label(feat.get("color")),
                         "shape": normalize_label(feat.get("shape")),
                     }
@@ -223,7 +265,7 @@ def summarize_scene_description(results_root: Path, model: str) -> Optional[pd.D
     df = load_if_exists(csv_path)
     if df is None:
         return None
-    df["features"] = df["features"].apply(lambda x: ast.literal_eval(x) if isinstance(x, str) else x)
+    df["features"] = df["features"].apply(parse_feature_sequence)
     df["gt_triplets"] = df["features"].apply(count_feature_triplets)
     df["prediction_objs"] = df["response"].apply(parse_sequence_payload)
     df["errors"] = df.apply(lambda row: count_object_errors(row["features"], row["prediction_objs"]), axis=1)
@@ -258,11 +300,11 @@ def summarize_rmts(results_root: Path, model: str) -> Optional[pd.DataFrame]:
                 target = df["feature_value"].apply(normalize_label)
                 df["correct_flag"] = df["prediction"] == target
             else:  # features2
-                df["ground_truth"] = df["features"].apply(lambda x: ast.literal_eval(x) if isinstance(x, str) else x)
+                df["ground_truth"] = df["features"].apply(parse_rmts_dict)
                 df["prediction_struct"] = df["response"].apply(parse_rmts_dict)
                 df["correct_flag"] = df.apply(
                     lambda row: rmts_structures_match(
-                        {k: {kk:kdict for kk,kdict in v.items()} for k,v in row["ground_truth"].items()},
+                        row["ground_truth"] if isinstance(row["ground_truth"], dict) else {},
                         row["prediction_struct"],
                     ),
                     axis=1,
