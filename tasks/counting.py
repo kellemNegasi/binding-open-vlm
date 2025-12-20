@@ -69,7 +69,7 @@ class Counting(Task):
 				 **kwargs):
 		self.n_objects = n_objects
 		self.n_trials = n_trials
-		self.size = size
+		self.size = size if size is not None else 28
 		self.shape_inds = shape_inds
 		super().__init__(**kwargs)
 	
@@ -83,9 +83,14 @@ class Counting(Task):
 		rgb_colors = np.array([mcolors.hex2color(color) for color in palette])
 		for n in tqdm(self.n_objects):
 			for i in range(self.n_trials):
-				if self.task_name == 'counting_high_diversity':
+				if self.task_name in ('counting_high_diversity', 'counting_distinct'):
+					# high-entropy style: assign distinct colors
 					color_inds = np.random.choice(len(rgb_colors), n, replace=False)
-				elif self.task_name == 'counting_low_diversity':
+				elif (
+					self.task_name == 'counting_low_diversity'
+					or 'uniform' in self.task_name
+				):
+					# low-entropy style: single shared color
 					color_inds = np.random.choice(len(rgb_colors), 1).repeat(n)
 				else:
 					raise ValueError(f'Invalid task name: {self.task_name}')

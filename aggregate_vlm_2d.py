@@ -52,6 +52,20 @@ def normalize_label(value: Optional[str]) -> Optional[str]:
     return value.strip().lower()
 
 
+def parse_bool_literal(value: Any) -> Optional[bool]:
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, (int, np.integer)):
+        return bool(value)
+    if isinstance(value, str):
+        normalized = value.strip().lower()
+        if normalized in ("true", "t", "1", "yes"):
+            return True
+        if normalized in ("false", "f", "0", "no"):
+            return False
+    return None
+
+
 def object_counter(objs: Iterable[Dict[str, str]]) -> Counter:
     return Counter(
         (normalize_label(obj.get("color")), normalize_label(obj.get("shape")))
@@ -204,9 +218,10 @@ def load_if_exists(path: Path) -> Optional[pd.DataFrame]:
 
 def summarize_visual_search(results_root: Path, model: str) -> Optional[pd.DataFrame]:
     tasks = {
-        "disjunctive_search": {"truth": "popout", "label": "disjunctive"},
-        "disjunctive_search_control": {"truth": "popout", "label": "disjunctive_control"},
-        "conjunctive_search": {"truth": "incongruent", "label": "conjunctive"},
+        "disjunctive_search": {"truth": "popout", "label": "disjunctive", "invert": False},
+        # Control prompt asks “are all shapes same color?”, so True == no oddball.
+        "disjunctive_search_control": {"truth": "popout", "label": "disjunctive_control", "invert": True},
+        "conjunctive_search": {"truth": "incongruent", "label": "conjunctive", "invert": False},
     }
     frames = []
     for task, cfg in tasks.items():
@@ -215,7 +230,12 @@ def summarize_visual_search(results_root: Path, model: str) -> Optional[pd.DataF
             continue
         df["prediction"] = df["response"].apply(lambda x: token_to_bool(extract_token(x)))
         df["n_objects"] = df["n_objects"].astype("Int64")
-        df["correct_flag"] = df["prediction"] == df[cfg["truth"]]
+        truth_column = df[cfg["truth"]]
+        if truth_column.dtype != bool:
+            truth_column = truth_column.apply(parse_bool_literal)
+        if cfg["invert"]:
+            truth_column = truth_column.apply(lambda x: None if x is None else not x)
+        df["correct_flag"] = df["prediction"] == truth_column
         grouped = (
             df.dropna(subset=["prediction"])
             .groupby("n_objects", as_index=False)["correct_flag"]
@@ -293,7 +313,7 @@ def summarize_rmts(results_root: Path, model: str) -> Optional[pd.DataFrame]:
                 df["correct_flag"] = df["prediction"] == df["correct"].astype("Int64")
             elif subtask == "relations":
                 df["prediction"] = df["response"].apply(lambda x: token_to_bool(extract_token(x)))
-                truth = df["relation_value"].astype(bool)
+                truth = df["relation_value"].apply(parse_bool_literal)
                 df["correct_flag"] = df["prediction"] == truth
             elif subtask == "features":
                 df["prediction"] = df["response"].apply(lambda x: normalize_label(extract_token(x)))
