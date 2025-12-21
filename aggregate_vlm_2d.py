@@ -17,7 +17,8 @@ from typing import Any, Dict, Iterable, List, Optional, Tuple
 
 import numpy as np
 import pandas as pd
-
+# to extract the results from the model outputs.
+# e.g The image contains five distinct shapes. <long description>. All shapes are separate and do not overlap. [5]
 BRACKET_RE = re.compile(r"\[([^\[\]]+)\]")
 
 
@@ -281,22 +282,29 @@ def summarize_counting(results_root: Path, model: str) -> Optional[pd.DataFrame]
 
 
 def summarize_scene_description(results_root: Path, model: str) -> Optional[pd.DataFrame]:
-    csv_path = results_root / "scene_description" / f"{model}.csv"
-    df = load_if_exists(csv_path)
-    if df is None:
-        return None
-    df["features"] = df["features"].apply(parse_feature_sequence)
-    df["gt_triplets"] = df["features"].apply(count_feature_triplets)
-    df["prediction_objs"] = df["response"].apply(parse_sequence_payload)
-    df["errors"] = df.apply(lambda row: count_object_errors(row["features"], row["prediction_objs"]), axis=1)
-    grouped = (
-        df.groupby(["n_objects", "gt_triplets"], as_index=False)["errors"]
-        .agg(["count", "mean", "median"])
-        .reset_index()
-        .rename(columns={"count": "n_trials", "mean": "mean_errors", "median": "median_errors"})
-    )
-    grouped["task_name"] = "scene_description"
-    return grouped
+    task_dirs = ["scene_description", "scene_description_balanced"]
+    frames = []
+    for task_name in task_dirs:
+        csv_path = results_root / task_name / f"{model}.csv"
+        df = load_if_exists(csv_path)
+        if df is None:
+            continue
+        df["features"] = df["features"].apply(parse_feature_sequence)
+        if "triplet_count" in df.columns:
+            df["gt_triplets"] = df["triplet_count"].astype(int)
+        else:
+            df["gt_triplets"] = df["features"].apply(count_feature_triplets)
+        df["prediction_objs"] = df["response"].apply(parse_sequence_payload)
+        df["errors"] = df.apply(lambda row: count_object_errors(row["features"], row["prediction_objs"]), axis=1)
+        grouped = (
+            df.groupby(["n_objects", "gt_triplets"], as_index=False)["errors"]
+            .agg(["count", "mean", "median"])
+            .reset_index()
+            .rename(columns={"count": "n_trials", "mean": "mean_errors", "median": "median_errors"})
+        )
+        grouped["task_name"] = task_name
+        frames.append(grouped)
+    return pd.concat(frames, ignore_index=True) if frames else None
 
 
 def summarize_rmts(results_root: Path, model: str) -> Optional[pd.DataFrame]:
