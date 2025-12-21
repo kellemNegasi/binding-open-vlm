@@ -76,6 +76,74 @@ Follow the same pattern as the Qwen3-VL setup whenever you want to exercise a di
 
    For HPC runs, duplicate or edit `qwen3_vl_job.sbatch` so it references `model=<your_model>` (and any other overrides) before submitting with `sbatch`. This gives you the same reproducible pipeline, only backed by your new VLM class.
 
+## Aggregating 2D Task Results
+
+Once you run all the tasks for a specific model you should have results that looks like as follows:
+
+```
+./output/
+└── vlm
+    └── 2D
+        ├── conjunctive_search
+        │   └── <model-name>.csv
+        ├── counting_control
+        │   └── <model-name>.csv
+        ├── counting_control_shape
+        │   └── <model-name>.csv
+        ├── counting_distinct
+        │   └── <model-name>.csv
+        ├── counting_high_diversity
+        │   └── <model-name>.csv
+        ├── counting_low_diversity
+        │   └── <model-name>.csv
+        ├── disjunctive_search
+        │   └── <model-name>.csv
+        ├── disjunctive_search_control
+        │   └── <model-name>.csv
+        ├── rmts
+        │   ├── decomposed
+        │   │   ├── features
+        │   │   │   └── <model-name>.csv
+        │   │   ├── features2
+        │   │   │   └── <model-name>.csv
+        │   │   ├── full
+        │   │   │   └── <model-name>.csv
+        │   │   └── relations
+        │   │       └── <model-name>.csv
+        │   └── unified
+        │       ├── features
+        │       │   └── <model-name>.csv
+        │       ├── features2
+        │       │   └── <model-name>.csv
+        │       ├── full
+        │       │   └── <model-name>.csv
+        │       └── relations
+        │           └── <model-name>.csv
+        ├── scene_description
+        │   └── <model-name>.csv
+        └── scene_description_balanced
+            └── <model-name>.csv
+```
+
+After this use `aggregate_vlm_2d.py` to summarize and aggregate the task outputs so that you end up with per-family summaries in `analysis/results/`:
+
+```
+analysis/results/
+├── <model-name>_counting.csv
+├── <model-name>_rmts.csv
+├── <model-name>_scene_description.csv
+└── <model-name>_visual_search.csv
+```
+
+Use the command below (override paths if your directories differ):
+
+```bash
+python aggregate_vlm_2d.py \
+  --model-name <model-name> \
+  --results-root ./output/vlm/2D \
+  --out-dir ./analysis/results
+```
+
 ## Monitoring and Managing SLURM Jobs
 
 - Check a specific job’s live status:
