@@ -290,6 +290,9 @@ def summarize_scene_description(results_root: Path, model: str) -> Optional[pd.D
         if df is None:
             continue
         df["features"] = df["features"].apply(parse_feature_sequence)
+        if "n_objects" not in df.columns:
+            df["n_objects"] = df["features"].apply(lambda feats: len(feats) if isinstance(feats, list) else np.nan)
+        df["n_objects"] = df["n_objects"].astype("Int64")
         if "triplet_count" in df.columns:
             df["gt_triplets"] = df["triplet_count"].astype(int)
         else:
