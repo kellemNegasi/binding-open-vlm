@@ -45,7 +45,7 @@ export HYDRA_FULL_ERROR=1
 export PROJECT_ROOT="$PROJECT_DIR"
 python run_vlm.py \
   model=qwen3_vl_30b \
-  task=scene_description_BALANCED.yaml \
+  task=scene_description_BALANCED \
   paths.root_dir="$PROJECT_DIR" \
   paths.data_dir="$PROJECT_DIR/data" \
   paths.output_dir="$PROJECT_DIR/output"
