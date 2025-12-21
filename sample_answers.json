@@ -1,0 +1,135 @@
+{
+    "conjunctive_search": {
+        "path": "data/vlm/2D/conjunctive_search/images/incongruent-15_41.png",
+        "popout": "",
+        "n_objects": 15,
+        "response": "The image contains multiple instances of the letters 'L' and 'T'. These letters are displayed in two colors: red and green.\n\n- The red letters are 'L's.\n- The green letters are 'T's.\n\nThere are no green 'L's present in the image.\n\n[False]",
+        "answer": "",
+        "incongruent": true
+    },
+    "counting_control": {
+        "path": "data/vlm/2D/counting_control/images/nObjects=12_trial=15.png",
+        "n_objects": 12,
+        "response": "The image contains the following shapes:\n\n- A purple infinity symbol (\u221e)\n- A yellow square\n- A red hexagon\n- A gray arrow pointing right\n- A green heart\n- A teal pentagon\n- A maroon circle\n- A light blue downward arrow\n- A pink \"X\" (which is a cross shape)\n- A dark blue leftward arrow\n- A magenta star\n- A green umbrella (which is a combination of a semicircle and a handle, but considered as one shape)\n\nCounting each distinct shape:\n1. Infinity symbol\n2. Square\n3. Hexagon\n4. Right arrow\n5. Heart\n6. Pentagon\n7. Circle\n8. Downward arrow\n9. Cross (X)\n10. Left arrow\n11. Star\n12. Umbrella\n\nTotal count: 12\n\n[12]"
+    },
+    "counting_control_shape": {
+        "path": "data/vlm/2D/counting_control_shape/images/nObjects=5_trial=13.png",
+        "n_objects": 5,
+        "response": "The image contains the following shapes:\n- A heart shape\n- A hexagon\n- An 'X' shape (which is a cross)\n- An umbrella shape\n- A downward-pointing arrow\n\nEach of these is a distinct shape.\n\nCounting them, we have:\n1. Heart\n2. Hexagon\n3. Cross (X)\n4. Umbrella\n5. Arrow\n\nTotal: 5 shapes.\n\n[5]"
+    },
+    "counting_distinct": {
+        "path": "data/vlm/2D/counting_distinct/images/nObjects=9_trial=4.png",
+        "n_objects": 9,
+        "response": "The image contains multiple circular shapes of various colors. Each shape is a distinct circle, and they are scattered across the image. The colors of the circles include pink, blue, red, green, brown, purple, and magenta. By counting each individual circle, we can determine the total number of shapes.\n\nThere are 9 shapes in the image.\n\n[9]"
+    },
+    "counting_high_diversity": {
+        "path": "data/vlm/2D/counting_high_diversity/images/nObjects=5_trial=71.png",
+        "n_objects": 5,
+        "response": "The image contains five distinct shapes. Each shape is a circle, and they are colored differently: one purple, one maroon, one green, one teal, and one orange. All shapes are separate and do not overlap.\n\n[5]"
+    },
+    "counting_low_diversity": {
+        "path": "data/vlm/2D/counting_low_diversity/images/nObjects=10_trial=44.png",
+        "n_objects": 10,
+        "response": "The image contains multiple green circular shapes scattered across a white background. Each shape is a solid, uniformly colored circle with no additional features or variations. The circles are distributed in a loose, non-uniform pattern, with some clustered together and others more isolated.\n\nAfter carefully examining the image and counting each distinct circle, the total number of shapes is 10.\n\n[10]"
+    },
+    "disjunctive_search": {
+        "path": "data/vlm/2D/disjunctive_search/images/popout-5_36.png",
+        "popout": true,
+        "n_objects": 5,
+        "response": "1. The image contains five circular shapes. Four of the shapes are red, and one shape is green. The green shape is located on the left side of the image, while the red shapes are distributed around it.\n\n2. Since there is one green shape present in the image, the answer is [True].",
+        "answer": ""
+    },
+    "disjunctive_search_control": {
+        "path": "data/vlm/2D/disjunctive_search_control/images/popout-20_73.png",
+        "popout": true,
+        "n_objects": 20,
+        "response": "1. The image contains multiple circular shapes scattered across the frame. Most of these shapes are red. However, there is one shape that is distinctly different in color\u2014it is purple.\n\n2. Since not all shapes are the same color (one is purple while the rest are red), there is an \"oddball\" shape.\n\n[False]",
+        "answer": ""
+    },
+    "rmts_decomposed_features": {
+        "unified_path": "data/vlm/2D/rmts/images/trial-179.png",
+        "decomposed_paths": "['data/vlm/2D/rmts/images/source-179.png', 'data/vlm/2D/rmts/images/target1-179.png', 'data/vlm/2D/rmts/images/target2-179.png']",
+        "feature": "color",
+        "feature_value": "red",
+        "pair": "target2",
+        "pair_loc": "bottom right",
+        "object_loc": "right",
+        "object_ind": "2nd",
+        "response": "[orange]"
+    },
+    "rmts_decomposed_features2": {
+        "unified_path": "data/vlm/2D/rmts/images/trial-60.png",
+        "decomposed_paths": "['data/vlm/2D/rmts/images/source-60.png', 'data/vlm/2D/rmts/images/target1-60.png', 'data/vlm/2D/rmts/images/target2-60.png']",
+        "response": "```json\n{\n    \"source\": {\n        \"source_object1\": {\"shape\": \"circle\", \"color\": \"gray\"},\n        \"source_object2\": {\"shape\": \"circle\", \"color\": \"gray\"}\n    },\n    \"target1\": {\n        \"target1_object1\": {\"shape\": \"circle\", \"color\": \"darkorange\"},\n        \"target1_object2\": {\"shape\": \"circle\", \"color\": \"red\"}\n    },\n    \"target2\": {\n        \"target2_object1\": {\"shape\": \"cross\", \"color\": \"blue\"},\n        \"target2_object2\": {\"shape\": \"cross\", \"color\": \"blue\"}\n    }\n}\n```",
+        "features": "{'source': {'source_object1': {'shape': 'circle', 'color': 'gray'}, 'source_object2': {'shape': 'circle', 'color': 'gray'}}, 'target1': {'target1_object1': {'shape': 'circle', 'color': 'darkorange'}, 'target1_object2': {'shape': 'circle', 'color': 'red'}}, 'target2': {'target2_object1': {'shape': 'cross', 'color': 'blue'}, 'target2_object2': {'shape': 'cross', 'color': 'blue'}}}"
+    },
+    "rmts_decomposed_full": {
+        "unified_path": "data/vlm/2D/rmts/images/trial-139.png",
+        "decomposed_paths": "['data/vlm/2D/rmts/images/source-139.png', 'data/vlm/2D/rmts/images/target1-139.png', 'data/vlm/2D/rmts/images/target2-139.png']",
+        "correct": 1,
+        "response": "Let's analyze the task step by step.\n\n---\n\n**Step 1: Identify the features of the objects in each pair (i.e. shape and color).**\n\n- **Source Pair:**\n  - Two objects.\n  - Shape: Both are circles.\n  - Color: Both are orange.\n  - So, the features are: (circle, orange) and (circle, orange).\n\n- **Target Pair 1:**\n  - Two objects.\n  - Shape: Both are X's (crosses).\n  - Color: Both are red.\n  - So, the features are: (X, red) and (X, red).\n\n- **Target Pair 2:**\n  - Two objects.\n  - Shape: Both are clouds.\n  - Color: One is gray, one is blue.\n  - So, the features are: (cloud, gray) and (cloud, blue).\n\n---\n\n**Step 2: Identify the relations over the features of each pair.**\n\nWe are looking for **relational** matches, not just feature matches. The key is to find the **relationship** between the two objects in the pair.\n\n- **Source Pair:**\n  - Shape: Both objects have the **same** shape (circle).\n  - Color: Both objects have the **same** color (orange).\n  - So, the relation is: **Same shape, same color**.\n\n- **Target Pair 1:**\n  - Shape: Both objects have the **same** shape (X).\n  - Color: Both objects have the **same** color (red).\n  - So, the relation is: **Same shape, same color**.\n\n- **Target Pair 2:**\n  - Shape: Both objects have the **same** shape (cloud).\n  - Color: The objects have **different** colors (gray and blue).\n  - So, the relation is: **Same shape, different color**.\n\n---\n\n**Step 3: Determine which target pair shares the same relations with the source pair.**\n\n- Source pair relation: Same shape, same color.\n- Target Pair 1: Same shape, same color \u2192 **Matches**.\n- Target Pair 2: Same shape, different color \u2192 **Does not match**.\n\nTherefore, Target Pair 1 shares the same relational structure as the Source Pair.\n\n---\n\n**Step 4: Conclude with the integer of the correct target pair.**\n\nThe correct target pair is [1]."
+    },
+    "rmts_decomposed_relations": {
+        "unified_path": "data/vlm/2D/rmts/images/trial-198.png",
+        "decomposed_paths": "['data/vlm/2D/rmts/images/source-198.png', 'data/vlm/2D/rmts/images/target1-198.png', 'data/vlm/2D/rmts/images/target2-198.png']",
+        "relation": "same_shape",
+        "relation_value": true,
+        "pair": "target2",
+        "pair_loc": "bottom right",
+        "response": "[True]"
+    },
+    "rmts_unified_features": {
+        "unified_path": "data/vlm/2D/rmts/images/trial-46.png",
+        "decomposed_paths": "['data/vlm/2D/rmts/images/source-46.png', 'data/vlm/2D/rmts/images/target1-46.png', 'data/vlm/2D/rmts/images/target2-46.png']",
+        "feature": "shape",
+        "feature_value": "cloud",
+        "pair": "source",
+        "pair_loc": "top",
+        "object_loc": "right",
+        "object_ind": "2nd",
+        "response": "[cloud]"
+    },
+    "rmts_unified_features2": {
+        "unified_path": "data/vlm/2D/rmts/images/trial-79.png",
+        "decomposed_paths": "['data/vlm/2D/rmts/images/source-79.png', 'data/vlm/2D/rmts/images/target1-79.png', 'data/vlm/2D/rmts/images/target2-79.png']",
+        "response": "```json\n{\n    \"source\": {\n        \"source_object1\": {\"shape\": \"circle\", \"color\": \"purple\"},\n        \"source_object2\": {\"shape\": \"circle\", \"color\": \"gray\"}\n    },\n    \"target1\": {\n        \"target1_object1\": {\"shape\": \"heart\", \"color\": \"purple\"},\n        \"target1_object2\": {\"shape\": \"heart\", \"color\": \"gray\"}\n    },\n    \"target2\": {\n        \"target2_object1\": {\"shape\": \"circle\", \"color\": \"purple\"},\n        \"target2_object2\": {\"shape\": \"circle\", \"color\": \"purple\"}\n    }\n}\n```",
+        "features": "{'source': {'source_object1': {'shape': 'circle', 'color': 'purple'}, 'source_object2': {'shape': 'circle', 'color': 'gray'}}, 'target1': {'target1_object1': {'shape': 'heart', 'color': 'purple'}, 'target1_object2': {'shape': 'heart', 'color': 'gray'}}, 'target2': {'target2_object1': {'shape': 'circle', 'color': 'purple'}, 'target2_object2': {'shape': 'circle', 'color': 'purple'}}}"
+    },
+    "rmts_unified_full": {
+        "unified_path": "data/vlm/2D/rmts/images/trial-29.png",
+        "decomposed_paths": "['data/vlm/2D/rmts/images/source-29.png', 'data/vlm/2D/rmts/images/target1-29.png', 'data/vlm/2D/rmts/images/target2-29.png']",
+        "correct": 2,
+        "response": "Let's analyze the image step by step according to the instructions.\n\n---\n\n### Step 1: Identify the features of the objects in each pair (shape and color)\n\n#### Source Pair (top):\n- Left object: **Heart**, **Green**\n- Right object: **Circle**, **Green**\n\nSo, the source pair has:\n- **Shapes**: Heart, Circle (different)\n- **Colors**: Green, Green (same)\n\n#### Target Pair 1 (bottom left):\n- Left object: **Triangle**, **Green**\n- Right object: **Triangle**, **Green**\n\nSo, target pair 1 has:\n- **Shapes**: Triangle, Triangle (same)\n- **Colors**: Green, Green (same)\n\n#### Target Pair 2 (bottom right):\n- Left object: **Square**, **Gray**\n- Right object: **X**, **Gray**\n\nSo, target pair 2 has:\n- **Shapes**: Square, X (different)\n- **Colors**: Gray, Gray (same)\n\n---\n\n### Step 2: Identify the relations over the features of each pair\n\nWe are looking for **relations** between the two objects in each pair.\n\nFor the **source pair**:\n- Shape relation: **Different** (Heart \u2260 Circle)\n- Color relation: **Same** (both Green)\n\nSo, the relation pattern is: **Different shape, Same color**\n\nFor **Target Pair 1**:\n- Shape: Same (both Triangle)\n- Color: Same (both Green)\n\u2192 Relation pattern: **Same shape, Same color**\n\nFor **Target Pair 2**:\n- Shape: Different (Square \u2260 X)\n- Color: Same (both Gray)\n\u2192 Relation pattern: **Different shape, Same color**\n\n---\n\n### Step 3: Determine which target pair shares the same relations with the source pair\n\nSource pair relation: **Different shape, Same color**\n\nTarget Pair 1: Same shape, Same color \u2192 **Does not match**\nTarget Pair 2: Different shape, Same color \u2192 **Matches**\n\nSo, **Target Pair 2** has the same relational structure as the source pair.\n\n---\n\n### Step 4: Conclude with the integer of the correct target pair\n\nThe correct target pair is **Target Pair 2**, so the answer is:\n\n[2]"
+    },
+    "rmts_unified_relations": {
+        "unified_path": "data/vlm/2D/rmts/images/trial-49.png",
+        "decomposed_paths": "['data/vlm/2D/rmts/images/source-49.png', 'data/vlm/2D/rmts/images/target1-49.png', 'data/vlm/2D/rmts/images/target2-49.png']",
+        "relation": "same_color",
+        "relation_value": true,
+        "pair": "target1",
+        "pair_loc": "bottom left",
+        "response": "[True]"
+    },
+    "scene_description": {
+        "path": "data/vlm/2D/scene_description/images/nObjects=10_nShapes=5_nColors=2_9.png",
+        "n_objects": 10,
+        "n_shapes": 5,
+        "n_colors": 2,
+        "features": "[{'shape': np.str_('right-arrow'), 'color': np.str_('darkorange')}, {'shape': np.str_('umbrella'), 'color': np.str_('salmon')}, {'shape': np.str_('square'), 'color': np.str_('salmon')}, {'shape': np.str_('heart'), 'color': np.str_('salmon')}, {'shape': np.str_('airplane'), 'color': np.str_('darkorange')}, {'shape': np.str_('heart'), 'color': np.str_('salmon')}, {'shape': np.str_('square'), 'color': np.str_('salmon')}, {'shape': np.str_('right-arrow'), 'color': np.str_('darkorange')}, {'shape': np.str_('right-arrow'), 'color': np.str_('darkorange')}, {'shape': np.str_('airplane'), 'color': np.str_('darkorange')}]",
+        "response": "[\n    {\"shape\": \"right-arrow\", \"color\": \"orange\"},\n    {\"shape\": \"square\", \"color\": \"salmon\"},\n    {\"shape\": \"right-arrow\", \"color\": \"orange\"},\n    {\"shape\": \"heart\", \"color\": \"salmon\"},\n    {\"shape\": \"right-arrow\", \"color\": \"orange\"},\n    {\"shape\": \"airplane\", \"color\": \"orange\"},\n    {\"shape\": \"airplane\", \"color\": \"orange\"},\n    {\"shape\": \"umbrella\", \"color\": \"salmon\"},\n    {\"shape\": \"heart\", \"color\": \"salmon\"},\n    {\"shape\": \"square\", \"color\": \"salmon\"}\n]",
+        "answer": ""
+    },
+    "scene_description_balanced": {
+        "n_shapes": 4,
+        "n_colors": 3,
+        "features": "[{'shape': np.str_('star'), 'color': np.str_('black')}, {'shape': np.str_('cloud'), 'color': np.str_('saddlebrown')}, {'shape': np.str_('triangle'), 'color': np.str_('darkorange')}, {'shape': np.str_('umbrella'), 'color': np.str_('black')}, {'shape': np.str_('cloud'), 'color': np.str_('darkorange')}, {'shape': np.str_('star'), 'color': np.str_('saddlebrown')}, {'shape': np.str_('umbrella'), 'color': np.str_('saddlebrown')}, {'shape': np.str_('triangle'), 'color': np.str_('black')}, {'shape': np.str_('triangle'), 'color': np.str_('black')}, {'shape': np.str_('umbrella'), 'color': np.str_('black')}]",
+        "triplet_count": 27,
+        "colors": "[np.str_('black'), np.str_('saddlebrown'), np.str_('darkorange'), np.str_('black'), np.str_('darkorange'), np.str_('saddlebrown'), np.str_('saddlebrown'), np.str_('black'), np.str_('black'), np.str_('black')]",
+        "shapes": "[np.str_('star'), np.str_('cloud'), np.str_('triangle'), np.str_('umbrella'), np.str_('cloud'), np.str_('star'), np.str_('umbrella'), np.str_('triangle'), np.str_('triangle'), np.str_('umbrella')]",
+        "color_vecs": "[[0 0 0 0 0 0 0 1 0 0]\n [0 0 0 0 0 1 0 0 0 0]\n [0 0 0 0 0 0 0 0 0 1]\n [0 0 0 0 0 0 0 1 0 0]\n [0 0 0 0 0 0 0 0 0 1]\n [0 0 0 0 0 1 0 0 0 0]\n [0 0 0 0 0 1 0 0 0 0]\n [0 0 0 0 0 0 0 1 0 0]\n [0 0 0 0 0 0 0 1 0 0]\n [0 0 0 0 0 0 0 1 0 0]]",
+        "shape_vecs": "[[0 0 0 0 0 0 1 0 0 0]\n [0 0 1 0 0 0 0 0 0 0]\n [0 1 0 0 0 0 0 0 0 0]\n [0 0 0 1 0 0 0 0 0 0]\n [0 0 1 0 0 0 0 0 0 0]\n [0 0 0 0 0 0 1 0 0 0]\n [0 0 0 1 0 0 0 0 0 0]\n [0 1 0 0 0 0 0 0 0 0]\n [0 1 0 0 0 0 0 0 0 0]\n [0 0 0 1 0 0 0 0 0 0]]",
+        "shape_inds": "[6 2 1 3 2 6 3 1 1 3]",
+        "response": "[\n    {\"shape\": \"cloud\", \"color\": \"orange\"},\n    {\"shape\": \"umbrella\", \"color\": \"black\"},\n    {\"shape\": \"umbrella\", \"color\": \"black\"},\n    {\"shape\": \"umbrella\", \"color\": \"brown\"},\n    {\"shape\": \"cloud\", \"color\": \"brown\"},\n    {\"shape\": \"star\", \"color\": \"black\"},\n    {\"shape\": \"star\", \"color\": \"brown\"},\n    {\"shape\": \"triangle\", \"color\": \"black\"},\n    {\"shape\": \"triangle\", \"color\": \"black\"},\n    {\"shape\": \"triangle\", \"color\": \"orange\"}\n]",
+        "path": "data/vlm/2D/scene_description_balanced/images/nObjects=10_nTriplets=27_trial=2661.png"
+    }
+}

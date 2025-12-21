@@ -23,6 +23,7 @@ BRACKET_RE = re.compile(r"\[([^\[\]]+)\]")
 
 
 def extract_token(text: Optional[str]) -> Optional[str]:
+    """Return the last token enclosed in square brackets from a response."""
     if not isinstance(text, str):
         return None
     matches = BRACKET_RE.findall(text)
@@ -30,6 +31,7 @@ def extract_token(text: Optional[str]) -> Optional[str]:
 
 
 def token_to_bool(token: Optional[str]) -> Optional[bool]:
+    """Convert a bracketed token into a boolean when possible."""
     if token is None:
         return None
     low = token.lower()
@@ -39,6 +41,7 @@ def token_to_bool(token: Optional[str]) -> Optional[bool]:
 
 
 def token_to_int(token: Optional[str]) -> Optional[int]:
+    """Convert a bracketed token into an integer when possible."""
     if token is None:
         return None
     try:
@@ -48,12 +51,14 @@ def token_to_int(token: Optional[str]) -> Optional[int]:
 
 
 def normalize_label(value: Optional[str]) -> Optional[str]:
+    """Clean simple labels (color/shape names) for downstream comparisons."""
     if not isinstance(value, str):
         return None
     return value.strip().lower()
 
 
 def parse_bool_literal(value: Any) -> Optional[bool]:
+    """Parse loose boolean representations such as 'yes' or 0/1."""
     if isinstance(value, bool):
         return value
     if isinstance(value, (int, np.integer)):
@@ -68,6 +73,7 @@ def parse_bool_literal(value: Any) -> Optional[bool]:
 
 
 def object_counter(objs: Iterable[Dict[str, str]]) -> Counter:
+    """Count how many times each (color, shape) combination appears."""
     return Counter(
         (normalize_label(obj.get("color")), normalize_label(obj.get("shape")))
         for obj in objs
@@ -76,6 +82,7 @@ def object_counter(objs: Iterable[Dict[str, str]]) -> Counter:
 
 
 def count_object_errors(gt_objs: List[Dict[str, str]], pred_objs: List[Dict[str, str]]) -> int:
+    """Compute symmetric difference size between ground-truth and predicted objects."""
     gt_counter = object_counter(gt_objs)
     pred_counter = object_counter(pred_objs)
     shared = sum(min(count, pred_counter[key]) for key, count in gt_counter.items())
@@ -128,6 +135,7 @@ def parse_feature_sequence(value: Any) -> List[Dict[str, str]]:
 
 
 def parse_sequence_payload(text: Optional[str]) -> List[Dict[str, str]]:
+    """Extract a list of {color, shape} dictionaries from a model response."""
     if not isinstance(text, str):
         return []
     snippet = text.strip()
@@ -153,6 +161,7 @@ def parse_sequence_payload(text: Optional[str]) -> List[Dict[str, str]]:
 
 
 def parse_rmts_dict(text: Optional[Any]) -> Dict[str, Dict[str, Dict[str, str]]]:
+    """Parse nested RMTS dictionaries describing source/target pairs."""
     if isinstance(text, dict):
         data = text
     elif not isinstance(text, str):
@@ -181,6 +190,7 @@ def parse_rmts_dict(text: Optional[Any]) -> Dict[str, Dict[str, Dict[str, str]]]
 
 def rmts_structures_match(gt: Dict[str, Dict[str, Dict[str, str]]],
                           pred: Dict[str, Dict[str, Dict[str, str]]]) -> bool:
+    """Check whether predicted RMTS features exactly match the ground truth."""
     for pair in ("source", "target1", "target2"):
         gt_pair = gt.get(pair, {})
         pred_pair = pred.get(pair, {})
@@ -198,6 +208,7 @@ def rmts_structures_match(gt: Dict[str, Dict[str, Dict[str, str]]],
 
 
 def count_feature_triplets(features: List[Dict[str, str]]) -> int:
+    """Count ambiguous triplets (shared color & shape pairs) in a feature list."""
     total = 0
     for triple in combinations(features, 3):
         colors = [normalize_label(obj["color"]) for obj in triple]
@@ -210,6 +221,8 @@ def count_feature_triplets(features: List[Dict[str, str]]) -> int:
 
 
 def load_if_exists(path: Path) -> Optional[pd.DataFrame]:
+    """Load a CSV if it exists, tagging the originating path for debugging."""
+    # Helper keeps aggregation tolerant to missing task directories.
     if not path.exists():
         return None
     df = pd.read_csv(path)
@@ -218,6 +231,7 @@ def load_if_exists(path: Path) -> Optional[pd.DataFrame]:
 
 
 def summarize_visual_search(results_root: Path, model: str) -> Optional[pd.DataFrame]:
+    """Aggregate disjunctive/conjunctive results into accuracy by set size."""
     tasks = {
         "disjunctive_search": {"truth": "popout", "label": "disjunctive", "invert": False},
         # Control prompt asks “are all shapes same color?”, so True == no oddball.
@@ -252,6 +266,7 @@ def summarize_visual_search(results_root: Path, model: str) -> Optional[pd.DataF
 
 
 def summarize_counting(results_root: Path, model: str) -> Optional[pd.DataFrame]:
+    """Compute accuracy per set size for the counting family of tasks."""
     tasks = {
         "counting_low_diversity": "low_entropy",
         "counting_high_diversity": "high_entropy",
@@ -282,6 +297,7 @@ def summarize_counting(results_root: Path, model: str) -> Optional[pd.DataFrame]
 
 
 def summarize_scene_description(results_root: Path, model: str) -> Optional[pd.DataFrame]:
+    """Measure scene-description errors grouped by number of objects/triplets."""
     task_dirs = ["scene_description", "scene_description_balanced"]
     frames = []
     for task_name in task_dirs:
@@ -311,6 +327,7 @@ def summarize_scene_description(results_root: Path, model: str) -> Optional[pd.D
 
 
 def summarize_rmts(results_root: Path, model: str) -> Optional[pd.DataFrame]:
+    """Summarize RMTS accuracies for each condition/subtask pairing."""
     subtasks = ("full", "relations", "features", "features2")
     frames = []
     for condition in ("unified", "decomposed"):
@@ -358,6 +375,7 @@ def summarize_rmts(results_root: Path, model: str) -> Optional[pd.DataFrame]:
 
 
 def main():
+    """Entry point aggregating every task family and writing CSV summaries."""
     parser = argparse.ArgumentParser(description="Aggregate 2D VLM task results.")
     parser.add_argument("--results-root", type=Path, default=Path("output/vlm/2D"))
     parser.add_argument("--model-name", required=True)
