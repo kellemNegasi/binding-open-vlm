@@ -28,6 +28,10 @@ PROPERTIES_PATH = ASSET_ROOT / "data" / "properties.json"
 RENDER_SCRIPT = ASSET_ROOT / "render_binding.py"
 
 
+def log(msg: str) -> None:
+    print(f"[gen_blender] {msg}", flush=True)
+
+
 def load_properties(path: Path) -> Dict:
     with open(path, "r") as f:
         return json.load(f)
@@ -109,6 +113,12 @@ def run_blender(
         json.dump({"scenes": scene_specs}, tmp)
         tmp_path = tmp.name
 
+    compute_flag = cycles_device_flag(device_choice)
+    log(
+        f"Launching Blender with {len(scene_specs)} scenes | device='{device_choice}' "
+        f"(Cycles flag={compute_flag})"
+    )
+
     cmd = [
         blender_binary,
         "--background",
@@ -121,7 +131,7 @@ def run_blender(
         f"--properties_json={PROPERTIES_PATH}",
         f"--shape_dir={ASSET_ROOT / 'data/shapes'}",
         f"--material_dir={ASSET_ROOT / 'data/materials'}",
-        f"--compute_device_type={cycles_device_flag(device_choice)}",
+        f"--compute_device_type={compute_flag}",
         f"--width={width}",
         f"--height={height}",
         f"--render_num_samples={render_samples}",
@@ -175,6 +185,13 @@ def parse_args(argv: List[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--height", type=int, default=512)
     parser.add_argument("--render-samples", type=int, default=256)
     parser.add_argument("--render-tile-size", type=int, default=256)
+    parser.add_argument(
+    "--render_tile_size",
+    default=256,
+    type=int,
+    help="Tile size (kept for compatibility; may be ignored in newer Blender).",
+)
+
     return parser.parse_args(argv)
 
 
@@ -241,6 +258,7 @@ def main(argv: List[str] | None = None) -> int:
     metadata_path.parent.mkdir(parents=True, exist_ok=True)
     metadata_df.to_csv(metadata_path, index=False)
     device_choice = detect_device(args.device)
+    log(f"Device preference '{args.device}' resolved to '{device_choice}'")
     output_scene_file = metadata_path.parent / "scenes_combined.json"
     output_scene_file.parent.mkdir(parents=True, exist_ok=True)
     run_blender(
