@@ -51,14 +51,14 @@ def parse_args() -> argparse.Namespace:
 
     parser.add_argument("--min_dist", default=0.25, type=float)
     parser.add_argument("--margin", default=0.4, type=float)
-    parser.add_argument("--min_pixels_per_object", default=200, type=int)
-    parser.add_argument("--max_retries", default=50, type=int)
+    parser.add_argument("--min_pixels_per_object", default=10, type=int)
+    parser.add_argument("--max_retries", default=10, type=int)
 
     parser.add_argument("--split", default="3D")
-    parser.add_argument("--width", default=512, type=int)
-    parser.add_argument("--height", default=512, type=int)
+    parser.add_argument("--width", default=100, type=int)
+    parser.add_argument("--height", default=100, type=int)
 
-    parser.add_argument("--render_num_samples", default=512, type=int)
+    parser.add_argument("--render_num_samples", default=100, type=int)
     parser.add_argument("--render_min_bounces", default=8, type=int)
     parser.add_argument("--render_max_bounces", default=8, type=int)
     parser.add_argument(
@@ -74,6 +74,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--key_light_jitter", default=1.0, type=float)
     parser.add_argument("--fill_light_jitter", default=1.0, type=float)
     parser.add_argument("--back_light_jitter", default=1.0, type=float)
+    parser.add_argument(
+        "--max_layout_attempts",
+        default=20,
+        type=int,
+        help="Number of times to rebuild a layout before rendering anyway.",
+    )
 
     parser.add_argument("--output_scene_file", default="scenes.json")
     parser.add_argument(
@@ -322,78 +328,103 @@ def add_specified_objects(scene_struct, object_specs, args, camera):
     materials = properties["materials"]
     shapes = properties["shapes"]
 
-    positions = []
+    def cleanup(blender_objs):
+        for obj in blender_objs:
+            utils.delete_object(obj)
+
+    max_layout_attempts = max(1, int(getattr(args, "max_layout_attempts", 20)))
     objects = []
     blender_objects = []
 
-    for idx, spec in enumerate(object_specs):
-        size_key = spec.get("size", next(iter(sizes)))
-        radius = sizes.get(size_key, list(sizes.values())[0])
+    for attempt in range(1, max_layout_attempts + 1):
+        if max_layout_attempts > 1:
+            log(f"Layout attempt {attempt}/{max_layout_attempts}")
+        positions = []
+        objects = []
+        blender_objects = []
+        success = True
 
-        color_key = spec["color"]
-        rgba = color_lookup[color_key]
+        for idx, spec in enumerate(object_specs):
+            size_key = spec.get("size", next(iter(sizes)))
+            radius = sizes.get(size_key, list(sizes.values())[0])
 
-        shape_key = spec["shape"]
-        blend_shape = shapes.get(shape_key)
-        if blend_shape is None:
-            raise ValueError(f"Shape '{shape_key}' missing from properties.json")
+            color_key = spec["color"]
+            rgba = color_lookup[color_key]
 
-        material_key = spec.get("material", next(iter(materials)))
-        material_name = materials.get(material_key)
-        if material_name is None:
-            raise ValueError(f"Material '{material_key}' missing from properties.json")
+            shape_key = spec["shape"]
+            blend_shape = shapes.get(shape_key)
+            if blend_shape is None:
+                raise ValueError(f"Shape '{shape_key}' missing from properties.json")
 
-        # Place object (rejection sampling with min_dist/margin)
-        num_tries = 0
-        while True:
-            num_tries += 1
-            if num_tries > args.max_retries:
-                for obj in blender_objects:
-                    utils.delete_object(obj)
-                return add_specified_objects(scene_struct, object_specs, args, camera)
+            material_key = spec.get("material", next(iter(materials)))
+            material_name = materials.get(material_key)
+            if material_name is None:
+                raise ValueError(f"Material '{material_key}' missing from properties.json")
 
-            x = random.uniform(-3, 3)
-            y = random.uniform(-3, 3)
-            if _placement_ok((x, y, radius), positions, scene_struct, args):
+            num_tries = 0
+            placed = False
+            while num_tries < args.max_retries:
+                num_tries += 1
+                x = random.uniform(-3, 3)
+                y = random.uniform(-3, 3)
+                if _placement_ok((x, y, radius), positions, scene_struct, args):
+                    placed = True
+                    break
+
+            if not placed:
+                log(f"  [{idx}] placement retries exhausted (attempt {attempt}); restarting layout")
+                success = False
                 break
 
-        theta = spec.get("rotation", 360.0 * random.random())
-        utils.add_object(args.shape_dir, blend_shape, radius, (x, y), theta=theta)
-        log(
-            f"  [{idx}] placed {shape_key} ({color_key}/{material_key}/{size_key})"
-            f" at ({x:.2f}, {y:.2f}) r={radius:.2f}"
-        )
+            theta = spec.get("rotation", 360.0 * random.random())
+            utils.add_object(args.shape_dir, blend_shape, radius, (x, y), theta=theta)
+            log(
+                f"  [{idx}] placed {shape_key} ({color_key}/{material_key}/{size_key})"
+                f" at ({x:.2f}, {y:.2f}) r={radius:.2f}"
+            )
 
-        obj = bpy.context.view_layer.objects.active
-        if obj is None:
-            obj = bpy.context.object
+            obj = bpy.context.view_layer.objects.active
+            if obj is None:
+                obj = bpy.context.object
 
-        blender_objects.append(obj)
-        positions.append((x, y, radius))
+            blender_objects.append(obj)
+            positions.append((x, y, radius))
 
-        utils.add_material(material_name, Color=rgba)
+            utils.add_material(material_name, Color=rgba)
 
-        pixel_coords = utils.get_camera_coords(camera, obj.location)
-        objects.append(
-            {
-                "shape": shape_key,
-                "size": size_key,
-                "material": material_key,
-                "3d_coords": tuple(obj.location),
-                "rotation": float(theta),
-                "pixel_coords": pixel_coords,
-                "color": color_key,
-                "metadata": spec.get("metadata", {}),
-            }
-        )
+            pixel_coords = utils.get_camera_coords(camera, obj.location)
+            objects.append(
+                {
+                    "shape": shape_key,
+                    "size": size_key,
+                    "material": material_key,
+                    "3d_coords": tuple(obj.location),
+                    "rotation": float(theta),
+                    "pixel_coords": pixel_coords,
+                    "color": color_key,
+                    "metadata": spec.get("metadata", {}),
+                }
+            )
 
-    # Visibility check (updated for Blender 5)
-    if not check_visibility(blender_objects, args.min_pixels_per_object):
-        for obj in blender_objects:
-            utils.delete_object(obj)
-        return add_specified_objects(scene_struct, object_specs, args, camera)
+        if not success:
+            if attempt < max_layout_attempts:
+                cleanup(blender_objects)
+                continue
+            log("Layout attempts exhausted; proceeding with partially placed objects.")
+            return objects, blender_objects
 
-    log("Visibility check passed")
+        if check_visibility(blender_objects, args.min_pixels_per_object):
+            log("Visibility check passed")
+            return objects, blender_objects
+
+        log("Visibility check failed; retrying layout")
+        if attempt < max_layout_attempts:
+            cleanup(blender_objects)
+            continue
+        log("Layout attempts exhausted; proceeding despite visibility failure.")
+        return objects, blender_objects
+
+    # Fallback (should not hit because of returns above)
     return objects, blender_objects
 
 

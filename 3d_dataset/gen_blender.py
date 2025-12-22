@@ -106,6 +106,8 @@ def run_blender(
     height: int,
     render_samples: int,
     render_tile_size: int,
+    min_pixels_per_object: int,
+    max_layout_attempts: int,
     output_scene_file: Path,
     blender_binary: str,
 ) -> None:
@@ -136,6 +138,8 @@ def run_blender(
         f"--height={height}",
         f"--render_num_samples={render_samples}",
         f"--render_tile_size={render_tile_size}",
+        f"--min_pixels_per_object={min_pixels_per_object}",
+        f"--max_layout_attempts={max_layout_attempts}",
         f"--output_scene_file={output_scene_file}",
         f"--num_images={len(scene_specs)}",
     ]
@@ -184,13 +188,28 @@ def parse_args(argv: List[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--width", type=int, default=512)
     parser.add_argument("--height", type=int, default=512)
     parser.add_argument("--render-samples", type=int, default=256)
-    parser.add_argument("--render-tile-size", type=int, default=256)
     parser.add_argument(
-    "--render_tile_size",
-    default=256,
-    type=int,
-    help="Tile size (kept for compatibility; may be ignored in newer Blender).",
-)
+        "--render-tile-size",
+        "--render_tile_size",
+        dest="render_tile_size",
+        default=256,
+        type=int,
+        help="Tile size (kept for compatibility; may be ignored in newer Blender).",
+    )
+    parser.add_argument(
+        "--min-pixels-per-object",
+        dest="min_pixels_per_object",
+        type=int,
+        default=10,
+        help="Minimum visible pixels per object before a layout retry (forwarded to Blender).",
+    )
+    parser.add_argument(
+        "--max-layout-attempts",
+        dest="max_layout_attempts",
+        type=int,
+        default=20,
+        help="Maximum number of whole-scene layout retries before proceeding anyway.",
+    )
 
     return parser.parse_args(argv)
 
@@ -268,6 +287,8 @@ def main(argv: List[str] | None = None) -> int:
         height=args.height,
         render_samples=args.render_samples,
         render_tile_size=args.render_tile_size,
+        min_pixels_per_object=args.min_pixels_per_object,
+        max_layout_attempts=args.max_layout_attempts,
         output_scene_file=output_scene_file,
         blender_binary=args.blender_binary,
     )
