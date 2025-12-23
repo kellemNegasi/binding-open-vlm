@@ -40,7 +40,7 @@ cd "$PROJECT_DIR"
 #   --image "$PROJECT_DIR/examples/sample-task.jpg" \
 #   --output "$PROJECT_DIR/qwen3_job_output_openvlm.txt"
 
-# Run the Qwen2.5-VL tasks sequentially via Hydra.
+# Run the all tasks sequentially via Hydra.
 export HYDRA_FULL_ERROR=1
 export PROJECT_ROOT="$PROJECT_DIR"
 COUNTING_TASKS=(
