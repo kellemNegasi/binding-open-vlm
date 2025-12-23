@@ -1,0 +1,8 @@
+# config/model/Qwen2.5-VL-32B-Instruct-AWQ .yaml
+defaults:
+  - base_vlm_local
+_target_: models.qwen_model.QwenModel
+model_name: Qwen2.5-VL-32B-Instruct-AWQ 
+weights_path: '${paths.root_dir}/model-weights/Qwen2.5-VL-32B-Instruct-AWQ'
+batch_size: 8            # adjust for VRAM
+prompt_format: null      # or set if the prompt needs wrapping
