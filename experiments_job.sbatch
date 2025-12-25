@@ -80,7 +80,6 @@ for TASK_NAME in "${SEARCH_TASKS[@]}"; do
 done
 
 SCENE_TASKS=(
-  scene_description
   scene_description_BALANCED
 )
 

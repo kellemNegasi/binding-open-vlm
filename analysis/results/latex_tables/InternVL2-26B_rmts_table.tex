@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\caption{Visual analogy results: InternVL2-26B.}
+\begin{tabular}{lcccc}
+\toprule
+ & \multicolumn{2}{c}{Unified Accuracy} & \multicolumn{2}{c}{Decomposed Accuracy} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5}
+ & Accuracy & 95\% CI & Accuracy & 95\% CI \\
+\midrule
+Analogy (full) & 56\% & (49\%, 63\%) & \textbf{74\%} & (51\%, 88\%) \\
+Relation decoding & \textbf{34\%} & (27\%, 40\%) & 12\% & (8\%, 17\%) \\
+Full feature decoding & \textbf{21\%} & (16\%, 27\%) & 8\% & (5\%, 13\%) \\
+Single feature decoding & \textbf{53\%} & (46\%, 60\%) & 0\% & (0\%, 2\%) \\
+\bottomrule
+\end{tabular}
+\end{table}

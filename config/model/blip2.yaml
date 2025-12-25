@@ -1,0 +1,7 @@
+defaults:
+  - base_vlm_local
+_target_: models.blip2_model.Blip2Model
+model_name: blip-2-flan-t5-xl
+weights_path: ${paths.root_dir}/model-weights/blip-2-flan-t5-xl
+batch_size: 4        # adjust to fit VRAM
+prompt_format: null  # or set a wrapper like "Question: {prompt}\nAnswer:"
