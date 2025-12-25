@@ -1,0 +1,7 @@
+defaults:
+  - base_vlm_local
+_target_: models.deepseek_vl_model.DeepseekVL2Model
+model_name: deepseek-vl2
+weights_path: '${paths.root_dir}/model-weights/deepseek-vl2'
+batch_size: 4
+prompt_format: null
