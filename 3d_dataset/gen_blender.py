@@ -54,7 +54,7 @@ def parse_triplet_targets(arg: str) -> Dict[int, int]:
 def prepare_scene_specs(
     *,
     task_name: str,
-    blueprints: List[SceneBlueprint],
+    indexed_blueprints: List[Tuple[int, SceneBlueprint]],
     data_dir: Path,
     root_dir: Path,
     save_blendfiles: bool,
@@ -70,15 +70,15 @@ def prepare_scene_specs(
 
     scene_specs: List[Dict] = []
     metadata_rows: List[Dict] = []
-    for idx, blueprint in enumerate(blueprints):
-        fname = f"{idx:06d}_{blueprint.slug}"
+    for global_idx, blueprint in indexed_blueprints:
+        fname = f"{global_idx:06d}_{blueprint.slug}"
         image_path = image_dir / f"{fname}.png"
         scene_path = scene_dir / f"{fname}.json"
         blend_path = str(blend_dir / f"{fname}.blend") if save_blendfiles else None
         rel_path = os.path.relpath(image_path, root_dir)
         scene_specs.append(
             {
-                "scene_id": f"{task_name}_{idx:06d}",
+                "scene_id": f"{task_name}_{global_idx:06d}",
                 "task_name": task_name,
                 "split": "3D",
                 "output_image": str(image_path),
@@ -108,6 +108,7 @@ def run_blender(
     render_tile_size: int,
     min_pixels_per_object: int,
     max_layout_attempts: int,
+    max_retries: int,
     output_scene_file: Path,
     blender_binary: str,
 ) -> None:
@@ -139,6 +140,7 @@ def run_blender(
         f"--render_num_samples={render_samples}",
         f"--render_tile_size={render_tile_size}",
         f"--min_pixels_per_object={min_pixels_per_object}",
+        f"--max_retries={max_retries}",
         f"--max_layout_attempts={max_layout_attempts}",
         f"--output_scene_file={output_scene_file}",
         f"--num_images={len(scene_specs)}",
@@ -180,9 +182,29 @@ def parse_args(argv: List[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--scene-max-objects", type=int, default=12)
     parser.add_argument("--device", default="auto", help="Compute device preference (auto/cpu/gpu/xpu/etc).")
     parser.add_argument("--seed", type=int, default=13)
+    parser.add_argument(
+        "--num-shards",
+        dest="num_shards",
+        type=int,
+        default=1,
+        help="Split a dataset deterministically across N shards (run each shard as a separate job).",
+    )
+    parser.add_argument(
+        "--shard-index",
+        dest="shard_index",
+        type=int,
+        default=0,
+        help="Which shard to render (0-indexed). Must be < --num-shards.",
+    )
     parser.add_argument("--root-dir", type=Path, default=REPO_ROOT)
     parser.add_argument("--data-dir", type=Path, default=REPO_ROOT / "data")
     parser.add_argument("--metadata-file", default="metadata.csv")
+    parser.add_argument(
+        "--combined-scene-file",
+        dest="combined_scene_file",
+        default="scenes_combined.json",
+        help="Filename for the combined JSON scene file (relative to the task output directory).",
+    )
     parser.add_argument("--save-blendfiles", action="store_true")
     parser.add_argument("--blender-binary", default="blender")
     parser.add_argument("--width", type=int, default=512)
@@ -209,6 +231,13 @@ def parse_args(argv: List[str] | None = None) -> argparse.Namespace:
         type=int,
         default=20,
         help="Maximum number of whole-scene layout retries before proceeding anyway.",
+    )
+    parser.add_argument(
+        "--max-retries",
+        dest="max_retries",
+        type=int,
+        default=50,
+        help="Maximum number of per-object placement retries inside Blender before restarting layout.",
     )
 
     return parser.parse_args(argv)
@@ -256,6 +285,10 @@ def build_blueprints(args: argparse.Namespace, vocab: SceneVocabulary) -> List[S
 
 def main(argv: List[str] | None = None) -> int:
     args = parse_args(argv)
+    if args.num_shards < 1:
+        raise ValueError("--num-shards must be >= 1")
+    if args.shard_index < 0 or args.shard_index >= args.num_shards:
+        raise ValueError("--shard-index must be in [0, --num-shards)")
     if not RENDER_SCRIPT.exists():
         raise FileNotFoundError(f"Missing Blender render script at {RENDER_SCRIPT}")
     properties = load_properties(PROPERTIES_PATH)
@@ -266,9 +299,14 @@ def main(argv: List[str] | None = None) -> int:
             f"[warning] Ignoring --num-scenes because the triplet histogram expands to {len(blueprints)} scenes.",
             file=sys.stderr,
         )
+    indexed_blueprints = [(idx, bp) for idx, bp in enumerate(blueprints)]
+    if args.num_shards > 1:
+        indexed_blueprints = [
+            (idx, bp) for idx, bp in indexed_blueprints if idx % args.num_shards == args.shard_index
+        ]
     scene_specs, metadata_df = prepare_scene_specs(
         task_name=args.task,
-        blueprints=blueprints,
+        indexed_blueprints=indexed_blueprints,
         data_dir=args.data_dir,
         root_dir=args.root_dir,
         save_blendfiles=args.save_blendfiles,
@@ -278,7 +316,7 @@ def main(argv: List[str] | None = None) -> int:
     metadata_df.to_csv(metadata_path, index=False)
     device_choice = detect_device(args.device)
     log(f"Device preference '{args.device}' resolved to '{device_choice}'")
-    output_scene_file = metadata_path.parent / "scenes_combined.json"
+    output_scene_file = metadata_path.parent / args.combined_scene_file
     output_scene_file.parent.mkdir(parents=True, exist_ok=True)
     run_blender(
         scene_specs=scene_specs,
@@ -289,6 +327,7 @@ def main(argv: List[str] | None = None) -> int:
         render_tile_size=args.render_tile_size,
         min_pixels_per_object=args.min_pixels_per_object,
         max_layout_attempts=args.max_layout_attempts,
+        max_retries=args.max_retries,
         output_scene_file=output_scene_file,
         blender_binary=args.blender_binary,
     )

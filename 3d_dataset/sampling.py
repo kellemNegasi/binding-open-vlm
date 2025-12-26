@@ -177,11 +177,27 @@ def make_conjunctive_scenes(
 
 
 COUNTING_MODES = {
-    "low_entropy": {"unique_shapes": False, "unique_colors": False},
-    "medium_shape": {"unique_shapes": False, "unique_colors": True},
-    "medium_color": {"unique_shapes": True, "unique_colors": False},
+    # Matches the paper's definition:
+    # - low_entropy: all objects share the same shape and color
+    # - medium_shape: same shape, unique colors
+    # - medium_color: same color, unique shapes
+    # - high_entropy: unique colors and unique shapes
+    "low_entropy": {"same_shape": True, "same_color": True},
+    "medium_shape": {"same_shape": True, "unique_colors": True},
+    "medium_color": {"same_color": True, "unique_shapes": True},
     "high_entropy": {"unique_shapes": True, "unique_colors": True},
 }
+
+def _draw_unique(rng: random.Random, pool: Sequence[str], num: int, *, label: str) -> List[str]:
+    values = list(pool)
+    if not values:
+        raise ValueError(f"Pool for {label} must contain at least one value.")
+    if num > len(values):
+        raise ValueError(
+            f"Need {num} unique {label} values but only {len(values)} are available. "
+            "Reduce the requested object count or expand the Blender vocabulary."
+        )
+    return rng.sample(values, num)
 
 
 def _draw_values(rng: random.Random, pool: Sequence[str], num: int, unique: bool) -> List[str]:
@@ -218,13 +234,28 @@ def make_counting_scenes(
 ) -> List[SceneBlueprint]:
     if mode not in COUNTING_MODES:
         raise ValueError(f"Unsupported counting mode '{mode}'")
-    specs = COUNTING_MODES[mode]
     counts = list(count_range)
     blueprints: List[SceneBlueprint] = []
     for idx in range(num_images):
         n_objects = rng.choice(counts)
-        shapes = _draw_values(rng, vocab.shapes, n_objects, unique=specs["unique_shapes"])
-        colors = _draw_values(rng, vocab.colors, n_objects, unique=specs["unique_colors"])
+        if mode == "low_entropy":
+            shape = rng.choice(vocab.shapes)
+            color = rng.choice(vocab.colors)
+            shapes = [shape] * n_objects
+            colors = [color] * n_objects
+        elif mode == "medium_shape":
+            shape = rng.choice(vocab.shapes)
+            shapes = [shape] * n_objects
+            colors = _draw_unique(rng, vocab.colors, n_objects, label="colors")
+        elif mode == "medium_color":
+            color = rng.choice(vocab.colors)
+            colors = [color] * n_objects
+            shapes = _draw_unique(rng, vocab.shapes, n_objects, label="shapes")
+        elif mode == "high_entropy":
+            shapes = _draw_unique(rng, vocab.shapes, n_objects, label="shapes")
+            colors = _draw_unique(rng, vocab.colors, n_objects, label="colors")
+        else:
+            raise ValueError(f"Unsupported counting mode '{mode}'")
         objects = [
             ObjectSpec(shape=shape, color=color, size=object_size)
             for shape, color in zip(shapes, colors)

@@ -328,13 +328,14 @@ def add_specified_objects(scene_struct, object_specs, args, camera):
     materials = properties["materials"]
     shapes = properties["shapes"]
 
-    def cleanup(blender_objs):
-        for obj in blender_objs:
+    def cleanup(created_objs):
+        for obj in created_objs:
             utils.delete_object(obj)
 
     max_layout_attempts = max(1, int(getattr(args, "max_layout_attempts", 20)))
     objects = []
     blender_objects = []
+    created_objects = []
 
     for attempt in range(1, max_layout_attempts + 1):
         if max_layout_attempts > 1:
@@ -342,6 +343,7 @@ def add_specified_objects(scene_struct, object_specs, args, camera):
         positions = []
         objects = []
         blender_objects = []
+        created_objects = []
         success = True
 
         for idx, spec in enumerate(object_specs):
@@ -377,15 +379,12 @@ def add_specified_objects(scene_struct, object_specs, args, camera):
                 break
 
             theta = spec.get("rotation", 360.0 * random.random())
-            utils.add_object(args.shape_dir, blend_shape, radius, (x, y), theta=theta)
+            obj, new_objs = utils.add_object(args.shape_dir, blend_shape, radius, (x, y), theta=theta)
             log(
                 f"  [{idx}] placed {shape_key} ({color_key}/{material_key}/{size_key})"
                 f" at ({x:.2f}, {y:.2f}) r={radius:.2f}"
             )
-
-            obj = bpy.context.view_layer.objects.active
-            if obj is None:
-                obj = bpy.context.object
+            created_objects.extend(new_objs)
 
             blender_objects.append(obj)
             positions.append((x, y, radius))
@@ -408,7 +407,7 @@ def add_specified_objects(scene_struct, object_specs, args, camera):
 
         if not success:
             if attempt < max_layout_attempts:
-                cleanup(blender_objects)
+                cleanup(created_objects)
                 continue
             log("Layout attempts exhausted; proceeding with partially placed objects.")
             return objects, blender_objects
@@ -419,7 +418,7 @@ def add_specified_objects(scene_struct, object_specs, args, camera):
 
         log("Visibility check failed; retrying layout")
         if attempt < max_layout_attempts:
-            cleanup(blender_objects)
+            cleanup(created_objects)
             continue
         log("Layout attempts exhausted; proceeding despite visibility failure.")
         return objects, blender_objects

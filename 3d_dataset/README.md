@@ -17,19 +17,21 @@ descriptions with controlled feature-triplet counts).
 ├── sampling.py             # Task-specific object samplers
 ├── gen_blender.py          # Entry-point that orchestrates sampling + Blender runs
 └── blender/
-    ├── data/               # Copied CLEVR assets (base scene, shapes, materials, properties)
+    ├── data/               # CLEVR base scene/materials plus added shapes/colors
     ├── render_binding.py   # Blender script that consumes explicit scene specs
     └── utils.py            # CLEVR helper functions for interacting with Blender
 ```
 
-The `blender/data` folder currently contains the CLEVR sphere/cube/cylinder objects.
-You can drop in new `.blend` files (e.g., spikey balls) later—just add them to
-`data/shapes/` and register them inside `data/properties.json`.
+The `blender/data` folder contains the CLEVR base scene/materials plus an expanded mesh/color kit.
+It includes the full 3D scene-description prompt vocabulary used in `binding/prompts/scene_description_3D.txt`,
+so those prompts are fully supported (see “Matching the paper’s 3D asset list”).
+You can drop in more `.blend` files later—just add them to `data/shapes/` and register them inside
+`data/properties.json`.
 
 ## Requirements
 
-* Blender 2.9+ with the Cycles renderer enabled. Add `binding/3d_dataset/blender`
-  to Blender's Python path (e.g., via a `.pth` file) so the script can `import utils`.
+* Blender 2.9+ with the Cycles renderer enabled (`blender` on `$PATH`, or pass `--blender-binary`).
+  No Blender Python-path setup is required: `render_binding.py` adds its own directory to `sys.path`.
 * Python dependencies that are already part of this repo (`pandas` is used to emit metadata).
 
 ## Generating a dataset
@@ -41,24 +43,41 @@ to render the PNGs into `data/vlm/3D/<task>/images/`.
 Examples:
 
 ```bash
+# Generate all 3D datasets (search + counting + scene description)
+./3d_dataset/generate_3d_all.sh
+
+# Quick preview render (fewer scenes + low samples)
+./3d_dataset/generate_3d_all.sh --num-scenes 20 --scene-num-scenes 20 --preview
+
+# Parallelize generation across N shards (runs shards locally in the background)
+./3d_dataset/generate_3d_all.sh --jobs 4
+
+# HPC job-array style: run only shard K of N (then merge metadata after all shards finish)
+./3d_dataset/generate_3d_all.sh --jobs 8 --job-idx 3 --only disjunctive_search
+./3d_dataset/merge_3d_metadata.sh --jobs 8 disjunctive_search
+
 # Red-vs-green popout dataset (1000 scenes with 4–50 distractors)
-python 3d_dataset/gen_blender.py \
+python -m 3d_dataset.gen_blender \
   --task disjunctive_search \
   --num-scenes 1000 \
   --root-dir /abs/path/to/binding \
   --data-dir /abs/path/to/binding/data
 
 # Conjunctive search (cubes vs spheres)
-python 3d_dataset/gen_blender.py --task conjunctive_search
+python -m 3d_dataset.gen_blender --task conjunctive_search
 
 # Counting with specified entropy level (low/medium_color/medium_shape/high)
-python 3d_dataset/gen_blender.py --task counting_high_entropy --num-scenes 1200
+python -m 3d_dataset.gen_blender --task counting_high_entropy --num-scenes 1200
 
 # Scene description benchmark w/ custom triplet histogram
-python 3d_dataset/gen_blender.py \
+python -m 3d_dataset.gen_blender \
   --task scene_description \
   --triplet-targets "0:150,1:200,2:200,3:200,4:200,5:150"
 ```
+
+Counting entropy definitions match the paper exactly (same-vs-unique shape/color constraints). For
+`medium_*`/`high_entropy`, ensure your `properties.json` has at least as many distinct shapes/colors as
+your requested maximum count (or lower `--count-max`).
 
 Common flags:
 
@@ -76,7 +95,11 @@ Common flags:
 | `--width/--height` | Output resolution in pixels (e.g., lower to 256×256 for fast smoke tests, raise to 512+ for final data). |
 | `--render-samples` | Cycles sample count; higher values reduce noise but increase render time (64 for previews, 256+ for production). |
 | `--min-pixels-per-object` | Passed to Blender’s visibility check. Lower it for tiny preview renders so layouts stop retrying forever. |
+| `--max-retries` | Per-object placement retries inside Blender before a whole-scene restart (raise for 50-object search scenes). |
 | `--max-layout-attempts` | Caps whole-scene placement retries; if exceeded we render whatever objects were successfully placed. |
+| `--num-shards/--shard-index` | Deterministically split a task across multiple jobs; shard selection is based on the sampled scene index. |
+| `--metadata-file` | Use a per-shard filename (e.g., `metadata.part-0.csv`) to avoid collisions when running in parallel. |
+| `--combined-scene-file` | Output filename for the combined scene JSON; set per-shard to avoid collisions when running in parallel. |
 
 All rendered metadata includes a `path` column (relative to `root_dir`) so the
 existing Hydra tasks can consume the CSVs without modification. Additional task-
@@ -102,7 +125,10 @@ You can override this detection with `--device cpu|cuda|hip|oneapi|metal`.
 ## Adding new shapes/materials/colors
 
 1. Drop the `.blend` file for the new shape into `blender/data/shapes/<ShapeName>.blend`,
-   ensuring the object is centered at the origin with unit size.
+   ensuring the object is centered at the origin with unit size. For best results, keep a single mesh
+   object in the file and name it the same as the filename stem (the loader will auto-detect if they
+   differ). If the file contains multiple mesh objects, the loader will automatically join them into a
+   single mesh so downstream visibility/material logic works reliably.
 2. Update `blender/data/properties.json`:
    * Add an entry under `"shapes"` mapping the logical name to the `.blend` stem.
    * Add any new colors (RGB values) or materials (node-group file names).
@@ -117,21 +143,23 @@ The 3D prompts in Appendix A of the paper (see `prompts/scene_description_3D.txt
 and colors annotators expect: `cone, cylinder, bowl, donut, sphere, cube, droplet, bowling-pin, coil,
 crown, snowman, spikey-ball` with colors drawn from
 `red, green, blue, yellow, purple, light green, gray, black, light blue, pink, teal, brown`.
-Our current CLEVR port only ships `sphere`, `cube`, and `cylinder`, plus eight colors in
-`blender/data/properties.json`.
+This repo now includes meshes and a `properties.json` vocabulary that match those prompt tokens.
+Note that `spikey-ball` is mapped to the on-disk blendfile `spike-ball.blend`, and the Blender
+Object datablock name is auto-detected at append time (so it does not need to match the filename).
 
-### What is missing?
+### Asset checklist
 
 | Asset type | Needed for prompts | Present today | Missing items |
 | --- | --- | --- | --- |
-| Shapes (`blender/data/shapes/*.blend`) | 12 | 3 (`Sphere`, `SmoothCube_v2`, `SmoothCylinder`) | `cone`, `bowl`, `donut`, `droplet`, `bowling-pin`, `coil`, `crown`, `snowman`, `spikey-ball` |
-| Colors (`properties.json` → `"colors"`) | 12 | 8 (`gray`, `red`, `blue`, `green`, `brown`, `purple`, `cyan`, `yellow`) | `light green`, `black`, `light blue`, `pink`, `teal` *(rename `cyan` to `teal` or add a second entry)* |
+| Shapes (`blender/data/shapes/*.blend`) | 12 | 12 (`cone`, `cylinder`, `bowl`, `donut`, `sphere`, `cube`, `droplet`, `bowling-pin`, `coil`, `crown`, `snowman`, `spikey-ball`) | — |
+| Colors (`properties.json` → `"colors"`) | 12 | 12 (`red`, `green`, `blue`, `yellow`, `purple`, `light green`, `gray`, `black`, `light blue`, `pink`, `teal`, `brown`) | — |
 
-### How to build the missing meshes
+### Expanding the mesh/color vocabulary (optional)
 
+If you want to run stricter counting settings (e.g., high-entropy scenes up to 20 objects requiring
+unique shapes/colors) you may want a larger vocabulary than the paper’s scene-description prompt list.
 The quickest path is to stay inside Blender, create each mesh as a separate object, apply all modifiers,
-shade smooth, and save the `.blend` into `blender/data/shapes/<ShapeName>.blend`. A suggested recipe for
-each missing item:
+shade smooth, and save the `.blend` into `blender/data/shapes/<ShapeName>.blend`.
 
 1. **Cone** – Add → Mesh → Cone, set the radius so it visually matches CLEVR scales (radius ≈ 1), apply
    rotation/scale, bevel the base slightly, shade smooth.
@@ -166,7 +194,7 @@ Edit `blender/data/properties.json` and append entries such as:
 "black": [0, 0, 0],
 "light blue": [173, 216, 230],
 "pink": [255, 105, 180],
-"teal": [54, 117, 136]
+"teal": [41, 208, 208]
 ```
 
 Use RGB values in the 0–255 range to stay consistent with the existing palette. After saving the file,
