@@ -21,7 +21,7 @@ PROJECT_DIR="$HOME/binding-open-vlm"
 cd "$PROJECT_DIR"
 
 # Your Blender binary (no cluster install needed).
-export BLENDER_BIN="/gpfs/helios/home/kelemnegasi/binary/blender-5.0.1-linux-x64/blender"
+export BLENDER_BIN="$HOME/binary/blender-5.0.1-linux-x64/blender"
 test -x "$BLENDER_BIN" || { echo "ERROR: BLENDER_BIN not executable: $BLENDER_BIN"; exit 1; }
 
 # Where to write the generated dataset (default is $PROJECT_DIR/data)

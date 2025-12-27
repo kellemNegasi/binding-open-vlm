@@ -191,6 +191,36 @@ Re-run your job after reinstalling; the patched build exposes the `hidden_size` 
 
 ## Generating 3D dataset
 
+3D dataset generation requires a Blender binary to render scenes from the `.blend` file into `.png` images.
+
+If you are running locally, install Blender and set the path to the binary (e.g. in `generate-dataset.sbatch`):
+
+```bash
+export BLENDER_BIN="/path/to/blender-binary/blender"
+test -x "$BLENDER_BIN" || { echo "ERROR: BLENDER_BIN not executable: $BLENDER_BIN"; exit 1; }
+```
+
+If you are running on an HPC cluster via Slurm, you can download a Blender binary to any folder and point `BLENDER_BIN` at it:
+
+```bash
+# download the latest blender
+wget https://ftp.nluug.nl/pub/graphics/blender/release/Blender5.0/blender-5.0.1-linux-x64.tar.xz
+
+# unzip using tar
+tar -xvf blender-5.0.1-linux-x64.tar.xz
+
+# if tar command does exist, try this 
+module load tar
+# then unzip the blender xz file.
+```
+
+Then update `generate-dataset.sbatch` to point to the extracted binary, e.g.:
+
+```bash
+export BLENDER_BIN="$HOME/binary/blender-5.0.1-linux-x64/blender"
+test -x "$BLENDER_BIN" || { echo "ERROR: BLENDER_BIN not executable: $BLENDER_BIN"; exit 1; }
+```
+
 Generate the 3D dataset with Blender (writes to `data/vlm/3D/...` by default).
 
 ```bash
@@ -217,10 +247,10 @@ ls ./data/vlm/3D/conjunctive_search/metadata.csv
 
 ### Running on SLURM (separate jobs per task)
 
-In your `sbatch` script, call the generator with `--task` so each job only produces one dataset and its `metadata.csv`:
+In your `sbatch` i.e `generate-dataset.sbatch` script, call the generator with `--task` so each job only produces one dataset and its `metadata.csv`:
 
 ```bash
-# Example (inside an sbatch script, after setting BLENDER_BIN and cd'ing into the repo)
+# Example to run disjuncitvive_search edit sbatch script's last line as follows
 bash "$PROJECT_DIR/generate_3d_vlm_datasets.sh" --task disjunctive_search
 ```
 
