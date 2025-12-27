@@ -151,11 +151,11 @@ def main(args):
       color_names = np.array([color for color, _ in color_name_to_rgba.items()])
       for _ in range(n_trials):
         n_shapes = min(n_shapes, len(shape_names))
-        n_shapes = min(n_shapes, n_objects)
+        n_shapes = min(n_shapes, num_objects)
         unique_shape_inds = np.random.choice(len(shape_names), n_shapes, replace=False)
         shape_inds = np.concatenate([unique_shape_inds, np.random.choice(unique_shape_inds, num_objects - n_shapes, replace=True)])
         n_colors = min(n_colors, len(color_names))
-        n_colors = min(n_colors, n_objects)
+        n_colors = min(n_colors, num_objects)
         unique_color_inds = np.random.choice(len(color_names), n_colors, replace=False)
         color_inds = np.concatenate([unique_color_inds, np.random.choice(unique_color_inds, num_objects - n_colors, replace=True)])
         colors = color_names[color_inds]

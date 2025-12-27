@@ -6,6 +6,55 @@ DATA_DIR="${DATA_DIR:-${ROOT_DIR}/data}"
 BLENDER_BIN="${BLENDER_BIN:-blender}"
 PYTHON_BIN="${PYTHON_BIN:-python3}"
 
+usage() {
+  cat <<'USAGE'
+Usage: generate_3d_vlm_datasets.sh [--task TASK]
+
+Generate one dataset task (and its metadata) or all tasks.
+
+Tasks:
+  all
+  conjunctive_search
+  disjunctive_search
+  counting_low_diversity
+  counting_high_diversity
+  counting_distinct
+  scene_description
+
+Examples:
+  bash generate_3d_vlm_datasets.sh --task conjunctive_search
+  bash generate_3d_vlm_datasets.sh --task disjunctive_search
+USAGE
+}
+
+TASK="${TASK:-all}"
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --task|-t)
+      TASK="${2:-}"
+      shift 2
+      ;;
+    --help|-h)
+      usage
+      exit 0
+      ;;
+    *)
+      echo "ERROR: Unknown argument: $1" >&2
+      usage >&2
+      exit 2
+      ;;
+  esac
+done
+
+case "${TASK}" in
+  all|conjunctive_search|disjunctive_search|counting_low_diversity|counting_high_diversity|counting_distinct|scene_description) ;;
+  *)
+    echo "ERROR: Unknown --task '${TASK}'" >&2
+    usage >&2
+    exit 2
+    ;;
+esac
+
 N_TRIALS_COUNTING="${N_TRIALS_COUNTING:-100}"
 N_TRIALS_SEARCH="${N_TRIALS_SEARCH:-100}"
 N_TRIALS_SCENE="${N_TRIALS_SCENE:-100}"
@@ -14,67 +63,15 @@ RENDER_SAMPLES="${RENDER_SAMPLES:-64}"   # lower = faster, higher = nicer
 WIDTH="${WIDTH:-640}"
 HEIGHT="${HEIGHT:-480}"
 
-render() {
-  local blender_task="$1"     # gen_blender.py --task (search/popout/counting_*/binding)
-  local dataset_name="$2"     # must match Hydra task_name (folder name)
-  local split="$3"            # used in filenames; we parse this for labels
-  local n_objects="$4"
-  local n_images="$5"
-  shift 5
-  local extra_args=("$@")
-
-  local out="${DATA_DIR}/vlm/3D/${dataset_name}"
-  mkdir -p "${out}/images" "${out}/scenes"
-
-  "${BLENDER_BIN}" --background --python "${ROOT_DIR}/3d-dataset-generation/gen_blender.py" -- \
-    --task "${blender_task}" \
-    --num_objects "${n_objects}" \
-    --num_images "${n_images}" \
-    --split "${split}" \
-    --filename_prefix "${dataset_name}" \
-    --render_num_samples "${RENDER_SAMPLES}" \
-    --width "${WIDTH}" --height "${HEIGHT}" \
-    --base_scene_blendfile "${ROOT_DIR}/3d-dataset-generation/blender_utils/base_scene.blend" \
-    --properties_json "${ROOT_DIR}/3d-dataset-generation/blender_utils/properties.json" \
-    --shape_dir "${ROOT_DIR}/3d-dataset-generation/blender_utils/shapes" \
-    --material_dir "${ROOT_DIR}/3d-dataset-generation/blender_utils/materials" \
-    --output_image_dir "${out}/images" \
-    --output_scene_dir "${out}/scenes" \
-    --output_scene_file "${out}/scenes/${dataset_name}_${split}.json" \
-    "${extra_args[@]}"
-}
-
-# 1) Conjunctive search (odd-ball present vs absent)
-for n in 5 10 15 20 25 30 35 40 45 50; do
-  render search                conjunctive_search "present_n${n}" "${n}" "${N_TRIALS_SEARCH}"
-  render search_counterfactual conjunctive_search "absent_n${n}"  "${n}" "${N_TRIALS_SEARCH}"
-done
-
-# 2) Disjunctive search (popout present vs uniform)
-for n in 5 10 15 20 25 30 35 40 45 50; do
-  render popout                disjunctive_search "popout_n${n}"  "${n}" "${N_TRIALS_SEARCH}"
-  render popout_counterfactual disjunctive_search "uniform_n${n}" "${n}" "${N_TRIALS_SEARCH}"
-done
-
-# 3) Counting variants (set sizes 1..20)
-for n in $(seq 1 20); do
-  render counting_min_distinctiveness counting_low_diversity  "n${n}" "${n}" "${N_TRIALS_COUNTING}"
-  render counting_max_distinctiveness counting_high_diversity "n${n}" "${n}" "${N_TRIALS_COUNTING}"
-  render counting_max_distinctiveness counting_distinct       "n${n}" "${n}" "${N_TRIALS_COUNTING}"
-done
-
-# 4) Scene description (uses binding renderer to get mixed shapes/colors)
-for n in 10 11 12 13 14 15; do
-  render binding scene_description "n${n}" "${n}" "${N_TRIALS_SCENE}" --num_features "${n}"
-done
-
-# 5) Build metadata.csv from per-image scene JSONs (what tasks/task.py expects)
-ROOT_DIR="${ROOT_DIR}" DATA_DIR="${DATA_DIR}" "${PYTHON_BIN}" - <<'PY'
+build_metadata() {
+  local only_dataset="$1"
+  ROOT_DIR="${ROOT_DIR}" DATA_DIR="${DATA_DIR}" ONLY_DATASET="${only_dataset}" "${PYTHON_BIN}" - <<'PY'
 import csv, json, os, re
 from pathlib import Path
 
 root = Path(os.environ["ROOT_DIR"]).resolve()
 data_dir = Path(os.environ["DATA_DIR"]).resolve()
+only_dataset = os.environ.get("ONLY_DATASET")
 
 datasets = {
   "conjunctive_search": "conjunctive",
@@ -84,6 +81,11 @@ datasets = {
   "counting_distinct": "counting",
   "scene_description": "scene_description",
 }
+
+if only_dataset:
+  if only_dataset not in datasets:
+    raise SystemExit(f"Unknown ONLY_DATASET={only_dataset!r}")
+  datasets = {only_dataset: datasets[only_dataset]}
 
 def write_csv(path: Path, fieldnames, rows):
   path.parent.mkdir(parents=True, exist_ok=True)
@@ -156,5 +158,97 @@ for name, kind in datasets.items():
   write_csv(base / "metadata.csv", fields, rows)
   print(f"Wrote {base/'metadata.csv'} ({len(rows)} rows)")
 PY
+}
 
-echo "Done. Datasets are in: ${DATA_DIR}/vlm/3D/*"
+render() {
+  local blender_task="$1"     # gen_blender.py --task (search/popout/counting_*/binding)
+  local dataset_name="$2"     # must match Hydra task_name (folder name)
+  local split="$3"            # used in filenames; we parse this for labels
+  local n_objects="$4"
+  local n_images="$5"
+  shift 5
+  local extra_args=("$@")
+
+  local out="${DATA_DIR}/vlm/3D/${dataset_name}"
+  mkdir -p "${out}/images" "${out}/scenes"
+
+  "${BLENDER_BIN}" --background --python "${ROOT_DIR}/3d-dataset-generation/gen_blender.py" -- \
+    --task "${blender_task}" \
+    --num_objects "${n_objects}" \
+    --num_images "${n_images}" \
+    --split "${split}" \
+    --filename_prefix "${dataset_name}" \
+    --render_num_samples "${RENDER_SAMPLES}" \
+    --width "${WIDTH}" --height "${HEIGHT}" \
+    --base_scene_blendfile "${ROOT_DIR}/3d-dataset-generation/blender_utils/base_scene.blend" \
+    --properties_json "${ROOT_DIR}/3d-dataset-generation/blender_utils/properties.json" \
+    --shape_dir "${ROOT_DIR}/3d-dataset-generation/blender_utils/shapes" \
+    --material_dir "${ROOT_DIR}/3d-dataset-generation/blender_utils/materials" \
+    --output_image_dir "${out}/images" \
+    --output_scene_dir "${out}/scenes" \
+    --output_scene_file "${out}/scenes/${dataset_name}_${split}.json" \
+    "${extra_args[@]}"
+}
+
+run_conjunctive_search() {
+  for n in 5 10 15 20 25 30 35 40 45 50; do
+    render search                conjunctive_search "present_n${n}" "${n}" "${N_TRIALS_SEARCH}"
+    render search_counterfactual conjunctive_search "absent_n${n}"  "${n}" "${N_TRIALS_SEARCH}"
+  done
+  build_metadata conjunctive_search
+}
+
+run_disjunctive_search() {
+  for n in 5 10 15 20 25 30 35 40 45 50; do
+    render popout                disjunctive_search "popout_n${n}"  "${n}" "${N_TRIALS_SEARCH}"
+    render popout_counterfactual disjunctive_search "uniform_n${n}" "${n}" "${N_TRIALS_SEARCH}"
+  done
+  build_metadata disjunctive_search
+}
+
+run_counting_low_diversity() {
+  for n in $(seq 1 20); do
+    render counting_min_distinctiveness counting_low_diversity "n${n}" "${n}" "${N_TRIALS_COUNTING}"
+  done
+  build_metadata counting_low_diversity
+}
+
+run_counting_high_diversity() {
+  for n in $(seq 1 20); do
+    render counting_max_distinctiveness counting_high_diversity "n${n}" "${n}" "${N_TRIALS_COUNTING}"
+  done
+  build_metadata counting_high_diversity
+}
+
+run_counting_distinct() {
+  for n in $(seq 1 20); do
+    render counting_max_distinctiveness counting_distinct "n${n}" "${n}" "${N_TRIALS_COUNTING}"
+  done
+  build_metadata counting_distinct
+}
+
+run_scene_description() {
+  for n in 10 11 12 13 14 15; do
+    render binding scene_description "n${n}" "${n}" "${N_TRIALS_SCENE}" --num_features "${n}"
+  done
+  build_metadata scene_description
+}
+
+case "${TASK}" in
+  all)
+    run_conjunctive_search
+    run_disjunctive_search
+    run_counting_low_diversity
+    run_counting_high_diversity
+    run_counting_distinct
+    run_scene_description
+    ;;
+  conjunctive_search) run_conjunctive_search ;;
+  disjunctive_search) run_disjunctive_search ;;
+  counting_low_diversity) run_counting_low_diversity ;;
+  counting_high_diversity) run_counting_high_diversity ;;
+  counting_distinct) run_counting_distinct ;;
+  scene_description) run_scene_description ;;
+esac
+
+echo "Done. Dataset(s) are in: ${DATA_DIR}/vlm/3D/*"

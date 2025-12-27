@@ -1,6 +1,6 @@
 #!/bin/bash
 # SLURM job for generating the 3D VLM datasets (runs generate_3d_vlm_datasets.sh).
-#SBATCH -J binding_3d_data_gen
+#SBATCH -J counting_low_diversity
 #SBATCH --output=slurm-%x.%j.out
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=32
@@ -41,4 +41,6 @@ export HYDRA_FULL_ERROR=1
 export PROJECT_ROOT="$PROJECT_DIR"
 
 # Run the 3D dataset generation script
-bash "$PROJECT_DIR/generate_3d_vlm_datasets.sh"
+# Valid tasks are: all, conjunctive_search, disjunctive_search, counting_low_diversity, 
+# counting_high_diversity, counting_distinct, scene_description
+bash generate_3d_vlm_datasets.sh --task scene_description
