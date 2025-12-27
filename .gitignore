@@ -11,4 +11,7 @@ model-weights/
 output/
 data/
 data/vlm/2D/scene_description/images/*
-**/*.png
+# ignore blender-assets
+blender-assets/
+analysis/results/
+*.log

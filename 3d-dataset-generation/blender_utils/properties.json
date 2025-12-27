@@ -1,0 +1,33 @@
+{
+  "shapes": {
+    "cube": "SmoothCube_v2",
+    "sphere": "Sphere",
+    "cylinder": "SmoothCylinder",
+    "cone": "Cone",
+    "diamond": "Diamond",
+    "hexagon": "Hexagon",
+    "prism": "Prism",
+    "pyramid": "Pyramid",
+    "torus": "Torus",
+    "bowl": "Bowl"
+  },
+  "colors": {
+    "black": [32, 32, 32],
+    "gray": [128, 128, 128],
+    "red": [192, 32, 32],
+    "blue": [32, 32, 192],
+    "green": [32, 192, 32],
+    "brown": [128, 64, 32],
+    "purple": [128, 32, 192],
+    "cyan": [64, 192, 192],
+    "yellow": [255, 255, 64],
+    "orange": [255, 128, 64]
+  },
+  "materials": {
+    "rubber": "Rubber"
+  },
+  "sizes": {
+    "large": 0.3,
+    "small": 0.3
+  }
+}

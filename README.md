@@ -125,10 +125,10 @@ Once you run all the tasks for a specific model you should have results that loo
             └── <model-name>.csv
 ```
 
-After this use `aggregate_vlm_2d.py` to summarize and aggregate the task outputs so that you end up with per-family summaries in `analysis/results/`:
+After this use `aggregate_vlm_2d.py` to summarize and aggregate the task outputs so that you end up with per-family summaries in `analysis/results/2D/`:
 
 ```
-analysis/results/
+analysis/results/2D/
 ├── <model-name>_counting.csv
 ├── <model-name>_rmts.csv
 ├── <model-name>_scene_description.csv
@@ -141,7 +141,7 @@ Use the command below (override paths if your directories differ):
 python aggregate_vlm_2d.py \
   --model-name <model-name> \
   --results-root ./output/vlm/2D \
-  --out-dir ./analysis/results
+  --out-dir ./analysis/results/2D
 ```
 
 ## Monitoring and Managing SLURM Jobs
@@ -188,3 +188,94 @@ DISABLE_TURBOMIND=1 pip install -e .
 ```
 
 Re-run your job after reinstalling; the patched build exposes the `hidden_size` attribute expected by the loader.
+
+## Generating 3D dataset
+
+The 3D workflow is two-step: (1) generate the datasets with `generate_3d_vlm_datasets.sh` (submit via `generate-dataset.sbatch` on Slurm), then (2) run the VLM experiments with `experiments_job_3d.sbatch` once the datasets are present.
+
+Before running experiments, generate the 3D datasets and metadata.
+
+3D dataset generation requires a Blender binary to render scenes from the `.blend` file into `.png` images.
+
+If you are running locally, install Blender and set the path to the binary (e.g. in `generate-dataset.sbatch`):
+
+```bash
+export BLENDER_BIN="/path/to/blender-binary/blender"
+test -x "$BLENDER_BIN" || { echo "ERROR: BLENDER_BIN not executable: $BLENDER_BIN"; exit 1; }
+```
+
+If you are running on an HPC cluster via Slurm, you can download a Blender binary to any folder and point `BLENDER_BIN` at it:
+
+```bash
+# download the latest blender
+wget https://ftp.nluug.nl/pub/graphics/blender/release/Blender5.0/blender-5.0.1-linux-x64.tar.xz
+
+# unzip using tar
+tar -xvf blender-5.0.1-linux-x64.tar.xz
+
+# if tar command does exist, try this 
+module load tar
+# then unzip the blender xz file.
+```
+
+Then update `generate-dataset.sbatch` to point to the extracted binary, e.g.:
+
+```bash
+export BLENDER_BIN="$HOME/binary/blender-5.0.1-linux-x64/blender"
+test -x "$BLENDER_BIN" || { echo "ERROR: BLENDER_BIN not executable: $BLENDER_BIN"; exit 1; }
+```
+
+Generate the 3D dataset with Blender (writes to `data/vlm/3D/...` by default).
+
+```bash
+# Run all tasks (default)
+BLENDER_BIN=blender bash ./generate_3d_vlm_datasets.sh
+
+# Run a single task
+BLENDER_BIN=blender bash ./generate_3d_vlm_datasets.sh --task conjunctive_search
+BLENDER_BIN=blender bash ./generate_3d_vlm_datasets.sh --task disjunctive_search
+BLENDER_BIN=blender bash ./generate_3d_vlm_datasets.sh --task counting_low_diversity
+BLENDER_BIN=blender bash ./generate_3d_vlm_datasets.sh --task counting_high_diversity
+BLENDER_BIN=blender bash ./generate_3d_vlm_datasets.sh --task counting_distinct
+BLENDER_BIN=blender bash ./generate_3d_vlm_datasets.sh --task scene_description
+
+# Show help / list tasks
+bash ./generate_3d_vlm_datasets.sh --help
+```
+
+Metadata is generated automatically after each task finishes:
+
+```bash
+ls ./data/vlm/3D/conjunctive_search/metadata.csv
+```
+
+### Running on SLURM (separate jobs per task)
+
+In your `sbatch` i.e `generate-dataset.sbatch` script, call the generator with `--task` so each job only produces one dataset and its `metadata.csv`:
+
+```bash
+# Example to run disjuncitvive_search edit sbatch script's last line as follows
+bash "$PROJECT_DIR/generate_3d_vlm_datasets.sh" --task disjunctive_search
+```
+
+Run tasks for 3D dataset
+```bash
+python run_vlm.py task=conjunctive_search task.task_variant=3D paths.root_dir="$(pwd)" paths.data_dir="$(pwd)/data" paths.output_dir="$(pwd)/output"
+```
+Or using the slurm job 
+```bash
+sbatch experiments_job_3d.sbatch
+```
+Inisde experiments_job_3d.sbatch you can enable specific task at a time so that you can submit multiple jobs using `sbatch experiments_job_3d.sbatch`. 
+E.g The following snippets only runs `conjunctive_search` when you submit the job. 
+![alt text](./docs/image.png)
+
+Or this can be automated in a way that submits separate job for each task. (TODO)
+### Aggregating 3D results
+
+After running the 3D tasks, aggregate results for one model from `output/vlm/3D` into `analysis/results/3D`:
+
+```bash
+# specify the exact CSV filename (model name) that that you wnat to aggregate for
+python aggregate_vlm_3d.py --model-name qwen3-vl-30b-a3b-instruct
+```
