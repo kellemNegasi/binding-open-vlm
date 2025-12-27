@@ -380,7 +380,7 @@ def main():
     parser = argparse.ArgumentParser(description="Aggregate 2D VLM task results.")
     parser.add_argument("--results-root", type=Path, default=Path("output/vlm/2D"))
     parser.add_argument("--model-name", required=True)
-    parser.add_argument("--out-dir", type=Path, default=Path("analysis/results"))
+    parser.add_argument("--out-dir", type=Path, default=Path("analysis/results/2D"))
     args = parser.parse_args()
 
     args.out_dir.mkdir(parents=True, exist_ok=True)

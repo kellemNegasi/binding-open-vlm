@@ -125,10 +125,10 @@ Once you run all the tasks for a specific model you should have results that loo
             └── <model-name>.csv
 ```
 
-After this use `aggregate_vlm_2d.py` to summarize and aggregate the task outputs so that you end up with per-family summaries in `analysis/results/`:
+After this use `aggregate_vlm_2d.py` to summarize and aggregate the task outputs so that you end up with per-family summaries in `analysis/results/2D/`:
 
 ```
-analysis/results/
+analysis/results/2D/
 ├── <model-name>_counting.csv
 ├── <model-name>_rmts.csv
 ├── <model-name>_scene_description.csv
@@ -141,7 +141,7 @@ Use the command below (override paths if your directories differ):
 python aggregate_vlm_2d.py \
   --model-name <model-name> \
   --results-root ./output/vlm/2D \
-  --out-dir ./analysis/results
+  --out-dir ./analysis/results/2D
 ```
 
 ## Monitoring and Managing SLURM Jobs
@@ -227,4 +227,21 @@ bash "$PROJECT_DIR/generate_3d_vlm_datasets.sh" --task disjunctive_search
 Run tasks for 3D dataset
 ```bash
 python run_vlm.py task=conjunctive_search task.task_variant=3D paths.root_dir="$(pwd)" paths.data_dir="$(pwd)/data" paths.output_dir="$(pwd)/output"
+```
+Or using the slurm job 
+```bash
+sbatch experiments_job_3d.sbatch
+```
+Inisde experiments_job_3d.sbatch you can enable specific task at a time so that you can submit multiple jobs using `sbatch experiments_job_3d.sbatch`. 
+E.g The following snippets only runs `conjunctive_search` when you submit the job. 
+![alt text](./docs/image.png)
+
+Or this can be automated in a way that submits separate job for each task. (TODO)
+### Aggregating 3D results
+
+After running the 3D tasks, aggregate results for one model from `output/vlm/3D` into `analysis/results/3D`:
+
+```bash
+# specify the exact CSV filename (model name) that that you wnat to aggregate for
+python aggregate_vlm_3d.py --model-name qwen3-vl-30b-a3b-instruct
 ```
