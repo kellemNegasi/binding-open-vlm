@@ -188,3 +188,15 @@ DISABLE_TURBOMIND=1 pip install -e .
 ```
 
 Re-run your job after reinstalling; the patched build exposes the `hidden_size` attribute expected by the loader.
+
+## Generating 3D dataset
+
+Generate 3D dataset 
+```bash
+# run (set BLENDER_BIN if blender isn't on PATH)
+BLENDER_BIN=blender ./generate_3d_vlm_datasets.sh
+```
+Run tasks for 3D dataset
+```bash
+python run_vlm.py task=conjunctive_search task.task_variant=3D paths.root_dir="$(pwd)" paths.data_dir="$(pwd)/data" paths.output_dir="$(pwd)/output"
+```
