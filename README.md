@@ -191,6 +191,10 @@ Re-run your job after reinstalling; the patched build exposes the `hidden_size` 
 
 ## Generating 3D dataset
 
+The 3D workflow is two-step: (1) generate the datasets with `generate_3d_vlm_datasets.sh` (submit via `generate-dataset.sbatch` on Slurm), then (2) run the VLM experiments with `experiments_job_3d.sbatch` once the datasets are present.
+
+Before running experiments, generate the 3D datasets and metadata.
+
 3D dataset generation requires a Blender binary to render scenes from the `.blend` file into `.png` images.
 
 If you are running locally, install Blender and set the path to the binary (e.g. in `generate-dataset.sbatch`):
