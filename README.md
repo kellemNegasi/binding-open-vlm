@@ -271,6 +271,25 @@ E.g The following snippets only runs `conjunctive_search` when you submit the jo
 ![alt text](./docs/image.png)
 
 Or this can be automated in a way that submits separate job for each task. (TODO)
+#### Results
+
+After running the experiments you should have a result in the following format
+
+```bash
+output/vlm/3D/
+├── conjunctive_search
+│   └── <model-name>.csv
+├── counting_distinct
+│   └── <model-name>.csv
+├── counting_high_diversity
+│   └── <model-name>.csv
+├── counting_low_diversity
+│   └── <model-name>.csv
+├── disjunctive_search
+│   └── <model-name>.csv
+└── scene_description
+    └── <model-name>.csv
+```
 ### Aggregating 3D results
 
 After running the 3D tasks, aggregate results for one model from `output/vlm/3D` into `analysis/results/3D`:
