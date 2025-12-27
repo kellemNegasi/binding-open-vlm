@@ -1,4 +1,3 @@
-cat > generate_3d_vlm_datasets.sh <<'SH'
 #!/usr/bin/env bash
 set -euo pipefail
 
@@ -159,9 +158,3 @@ for name, kind in datasets.items():
 PY
 
 echo "Done. Datasets are in: ${DATA_DIR}/vlm/3D/*"
-SH
-
-chmod +x generate_3d_vlm_datasets.sh
-
-# run (set BLENDER_BIN if blender isn't on PATH)
-BLENDER_BIN=blender ./generate_3d_vlm_datasets.sh

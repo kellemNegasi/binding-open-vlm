@@ -15,4 +15,4 @@ data/vlm/2D/scene_description/images/*
 # ignore blender-assets
 blender-assets/
 analysis/results/
-vlm-binding-main
+*.log

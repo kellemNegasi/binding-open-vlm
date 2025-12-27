@@ -22,22 +22,16 @@ INSIDE_BLENDER = True
 try:
   import bpy, bpy_extras
   from mathutils import Vector
-except ImportError as e:
+except ImportError:
   INSIDE_BLENDER = False
 
 parser = argparse.ArgumentParser()
 
 # Input options
 parser.add_argument('--base_scene_blendfile', default='blender_utils/base_scene.blend',
-    help="Base blender file on which all scenes are based; includes " +
-          "ground plane, lights, and camera.")
+    help="Base blender file on which all scenes are based; includes ground plane, lights, and camera.")
 parser.add_argument('--properties_json', default='blender_utils/properties.json',
-    help="JSON file defining objects, materials, sizes, and colors. " +
-         "The \"colors\" field maps from CLEVR color names to RGB values; " +
-         "The \"sizes\" field maps from CLEVR size names to scalars used to " +
-         "rescale object models; the \"materials\" and \"shapes\" fields map " +
-         "from CLEVR material and shape names to .blend files in the " +
-         "--object_material_dir and --shape_dir directories respectively.")
+    help="JSON file defining objects, materials, sizes, and colors.")
 parser.add_argument('--shape_dir', default='blender_utils/shapes',
     help="Directory where .blend files for object models are stored")
 parser.add_argument('--material_dir', default='blender_utils/materials',
@@ -49,93 +43,77 @@ parser.add_argument('--num_objects', default=20, type=int,
 parser.add_argument('--min_dist', default=0.2, type=float,
     help="The minimum allowed distance between object centers")
 parser.add_argument('--margin', default=0.1, type=float,
-    help="Along all cardinal directions (left, right, front, back), all " +
-         "objects will be at least this distance apart. This makes resolving " +
-         "spatial relationships slightly less ambiguous.")
+    help="Along all cardinal directions (left, right, front, back), all objects will be at least this distance apart.")
 parser.add_argument('--min_pixels_per_object', default=100, type=int,
-    help="All objects will have at least this many visible pixels in the " +
-         "final rendered images; this ensures that no objects are fully " +
-         "occluded by other objects.")
+    help="All objects will have at least this many visible pixels in the final rendered images.")
 parser.add_argument('--max_retries', default=500, type=int,
-    help="The number of times to try placing an object before giving up and " +
-         "re-placing all objects in the scene.")
+    help="The number of times to try placing an object before giving up and re-placing all objects.")
 
 # Output settings
 parser.add_argument('--start_idx', default=0, type=int,
-    help="The index at which to start for numbering rendered images. Setting " +
-         "this to non-zero values allows you to distribute rendering across " +
-         "multiple machines and recombine the results later.")
+    help="The index at which to start for numbering rendered images.")
 parser.add_argument('--num_images', default=5, type=int,
     help="The number of images to render")
 parser.add_argument('--filename_prefix', default='CLEVR',
-    help="This prefix will be prepended to the rendered images and JSON scenes")
+    help="Prefix prepended to rendered images and JSON scenes")
 parser.add_argument('--split', default='new',
-    help="Name of the split for which we are rendering. This will be added to " +
-         "the names of rendered images, and will also be stored in the JSON " +
-         "scene structure for each image.")
+    help="Split name stored in JSON and used in filenames.")
 parser.add_argument('--output_image_dir', default='../output/images/',
-    help="The directory where output images will be stored. It will be " +
-         "created if it does not exist.")
+    help="Directory where output images will be stored.")
 parser.add_argument('--output_scene_dir', default='../output/scenes/',
-    help="The directory where output JSON scene structures will be stored. " +
-         "It will be created if it does not exist.")
+    help="Directory where output JSON scene structures will be stored.")
 parser.add_argument('--output_scene_file', default='../output/CLEVR_scenes.json',
     help="Path to write a single JSON file containing all scene information")
 parser.add_argument('--version', default='1.0',
-    help="String to store in the \"version\" field of the generated JSON file")
+    help="String stored in the \"version\" field of the output JSON")
 parser.add_argument('--license',
     default="Creative Commons Attribution (CC-BY 4.0)",
-    help="String to store in the \"license\" field of the generated JSON file")
+    help="String stored in the \"license\" field of the output JSON")
 parser.add_argument('--date', default=dt.today().strftime("%m/%d/%Y"),
-    help="String to store in the \"date\" field of the generated JSON file; " +
-         "defaults to today's date")
-
+    help="String stored in the \"date\" field of the output JSON")
 
 # Rendering options
 parser.add_argument('--width', default=640, type=int,
-    help="The width (in pixels) for the rendered images")
+    help="Rendered image width in pixels")
 parser.add_argument('--height', default=480, type=int,
-    help="The height (in pixels) for the rendered images")
+    help="Rendered image height in pixels")
 parser.add_argument('--key_light_jitter', default=1.0, type=float,
-    help="The magnitude of random jitter to add to the key light position.")
+    help="Random jitter magnitude for key light position.")
 parser.add_argument('--fill_light_jitter', default=1.0, type=float,
-    help="The magnitude of random jitter to add to the fill light position.")
+    help="Random jitter magnitude for fill light position.")
 parser.add_argument('--back_light_jitter', default=1.0, type=float,
-    help="The magnitude of random jitter to add to the back light position.")
+    help="Random jitter magnitude for back light position.")
 parser.add_argument('--camera_jitter', default=0.5, type=float,
-    help="The magnitude of random jitter to add to the camera position")
+    help="Random jitter magnitude for camera position")
 parser.add_argument('--render_num_samples', default=512, type=int,
-    help="The number of samples to use when rendering. Larger values will " +
-         "result in nicer images but will cause rendering to take longer.")
+    help="Cycles samples for rendering")
 parser.add_argument('--render_min_bounces', default=8, type=int,
-    help="The minimum number of bounces to use for rendering.")
+    help="Minimum bounces for rendering.")
 parser.add_argument('--render_max_bounces', default=8, type=int,
-    help="The maximum number of bounces to use for rendering.")
+    help="Maximum bounces for rendering.")
 parser.add_argument('--render_tile_size', default=256, type=int,
-    help="The tile size to use for rendering. This should not affect the " +
-         "quality of the rendered image but may affect the speed; CPU-based " +
-         "rendering may achieve better performance using smaller tile sizes " +
-         "while larger tile sizes may be optimal for GPU-based rendering.")
+    help="(Legacy) tile size; not used in Blender 5.0 Cycles in the same way.")
 parser.add_argument('--task', default="counting", type=str,
-    help="The task to render images for. This will determine the types of " +
-         "objects, colors, materials, sizes, etc. that will be used.")
+    help="Task type controlling object/color choices.")
 parser.add_argument('--num_features', default=2, type=int,
-    help="The number of unique features to use for binding tasks")
+    help="Number of unique features for binding tasks")
 parser.add_argument('--override_output_dir', default=False, action='store_true',
     help="Whether to override the output directory")
+
 
 def main(args):
   num_digits = 6
   prefix = '%s_%s_' % (args.filename_prefix, args.split)
   img_template = '%s%%0%dd.png' % (prefix, num_digits)
   scene_template = '%s%%0%dd.json' % (prefix, num_digits)
-  blend_template = '%s%%0%dd.blend' % (prefix, num_digits)
+
   if args.override_output_dir:
     output_image_dir = args.output_image_dir.replace("images", args.task + "/images")
     output_scene_dir = args.output_scene_dir.replace("scenes", args.task + "/scenes")
   else:
     output_image_dir = args.output_image_dir
     output_scene_dir = args.output_scene_dir
+
   img_template = os.path.join(output_image_dir, img_template)
   scene_template = os.path.join(output_scene_dir, scene_template)
 
@@ -143,10 +121,12 @@ def main(args):
     os.makedirs(output_image_dir)
   if not os.path.isdir(output_scene_dir):
     os.makedirs(output_scene_dir)
-  
+
   all_scene_paths = []
   num_images = args.num_images
   num_objects = args.num_objects
+
+  objects_features = None
   if args.task == 'binding':
     with open(args.properties_json, 'r') as f:
       properties = json.load(f)
@@ -155,22 +135,29 @@ def main(args):
         rgba = [np.round(float(c) / 255.0, 2) for c in rgb] + [1.0]
         color_name_to_rgba[name] = rgba
       object_mapping = [(v, k) for k, v in properties['shapes'].items()]
-    task_conditions = list(product(range(1,num_objects+1), range(1,num_objects+1)))
+
+    task_conditions = list(product(range(1, num_objects + 1), range(1, num_objects + 1)))
     condition_feature_counts = np.vstack(task_conditions).sum(axis=1)
     counts, count_freq = np.unique(condition_feature_counts, return_counts=True)
+
     num_features_dict = {}
     for n_features, (n_shapes, n_colors) in zip(condition_feature_counts, task_conditions):
       num_features_dict[n_features] = [(n_shapes, n_colors)] + num_features_dict.get(n_features, [])
+
     objects_features = []
     for n_shapes, n_colors in num_features_dict[args.num_features]:
-      n_trials = int(np.ceil(args.num_images / count_freq[counts==args.num_features][0]))
+      n_trials = int(np.ceil(args.num_images / count_freq[counts == args.num_features][0]))
       shape_names = np.array([shape for shape, _ in object_mapping])
       color_names = np.array([color for color, _ in color_name_to_rgba.items()])
-      for i in range(n_trials):
-        unique_shape_inds = np.random.choice(len(shape_names), n_shapes, replace=False) # sample the unique shapes for the current trial.
-        shape_inds = np.concatenate([unique_shape_inds, np.random.choice(unique_shape_inds, num_objects-n_shapes, replace=True)])
-        unique_color_inds = np.random.choice(len(color_names), n_colors, replace=False)  # sample the unique colors for the current trial.
-        color_inds = np.concatenate([unique_color_inds, np.random.choice(unique_color_inds, num_objects-n_colors, replace=True)])
+      for _ in range(n_trials):
+        n_shapes = min(n_shapes, len(shape_names))
+        n_shapes = min(n_shapes, n_objects)
+        unique_shape_inds = np.random.choice(len(shape_names), n_shapes, replace=False)
+        shape_inds = np.concatenate([unique_shape_inds, np.random.choice(unique_shape_inds, num_objects - n_shapes, replace=True)])
+        n_colors = min(n_colors, len(color_names))
+        n_colors = min(n_colors, n_objects)
+        unique_color_inds = np.random.choice(len(color_names), n_colors, replace=False)
+        color_inds = np.concatenate([unique_color_inds, np.random.choice(unique_color_inds, num_objects - n_colors, replace=True)])
         colors = color_names[color_inds]
         shapes = shape_names[shape_inds]
         trial_features = list(zip(shapes, colors))
@@ -178,32 +165,37 @@ def main(args):
     random.shuffle(objects_features)
 
   for i in range(num_images):
-      logger.info('\nRendering image %d / %d' % (i, num_images))
-      num_objects = args.num_objects 
-      index = i + 100 * num_objects + args.start_idx 
-      if args.task == 'binding':
-        index = i + 100 * args.num_features + args.start_idx
-        num_objects = args.num_objects
-      img_path = img_template % (index)
-      logger.info('\nImage path: %s, index: %d' % (img_path, index))
-      scene_path = scene_template % (index)
-      all_scene_paths.append(scene_path)
-      logger.info('\nRendering scene %d with %d objects' % (index, num_objects))
-      render_scene(args,
-        num_objects=num_objects,
-        output_index=(index),
-        output_split=args.split,
-        output_image=img_path,
-        output_scene=scene_path,
-        objects_features=objects_features[i] if args.task == 'binding' else None
-      )
+    logger.info('\nRendering image %d / %d' % (i, num_images))
+    num_objects = args.num_objects
+    index = i + 100 * num_objects + args.start_idx
 
-  # After rendering all images, combine the JSON files for each scene into a
-  # single JSON file.
+    if args.task == 'binding':
+      index = i + 100 * args.num_features + args.start_idx
+      num_objects = args.num_objects
+
+    img_path = img_template % (index)
+    scene_path = scene_template % (index)
+    all_scene_paths.append(scene_path)
+
+    logger.info('\nImage path: %s, index: %d' % (img_path, index))
+    logger.info('\nRendering scene %d with %d objects' % (index, num_objects))
+
+    render_scene(
+      args,
+      num_objects=num_objects,
+      output_index=index,
+      output_split=args.split,
+      output_image=img_path,
+      output_scene=scene_path,
+      objects_features=objects_features[i] if (args.task == 'binding' and objects_features is not None) else None
+    )
+
+  # Combine per-scene JSON files into one
   all_scenes = []
   for scene_path in all_scene_paths:
     with open(scene_path, 'r') as f:
       all_scenes.append(json.load(f))
+
   output = {
     'info': {
       'date': args.date,
@@ -216,15 +208,15 @@ def main(args):
   with open(args.output_scene_file, 'w') as f:
     json.dump(output, f)
 
+
 def generate_isoluminant_colors(num_colors, saturation=1, lightness=0.8, mu=0.5, sigma=0.1, mode="min"):
-  if mode=="max":
+  if mode == "max":
     hues = np.linspace(0, 1, num_colors, endpoint=False)
   elif mode == "intermediate":
     mu = np.random.uniform(0, 1)
     sigma = 1e-1
     hues = np.random.normal(loc=mu, scale=sigma, size=num_colors) % 1.0
   elif mode == "min":
-    # sample mu
     mu = np.random.uniform(0, 1)
     sigma = 1e-4
     hues = np.random.normal(loc=mu, scale=sigma, size=num_colors) % 1.0
@@ -233,6 +225,7 @@ def generate_isoluminant_colors(num_colors, saturation=1, lightness=0.8, mu=0.5,
   hsl_colors = [(hue, saturation, lightness) for hue in hues]
   rgb_colors = [colorsys.hsv_to_rgb(*color) for color in hsl_colors]
   return rgb_colors
+
 
 def render_scene(args,
     num_objects=5,
@@ -243,68 +236,75 @@ def render_scene(args,
     objects_features=None
   ):
 
-  # Load the main blendfile
   bpy.ops.wm.open_mainfile(filepath=args.base_scene_blendfile)
 
-  # Load materials
   load_materials(args.material_dir)
 
-  # Set render arguments so we can get pixel coordinates later.
-  # We use functionality specific to the CYCLES renderer so BLENDER_RENDER
-  # cannot be used.
-  render_args = bpy.context.scene.render
+  scene = bpy.context.scene
+  render_args = scene.render
+
   render_args.engine = "CYCLES"
   render_args.filepath = output_image
   render_args.resolution_x = args.width
   render_args.resolution_y = args.height
   render_args.resolution_percentage = 100
-  render_args.tile_x = args.render_tile_size
-  render_args.tile_y = args.render_tile_size
 
-  # Some CYCLES-specific stuff
-  bpy.data.worlds['World'].cycles.sample_as_light = True
-  bpy.context.scene.cycles.blur_glossy = 2.0
-  bpy.context.scene.cycles.samples = args.render_num_samples
-  bpy.context.scene.cycles.transparent_min_bounces = args.render_min_bounces
-  bpy.context.scene.cycles.transparent_max_bounces = args.render_max_bounces
+  # NOTE: tile_x / tile_y are not reliably available/used in modern Cycles, so we omit them.
 
-  # This will give ground-truth information about the scene and its objects
+  # Cycles settings
+  try:
+    bpy.data.worlds['World'].cycles.sample_as_light = True
+  except Exception:
+    pass
+
+  scene.cycles.blur_glossy = 2.0
+  scene.cycles.samples = args.render_num_samples
+  # transparent bounces
+  if hasattr(scene.cycles, "transparent_min_bounces"):
+      scene.cycles.transparent_min_bounces = args.render_min_bounces  # old Blender
+  # else: Blender 5.x doesn't have it; ignore
+
+  if hasattr(scene.cycles, "transparent_max_bounces"):
+    scene.cycles.transparent_max_bounces = args.render_max_bounces
+
+  # Turn off denoise for deterministic pixel counting renders (if present)
+  if hasattr(scene.cycles, "use_denoising"):
+    scene.cycles.use_denoising = False
+
   scene_struct = {
-      'split': output_split,
-      'image_index': output_index,
-      'image_filename': os.path.basename(output_image),
-      'objects': [],
-      'directions': {},
+    'split': output_split,
+    'image_index': output_index,
+    'image_filename': os.path.basename(output_image),
+    'objects': [],
+    'directions': {},
   }
 
-  # Put a plane on the ground so we can compute cardinal directions
-  bpy.ops.mesh.primitive_plane_add(radius=5)
+  # Add temp plane to compute directions
+  bpy.ops.mesh.primitive_plane_add(size=5)
   plane = bpy.context.object
 
   def rand(L):
     return 2.0 * L * (random.random() - 0.5)
 
-  # Add random jitter to camera position
+  # Camera jitter
   if args.camera_jitter > 0:
-    for i in range(3):
-      bpy.data.objects['Camera'].location[i] += rand(args.camera_jitter)
+    cam = bpy.data.objects.get('Camera')
+    if cam is not None:
+      for i in range(3):
+        cam.location[i] += rand(args.camera_jitter)
 
-  # Figure out the left, up, and behind directions along the plane and record
-  # them in the scene structure
   camera = bpy.data.objects['Camera']
+
   plane_normal = plane.data.vertices[0].normal
-  cam_behind = camera.matrix_world.to_quaternion() * Vector((0, 0, -1))
-  cam_left = camera.matrix_world.to_quaternion() * Vector((-1, 0, 0))
-  cam_up = camera.matrix_world.to_quaternion() * Vector((0, 1, 0))
+  cam_behind = camera.matrix_world.to_quaternion() @ Vector((0, 0, -1))
+  cam_left = camera.matrix_world.to_quaternion() @ Vector((-1, 0, 0))
+  cam_up = camera.matrix_world.to_quaternion() @ Vector((0, 1, 0))
   plane_behind = (cam_behind - cam_behind.project(plane_normal)).normalized()
   plane_left = (cam_left - cam_left.project(plane_normal)).normalized()
   plane_up = cam_up.project(plane_normal).normalized()
 
-  # Delete the plane; we only used it for normals anyway. The base scene file
-  # contains the actual ground plane.
   delete_object(plane)
 
-  # Save all six axis-aligned directions in the scene struct
   scene_struct['directions']['behind'] = tuple(plane_behind)
   scene_struct['directions']['front'] = tuple(-plane_behind)
   scene_struct['directions']['left'] = tuple(plane_left)
@@ -312,23 +312,23 @@ def render_scene(args,
   scene_struct['directions']['above'] = tuple(plane_up)
   scene_struct['directions']['below'] = tuple(-plane_up)
 
-  # Add random jitter to lamp positions
-  if args.key_light_jitter > 0:
+  # Light jitter (names must match your base scene)
+  if args.key_light_jitter > 0 and bpy.data.objects.get('Lamp_Key') is not None:
     for i in range(3):
       bpy.data.objects['Lamp_Key'].location[i] += rand(args.key_light_jitter)
-  if args.back_light_jitter > 0:
+  if args.back_light_jitter > 0 and bpy.data.objects.get('Lamp_Back') is not None:
     for i in range(3):
       bpy.data.objects['Lamp_Back'].location[i] += rand(args.back_light_jitter)
-  if args.fill_light_jitter > 0:
+  if args.fill_light_jitter > 0 and bpy.data.objects.get('Lamp_Fill') is not None:
     for i in range(3):
       bpy.data.objects['Lamp_Fill'].location[i] += rand(args.fill_light_jitter)
 
-  # Now make some random objects
   objects, blender_objects = add_random_objects(scene_struct, num_objects, args, camera, objects_features)
   logger.info('\nObjects added')
-  # Render the scene and dump the scene data structure
+
   scene_struct['objects'] = objects
   scene_struct['relationships'] = compute_all_relationships(scene_struct)
+
   logger.info('\nStarting rendering')
   while True:
     try:
@@ -337,16 +337,13 @@ def render_scene(args,
     except Exception as e:
       logger.info('\nRendering error %s' % e)
       print(e)
+
   logger.info('\nRendering done')
   with open(output_scene, 'w') as f:
     json.dump(scene_struct, f, indent=2)
 
-def add_random_objects(scene_struct, num_objects, args, camera, objects_features=None):
-  """
-  Add random objects to the current blender scene
-  """
 
-  # Load the property file
+def add_random_objects(scene_struct, num_objects, args, camera, objects_features=None):
   with open(args.properties_json, 'r') as f:
     properties = json.load(f)
     color_name_to_rgba = {}
@@ -376,37 +373,27 @@ def add_random_objects(scene_struct, num_objects, args, camera, objects_features
   positions = []
   objects = []
   blender_objects = []
+
   for i in range(num_objects):
-    max_retries = args.max_retries + 10*i
+    max_retries = args.max_retries + 10 * i
     logger.info('\nAdding object %d of %d\n' % (i, num_objects))
-    # Choose a random size
+
     size_name, r = random.choice(size_mapping)
 
-    # Try to place the object, ensuring that we don't intersect any existing
-    # objects and that we are more than the desired margin away from all existing
-    # objects along all cardinal directions.
     num_tries = 0
     while True:
-      # If we try and fail to place an object too many times, then delete all
-      # the objects in the scene and start over.
       num_tries += 1
       if num_tries > max_retries:
         logger.info("Max retries exceeded: %d" % max_retries)
         for obj in blender_objects:
           delete_object(obj)
-        return add_random_objects(scene_struct, num_objects, args, camera)
-      # while True:
-      #   radius = 4
-      #   x = random.uniform(-radius, radius)
-      #   y = random.uniform(-radius, radius)
-      #   if abs(x) + abs(y) < radius * 1.5:
-      #     break
+        return add_random_objects(scene_struct, num_objects, args, camera, objects_features)
+
       radius = random.uniform(0, 4.5)
       alpha = random.uniform(0, 2 * math.pi)
       x, y = radius * math.cos(alpha), radius * math.sin(alpha)
       logger.info('\nTrying to place object at %f, %f, within %f' % (x, y, radius))
-      # Check to make sure the new object is further than min_dist from all
-      # other objects, and further than margin along the four cardinal directions
+
       dists_good = True
       margins_good = True
       for (xx, yy, rr) in positions:
@@ -420,9 +407,6 @@ def add_random_objects(scene_struct, num_objects, args, camera, objects_features
           assert direction_vec[2] == 0
           margin = dx * direction_vec[0] + dy * direction_vec[1]
           if 0 < margin < args.margin:
-            # logger.info('\nBroken margin: %s, %s, %s' % (margin, args.margin, direction_name))
-            print(margin, args.margin, direction_name)
-            print('BROKEN MARGIN!')
             margins_good = False
             break
         if not margins_good:
@@ -438,7 +422,7 @@ def add_random_objects(scene_struct, num_objects, args, camera, objects_features
     elif args.task == 'counting':
       obj_name, obj_name_out = "Sphere", dict(object_mapping)["Sphere"]
       color_name, rgba = "black", dict(color_name_to_rgba)["black"]
-    elif args.task == 'counting_min_distinctiveness' or args.task == 'counting_intermediate' or args.task == 'counting_max_distinctiveness':
+    elif args.task in ('counting_min_distinctiveness', 'counting_intermediate', 'counting_max_distinctiveness'):
       obj_name, obj_name_out = "Sphere", dict(object_mapping)["Sphere"]
       color_name, rgba = "color_" + str(i), dict(color_name_to_rgba)["color_" + str(i)]
     elif args.task == 'popout':
@@ -473,69 +457,56 @@ def add_random_objects(scene_struct, num_objects, args, camera, objects_features
       color_name, rgba = "green", dict(color_name_to_rgba)["green"]
     else:
       raise ValueError('Unrecognized task')
+
     logger.info('\nAdding object: %s, %s, %s' % (obj_name_out, color_name, rgba))
 
-    # For SmoothCube_v2, adjust the size a bit
     if obj_name == 'SmoothCube_v2':
       r *= 0.9
 
-    # Choose random orientation for the object.
-    theta = 360.0 * random.random()
+    theta_deg = 360.0 * random.random()
 
-    # Actually add the object to the scene
-    add_object(args.shape_dir, obj_name, r, (x, y), theta=theta)
-    obj = bpy.context.object
+    # Add object (Blender 5-safe append/link)
+    add_object(args.shape_dir, obj_name, r, (x, y), theta=theta_deg)
+    obj = bpy.context.view_layer.objects.active
     blender_objects.append(obj)
     positions.append((x, y, r))
 
-    # Attach a random material
     mat_name, mat_name_out = random.choice(material_mapping)
     add_material(mat_name, Color=rgba, logger=logger)
 
-    # Record data about the object in the scene data structure
     pixel_coords = get_camera_coords(camera, obj.location)
     objects.append({
       'shape': obj_name_out,
       'size': size_name,
       'material': mat_name_out,
       '3d_coords': tuple(obj.location),
-      'rotation': theta,
+      'rotation': theta_deg,
       'pixel_coords': pixel_coords,
       'color': color_name,
     })
 
-  # Check that all objects are at least partially visible in the rendered image
   all_visible = check_visibility(blender_objects, args.min_pixels_per_object)
   if not all_visible:
-    # If any of the objects are fully occluded then start over; delete all
-    # objects from the scene and place them all again.
-    print('Some objects are occluded; replacing objects')
     logger.info('\nSome objects are occluded; replacing objects')
     for obj in blender_objects:
       delete_object(obj)
-    return add_random_objects(scene_struct, num_objects, args, camera)
+    return add_random_objects(scene_struct, num_objects, args, camera, objects_features)
 
   return objects, blender_objects
 
 
 def compute_all_relationships(scene_struct, eps=0.2):
-  """
-  Computes relationships between all pairs of objects in the scene.
-  
-  Returns a dictionary mapping string relationship names to lists of lists of
-  integers, where output[rel][i] gives a list of object indices that have the
-  relationship rel with object i. For example if j is in output['left'][i] then
-  object j is left of object i.
-  """
   all_relationships = {}
   for name, direction_vec in scene_struct['directions'].items():
-    if name == 'above' or name == 'below': continue
+    if name in ('above', 'below'):
+      continue
     all_relationships[name] = []
     for i, obj1 in enumerate(scene_struct['objects']):
       coords1 = obj1['3d_coords']
       related = set()
       for j, obj2 in enumerate(scene_struct['objects']):
-        if obj1 == obj2: continue
+        if obj1 == obj2:
+          continue
         coords2 = obj2['3d_coords']
         diff = [coords2[k] - coords1[k] for k in [0, 1, 2]]
         dot = sum(diff[k] * direction_vec[k] for k in [0, 1, 2])
@@ -546,24 +517,27 @@ def compute_all_relationships(scene_struct, eps=0.2):
 
 
 def check_visibility(blender_objects, min_pixels_per_object):
-  """
-  Check whether all objects in the scene have some minimum number of visible
-  pixels; to accomplish this we assign random (but distinct) colors to all
-  objects, and render using no lighting or shading or antialiasing; this
-  ensures that each object is just a solid uniform color. We can then count
-  the number of pixels of each color in the output image to check the visibility
-  of each object.
-
-  Returns True if all objects are visible and False otherwise.
-  """
   f, path = tempfile.mkstemp(suffix='.png')
+  os.close(f)
+
   object_colors = render_shadeless(blender_objects, path=path)
+
   img = bpy.data.images.load(path)
   p = list(img.pixels)
   color_count = Counter((p[i], p[i+1], p[i+2], p[i+3])
                         for i in range(0, len(p), 4))
   logger.info('\nColor count: %s' % color_count)
-  os.remove(path)
+
+  # cleanup
+  try:
+    bpy.data.images.remove(img)
+  except Exception:
+    pass
+  try:
+    os.remove(path)
+  except Exception:
+    pass
+
   if len(color_count) != len(blender_objects) + 1:
     return False
   for _, count in color_count.most_common():
@@ -574,72 +548,93 @@ def check_visibility(blender_objects, min_pixels_per_object):
 
 def render_shadeless(blender_objects, path='flat.png'):
   """
-  Render a version of the scene with shading disabled and unique materials
-  assigned to all objects, and return a set of all colors that should be in the
-  rendered image. The image itself is written to path. This is used to ensure
-  that all objects will be visible in the final rendered scene.
+  Blender 5.0 replacement for 2.7x "shadeless + BLENDER_RENDER":
+  - Render with Cycles
+  - Hide lights/ground from render
+  - Assign unique EMISSION materials (flat colors)
   """
-  render_args = bpy.context.scene.render
+  scene = bpy.context.scene
+  render_args = scene.render
 
-  # Cache the render args we are about to clobber
   old_filepath = render_args.filepath
   old_engine = render_args.engine
-  old_use_antialiasing = render_args.use_antialiasing
 
-  # Override some render settings to have flat shading
+  # Cache some Cycles settings we’ll restore
+  old_samples = getattr(scene.cycles, "samples", None)
+  old_denoise = getattr(scene.cycles, "use_denoising", None)
+
   render_args.filepath = path
-  render_args.engine = 'BLENDER_RENDER'
-  render_args.use_antialiasing = False
+  render_args.engine = 'CYCLES'
 
-  # Move the lights and ground to layer 2 so they don't render
-  set_layer(bpy.data.objects['Lamp_Key'], 2)
-  set_layer(bpy.data.objects['Lamp_Fill'], 2)
-  set_layer(bpy.data.objects['Lamp_Back'], 2)
-  set_layer(bpy.data.objects['Ground'], 2)
+  # Make the pass fast and reduce blending/AA artifacts
+  scene.cycles.samples = 1
+  if hasattr(scene.cycles, "use_denoising"):
+    scene.cycles.use_denoising = False
 
-  # Add random shadeless materials to all objects
+  # Hide lights + ground from render
+  hidden = {}
+  for name in ['Lamp_Key', 'Lamp_Fill', 'Lamp_Back', 'Ground']:
+    obj = bpy.data.objects.get(name)
+    if obj is not None:
+      hidden[name] = obj.hide_render
+      obj.hide_render = True
+
   object_colors = set()
   old_materials = []
+
   for i, obj in enumerate(blender_objects):
-    old_materials.append(obj.data.materials[0])
-    bpy.ops.material.new()
-    mat = bpy.data.materials['Material']
-    mat.name = 'Material_%d' % i
+    old_mat = obj.data.materials[0] if obj.data.materials else None
+    old_materials.append(old_mat)
+
+    mat = bpy.data.materials.new(name=f"FlatMat_{i}")
+    mat.use_nodes = True
+    nt = mat.node_tree
+    nodes = nt.nodes
+    links = nt.links
+    nodes.clear()
+
+    out = nodes.new(type="ShaderNodeOutputMaterial")
+    emit = nodes.new(type="ShaderNodeEmission")
+
     while True:
       r, g, b = [random.random() for _ in range(3)]
-      if (r, g, b) not in object_colors: break
+      if (r, g, b) not in object_colors:
+        break
     object_colors.add((r, g, b))
-    mat.diffuse_color = [r, g, b]
-    mat.use_shadeless = True
-    obj.data.materials[0] = mat
 
-  # Render the scene
+    emit.inputs["Color"].default_value = (r, g, b, 1.0)
+    emit.inputs["Strength"].default_value = 1.0
+    links.new(emit.outputs["Emission"], out.inputs["Surface"])
+
+    obj.data.materials.clear()
+    obj.data.materials.append(mat)
+
   bpy.ops.render.render(write_still=True)
 
-  # Undo the above; first restore the materials to objects
-  for mat, obj in zip(old_materials, blender_objects):
-    obj.data.materials[0] = mat
+  # Restore object materials
+  for old_mat, obj in zip(old_materials, blender_objects):
+    obj.data.materials.clear()
+    if old_mat is not None:
+      obj.data.materials.append(old_mat)
 
-  # Move the lights and ground back to layer 0
-  set_layer(bpy.data.objects['Lamp_Key'], 0)
-  set_layer(bpy.data.objects['Lamp_Fill'], 0)
-  set_layer(bpy.data.objects['Lamp_Back'], 0)
-  set_layer(bpy.data.objects['Ground'], 0)
+  # Restore hide_render
+  for name, old_state in hidden.items():
+    obj = bpy.data.objects.get(name)
+    if obj is not None:
+      obj.hide_render = old_state
 
-  # Set the render settings back to what they were
+  # Restore render settings
   render_args.filepath = old_filepath
   render_args.engine = old_engine
-  render_args.use_antialiasing = old_use_antialiasing
+  if old_samples is not None:
+    scene.cycles.samples = old_samples
+  if old_denoise is not None and hasattr(scene.cycles, "use_denoising"):
+    scene.cycles.use_denoising = old_denoise
 
   return object_colors
 
 
 def extract_args(input_argv=None):
-  """
-  Pull out command-line arguments after "--". Blender ignores command-line flags
-  after --, so this lets us forward command line arguments from the blender
-  invocation to our own script.
-  """
   if input_argv is None:
     input_argv = sys.argv
   output_argv = []
@@ -653,28 +648,16 @@ def parse_args(parser, argv=None):
   return parser.parse_args(extract_args(argv))
 
 
-# I wonder if there's a better way to do this?
 def delete_object(obj):
-  """ Delete a specified blender object """
-  for o in bpy.data.objects:
-    o.select = False
-  obj.select = True
-  bpy.ops.object.delete()
+  """Delete a specified blender object (Blender 2.8+ / 5.0 compatible)."""
+  view_layer = bpy.context.view_layer
+  bpy.ops.object.select_all(action='DESELECT')
+  obj.select_set(True)
+  view_layer.objects.active = obj
+  bpy.ops.object.delete(use_global=False)
 
 
 def get_camera_coords(cam, pos):
-  """
-  For a specified point, get both the 3D coordinates and 2D pixel-space
-  coordinates of the point from the perspective of the camera.
-
-  Inputs:
-  - cam: Camera object
-  - pos: Vector giving 3D world-space position
-
-  Returns a tuple of:
-  - (px, py, pz): px and py give 2D image-space coordinates; pz gives depth
-    in the range [-1, 1]
-  """
   scene = bpy.context.scene
   x, y, z = bpy_extras.object_utils.world_to_camera_view(scene, cam, pos)
   scale = scene.render.resolution_percentage / 100.0
@@ -685,120 +668,111 @@ def get_camera_coords(cam, pos):
   return (px, py, z)
 
 
-def set_layer(obj, layer_idx):
-  """ Move an object to a particular layer """
-  # Set the target layer to True first because an object must always be on
-  # at least one layer.
-  obj.layers[layer_idx] = True
-  for i in range(len(obj.layers)):
-    obj.layers[i] = (i == layer_idx)
-
-
 def add_object(object_dir, name, scale, loc, theta=0):
   """
-  Load an object from a file. We assume that in the directory object_dir, there
-  is a file named "$name.blend" which contains a single object named "$name"
-  that has unit size and is centered at the origin.
-
-  - scale: scalar giving the size that the object should be in the scene
-  - loc: tuple (x, y) giving the coordinates on the ground plane where the
-    object should be placed.
+  Blender 5 compatible object import/link:
+  - Loads object datablock from .blend
+  - Links it into the current collection
+  - Applies transforms without context-sensitive operators
   """
-  # First figure out how many of this object are already in the scene so we can
-  # give the new object a unique name
-  count = 0
-  for obj in bpy.data.objects:
-    if obj.name.startswith(name):
-      count += 1
+  filepath = os.path.join(object_dir, f'{name}.blend')
 
-  name_path = name
-  filepath = os.path.join(object_dir, '%s.blend' % name_path)
+  with bpy.data.libraries.load(filepath, link=False) as (data_from, data_to):
+    src_name = name if name in data_from.objects else (data_from.objects[0] if data_from.objects else None)
+    if src_name is None:
+      raise RuntimeError(f"No objects found in {filepath}")
+    data_to.objects = [src_name]
 
-  with bpy.data.libraries.load(filepath, link=True) as (data_from, data_to):
-    name = [name for name in data_from.objects][0]
+  obj = data_to.objects[0]
+  if obj is None:
+    raise RuntimeError(f"Failed to load object '{name}' from {filepath}")
 
-  filename = os.path.join(object_dir, '%s.blend' % name_path, 'Object', name)
-  bpy.ops.wm.append(filename=filename)
+  # Ensure unique name
+  base = obj.name
+  count = sum(o.name.startswith(base) for o in bpy.data.objects)
+  obj.name = f"{base}_{count}"
 
-  # Give it a new name to avoid conflicts
-  new_name = '%s_%d' % (name, count)
-  bpy.data.objects[name].name = new_name
+  # Link into the current collection
+  bpy.context.collection.objects.link(obj)
 
-  # Set the new object as active, then rotate, scale, and translate it
+  # Apply transforms
   x, y = loc
-  bpy.context.scene.objects.active = bpy.data.objects[new_name]
-  bpy.context.object.rotation_euler[2] = theta
-  bpy.ops.transform.resize(value=(scale, scale, scale))
-  bpy.ops.transform.translate(value=(x, y, scale))
+  obj.scale = (scale, scale, scale)
+  obj.location = (x, y, scale)
+
+  # theta given in degrees in original code; convert to radians for Blender
+  obj.rotation_euler[2] = math.radians(theta)
+
+  # Make active
+  bpy.context.view_layer.objects.active = obj
 
 
 def load_materials(material_dir):
   """
-  Load materials from a directory. We assume that the directory contains .blend
-  files with one material each. The file X.blend has a single NodeTree item named
-  X; this NodeTree item must have a "Color" input that accepts an RGBA value.
+  Load materials from a directory. Each .blend contains a NodeTree named X with a "Color" input.
   """
   for fn in os.listdir(material_dir):
-    if not fn.endswith('.blend'): continue
+    if not fn.endswith('.blend'):
+      continue
     name = os.path.splitext(fn)[0]
-    filepath = os.path.join(material_dir, fn, 'NodeTree', name)
-    bpy.ops.wm.append(filename=filepath)
+
+    # Append the node group by filepath + directory + filename (more robust than legacy single-string append)
+    blend_path = os.path.join(material_dir, fn)
+    directory = os.path.join(blend_path, 'NodeTree')
+    filepath = os.path.join(directory, name)
+    bpy.ops.wm.append(filepath=filepath, directory=directory, filename=name)
 
 
 def add_material(name, **properties):
   """
-  Create a new material and assign it to the active object. "name" should be the
-  name of a material that has been previously loaded using load_materials.
+  Create a new material and assign it to the active object.
+  "name" must be a node group already loaded into bpy.data.node_groups.
   """
-  # Attach the new material to the active object
-  # Make sure it doesn't already have materials
   obj = bpy.context.active_object
-  # check if obj has materials attribute
-  for i in range(len(obj.data.materials)):
-    obj.data.materials.pop()
+  if obj is None:
+    obj = bpy.context.view_layer.objects.active
+  if obj is None:
+    raise RuntimeError("No active object found to assign a material.")
 
-  # Figure out how many materials are already in the scene
+  # Clear existing materials
+  if hasattr(obj.data, "materials"):
+    obj.data.materials.clear()
+
   mat_count = len(bpy.data.materials)
+  mat = bpy.data.materials.new(name=f"Material_{mat_count}")
+  mat.use_nodes = True
 
-  # Create a new material; it is not attached to anything and
-  # it will be called "Material"
-  bpy.ops.material.new()
-
-  # Get a reference to the material we just created and rename it;
-  # then the next time we make a new material it will still be called
-  # "Material" and we will still be able to look it up by name
-  mat = bpy.data.materials['Material']
-  mat.name = 'Material_%d' % mat_count
-  
-  assert len(obj.data.materials) == 0
   obj.data.materials.append(mat)
-  # Find the output node of the new material
+
+  # Ensure an output node exists
   output_node = None
   for n in mat.node_tree.nodes:
-    if n.name == 'Material Output':
+    if n.type == 'OUTPUT_MATERIAL':
       output_node = n
       break
+  if output_node is None:
+    output_node = mat.node_tree.nodes.new('ShaderNodeOutputMaterial')
 
-  # Add a new GroupNode to the node tree of the active material,
-  # and copy the node tree from the preloaded node group to the
-  # new group node. This copying seems to happen by-value, so
-  # we can create multiple materials of the same type without them
-  # clobbering each other
+  # Add group node
   group_node = mat.node_tree.nodes.new('ShaderNodeGroup')
+  if name not in bpy.data.node_groups:
+    raise RuntimeError(f"Node group '{name}' not found. Did load_materials() load it?")
   group_node.node_tree = bpy.data.node_groups[name]
-  logger = properties.get('logger', None)
-  # Find and set the "Color" input of the new group node
+
+  _logger = properties.get('logger', None)
+
   for inp in group_node.inputs:
     if inp.name in properties:
-      logger.info("color input: %s" % properties[inp.name])
+      if _logger is not None:
+        _logger.info("Setting input %s: %s" % (inp.name, properties[inp.name]))
       inp.default_value = properties[inp.name]
 
-  # Wire the output of the new group node to the input of
-  # the MaterialOutput node
+  # Connect Shader -> Surface
   mat.node_tree.links.new(
-      group_node.outputs['Shader'],
-      output_node.inputs['Surface'],
+    group_node.outputs.get('Shader'),
+    output_node.inputs.get('Surface')
   )
+
 
 if __name__ == '__main__':
   if INSIDE_BLENDER:
@@ -810,10 +784,9 @@ if __name__ == '__main__':
   else:
     print('This script is intended to be called from blender like this:')
     print()
-    print('blender --background --python render_images.py -- [args]')
+    print('blender --background --python gen-blender.py -- [args]')
     print()
     print('You can also run as a standalone python script to view all')
     print('arguments like this:')
     print()
-    print('python render_images.py --help')
-
+    print('python gen-blender.py --help')
