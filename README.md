@@ -191,11 +191,39 @@ Re-run your job after reinstalling; the patched build exposes the `hidden_size` 
 
 ## Generating 3D dataset
 
-Generate 3D dataset 
+Generate the 3D dataset with Blender (writes to `data/vlm/3D/...` by default).
+
 ```bash
-# run (set BLENDER_BIN if blender isn't on PATH)
-BLENDER_BIN=blender ./generate_3d_vlm_datasets.sh
+# Run all tasks (default)
+BLENDER_BIN=blender bash ./generate_3d_vlm_datasets.sh
+
+# Run a single task
+BLENDER_BIN=blender bash ./generate_3d_vlm_datasets.sh --task conjunctive_search
+BLENDER_BIN=blender bash ./generate_3d_vlm_datasets.sh --task disjunctive_search
+BLENDER_BIN=blender bash ./generate_3d_vlm_datasets.sh --task counting_low_diversity
+BLENDER_BIN=blender bash ./generate_3d_vlm_datasets.sh --task counting_high_diversity
+BLENDER_BIN=blender bash ./generate_3d_vlm_datasets.sh --task counting_distinct
+BLENDER_BIN=blender bash ./generate_3d_vlm_datasets.sh --task scene_description
+
+# Show help / list tasks
+bash ./generate_3d_vlm_datasets.sh --help
 ```
+
+Metadata is generated automatically after each task finishes:
+
+```bash
+ls ./data/vlm/3D/conjunctive_search/metadata.csv
+```
+
+### Running on SLURM (separate jobs per task)
+
+In your `sbatch` script, call the generator with `--task` so each job only produces one dataset and its `metadata.csv`:
+
+```bash
+# Example (inside an sbatch script, after setting BLENDER_BIN and cd'ing into the repo)
+bash "$PROJECT_DIR/generate_3d_vlm_datasets.sh" --task disjunctive_search
+```
+
 Run tasks for 3D dataset
 ```bash
 python run_vlm.py task=conjunctive_search task.task_variant=3D paths.root_dir="$(pwd)" paths.data_dir="$(pwd)/data" paths.output_dir="$(pwd)/output"

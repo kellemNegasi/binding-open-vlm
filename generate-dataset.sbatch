@@ -1,6 +1,6 @@
 #!/bin/bash
 # SLURM job for generating the 3D VLM datasets (runs generate_3d_vlm_datasets.sh).
-#SBATCH -J counting_low_diversity
+#SBATCH -J scene_description
 #SBATCH --output=slurm-%x.%j.out
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=32
