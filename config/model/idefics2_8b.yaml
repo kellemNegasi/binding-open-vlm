@@ -1,0 +1,9 @@
+# config/model/qwen3_vl_30b.yaml
+defaults:
+  - base_vlm_local
+_target_: models.idefics2_model.Idefics2Model
+model_name: idefics2_8b
+weights_path: '${paths.root_dir}/model-weights/idefics2-8b'
+batch_size: 2            # adjust for VRAM
+max_tokens: 100
+prompt_format: null      # or set if the prompt needs wrapping

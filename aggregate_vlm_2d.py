@@ -298,7 +298,8 @@ def summarize_counting(results_root: Path, model: str) -> Optional[pd.DataFrame]
 
 def summarize_scene_description(results_root: Path, model: str) -> Optional[pd.DataFrame]:
     """Measure scene-description errors grouped by number of objects/triplets."""
-    task_dirs = ["scene_description", "scene_description_balanced"]
+    # task_dirs = ["scene_description", "scene_description_balanced"]
+    task_dirs = ["scene_description_balanced"] # let's only use the result with triplet_count column.
     frames = []
     for task_name in task_dirs:
         csv_path = results_root / task_name / f"{model}.csv"
