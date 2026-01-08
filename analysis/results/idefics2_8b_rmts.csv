@@ -1,0 +1,9 @@
+condition,subtask,n_trials,n_correct,accuracy
+unified,full,200,97,0.485
+unified,relations,200,50,0.25
+unified,features,200,17,0.085
+unified,features2,200,0,0.0
+decomposed,full,200,97,0.485
+decomposed,relations,200,50,0.25
+decomposed,features,200,17,0.085
+decomposed,features2,200,0,0.0
