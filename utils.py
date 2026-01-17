@@ -1,7 +1,7 @@
 import os
 import base64
 from glob import glob
-from typing import Dict
+from typing import Dict, List, Tuple, Union
 
 import numpy as np
 from PIL import Image
@@ -11,7 +11,8 @@ def paste_shape(shape: np.ndarray,
                 positions: np.ndarray, 
                 canvas_img: Image.Image, 
                 i: int, 
-                img_size: int = 40) -> np.ndarray:
+                img_size: int = 40,
+                return_masks: bool = False):
     """
     Paste a shape onto a canvas image at a random position.
 
@@ -21,6 +22,7 @@ def paste_shape(shape: np.ndarray,
     canvas_img (Image.Image): The canvas image.
     i (int): The index of the current shape.
     img_size (int): The size of the shape. Default is 12.
+    return_masks (bool): Whether to also return an instance mask and bounding box.
 
     Returns:
     np.ndarray: The updated positions of the shapes on the canvas.
@@ -32,7 +34,29 @@ def paste_shape(shape: np.ndarray,
         position = np.array(np.random.randint(0, 256-img_size, size=2)).reshape(1,-1)
     canvas_img.paste(img, tuple(position.squeeze()))
     positions[i] = position
-    return positions
+
+    if not return_masks:
+        return positions
+
+    # Define silhouette as any non-white pixel (no alpha channel).
+    img_arr = np.asarray(img)  # (H, W, 3), uint8
+    obj_mask_patch = np.any(img_arr < 255, axis=2).astype(np.uint8) * 255  # (H, W), {0,255}
+    mask_patch_img = Image.fromarray(obj_mask_patch, mode='L')
+    mask_img = Image.new('L', (256, 256), 0)
+    x, y = map(int, position.squeeze())
+    mask_img.paste(mask_patch_img, (x, y))
+
+    ys, xs = np.where(obj_mask_patch > 0)
+    if len(xs) == 0 or len(ys) == 0:
+        box = (x, y, x, y)
+    else:
+        x0 = x + int(xs.min())
+        y0 = y + int(ys.min())
+        x1 = x + int(xs.max()) + 1
+        y1 = y + int(ys.max()) + 1
+        box = (x0, y0, x1, y1)
+
+    return positions, mask_img, box
 
 
 def color_shape(img: np.ndarray, rgb: np.ndarray, bg_color: float = 1, all_black: bool = False) -> np.ndarray:
@@ -97,7 +121,7 @@ def encode_image(image_path):
         return base64.b64encode(image_file.read()).decode('utf-8')
     
 
-def place_shapes(shape_imgs, img_size=32):
+def place_shapes(shape_imgs, img_size=32, return_masks: bool = False):
     # Define the canvas to draw images on, font, and drawing tool.
     canvas = np.ones((3, 256, 256), dtype=np.uint8) * 255
     canvas = np.transpose(canvas, (1, 2, 0))  # Transpose to (256x256x3) for PIL compatibility.
@@ -105,8 +129,20 @@ def place_shapes(shape_imgs, img_size=32):
     # Add the shapes to the canvas.
     n_shapes = len(shape_imgs)
     positions = np.zeros([n_shapes, 2])
+    masks: List[Image.Image] = []
+    boxes: List[Tuple[int, int, int, int]] = []
     for i, img in enumerate(shape_imgs):
-        positions = paste_shape(img, positions, canvas_img, i, img_size=img_size)
+        if return_masks:
+            positions, mask_img, box = paste_shape(
+                img, positions, canvas_img, i, img_size=img_size, return_masks=True
+            )
+            masks.append(mask_img)
+            boxes.append(box)
+        else:
+            positions = paste_shape(img, positions, canvas_img, i, img_size=img_size)
+
+    if return_masks:
+        return canvas_img, masks, boxes
     return canvas_img
 
 
