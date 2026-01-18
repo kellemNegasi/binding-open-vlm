@@ -15,3 +15,4 @@ data/vlm/2D/scene_description/images/*
 blender-assets/
 analysis/results/
 *.log
+*.zip
