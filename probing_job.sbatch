@@ -46,7 +46,7 @@ SEED=0
 LAYERS="0,10,20"
 
 echo "[$(date --iso-8601=seconds)] 1) Generate masked dataset"
-python probing/00_generate_masked_scene_desc_dataset.py \
+python probing/generate_masked_scene_desc_dataset.py \
   --out_dir "$DATASET_DIR" \
   --n_objects "$N_OBJECTS" --n_trials "$N_TRIALS" --img_size "$IMG_SIZE" --seed "$SEED"
 
@@ -58,7 +58,7 @@ python probing/debug_token_positions.py \
   --device auto --dtype auto
 
 echo "[$(date --iso-8601=seconds)] 3) Extract per-layer image-token hidden states"
-python probing/10_extract_image_tokens.py \
+python probing/extract_image_tokens.py \
   --dataset_dir "$DATASET_DIR" \
   --out_dir "$OUT_DIR" \
   --model "$MODEL_KEY" \
@@ -67,16 +67,15 @@ python probing/10_extract_image_tokens.py \
   --device auto --dtype auto
 
 echo "[$(date --iso-8601=seconds)] 4) Pool per-object embeddings using masks"
-python probing/20_build_object_embeddings.py \
+python probing/build_object_embeddings.py \
   --dataset_dir "$DATASET_DIR" \
   --tokens_dir "$OUT_DIR/tokens" \
   --out_dir "$OUT_DIR"
 
 echo "[$(date --iso-8601=seconds)] 5) Train linear probes (default split by sample_id)"
-python probing/30_train_probes.py \
+python probing/train_probes.py \
   --embeddings_path "$OUT_DIR/embeddings.npz" \
   --out_dir "$OUT_DIR/probes" \
   --test_split 0.2 --seed "$SEED" --C 1.0
 
 echo "[$(date --iso-8601=seconds)] Done"
-

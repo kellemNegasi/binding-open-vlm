@@ -11,7 +11,7 @@ This folder contains a minimal pipeline to probe object bindings by:
 1) Generate a masked dataset (does **not** write into benchmark dataset folders):
 
 ```bash
-python probing/00_generate_masked_scene_desc_dataset.py \
+python probing/generate_masked_scene_desc_dataset.py \
   --out_dir data/probing/scene_description_balanced_2d \
   --n_objects 10 --n_trials 100 --img_size 40 --seed 0
 ```
@@ -19,7 +19,7 @@ python probing/00_generate_masked_scene_desc_dataset.py \
 2) Extract image-token hidden states (Qwen support included):
 
 ```bash
-python probing/10_extract_image_tokens.py \
+python probing/extract_image_tokens.py \
   --dataset_dir data/probing/scene_description_balanced_2d \
   --out_dir data/probing/scene_description_balanced_2d_out \
   --model qwen3_vl_30b \
@@ -43,7 +43,7 @@ python probing/debug_token_positions.py \
 If your local PyTorch build supports `torch.xpu` (e.g., via Intel Extension for PyTorch), you can request XPU:
 
 ```bash
-python probing/10_extract_image_tokens.py \
+python probing/extract_image_tokens.py \
   --dataset_dir data/probing/scene_description_balanced_2d \
   --out_dir data/probing/scene_description_balanced_2d_out_qwen25_xpu \
   --model qwen2.5-VL-7B-Instruct \
@@ -54,7 +54,7 @@ python probing/10_extract_image_tokens.py \
 3) Pool per-object embeddings using masks:
 
 ```bash
-python probing/20_build_object_embeddings.py \
+python probing/build_object_embeddings.py \
   --dataset_dir data/probing/scene_description_balanced_2d \
   --tokens_dir data/probing/scene_description_balanced_2d_out/tokens \
   --out_dir data/probing/scene_description_balanced_2d_out
@@ -63,7 +63,7 @@ python probing/20_build_object_embeddings.py \
 4) Train linear probes:
 
 ```bash
-python probing/30_train_probes.py \
+python probing/train_probes.py \
   --embeddings_path data/probing/scene_description_balanced_2d_out/embeddings.npz \
   --out_dir data/probing/scene_description_balanced_2d_out/probes \
   --test_split 0.2 --seed 0 --C 1.0
@@ -71,13 +71,13 @@ python probing/30_train_probes.py \
 
 ### Train/test splitting note
 
-By default, `probing/30_train_probes.py` splits by `sample_id` (image), meaning all objects from the same image stay in the same split.
+By default, `probing/train_probes.py` splits by `sample_id` (image), meaning all objects from the same image stay in the same split.
 This avoids leakage where objects from the same rendered scene appear in both train and test.
 
 If you explicitly want to split over *objects* (older behavior), you can use:
 
 ```bash
-python probing/30_train_probes.py \
+python probing/train_probes.py \
   --embeddings_path data/probing/scene_description_balanced_2d_out/embeddings.npz \
   --out_dir data/probing/scene_description_balanced_2d_out/probes \
   --split_mode object

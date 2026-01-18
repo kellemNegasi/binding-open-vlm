@@ -57,7 +57,7 @@ def main() -> None:
         if args.split_mode == "sample_id" and sample_id is None:
             raise KeyError(
                 "Requested split_mode=sample_id but embeddings.npz does not contain `sample_id_per_object`. "
-                "Re-run `probing/20_build_object_embeddings.py` to regenerate embeddings."
+                "Re-run `probing/build_object_embeddings.py` to regenerate embeddings."
             )
 
         results: dict[str, dict] = {}
