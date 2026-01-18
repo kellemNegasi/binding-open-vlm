@@ -4,7 +4,7 @@ from pathlib import Path
 
 import numpy as np
 from sklearn.linear_model import LogisticRegression
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import GroupShuffleSplit, train_test_split
 from sklearn.metrics import accuracy_score
 
 
@@ -31,6 +31,17 @@ def main() -> None:
     parser.add_argument("--test_split", type=float, default=0.2)
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--C", type=float, default=1.0)
+    parser.add_argument(
+        "--split_mode",
+        type=str,
+        default="sample_id",
+        choices=["sample_id", "object"],
+        help=(
+            "How to form train/test splits. "
+            "`sample_id` keeps all objects from the same image in the same split (recommended; default). "
+            "`object` splits over objects directly, which can place objects from the same image in both train and test."
+        ),
+    )
     args = parser.parse_args()
 
     out_dir = Path(args.out_dir)
@@ -42,17 +53,31 @@ def main() -> None:
         y_shape = z["y_shape"]
         y_conj = z["y_conj"]
         triplet = z["triplet_count_per_object"]
+        sample_id = z.get("sample_id_per_object", None)
+        if args.split_mode == "sample_id" and sample_id is None:
+            raise KeyError(
+                "Requested split_mode=sample_id but embeddings.npz does not contain `sample_id_per_object`. "
+                "Re-run `probing/20_build_object_embeddings.py` to regenerate embeddings."
+            )
 
         results: dict[str, dict] = {}
         for layer in layers:
             X = z[f"X_{layer}"]
 
-            idx_train, idx_test = train_test_split(
-                np.arange(len(X)),
-                test_size=args.test_split,
-                random_state=args.seed,
-                stratify=y_conj if len(np.unique(y_conj)) > 1 else None,
-            )
+            indices = np.arange(len(X))
+            if args.split_mode == "sample_id":
+                # Split by image (group), so all objects from the same rendered scene
+                # go to either train or test (avoids leakage from near-duplicate context).
+                splitter = GroupShuffleSplit(n_splits=1, test_size=args.test_split, random_state=args.seed)
+                idx_train, idx_test = next(splitter.split(indices, groups=sample_id))
+            else:
+                # Split by object: objects from the same image might land in both splits.
+                idx_train, idx_test = train_test_split(
+                    indices,
+                    test_size=args.test_split,
+                    random_state=args.seed,
+                    stratify=y_conj if len(np.unique(y_conj)) > 1 else None,
+                )
 
             layer_result: dict[str, dict] = {}
             for name, y in [("color", y_color), ("shape", y_shape), ("conjunction", y_conj)]:
@@ -93,4 +118,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

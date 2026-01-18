@@ -6,12 +6,16 @@ class QwenModel(LocalVLModel):
         
     def __init__(self, prompt_format, **kwargs):
         super().__init__(**kwargs)
-        self.pipe = pipeline(model_path=self.weights_path)
+        # Lazily initialize lmdeploy pipeline so probing/introspection can instantiate
+        # the wrapper without requiring the lmdeploy runtime/device to be available.
+        self.pipe = None
         self._hf_model = None
         self._hf_processor = None
         self._hf_components_key = None
         
     def run_batch(self, batch):
+        if self.pipe is None:
+            self.pipe = pipeline(model_path=self.weights_path)
         image_paths = self.get_image_paths(batch)
         prompts = []
         for (_, row), image_path in zip(batch.iterrows(), image_paths):
@@ -51,6 +55,9 @@ class QwenModel(LocalVLModel):
                 "Hidden-state introspection for Qwen requires `torch` and `transformers`."
             ) from e
 
+        if device is not None:
+            device = device.lower()
+
         dtype_map = {
             None: "auto",
             "auto": "auto",
@@ -63,14 +70,36 @@ class QwenModel(LocalVLModel):
         }
         torch_dtype = dtype_map.get((dtype or "auto").lower(), "auto")
 
-        # For large models, let HF place weights automatically (device_map='auto').
-        device_map = "auto" if device in (None, "auto") else "auto"
+        # Device handling:
+        # - default/auto: let HF/Accelerate decide (device_map='auto')
+        # - xpu: load on CPU then move to XPU (device_map=None) to avoid CUDA assumptions
+        load_kwargs = dict(trust_remote_code=True)
+        if torch_dtype != "auto":
+            load_kwargs["torch_dtype"] = torch_dtype
+
+        if device in (None, "auto"):
+            load_kwargs["device_map"] = "auto"
+        elif device == "xpu":
+            # Some environments require IPEX for XPU; attempt import but don't hard-require it here.
+            try:  # pragma: no cover
+                import intel_extension_for_pytorch  # noqa: F401
+            except Exception:
+                pass
+            if not hasattr(torch, "xpu") or not torch.xpu.is_available():
+                raise RuntimeError(
+                    "Requested device=xpu but torch.xpu is not available. "
+                    "Install/enable the XPU backend (e.g., Intel Extension for PyTorch) and retry."
+                )
+            load_kwargs["device_map"] = None
+        else:
+            raise ValueError(f"Unsupported device={device!r}. Use auto or xpu.")
+
         hf_model = AutoModelForVision2Seq.from_pretrained(
             self.weights_path,
-            device_map=device_map,
-            torch_dtype=torch_dtype,
-            trust_remote_code=True,
+            **load_kwargs,
         )
+        if device == "xpu":
+            hf_model.to("xpu")
         hf_model.eval()
 
         processor = AutoProcessor.from_pretrained(self.weights_path, trust_remote_code=True)

@@ -27,6 +27,30 @@ python probing/10_extract_image_tokens.py \
   --layers 0,10,20
 ```
 
+### Optional: debug image-token positions
+
+To sanity-check that we are extracting hidden states from *image patch tokens* (not the text tokens), run:
+
+```bash
+python probing/debug_token_positions.py \
+  --model qwen3_vl_30b \
+  --prompt_path prompts/scene_description_2D_parse.txt \
+  --dataset_dir data/probing/scene_description_balanced_2d
+```
+
+### Running on XPU (Qwen2.5-VL-7B)
+
+If your local PyTorch build supports `torch.xpu` (e.g., via Intel Extension for PyTorch), you can request XPU:
+
+```bash
+python probing/10_extract_image_tokens.py \
+  --dataset_dir data/probing/scene_description_balanced_2d \
+  --out_dir data/probing/scene_description_balanced_2d_out_qwen25_xpu \
+  --model qwen2.5-VL-7B-Instruct \
+  --device xpu --dtype bf16 \
+  --layers 0,10,20
+```
+
 3) Pool per-object embeddings using masks:
 
 ```bash
@@ -45,6 +69,20 @@ python probing/30_train_probes.py \
   --test_split 0.2 --seed 0 --C 1.0
 ```
 
+### Train/test splitting note
+
+By default, `probing/30_train_probes.py` splits by `sample_id` (image), meaning all objects from the same image stay in the same split.
+This avoids leakage where objects from the same rendered scene appear in both train and test.
+
+If you explicitly want to split over *objects* (older behavior), you can use:
+
+```bash
+python probing/30_train_probes.py \
+  --embeddings_path data/probing/scene_description_balanced_2d_out/embeddings.npz \
+  --out_dir data/probing/scene_description_balanced_2d_out/probes \
+  --split_mode object
+```
+
 ## Adding support for a new model
 
 `probing/model_introspect.py` currently extracts image-token hidden states via an HF forward pass.
@@ -54,4 +92,3 @@ python probing/30_train_probes.py \
   - prepare model inputs with the processor,
   - run a forward pass with `output_hidden_states=True`,
   - identify which sequence positions correspond to image tokens (and return them).
-

@@ -22,10 +22,11 @@ class ImageHiddenStates:
 
 def load_model_from_hydra(model_name: str):
     """Instantiate a repo model wrapper via Hydra config (like `run_vlm.py`)."""
-    from hydra import compose, initialize
+    from hydra import compose, initialize_config_dir
     from hydra.utils import instantiate
 
-    with initialize(version_base=None, config_path=str(root / "config")):
+    # `initialize()` requires a *relative* config_path; use initialize_config_dir for an absolute path.
+    with initialize_config_dir(version_base=None, config_dir=str(root / "config")):
         cfg = compose(config_name="run", overrides=[f"model={model_name}", "task=default", "paths=default"])
     # Many wrappers require `task` at construction time; allow `task=None` for probing use-cases.
     return instantiate(cfg.model, task=None)
@@ -101,6 +102,10 @@ def extract_image_hidden_states(
     import torch
 
     hf_model, processor = model.get_hf_components(device=device, dtype=dtype)
+    try:
+        target_device = next(hf_model.parameters()).device
+    except StopIteration:  # pragma: no cover
+        target_device = getattr(hf_model, "device", None) or torch.device("cpu")
     tokenizer = getattr(processor, "tokenizer", None)
     if tokenizer is None:
         raise NotImplementedError("Processor does not expose a tokenizer; cannot identify image tokens.")
@@ -109,7 +114,7 @@ def extract_image_hidden_states(
     inputs = processor(text=[prompt], images=[image], return_tensors="pt", padding=True)
     for k, v in list(inputs.items()):
         if torch.is_tensor(v):
-            inputs[k] = v.to(hf_model.device)
+            inputs[k] = v.to(target_device)
 
     with torch.no_grad():
         outputs = hf_model(**inputs, output_hidden_states=True, return_dict=True)
@@ -155,4 +160,3 @@ def extract_image_hidden_states(
         h_patches=h_patches,
         w_patches=w_patches,
     )
-
