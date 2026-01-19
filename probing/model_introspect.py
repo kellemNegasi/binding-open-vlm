@@ -39,21 +39,89 @@ def _maybe_prepend_image_token(prompt: str) -> str:
 
 
 def _single_token_id(tokenizer, token_text: str) -> Optional[int]:
+    """Best-effort lookup for special token IDs.
+
+    Some tokenizers do not round-trip special tokens through `encode()` as a single ID.
+    Prefer direct vocab / added-vocab lookup, then fall back to `convert_tokens_to_ids`,
+    and finally accept `encode()` only when it returns a single ID.
+    """
+    # 1) Direct vocab lookup (fast + reliable for special tokens).
+    try:
+        vocab = tokenizer.get_vocab()
+        if token_text in vocab:
+            return int(vocab[token_text])
+    except Exception:
+        pass
+
+    # 2) Added vocab (common for additional special tokens).
+    try:
+        added = tokenizer.get_added_vocab()
+        if token_text in added:
+            return int(added[token_text])
+    except Exception:
+        pass
+
+    # 3) convert_tokens_to_ids (may return unk_token_id if missing).
+    try:
+        tid = tokenizer.convert_tokens_to_ids(token_text)
+        if tid is not None:
+            unk = getattr(tokenizer, "unk_token_id", None)
+            if unk is None or int(tid) != int(unk):
+                return int(tid)
+    except Exception:
+        pass
+
+    # 4) Last resort: accept encode() only if it produces exactly one token id.
     try:
         ids = tokenizer.encode(token_text, add_special_tokens=False)
+        if isinstance(ids, list) and len(ids) == 1:
+            return int(ids[0])
     except Exception:
-        return None
-    if isinstance(ids, list) and len(ids) == 1:
-        return int(ids[0])
+        pass
+
     return None
 
 
 def _infer_image_token_indices(tokenizer, input_ids) -> Any:
     import torch
 
+    # Qwen-VL style (common): a vision span demarcated by vision_start / vision_end,
+    # or repeated image_pad tokens. Keep candidates extensible since different releases
+    # may register these as "added" tokens rather than normal vocab entries.
     candidates_pad = ["<|image_pad|>"]
-    candidates_vstart = ["<|vision_start|>", "<|vision_start|>"]
-    candidates_vend = ["<|vision_end|>", "<|vision_end|>"]
+    candidates_vstart = ["<|vision_start|>"]
+    candidates_vend = ["<|vision_end|>"]
+
+    def _discover_from_special_tokens(needle: str) -> list[str]:
+        toks: list[str] = []
+        for t in getattr(tokenizer, "additional_special_tokens", []) or []:
+            if isinstance(t, str) and needle in t:
+                toks.append(t)
+        try:
+            special_map = tokenizer.special_tokens_map_extended
+        except Exception:
+            special_map = {}
+        for v in (special_map or {}).values():
+            if isinstance(v, str):
+                v = [v]
+            if isinstance(v, (list, tuple)):
+                for t in v:
+                    if isinstance(t, str) and needle in t:
+                        toks.append(t)
+        # preserve order, de-dupe
+        seen = set()
+        out = []
+        for t in toks:
+            if t not in seen:
+                seen.add(t)
+                out.append(t)
+        return out
+
+    # If the canonical candidates aren't registered as single tokens, fall back to any special tokens
+    # that contain the expected substrings (e.g., different delimiter styles across versions).
+    candidates_pad = candidates_pad + _discover_from_special_tokens("image_pad")
+    candidates_vstart = candidates_vstart + _discover_from_special_tokens("vision_start")
+    candidates_vend = candidates_vend + _discover_from_special_tokens("vision_end")
 
     image_pad_id = next((tid for t in candidates_pad if (tid := _single_token_id(tokenizer, t)) is not None), None)
     vstart_id = next((tid for t in candidates_vstart if (tid := _single_token_id(tokenizer, t)) is not None), None)
@@ -73,10 +141,18 @@ def _infer_image_token_indices(tokenizer, input_ids) -> Any:
         if len(idx) > 0:
             return idx
 
+    try:
+        specials = list(getattr(tokenizer, "additional_special_tokens", []) or [])
+        specials = [t for t in specials if isinstance(t, str)]
+        hint = [t for t in specials if any(s in t for s in ("vision", "image"))][:20]
+    except Exception:
+        hint = []
+
     raise ValueError(
         "Unable to infer image token positions. "
         "For Qwen-VL models, ensure the processor inserts repeated `<|image_pad|>` tokens, "
-        "or update `_infer_image_token_indices()` for this wrapper."
+        "or update `_infer_image_token_indices()` for this wrapper. "
+        f"Tokenizer additional_special_tokens (vision/image-related, first 20): {hint}"
     )
 
 

@@ -83,7 +83,14 @@ def main() -> None:
         image = Image.new("RGB", (256, 256), color=(255, 255, 255))
 
     model = load_model_from_hydra(args.model)
-    hf_model, processor = model.get_hf_components(device=args.device, dtype=args.dtype)
+    # Only need the processor/tokenizer to inspect input_ids, so avoid loading HF model weights.
+    if not getattr(model, "weights_path", None):
+        raise ValueError(f"Model wrapper {type(model).__name__} does not expose `weights_path`; cannot load processor.")
+
+    from transformers import AutoProcessor
+
+    processor = AutoProcessor.from_pretrained(model.weights_path, trust_remote_code=True)
+
     tokenizer = processor.tokenizer
 
     inputs = processor(text=[prompt], images=[image], return_tensors="pt", padding=True)
@@ -135,4 +142,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
