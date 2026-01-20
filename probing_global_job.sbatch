@@ -7,9 +7,9 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=16
 #SBATCH --partition=gpu
-#SBATCH --gres=gpu:a100-80g
+#SBATCH --gres=gpu:h200-141g
 #SBATCH --mem=64G
-#SBATCH -t 01:00:00
+#SBATCH -t 10:00:00
 
 set -euo pipefail
 
@@ -25,8 +25,8 @@ cd "$PROJECT_DIR"
 
 export PROJECT_ROOT="$PROJECT_DIR"
 
-MODEL_KEY="${MODEL_KEY:-qwen2.5-VL-7B-Instruct}"
-MODEL_TAG="${MODEL_TAG:-qwen2.5-VL-7B-Instruct}"
+MODEL_KEY="${MODEL_KEY:-qwen3-vl-30b-a3b-instruct}"
+MODEL_TAG="${MODEL_TAG:-qwen3-vl-30b-a3b-instruct}"
 DATASET_DIR="${DATASET_DIR:-data/probing/scene_description_balanced_2d}"
 LAYERS="${LAYERS:-0,10,20}"
 
