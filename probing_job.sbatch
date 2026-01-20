@@ -8,7 +8,7 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=16
 #SBATCH --partition=gpu
-#SBATCH --gres=gpu:a100-80g:1
+#SBATCH --gres=gpu:h200-141g
 #SBATCH --mem=64G
 #SBATCH -t 06:00:00
 
@@ -32,11 +32,11 @@ export PROJECT_ROOT="$PROJECT_DIR"
 # export HF_HOME="${HF_HOME:-$SCRATCH/.cache/huggingface}"
 # export HF_HUB_CACHE="${HF_HUB_CACHE:-$HF_HOME}"
 
-MODEL_KEY="qwen3_vl_30b"
+MODEL_KEY="qwen3-vl-30b-a3b-instruct"
 PROMPT_PATH="prompts/scene_description_2D_parse.txt"
 
 DATASET_DIR="data/probing/scene_description_balanced_2d"
-OUT_DIR="data/probing/scene_description_balanced_2d_out_qwen3_vl_30b"
+OUT_DIR="data/probing/scene_description_balanced_2d_out_qwen3-vl-30b-a3b-instruct"
 
 N_OBJECTS=10
 N_TRIALS=100
@@ -45,32 +45,32 @@ SEED=0
 
 LAYERS="0,10,20"
 
-echo "[$(date --iso-8601=seconds)] 1) Generate masked dataset"
-python probing/generate_masked_scene_desc_dataset.py \
-  --out_dir "$DATASET_DIR" \
-  --n_objects "$N_OBJECTS" --n_trials "$N_TRIALS" --img_size "$IMG_SIZE" --seed "$SEED"
+# echo "[$(date --iso-8601=seconds)] 1) Generate masked dataset"
+# python probing/generate_masked_scene_desc_dataset.py \
+#   --out_dir "$DATASET_DIR" \
+#   --n_objects "$N_OBJECTS" --n_trials "$N_TRIALS" --img_size "$IMG_SIZE" --seed "$SEED" --skip_if_exists
 
-echo "[$(date --iso-8601=seconds)] 2) Debug token positions (sanity check image token slicing)"
-python probing/debug_token_positions.py \
-  --model "$MODEL_KEY" \
-  --prompt_path "$PROMPT_PATH" \
-  --dataset_dir "$DATASET_DIR" \
-  --device auto --dtype auto
+# echo "[$(date --iso-8601=seconds)] 2) Debug token positions (sanity check image token slicing)"
+# python probing/debug_token_positions.py \
+#   --model "$MODEL_KEY" \
+#   --prompt_path "$PROMPT_PATH" \
+#   --dataset_dir "$DATASET_DIR" \
+#   --device auto --dtype auto
 
-echo "[$(date --iso-8601=seconds)] 3) Extract per-layer image-token hidden states"
-python probing/extract_image_tokens.py \
-  --dataset_dir "$DATASET_DIR" \
-  --out_dir "$OUT_DIR" \
-  --model "$MODEL_KEY" \
-  --prompt_path "$PROMPT_PATH" \
-  --layers "$LAYERS" \
-  --device auto --dtype auto
+# echo "[$(date --iso-8601=seconds)] 3) Extract per-layer image-token hidden states"
+# python probing/extract_image_tokens.py \
+#   --dataset_dir "$DATASET_DIR" \
+#   --out_dir "$OUT_DIR" \
+#   --model "$MODEL_KEY" \
+#   --prompt_path "$PROMPT_PATH" \
+#   --layers "$LAYERS" \
+#   --device auto --dtype auto
 
-echo "[$(date --iso-8601=seconds)] 4) Pool per-object embeddings using masks"
-python probing/build_object_embeddings.py \
-  --dataset_dir "$DATASET_DIR" \
-  --tokens_dir "$OUT_DIR/tokens" \
-  --out_dir "$OUT_DIR"
+# echo "[$(date --iso-8601=seconds)] 4) Pool per-object embeddings using masks"
+# python probing/build_object_embeddings.py \
+#   --dataset_dir "$DATASET_DIR" \
+#   --tokens_dir "$OUT_DIR/tokens" \
+#   --out_dir "$OUT_DIR"
 
 echo "[$(date --iso-8601=seconds)] 5) Train linear probes (default split by sample_id)"
 python probing/train_probes.py \

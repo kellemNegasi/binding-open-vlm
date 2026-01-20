@@ -82,10 +82,9 @@ def main() -> None:
             layer_result: dict[str, dict] = {}
             for name, y in [("color", y_color), ("shape", y_shape), ("conjunction", y_conj)]:
                 clf = LogisticRegression(
-                    C=args.C,
                     max_iter=2000,
-                    n_jobs=-1,
-                    multi_class="auto",
+                    solver="lbfgs",
+                    C=args.C,
                 )
                 clf.fit(X[idx_train], y[idx_train])
                 y_pred = clf.predict(X[idx_test])

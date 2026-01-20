@@ -53,6 +53,11 @@ def main() -> None:
     parser.add_argument("--img_size", type=int, default=40)
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--config_task_yaml", type=str, default=None)
+    parser.add_argument(
+        "--skip_if_exists",
+        action="store_true",
+        help="Skip generation if meta.jsonl already exists with at least n_trials rows.",
+    )
     args = parser.parse_args()
 
     if args.seed is not None:
@@ -77,6 +82,10 @@ def main() -> None:
     images_dir.mkdir(parents=True, exist_ok=True)
     masks_dir.mkdir(parents=True, exist_ok=True)
     meta_path = out_dir / "meta.jsonl"
+    if args.skip_if_exists and meta_path.exists():
+        existing_rows = sum(1 for _ in meta_path.open("r"))
+        if existing_rows >= args.n_trials:
+            return
 
     with meta_path.open("w") as f:
         for sample_id, trial in tqdm(trial_df.iterrows(), total=len(trial_df)):
@@ -121,4 +130,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

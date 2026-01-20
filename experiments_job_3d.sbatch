@@ -13,7 +13,7 @@
 # And aggregate:
 #   python aggregate_vlm_3d.py --model-name <model_name>
 
-#SBATCH -J vlm_3d_job
+#SBATCH -J vlm_3d_scene_description_job
 #SBATCH --output=slurm-%x.%j.out
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=16
@@ -38,7 +38,7 @@ export HYDRA_FULL_ERROR=1
 export PROJECT_ROOT="$PROJECT_DIR"
 
 # Set the model you want to run.
-MODEL_NAME="${MODEL_NAME:-qwen3_vl_30b}"
+MODEL_NAME="${MODEL_NAME:-qwen2.5-VL-32B-Instruct}"
 
 require_metadata() {
   local task_name="$1"
@@ -50,24 +50,24 @@ require_metadata() {
   fi
 }
 
-COUNTING_TASKS=(
-  counting_low_diversity
-  counting_high_diversity
-  counting_distinct
-)
+# COUNTING_TASKS=(
+  # counting_low_diversity
+  # counting_high_diversity
+  # counting_distinct
+# )
 
-SEARCH_TASKS=(
-  conjunctive_search
-  disjunctive_search
-)
+# SEARCH_TASKS=(
+  # conjunctive_search
+  # disjunctive_search
+# )
 
 SCENE_TASKS=(
   scene_description
 )
 
 ALL_TASKS=(
-  "${COUNTING_TASKS[@]}"
-  "${SEARCH_TASKS[@]}"
+  # "${COUNTING_TASKS[@]}"
+  # "${SEARCH_TASKS[@]}"
   "${SCENE_TASKS[@]}"
 )
 

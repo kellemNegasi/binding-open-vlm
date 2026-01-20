@@ -36,6 +36,7 @@ def main() -> None:
     parser.add_argument("--device", type=str, default="auto")
     parser.add_argument("--dtype", type=str, default="auto")
     parser.add_argument("--batch_size", type=int, default=1)
+    parser.add_argument("--overwrite", action="store_true", help="Recompute tokens even if output exists.")
     args = parser.parse_args()
 
     model_key = args.model
@@ -69,6 +70,10 @@ def main() -> None:
         image_path = dataset_dir / rec["image"]
         image = Image.open(image_path).convert("RGB")
 
+        save_path = tokens_dir / f"sample_{sample_id:06d}.npz"
+        if save_path.exists() and not args.overwrite:
+            continue
+
         hs = extract_image_hidden_states(
             model=model,
             image=image,
@@ -77,8 +82,6 @@ def main() -> None:
             device=args.device,
             dtype=args.dtype,
         )
-
-        save_path = tokens_dir / f"sample_{sample_id:06d}.npz"
         arrays = {
             "n_image_tokens": np.array(hs.n_image_tokens, dtype=np.int32),
             "image_token_indices": np.asarray(hs.image_token_indices, dtype=np.int32),
@@ -87,10 +90,12 @@ def main() -> None:
         }
         for layer, emb in hs.per_layer.items():
             arrays[f"layer_{layer}"] = np.asarray(emb, dtype=np.float32)
+        if hs.cls_per_layer:
+            for layer, emb in hs.cls_per_layer.items():
+                arrays[f"cls_{layer}"] = np.asarray(emb, dtype=np.float32)
 
         np.savez_compressed(save_path, **arrays)
 
 
 if __name__ == "__main__":
     main()
-

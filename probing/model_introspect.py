@@ -14,6 +14,7 @@ root = pyrootutils.setup_root(__file__, dotenv=True, pythonpath=True)
 @dataclass
 class ImageHiddenStates:
     per_layer: Dict[int, Any]
+    cls_per_layer: Optional[Dict[int, Any]]
     n_image_tokens: int
     image_token_indices: Any
     h_patches: Optional[int] = None
@@ -29,7 +30,7 @@ def load_model_from_hydra(model_name: str):
     with initialize_config_dir(version_base=None, config_dir=str(root / "config")):
         cfg = compose(config_name="run", overrides=[f"model={model_name}", "task=default", "paths=default"])
     # Many wrappers require `task` at construction time; allow `task=None` for probing use-cases.
-    return instantiate(cfg.model, task=None)
+    return instantiate(cfg.model, task=None, prompt_format="qwen")
 
 
 def _maybe_prepend_image_token(prompt: str) -> str:
@@ -86,9 +87,9 @@ def _infer_image_token_indices(tokenizer, input_ids) -> Any:
     import torch
 
     # Qwen-VL style (common): a vision span demarcated by vision_start / vision_end,
-    # or repeated image_pad tokens. Keep candidates extensible since different releases
+    # or repeated pad tokens. Keep candidates extensible since different releases
     # may register these as "added" tokens rather than normal vocab entries.
-    candidates_pad = ["<|image_pad|>"]
+    candidates_pad = ["<|image_pad|>", "<|vision_pad|>"]
     candidates_vstart = ["<|vision_start|>"]
     candidates_vend = ["<|vision_end|>"]
 
@@ -120,10 +121,11 @@ def _infer_image_token_indices(tokenizer, input_ids) -> Any:
     # If the canonical candidates aren't registered as single tokens, fall back to any special tokens
     # that contain the expected substrings (e.g., different delimiter styles across versions).
     candidates_pad = candidates_pad + _discover_from_special_tokens("image_pad")
+    candidates_pad = candidates_pad + _discover_from_special_tokens("vision_pad")
     candidates_vstart = candidates_vstart + _discover_from_special_tokens("vision_start")
     candidates_vend = candidates_vend + _discover_from_special_tokens("vision_end")
 
-    image_pad_id = next((tid for t in candidates_pad if (tid := _single_token_id(tokenizer, t)) is not None), None)
+    pad_id = next((tid for t in candidates_pad if (tid := _single_token_id(tokenizer, t)) is not None), None)
     vstart_id = next((tid for t in candidates_vstart if (tid := _single_token_id(tokenizer, t)) is not None), None)
     vend_id = next((tid for t in candidates_vend if (tid := _single_token_id(tokenizer, t)) is not None), None)
 
@@ -136,10 +138,39 @@ def _infer_image_token_indices(tokenizer, input_ids) -> Any:
             if end > start + 1:
                 return torch.arange(start + 1, end, device=input_ids.device, dtype=torch.long)
 
-    if image_pad_id is not None:
-        idx = torch.where(input_ids[0] == image_pad_id)[0]
+    if pad_id is not None:
+        idx = torch.where(input_ids[0] == pad_id)[0]
         if len(idx) > 0:
             return idx
+
+    # Some tokenizers expose a dedicated image/vision token id; try those as a last resort.
+    attr_ids = [
+        "image_token_id",
+        "vision_token_id",
+        "image_pad_token_id",
+        "vision_pad_token_id",
+    ]
+    for name in attr_ids:
+        tid = getattr(tokenizer, name, None)
+        if tid is not None:
+            idx = torch.where(input_ids[0] == int(tid))[0]
+            if len(idx) > 0:
+                return idx
+
+    attr_tokens = [
+        "image_token",
+        "vision_token",
+        "image_pad_token",
+        "vision_pad_token",
+    ]
+    for name in attr_tokens:
+        tok = getattr(tokenizer, name, None)
+        if isinstance(tok, str):
+            tid = _single_token_id(tokenizer, tok)
+            if tid is not None:
+                idx = torch.where(input_ids[0] == tid)[0]
+                if len(idx) > 0:
+                    return idx
 
     try:
         specials = list(getattr(tokenizer, "additional_special_tokens", []) or [])
@@ -154,6 +185,45 @@ def _infer_image_token_indices(tokenizer, input_ids) -> Any:
         "or update `_infer_image_token_indices()` for this wrapper. "
         f"Tokenizer additional_special_tokens (vision/image-related, first 20): {hint}"
     )
+
+
+def _infer_vision_start_index(tokenizer, input_ids) -> Optional[int]:
+    import torch
+
+    candidates_vstart = ["<|vision_start|>"]
+
+    def _discover_from_special_tokens(needle: str) -> list[str]:
+        toks: list[str] = []
+        for t in getattr(tokenizer, "additional_special_tokens", []) or []:
+            if isinstance(t, str) and needle in t:
+                toks.append(t)
+        try:
+            special_map = tokenizer.special_tokens_map_extended
+        except Exception:
+            special_map = {}
+        for v in (special_map or {}).values():
+            if isinstance(v, str):
+                v = [v]
+            if isinstance(v, (list, tuple)):
+                for t in v:
+                    if isinstance(t, str) and needle in t:
+                        toks.append(t)
+        seen = set()
+        out = []
+        for t in toks:
+            if t not in seen:
+                seen.add(t)
+                out.append(t)
+        return out
+
+    candidates_vstart = candidates_vstart + _discover_from_special_tokens("vision_start")
+    vstart_id = next((tid for t in candidates_vstart if (tid := _single_token_id(tokenizer, t)) is not None), None)
+    if vstart_id is None:
+        return None
+    idx = torch.where(input_ids[0] == vstart_id)[0]
+    if len(idx) == 0:
+        return None
+    return int(idx[0].item())
 
 
 def extract_image_hidden_states(
@@ -186,8 +256,45 @@ def extract_image_hidden_states(
     if tokenizer is None:
         raise NotImplementedError("Processor does not expose a tokenizer; cannot identify image tokens.")
 
-    prompt = _maybe_prepend_image_token(prompt)
-    inputs = processor(text=[prompt], images=[image], return_tensors="pt", padding=True)
+    # prompt = _maybe_prepend_image_token(prompt)
+    # inputs = processor(text=[prompt], images=[image], return_tensors="pt", padding=True)
+
+    # Build multimodal chat messages (Qwen-VL expects this)
+    messages = [
+        {
+            "role": "user",
+            "content": [
+                {"type": "image"},
+                {"type": "text", "text": prompt},
+            ],
+        }
+    ]
+
+    # Qwen-style: chat template is usually on the tokenizer
+    if hasattr(tokenizer, "apply_chat_template"):
+        chat_text = tokenizer.apply_chat_template(
+            messages,
+            tokenize=False,
+            add_generation_prompt=True,
+        )
+    elif hasattr(processor, "apply_chat_template"):
+        chat_text = processor.apply_chat_template(
+            messages,
+            tokenize=False,
+            add_generation_prompt=True,
+        )
+    else:
+        # fallback (less reliable for Qwen-VL)
+        chat_text = _maybe_prepend_image_token(prompt)
+
+    inputs = processor(
+        text=[chat_text],
+        images=[image],
+        return_tensors="pt",
+        padding=True,
+    )
+
+
     for k, v in list(inputs.items()):
         if torch.is_tensor(v):
             inputs[k] = v.to(target_device)
@@ -202,7 +309,13 @@ def extract_image_hidden_states(
     input_ids = inputs.get("input_ids", None)
     if input_ids is None:
         raise RuntimeError("Processor did not produce `input_ids`; cannot infer image token positions.")
-
+    
+    tokens = tokenizer.convert_ids_to_tokens(input_ids[0].tolist())
+    print("vision_start in input_ids?", "<|vision_start|>" in tokens)
+    print("vision_end in input_ids?", "<|vision_end|>" in tokens)
+    print("image_pad count:", sum(t == "<|image_pad|>" for t in tokens))
+    print("vision_pad count:", sum(t == "<|vision_pad|>" for t in tokens))
+    print("First 120 tokens:", tokens[:120])
     image_token_indices = _infer_image_token_indices(tokenizer, input_ids)
     n_image_tokens = int(image_token_indices.shape[0])
 
@@ -220,6 +333,10 @@ def extract_image_hidden_states(
             pass
 
     per_layer: Dict[int, Any] = {}
+    cls_per_layer: Optional[Dict[int, Any]] = None
+    cls_index = _infer_vision_start_index(tokenizer, input_ids)
+    if cls_index is not None:
+        cls_per_layer = {}
     n_blocks = len(hidden_states) - 1  # hidden_states[0] is embeddings
     for layer in layers:
         if layer < 0:
@@ -228,9 +345,12 @@ def extract_image_hidden_states(
             raise ValueError(f"Requested layer {layer} out of range [0, {n_blocks - 1}]")
         hs = hidden_states[layer + 1]  # [B, seq, d]
         per_layer[int(layer)] = hs[0, image_token_indices, :].detach().cpu()
+        if cls_per_layer is not None:
+            cls_per_layer[int(layer)] = hs[0, cls_index, :].detach().cpu()
 
     return ImageHiddenStates(
         per_layer=per_layer,
+        cls_per_layer=cls_per_layer,
         n_image_tokens=n_image_tokens,
         image_token_indices=image_token_indices.detach().cpu(),
         h_patches=h_patches,

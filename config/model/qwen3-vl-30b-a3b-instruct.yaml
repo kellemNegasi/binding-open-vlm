@@ -5,4 +5,4 @@ defaults:
 _target_: models.qwen_model.QwenModel
 model_name: qwen3-vl-30b-a3b-instruct
 weights_path: '${paths.root_dir}/model-weights/Qwen3-VL-30B-A3B-Instruct'
-
+prompt_format: qwen

@@ -69,6 +69,73 @@ python probing/train_probes.py \
   --test_split 0.2 --seed 0 --C 1.0
 ```
 
+## Global scene probe (illusory conjunctions)
+
+This variant builds a single embedding per scene (mean-pooled image tokens and optional CLS token),
+trains a multi-label probe to predict which (color, shape) pairs are present, and evaluates false positives
+on implied vs non-implied absent pairs. Results are grouped by both triplet count and implied-absent count.
+
+Key definitions:
+- **Pair index**: each label corresponds to one (color, shape) pair in the global vocab.
+- **Present**: the pair appears in the scene.
+- **Implied-absent**: the pair is absent, but the color appears with another shape and the shape appears with another color.
+- **Non-implied absent**: absent and not implied.
+- **FPR**: for an absent set, the fraction of pairs predicted as present.
+
+### Recommended: use the scripts (Qwen3-30B default)
+
+```bash
+bash scripts/extract_image_tokens.sh
+bash scripts/global_embedding_labels.sh
+bash scripts/train_multi_label_probe.sh
+```
+
+Override the model or output paths as needed:
+
+```bash
+bash scripts/extract_image_tokens.sh qwen2_5_vl_7b qwen2.5-VL-7B-Instruct
+bash scripts/global_embedding_labels.sh qwen2.5-VL-7B-Instruct
+bash scripts/train_multi_label_probe.sh qwen2.5-VL-7B-Instruct
+```
+
+### Direct commands (manual)
+
+1) Extract image tokens (saves image tokens + CLS tokens when available):
+
+```bash
+python probing/extract_image_tokens.py \
+  --dataset_dir data/probing/scene_description_balanced_2d \
+  --out_dir data/probing/scene_description_balanced_2d_out_qwen3-vl-30b-a3b-instruct \
+  --model qwen3_vl_30b \
+  --prompt_path prompts/scene_description_2D_parse.txt \
+  --layers 0,10,20 --overwrite
+```
+
+2) Build global scene embeddings + labels:
+
+```bash
+python probing/build_global_embeddings.py \
+  --dataset_dir data/probing/scene_description_balanced_2d \
+  --tokens_dir data/probing/scene_description_balanced_2d_out_qwen3-vl-30b-a3b-instruct/tokens \
+  --out_dir output/probing_global/scene_description_balanced_2d_qwen3-vl-30b-a3b-instruct \
+  --pool mean
+```
+
+3) Train the multi-label probe and report FPRs:
+
+```bash
+python probing/train_global_probe.py \
+  --embeddings_path output/probing_global/scene_description_balanced_2d_qwen3-vl-30b-a3b-instruct/global_embeddings.npz \
+  --out_dir output/probing_global/scene_description_balanced_2d_qwen3-vl-30b-a3b-instruct/probes \
+  --test_split 0.2 --seed 0 --C 1.0 --threshold 0.5
+```
+
+Outputs:
+- `global_embeddings.npz` contains `X_{layer}` (mean pooled) and `X_cls_{layer}` (CLS) features.
+- `probe_results.json` reports micro/macro F1 and implied/non-implied FPRs, grouped by:
+  - `triplet_count_per_sample`
+  - `n_implied_absent_pairs_per_sample`
+
 ### Train/test splitting note
 
 By default, `probing/train_probes.py` splits by `sample_id` (image), meaning all objects from the same image stay in the same split.

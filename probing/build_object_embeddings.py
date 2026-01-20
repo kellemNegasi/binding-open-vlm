@@ -19,9 +19,19 @@ def _load_jsonl(path: Path) -> list[dict]:
 
 def _infer_grid(n_tokens: int, h_patches: int, w_patches: int) -> tuple[int, int]:
     if h_patches > 0 and w_patches > 0:
-        return int(h_patches), int(w_patches)
+        h_patches = int(h_patches)
+        w_patches = int(w_patches)
+        if h_patches * w_patches == n_tokens:
+            return h_patches, w_patches
     side = int(math.isqrt(n_tokens))
     if side * side != n_tokens:
+        if h_patches > 0 and w_patches > 0:
+            raise ValueError(
+                "Image grid metadata does not match token count: "
+                f"n_image_tokens={n_tokens}, H_patches={h_patches}, W_patches={w_patches}. "
+                "Re-run extraction with a model/processor that exposes the correct grid, "
+                "or extend `probing/model_introspect.py`."
+            )
         raise ValueError(
             f"n_image_tokens={n_tokens} is not a perfect square and no grid was provided. "
             "Re-run extraction with a model/processor that exposes H_patches/W_patches, "
@@ -162,4 +172,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
