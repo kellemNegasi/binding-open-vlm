@@ -6,4 +6,5 @@ set -euo pipefail
 
 python probing/generate_masked_scene_desc_dataset.py \
   --config_task_yaml config/task/scene_description_BALANCED_limited.yaml \
+  --n_objects 4 \
   --out_dir data/probing/scene_description_balanced_2d_limited

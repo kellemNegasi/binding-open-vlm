@@ -1,8 +1,9 @@
 #!/bin/bash
-# SLURM job for running the global illusory-conjunction probing pipeline.
+# SLURM job for running the global illusory-conjunction probing pipeline
+# on the limited 2D dataset (max 4 shapes/colors).
 # Runs global embedding/label build, then multi-label probe training.
 
-#SBATCH -J probing_global_qwen3_30b
+#SBATCH -J probing_global_qwen3_30b_limited
 #SBATCH --output=slurm-%x.%j.out
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=16
@@ -25,20 +26,23 @@ cd "$PROJECT_DIR"
 
 export PROJECT_ROOT="$PROJECT_DIR"
 
-MODEL_KEY="${MODEL_KEY:-qwen2.5-VL-32B-Instruct}"
-MODEL_TAG="${MODEL_TAG:-qwen2.5-VL-32B-Instruct}"
-DATASET_DIR="${DATASET_DIR:-data/probing/scene_description_balanced_2d}"
+MODEL_KEY="${MODEL_KEY:-qwen2.5-VL-7B-Instruct}"
+MODEL_TAG="${MODEL_TAG:-qwen2.5-VL-7B-Instruct}"
+DATASET_DIR="${DATASET_DIR:-data/probing/scene_description_balanced_2d_limited}"
 LAYERS="${LAYERS:-0,10,20}"
+
+TOKENS_OUT_DIR="data/probing/scene_description_balanced_2d_limited_out_${MODEL_TAG}"
+GLOBAL_OUT_DIR="output/probing_global/scene_description_balanced_2d_limited_${MODEL_TAG}"
 
 echo "[$(date --iso-8601=seconds)] 1) Extract image tokens (overwrite)"
 bash scripts/extract_image_tokens.sh "$MODEL_KEY" "$MODEL_TAG" "$DATASET_DIR" \
-  "data/probing/scene_description_balanced_2d_out_${MODEL_TAG}" \
-  "prompts/scene_description_2D_parse.txt" "$LAYERS"
+  "$TOKENS_OUT_DIR" "prompts/scene_description_2D_parse.txt" "$LAYERS"
 
 echo "[$(date --iso-8601=seconds)] 2) Build global embeddings + labels"
-bash scripts/global_embedding_labels.sh "$MODEL_TAG" "$DATASET_DIR"
+bash scripts/global_embedding_labels.sh "$MODEL_TAG" "$DATASET_DIR" \
+  "${TOKENS_OUT_DIR}/tokens" "$GLOBAL_OUT_DIR"
 
 echo "[$(date --iso-8601=seconds)] 3) Train multi-label global probe"
-bash scripts/train_multi_label_probe.sh "$MODEL_TAG"
+bash scripts/train_multi_label_probe.sh "$MODEL_TAG" "$GLOBAL_OUT_DIR"
 
 echo "[$(date --iso-8601=seconds)] Done"

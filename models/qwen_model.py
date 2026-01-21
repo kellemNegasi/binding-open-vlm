@@ -50,10 +50,18 @@ class QwenModel(LocalVLModel):
         try:
             import torch
             from transformers import AutoModelForVision2Seq, AutoProcessor
+            from transformers import activations as hf_activations
         except Exception as e:  # pragma: no cover
             raise ImportError(
                 "Hidden-state introspection for Qwen requires `torch` and `transformers`."
             ) from e
+        # Compatibility shim: AWQ expects PytorchGELUTanh, removed in newer transformers.
+        if not hasattr(hf_activations, "PytorchGELUTanh"):
+            class PytorchGELUTanh(torch.nn.Module):
+                def forward(self, x):
+                    return torch.nn.functional.gelu(x, approximate="tanh")
+
+            hf_activations.PytorchGELUTanh = PytorchGELUTanh
 
         if device is not None:
             device = device.lower()

@@ -38,7 +38,7 @@ export HYDRA_FULL_ERROR=1
 export PROJECT_ROOT="$PROJECT_DIR"
 
 # Set the model you want to run.
-MODEL_NAME="${MODEL_NAME:-qwen2.5-VL-32B-Instruct}"
+MODEL_NAME="${MODEL_NAME:-qwen2.5-VL-7B-Instruct}"
 
 require_metadata() {
   local task_name="$1"
@@ -50,24 +50,24 @@ require_metadata() {
   fi
 }
 
-# COUNTING_TASKS=(
-  # counting_low_diversity
-  # counting_high_diversity
-  # counting_distinct
-# )
+COUNTING_TASKS=(
+  counting_low_diversity
+  counting_high_diversity
+  counting_distinct
+)
 
-# SEARCH_TASKS=(
-  # conjunctive_search
-  # disjunctive_search
-# )
+SEARCH_TASKS=(
+  conjunctive_search
+  disjunctive_search
+)
 
 SCENE_TASKS=(
   scene_description
 )
 
 ALL_TASKS=(
-  # "${COUNTING_TASKS[@]}"
-  # "${SEARCH_TASKS[@]}"
+  "${COUNTING_TASKS[@]}"
+  "${SEARCH_TASKS[@]}"
   "${SCENE_TASKS[@]}"
 )
 
