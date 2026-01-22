@@ -20,25 +20,27 @@
 #SBATCH --partition=gpu
 #SBATCH --gres=gpu:a100-80g:2
 #SBATCH --mem=64G
-#SBATCH -t 06:00:00
+#SBATCH -t 24:00:00
 
 set -euo pipefail
 
 module load cuda/12.1
-module load python/3.12.3
+# module load python/3.12.0
 
 # Activate your virtual environment. Update the path if needed.
-source ~/binding-open-vlm/.venv/bin/activate
+source /gpfs/helios/home/zain/miniconda3/etc/profile.d/conda.sh
+conda activate vlm
+
 
 # Change this to the absolute path of the repo on the cluster.
-PROJECT_DIR="$HOME/binding-open-vlm"
+PROJECT_DIR="$HOME/llama_vision/binding-open-vlm"
 cd "$PROJECT_DIR"
 
 export HYDRA_FULL_ERROR=1
 export PROJECT_ROOT="$PROJECT_DIR"
 
 # Set the model you want to run.
-MODEL_NAME="${MODEL_NAME:-qwen3_vl_30b}"
+MODEL_NAME="${MODEL_NAME:-internvl2_26b}"
 
 require_metadata() {
   local task_name="$1"

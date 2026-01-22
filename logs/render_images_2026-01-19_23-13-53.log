@@ -1,0 +1,6072 @@
+
+Rendering image 0 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001500.png, index: 1500
+
+Rendering scene 1500 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at -1.498870, -1.015297, within 1.810370
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at -0.993799, 1.503772, within 1.802489
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at 1.134346, -0.663576, within 1.314182
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at -0.762840, -0.191619, within 0.786538
+
+Trying to place object at 0.266572, 0.469539, within 0.539933
+
+Trying to place object at 0.186017, -1.475142, within 1.486824
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at -2.890584, -1.173825, within 3.119831
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at 4.124437, 0.320306, within 4.136856
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at 0.961352, 0.874754, within 1.299766
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at 0.453902, -3.093752, within 3.126872
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at 0.126841, -2.631170, within 2.634226
+
+Trying to place object at -2.812818, 3.021495, within 4.128120
+
+Trying to place object at -0.026073, -0.507059, within 0.507729
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at 3.728088, -1.944935, within 4.204927
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at 0.738640, 2.766724, within 2.863626
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at -1.957830, 2.946868, within 3.537956
+
+Trying to place object at 3.088492, 2.358481, within 3.886028
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at 0.611206, -1.334935, within 1.468204
+
+Trying to place object at -0.522017, -4.047464, within 4.080988
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at 3.232099, 3.069260, within 4.457221
+
+Trying to place object at 0.105846, 0.552931, within 0.562971
+
+Trying to place object at -2.134778, 3.824228, within 4.379725
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at -1.436894, -2.231115, within 2.653778
+
+Trying to place object at -0.315360, -1.346949, within 1.383374
+
+Trying to place object at -1.340770, -4.163102, within 4.373680
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 280329, (0.5137255191802979, 0.49803924560546875, 0.6941176652908325, 1.0): 2998, (0.4901961088180542, 0.7254902124404907, 0.7411764860153198, 1.0): 2678, (0.5215686559677124, 0.5921568870544434, 0.8235294818878174, 1.0): 2350, (0.41960787773132324, 0.988235354423523, 0.7568628191947937, 1.0): 2133, (0.6745098233222961, 0.14509804546833038, 0.19607844948768616, 1.0): 1975, (0.5647059082984924, 0.7803922295570374, 0.8392157554626465, 1.0): 1944, (0.6901960968971252, 0.7176470756530762, 0.21176472306251526, 1.0): 1847, (0.7490196228027344, 0.8509804606437683, 0.729411780834198, 1.0): 1777, (0.6196078658103943, 0.7960785031318665, 0.6980392336845398, 1.0): 1770, (0.9294118285179138, 0.8431373238563538, 0.7372549176216125, 1.0): 1535, (0.48235297203063965, 0.21176472306251526, 0.7529412508010864, 1.0): 1441, (0.8666667342185974, 0.03529411926865578, 0.5176470875740051, 1.0): 1434, (0.5921568870544434, 0.7137255072593689, 0.529411792755127, 1.0): 1380, (0.27843138575553894, 0.6117647290229797, 0.7882353663444519, 1.0): 919, (0.8862745761871338, 0.8352941870689392, 0.8666667342185974, 1.0): 690})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 1 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001501.png, index: 1501
+
+Rendering scene 1501 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at -0.319735, -0.532716, within 0.621303
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at 0.500850, 1.380720, within 1.468754
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at -2.335260, -1.006763, within 2.543032
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at -0.655760, -1.080747, within 1.264134
+
+Trying to place object at 3.079946, 3.243925, within 4.473155
+
+Trying to place object at -0.188463, -0.980818, within 0.998761
+
+Trying to place object at -3.020905, -0.280440, within 3.033894
+
+Trying to place object at 2.985998, 3.089289, within 4.296497
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at -2.064803, 2.251895, within 3.055232
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at 1.531305, -1.590178, within 2.207614
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at 2.710600, -0.426574, within 2.743960
+
+Trying to place object at 0.938695, -0.344319, within 0.999852
+
+Trying to place object at 0.773560, 2.003561, within 2.147709
+
+Trying to place object at 1.368038, -0.432150, within 1.434671
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at 1.354817, -0.647855, within 1.501747
+
+Trying to place object at 1.330166, 0.477445, within 1.413257
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at -0.029040, 0.079332, within 0.084480
+
+Trying to place object at -1.178522, -1.250285, within 1.718176
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at -3.622988, 1.890855, within 4.086731
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at 0.198639, 1.304403, within 1.319441
+
+Trying to place object at 0.622603, -1.235370, within 1.383392
+
+Trying to place object at -0.381537, 0.581425, within 0.695432
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at -1.330234, -3.743738, within 3.973046
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at 2.946925, 0.642824, within 3.016221
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at 0.786289, -1.159555, within 1.401006
+
+Trying to place object at -2.163474, -3.078993, within 3.763086
+
+Trying to place object at -1.294600, 1.713557, within 2.147619
+
+Trying to place object at 0.816759, -1.258206, within 1.500059
+
+Trying to place object at 1.025632, 1.539691, within 1.850019
+
+Trying to place object at 0.916907, -0.475911, within 1.033058
+
+Trying to place object at -0.125071, -2.208965, within 2.212503
+
+Trying to place object at 1.019263, 0.693344, within 1.232730
+
+Trying to place object at 0.811968, -0.444164, within 0.925512
+
+Trying to place object at -1.855557, 0.243572, within 1.871475
+
+Trying to place object at 0.861571, -3.703746, within 3.802636
+
+Trying to place object at -2.634894, -2.933813, within 3.943339
+
+Trying to place object at -0.090350, -0.494767, within 0.502949
+
+Trying to place object at 3.382851, 0.845781, within 3.486979
+
+Trying to place object at 1.023844, 0.252854, within 1.054605
+
+Trying to place object at -4.363438, 0.395364, within 4.381313
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at -2.365802, 0.943680, within 2.547067
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 285313, (0.6470588445663452, 0.8313726186752319, 0.8313726186752319, 1.0): 2440, (0.8705883026123047, 0.9098039865493774, 0.7215686440467834, 1.0): 2286, (0.874509871006012, 0.7411764860153198, 0.8705883026123047, 1.0): 1872, (0.8588235974311829, 0.9019608497619629, 0.40000003576278687, 1.0): 1701, (0.9529412388801575, 0.7450980544090271, 0.6627451181411743, 1.0): 1687, (0.4862745404243469, 0.7215686440467834, 0.9058824181556702, 1.0): 1629, (0.9529412388801575, 0.8117647767066956, 0.9372549653053284, 1.0): 1612, (0.5764706134796143, 0.9215686917304993, 0.7176470756530762, 1.0): 1463, (0.35686275362968445, 0.6823529601097107, 0.6784313917160034, 1.0): 1285, (0.23137256503105164, 0.2823529541492462, 0.6235294342041016, 1.0): 1263, (0.4549019932746887, 0.9098039865493774, 0.8392157554626465, 1.0): 1121, (0.9960784912109375, 0.7490196228027344, 0.7411764860153198, 1.0): 1072, (0.9058824181556702, 0.27450981736183167, 0.686274528503418, 1.0): 1051, (0.6392157077789307, 0.6235294342041016, 0.8431373238563538, 1.0): 727, (0.6078431606292725, 0.7803922295570374, 0.5607843399047852, 1.0): 678})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 2 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001502.png, index: 1502
+
+Rendering scene 1502 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at -1.862542, 3.904861, within 4.326315
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at 3.042976, -2.050909, within 3.669596
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at 0.906618, -0.882764, within 1.265397
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at 0.154508, -4.183292, within 4.186144
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at 0.981029, -0.219370, within 1.005257
+
+Trying to place object at 1.079754, 0.529088, within 1.202416
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at -0.136067, 2.475778, within 2.479514
+
+Trying to place object at 0.708607, -0.178922, within 0.730847
+
+Trying to place object at -1.232140, 1.546584, within 1.977395
+
+Trying to place object at 2.488078, 3.692590, within 4.452612
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at 1.130895, -0.965313, within 1.486860
+
+Trying to place object at -1.955288, 3.580817, within 4.079878
+
+Trying to place object at -0.092454, -3.227522, within 3.228846
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at -0.526895, 0.232786, within 0.576027
+
+Trying to place object at -1.467930, 1.306494, within 1.965132
+
+Trying to place object at -2.244825, 0.462659, within 2.292006
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at -0.401541, 0.928747, within 1.011833
+
+Trying to place object at -3.445804, -0.033736, within 3.445969
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at -0.274026, 0.398383, within 0.483528
+
+Trying to place object at -1.097060, -0.139638, within 1.105911
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at -3.040413, -1.424120, within 3.357414
+
+Trying to place object at 2.472707, -0.769147, within 2.589569
+
+Trying to place object at -1.016944, -0.669359, within 1.217463
+
+Trying to place object at 0.415855, 2.867571, within 2.897567
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at -0.151495, 0.049836, within 0.159482
+
+Trying to place object at 3.342452, 2.649173, within 4.264986
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at 3.074331, 1.363183, within 3.363001
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at -0.018441, -3.933056, within 3.933099
+
+Trying to place object at 1.078194, 0.463202, within 1.173481
+
+Trying to place object at 4.128878, 0.831839, within 4.211839
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at 1.490218, 0.272712, within 1.514966
+
+Trying to place object at 1.353630, -1.124102, within 1.759523
+
+Trying to place object at -2.399567, 1.676487, within 2.927205
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 283458, (0.9490196704864502, 0.917647123336792, 0.803921639919281, 1.0): 2770, (0.9098039865493774, 0.5921568870544434, 0.3921568989753723, 1.0): 2339, (0.9764706492424011, 0.8901961445808411, 0.6352941393852234, 1.0): 2122, (0.5921568870544434, 0.9450981020927429, 0.5176470875740051, 1.0): 2041, (0.6235294342041016, 0.8117647767066956, 0.37254902720451355, 1.0): 1935, (0.6549019813537598, 0.6980392336845398, 0.25882354378700256, 1.0): 1933, (0.7843137979507446, 0.8901961445808411, 0.9960784912109375, 1.0): 1752, (0.501960813999176, 0.6313725709915161, 0.9058824181556702, 1.0): 1384, (0.8000000715255737, 0.9921569228172302, 0.9254902601242065, 1.0): 1253, (0.5098039507865906, 0.33725491166114807, 0.46666669845581055, 1.0): 1163, (0.7568628191947937, 0.8392157554626465, 0.8392157554626465, 1.0): 1113, (0.8901961445808411, 0.1411764770746231, 0.2549019753932953, 1.0): 1046, (0.20784315466880798, 0.2666666805744171, 0.8980392813682556, 1.0): 1037, (0.8823530077934265, 0.5686274766921997, 0.9215686917304993, 1.0): 1001, (0.9098039865493774, 0.14901961386203766, 0.4745098352432251, 1.0): 853})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 3 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001503.png, index: 1503
+
+Rendering scene 1503 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at 0.065678, -0.222241, within 0.231743
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at 0.990815, 0.787400, within 1.265588
+
+Trying to place object at 3.547953, 0.102223, within 3.549426
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at 0.502113, -0.086477, within 0.509505
+
+Trying to place object at -1.302845, -1.698166, within 2.140368
+
+Trying to place object at -3.217891, -2.518981, within 4.086575
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at -0.726883, 2.063750, within 2.188018
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at 0.741546, -1.789482, within 1.937043
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at -2.337646, -2.374781, within 3.332292
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at -1.180025, -1.556513, within 1.953252
+
+Trying to place object at -0.893078, -0.795442, within 1.195958
+
+Trying to place object at 0.005848, 4.324047, within 4.324051
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at -0.207573, -0.239588, within 0.317000
+
+Trying to place object at 4.373657, 0.110978, within 4.375064
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at -1.717832, 0.903541, within 1.940962
+
+Trying to place object at 0.546375, 2.767725, within 2.821139
+
+Trying to place object at -4.074353, -1.088587, within 4.217271
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at 2.154558, -2.171612, within 3.059088
+
+Trying to place object at -0.146044, -0.817037, within 0.829987
+
+Trying to place object at -1.944257, -0.750557, within 2.084099
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at 4.062820, 1.083217, within 4.204743
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at 2.674682, 2.913135, within 3.954780
+
+Trying to place object at 0.375266, 1.661597, within 1.703446
+
+Trying to place object at 4.236697, 1.350292, within 4.446672
+
+Trying to place object at -3.342239, -0.057175, within 3.342728
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at -0.911959, 0.740471, within 1.174720
+
+Trying to place object at 2.758561, -2.143574, within 3.493504
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at 2.686936, 2.684587, within 3.798240
+
+Trying to place object at -3.911998, -1.424767, within 4.163375
+
+Trying to place object at -2.116353, 1.318845, within 2.493652
+
+Trying to place object at -2.384333, 1.726943, within 2.944041
+
+Trying to place object at -3.359515, -1.205511, within 3.569258
+
+Trying to place object at -1.815292, -0.532608, within 1.891813
+
+Trying to place object at 1.243589, -0.489289, within 1.336382
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at 3.270038, -2.540575, within 4.140975
+
+Trying to place object at 0.250873, -3.731409, within 3.739833
+
+Trying to place object at -2.409554, 3.184436, within 3.993318
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 284536, (0.9019608497619629, 0.6705882549285889, 0.8078432083129883, 1.0): 3124, (0.729411780834198, 0.501960813999176, 0.7019608020782471, 1.0): 2485, (0.7529412508010864, 0.9490196704864502, 0.4705882668495178, 1.0): 2135, (0.960784375667572, 0.8862745761871338, 0.27450981736183167, 1.0): 2124, (0.9137255549430847, 0.13725490868091583, 0.9647059440612793, 1.0): 1824, (0.7921569347381592, 0.6666666865348816, 0.9215686917304993, 1.0): 1752, (0.7686275243759155, 0.5058823823928833, 0.3764706254005432, 1.0): 1344, (1.0, 0.6235294342041016, 0.6705882549285889, 1.0): 1207, (0.9647059440612793, 0.5137255191802979, 0.9686275124549866, 1.0): 1173, (0.2392157018184662, 0.5254902243614197, 0.4862745404243469, 1.0): 1076, (0.847058892250061, 0.5803921818733215, 0.8941177129745483, 1.0): 1062, (0.9764706492424011, 0.9333333969116211, 0.02352941408753395, 1.0): 947, (0.9686275124549866, 0.9686275124549866, 0.8352941870689392, 1.0): 833, (0.22745099663734436, 0.6392157077789307, 0.6549019813537598, 1.0): 823, (0.8862745761871338, 0.1764705926179886, 0.9450981020927429, 1.0): 755})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 4 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001504.png, index: 1504
+
+Rendering scene 1504 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at -1.231711, 2.306806, within 2.615046
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at -4.382894, 0.700385, within 4.438502
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at -1.992707, 2.137472, within 2.922271
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at -1.267945, 0.159802, within 1.277975
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at 1.216797, -0.292178, within 1.251385
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at 3.572861, 0.138690, within 3.575551
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at -2.030912, 0.771753, within 2.172604
+
+Trying to place object at 3.592264, 0.487503, within 3.625192
+
+Trying to place object at -0.393975, 3.021928, within 3.047501
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at 2.866628, 2.959563, within 4.120264
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at 1.261864, -0.610274, within 1.401691
+
+Trying to place object at 0.398569, 0.671336, within 0.780736
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at -1.356196, 0.806694, within 1.577980
+
+Trying to place object at -2.844747, 1.695074, within 3.311474
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at -0.142388, -0.114091, within 0.182458
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at 2.318862, 3.378921, within 4.098077
+
+Trying to place object at -0.074875, -1.241554, within 1.243809
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at 1.586903, -0.560007, within 1.682816
+
+Trying to place object at -1.887605, 2.104163, within 2.826757
+
+Trying to place object at -0.346101, 0.552921, within 0.652309
+
+Trying to place object at -1.791369, -3.474045, within 3.908707
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at -0.005536, -0.494619, within 0.494650
+
+Trying to place object at 1.635427, -1.675615, within 2.341433
+
+Trying to place object at 0.709689, -0.082564, within 0.714475
+
+Trying to place object at 1.043387, 3.960503, within 4.095636
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at 1.899476, -2.181169, within 2.892319
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 283911, (0.6392157077789307, 0.6666666865348816, 0.8000000715255737, 1.0): 3295, (0.9725490808486938, 0.8000000715255737, 0.5921568870544434, 1.0): 2356, (0.49803924560546875, 0.9960784912109375, 0.9843137860298157, 1.0): 2132, (0.988235354423523, 0.5176470875740051, 0.9725490808486938, 1.0): 2045, (0.760784387588501, 0.760784387588501, 0.5411764979362488, 1.0): 1730, (0.9333333969116211, 0.38431376218795776, 0.8156863451004028, 1.0): 1638, (0.7647059559822083, 0.5333333611488342, 0.5098039507865906, 1.0): 1389, (0.7686275243759155, 0.9686275124549866, 0.22352942824363708, 1.0): 1383, (0.5647059082984924, 0.37254902720451355, 0.2392157018184662, 1.0): 1359, (0.8784314393997192, 0.760784387588501, 0.1764705926179886, 1.0): 1245, (0.6941176652908325, 0.8000000715255737, 0.5058823823928833, 1.0): 1197, (0.9529412388801575, 0.4862745404243469, 0.9294118285179138, 1.0): 1033, (0.6470588445663452, 0.41960787773132324, 0.9764706492424011, 1.0): 975, (0.9725490808486938, 0.9372549653053284, 0.9764706492424011, 1.0): 774, (0.7529412508010864, 0.7529412508010864, 0.760784387588501, 1.0): 738})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 5 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001505.png, index: 1505
+
+Rendering scene 1505 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at 0.345379, 0.219973, within 0.409482
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at 0.003908, 3.509511, within 3.509513
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at 2.424686, -1.250183, within 2.728014
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at 0.714312, 3.639899, within 3.709327
+
+Trying to place object at 0.941082, -1.148547, within 1.484855
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at 4.053473, -0.309477, within 4.065270
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at -0.836452, -3.323178, within 3.426830
+
+Trying to place object at -0.379854, 0.123749, within 0.399503
+
+Trying to place object at 1.895405, 3.536187, within 4.012129
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at 0.610938, -0.179766, within 0.636837
+
+Trying to place object at -0.255254, -0.678434, within 0.724864
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at 0.100528, -0.186988, within 0.212298
+
+Trying to place object at -1.167115, -3.471120, within 3.662080
+
+Trying to place object at 3.318808, 0.329671, within 3.335141
+
+Trying to place object at 0.277623, 0.753876, within 0.803370
+
+Trying to place object at 0.744573, 1.655324, within 1.815072
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at -0.827528, 1.510897, within 1.722676
+
+Trying to place object at 1.333650, -2.574747, within 2.899646
+
+Trying to place object at 1.158721, 2.632982, within 2.876670
+
+Trying to place object at 1.235638, -1.412471, within 1.876667
+
+Trying to place object at 2.198444, 0.521248, within 2.259393
+
+Trying to place object at 2.877146, 3.411298, within 4.462615
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at 2.707287, 1.553081, within 3.121132
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at -0.122745, 0.266811, within 0.293691
+
+Trying to place object at -0.498911, -0.188277, within 0.533254
+
+Trying to place object at 1.801805, -1.717820, within 2.489460
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at 0.224823, 0.807164, within 0.837889
+
+Trying to place object at 0.484465, -3.458576, within 3.492343
+
+Trying to place object at 0.792703, -0.971158, within 1.253605
+
+Trying to place object at -3.947596, 1.996505, within 4.423748
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at 1.102734, -1.794599, within 2.106325
+
+Trying to place object at -0.809435, -2.681904, within 2.801391
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at 0.620140, -0.146203, within 0.637141
+
+Trying to place object at -0.046590, 0.067271, within 0.081830
+
+Trying to place object at 3.677070, -0.882587, within 3.781508
+
+Trying to place object at -3.089960, -0.263893, within 3.101208
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at -1.002787, 1.203852, within 1.566794
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 284701, (0.7176470756530762, 0.8980392813682556, 0.2980392277240753, 1.0): 3019, (0.8078432083129883, 0.8509804606437683, 0.2862745225429535, 1.0): 2692, (0.8431373238563538, 0.5764706134796143, 0.2392157018184662, 1.0): 2448, (0.8509804606437683, 0.24705883860588074, 0.9019608497619629, 1.0): 2088, (0.458823561668396, 0.760784387588501, 0.5490196347236633, 1.0): 1588, (0.44705885648727417, 0.8274510502815247, 0.16862745583057404, 1.0): 1565, (0.8117647767066956, 0.3960784673690796, 0.7450980544090271, 1.0): 1500, (0.9529412388801575, 0.9333333969116211, 0.7568628191947937, 1.0): 1299, (0.6509804129600525, 0.3019607961177826, 0.9372549653053284, 1.0): 1142, (0.02352941408753395, 0.988235354423523, 0.5215686559677124, 1.0): 1054, (0.9843137860298157, 0.9921569228172302, 0.6117647290229797, 1.0): 984, (0.9137255549430847, 0.8666667342185974, 0.9215686917304993, 1.0): 960, (0.27450981736183167, 0.7725490927696228, 0.29411765933036804, 1.0): 786, (0.8509804606437683, 0.5411764979362488, 0.7803922295570374, 1.0): 769, (0.41568630933761597, 0.01568627543747425, 0.05490196496248245, 1.0): 605})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 6 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001506.png, index: 1506
+
+Rendering scene 1506 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at -0.482103, -4.034065, within 4.062770
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at -0.006532, -0.024930, within 0.025771
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at -2.932353, 1.834321, within 3.458818
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at -0.188162, 1.203385, within 1.218006
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at 0.248995, -1.421142, within 1.442790
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at -0.122967, 0.165129, within 0.205885
+
+Trying to place object at 0.963632, 0.536012, within 1.102676
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at -0.079685, -0.991635, within 0.994831
+
+Trying to place object at -0.939746, 1.396196, within 1.682999
+
+Trying to place object at -3.145329, 2.906542, within 4.282649
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at -1.073263, 1.699004, within 2.009604
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at -3.883756, 1.322000, within 4.102590
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at 1.388603, -0.472933, within 1.466930
+
+Trying to place object at -1.344000, -1.245932, within 1.832671
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at -1.337753, -0.195924, within 1.352024
+
+Trying to place object at -3.075044, -2.876751, within 4.210889
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at -0.047235, 4.160623, within 4.160891
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at -3.260272, 2.779342, within 4.284170
+
+Trying to place object at -1.775004, -2.747262, within 3.270793
+
+Trying to place object at 1.051600, 1.867985, within 2.143649
+
+Trying to place object at -2.547894, -0.280410, within 2.563277
+
+Trying to place object at 0.493624, -3.811219, within 3.843053
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at 0.578020, 0.661131, within 0.878180
+
+Trying to place object at -0.805771, 0.836986, within 1.161814
+
+Trying to place object at -2.571125, 1.727375, within 3.097500
+
+Trying to place object at -0.278825, 1.993908, within 2.013309
+
+Trying to place object at 0.206132, 0.739477, within 0.767670
+
+Trying to place object at -0.926644, 0.928692, within 1.311921
+
+Trying to place object at -1.611718, -0.218084, within 1.626405
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at -0.275659, 3.645444, within 3.655851
+
+Trying to place object at 0.446604, -0.406280, within 0.603754
+
+Trying to place object at 2.519465, 2.003393, within 3.218895
+
+Trying to place object at -2.276450, 0.306404, within 2.296978
+
+Trying to place object at 1.697208, -3.234805, within 3.653009
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 287119, (0.6666666865348816, 0.8274510502815247, 0.7372549176216125, 1.0): 2869, (0.8627451658248901, 0.5686274766921997, 0.6078431606292725, 1.0): 2500, (0.7960785031318665, 0.8941177129745483, 0.8392157554626465, 1.0): 2463, (0.9529412388801575, 0.364705890417099, 0.4745098352432251, 1.0): 1728, (0.6039215922355652, 0.8666667342185974, 0.9333333969116211, 1.0): 1351, (0.8862745761871338, 0.4078431725502014, 0.4431372880935669, 1.0): 1100, (0.5568627715110779, 0.8352941870689392, 0.05882353335618973, 1.0): 1041, (0.9725490808486938, 0.9725490808486938, 0.9215686917304993, 1.0): 1017, (0.9725490808486938, 0.8431373238563538, 0.9647059440612793, 1.0): 994, (0.4941176772117615, 0.5843137502670288, 1.0, 1.0): 930, (0.5764706134796143, 0.29411765933036804, 0.4862745404243469, 1.0): 906, (0.40000003576278687, 0.9529412388801575, 0.760784387588501, 1.0): 892, (0.9372549653053284, 0.49803924560546875, 0.43137258291244507, 1.0): 843, (0.9215686917304993, 0.9019608497619629, 0.7686275243759155, 1.0): 734, (0.2980392277240753, 0.7137255072593689, 0.5647059082984924, 1.0): 713})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 7 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001507.png, index: 1507
+
+Rendering scene 1507 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at 0.336971, -0.037808, within 0.339086
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at 1.117667, 2.654652, within 2.880339
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at -2.581167, 3.193365, within 4.106093
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at -0.536466, -4.056341, within 4.091662
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at 1.998250, -2.547627, within 3.237809
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at 0.262489, -1.376081, within 1.400893
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at 0.235180, -0.122467, within 0.265156
+
+Trying to place object at -0.692307, 4.104880, within 4.162851
+
+Trying to place object at -0.031520, -3.351039, within 3.351187
+
+Trying to place object at 1.833984, 0.955344, within 2.067893
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at -0.742130, -0.049005, within 0.743747
+
+Trying to place object at 0.693728, 0.171773, within 0.714678
+
+Trying to place object at 0.178401, -0.479296, within 0.511421
+
+Trying to place object at 1.242256, 0.492277, within 1.336240
+
+Trying to place object at 1.194898, 0.595849, within 1.335222
+
+Trying to place object at 1.708676, -2.505888, within 3.032993
+
+Trying to place object at -1.609376, -2.633081, within 3.085969
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at -1.150406, -2.087951, within 2.383899
+
+Trying to place object at -2.341695, 3.592309, within 4.288149
+
+Trying to place object at -4.290423, 1.174682, within 4.448327
+
+Trying to place object at 1.521362, 0.414938, within 1.576933
+
+Trying to place object at 2.485765, 1.932012, within 3.148285
+
+Trying to place object at -1.394585, -2.188500, within 2.595072
+
+Trying to place object at -4.103264, 1.714755, within 4.447152
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at 2.891966, 1.092508, within 3.091447
+
+Trying to place object at -3.059481, -2.292738, within 3.823228
+
+Trying to place object at -0.810587, -0.286910, within 0.859865
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at -2.063469, 3.537654, within 4.095473
+
+Trying to place object at 1.035414, 0.024025, within 1.035693
+
+Trying to place object at 0.157386, 0.662682, within 0.681116
+
+Trying to place object at 0.620609, 0.952830, within 1.137119
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at 0.081999, -0.923005, within 0.926640
+
+Trying to place object at 1.121071, -0.925101, within 1.453483
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at -2.467232, 0.941146, within 2.640642
+
+Trying to place object at 0.221374, -4.172137, within 4.178006
+
+Trying to place object at 1.284665, 3.803196, within 4.014307
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at -2.682778, -1.824661, within 3.244486
+
+Trying to place object at -0.973882, -1.093763, within 1.464501
+
+Trying to place object at 0.990346, -3.104623, within 3.258752
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at 2.526572, 0.231588, within 2.537163
+
+Trying to place object at -0.596631, 0.775881, within 0.978754
+
+Trying to place object at -1.139025, 1.574105, within 1.942984
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 285769, (0.0941176563501358, 0.6274510025978088, 0.6745098233222961, 1.0): 2901, (0.4941176772117615, 0.8941177129745483, 0.9333333969116211, 1.0): 1918, (0.7725490927696228, 0.7450980544090271, 0.8431373238563538, 1.0): 1754, (0.7882353663444519, 0.6470588445663452, 0.9411765336990356, 1.0): 1652, (0.9960784912109375, 0.8980392813682556, 0.7882353663444519, 1.0): 1618, (0.7803922295570374, 0.2196078598499298, 0.4784314036369324, 1.0): 1535, (0.43137258291244507, 0.07450980693101883, 0.572549045085907, 1.0): 1383, (0.7921569347381592, 0.8392157554626465, 0.24313727021217346, 1.0): 1343, (0.6039215922355652, 0.9137255549430847, 0.8509804606437683, 1.0): 1273, (0.6352941393852234, 0.4549019932746887, 0.46274513006210327, 1.0): 1196, (0.9450981020927429, 0.8235294818878174, 0.8235294818878174, 1.0): 1194, (0.8705883026123047, 0.5333333611488342, 0.3960784673690796, 1.0): 999, (0.3686274588108063, 0.8901961445808411, 0.27450981736183167, 1.0): 956, (0.4431372880935669, 0.5686274766921997, 0.22352942824363708, 1.0): 883, (0.8117647767066956, 0.5529412031173706, 0.9647059440612793, 1.0): 826})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 8 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001508.png, index: 1508
+
+Rendering scene 1508 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at -0.073187, 0.064924, within 0.097834
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at 0.003867, 0.000719, within 0.003933
+
+Trying to place object at 0.308701, 0.174982, within 0.354845
+
+Trying to place object at -0.338019, -0.836616, within 0.902321
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at -0.641566, 0.033631, within 0.642447
+
+Trying to place object at -2.301148, -0.783257, within 2.430797
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at 0.045469, 0.009753, within 0.046503
+
+Trying to place object at 1.750949, -2.424116, within 2.990344
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at 3.371294, -0.474393, within 3.404508
+
+Trying to place object at 0.038572, -0.940111, within 0.940902
+
+Trying to place object at 0.172243, -0.181740, within 0.250394
+
+Trying to place object at 0.895034, 0.702597, within 1.137861
+
+Trying to place object at 3.322448, -0.882409, within 3.437631
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at -2.175573, 2.402774, within 3.241364
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at 1.557812, 2.839402, within 3.238670
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at 2.629347, 1.229312, within 2.902529
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at -0.659859, 0.339182, within 0.741929
+
+Trying to place object at 3.971203, 0.558243, within 4.010248
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at -0.446778, -0.234707, within 0.504676
+
+Trying to place object at -0.333398, 0.266441, within 0.426784
+
+Trying to place object at 1.674316, -1.040515, within 1.971295
+
+Trying to place object at -0.820378, 2.406778, within 2.542754
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at -1.401617, -1.301178, within 1.912484
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at 4.059051, -1.794582, within 4.438065
+
+Trying to place object at -0.506550, 1.190968, within 1.294217
+
+Trying to place object at 1.118279, 1.087026, within 1.559543
+
+Trying to place object at 1.333107, 2.087196, within 2.476603
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at -1.136146, 1.347535, within 1.762577
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at -0.492506, -1.257987, within 1.350961
+
+Trying to place object at 1.830549, -2.068505, within 2.762177
+
+Trying to place object at 1.465070, 1.460154, within 2.068449
+
+Trying to place object at 0.872359, -1.727905, within 1.935630
+
+Trying to place object at -0.452587, -0.064490, within 0.457158
+
+Trying to place object at 3.706433, -1.350516, within 3.944812
+
+Trying to place object at 0.223437, -0.549024, within 0.592749
+
+Trying to place object at 0.907080, 1.673754, within 1.903746
+
+Trying to place object at -0.233618, -0.437247, within 0.495744
+
+Trying to place object at -0.363241, -0.288138, within 0.463646
+
+Trying to place object at 4.233493, -0.367690, within 4.249430
+
+Trying to place object at -0.482011, 0.175891, within 0.513100
+
+Trying to place object at 1.648257, -0.327742, within 1.680526
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at -0.214582, -0.087985, within 0.231919
+
+Trying to place object at 2.411771, -1.629662, within 2.910745
+
+Trying to place object at -2.461734, 0.305248, within 2.480587
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 285139, (0.8901961445808411, 0.545098066329956, 0.7647059559822083, 1.0): 3037, (0.6823529601097107, 0.658823549747467, 0.33725491166114807, 1.0): 2869, (0.49803924560546875, 0.9764706492424011, 0.4901961088180542, 1.0): 1792, (0.3019607961177826, 0.8784314393997192, 0.8980392813682556, 1.0): 1544, (0.8431373238563538, 0.8117647767066956, 0.9411765336990356, 1.0): 1503, (0.5568627715110779, 0.8941177129745483, 0.8352941870689392, 1.0): 1433, (0.9333333969116211, 0.32156863808631897, 0.3529411852359772, 1.0): 1379, (0.8666667342185974, 0.6078431606292725, 0.3686274588108063, 1.0): 1375, (0.7686275243759155, 0.7647059559822083, 0.3529411852359772, 1.0): 1275, (0.8549020290374756, 0.9450981020927429, 0.501960813999176, 1.0): 1213, (0.960784375667572, 0.4862745404243469, 0.9960784912109375, 1.0): 1127, (0.7254902124404907, 0.9215686917304993, 0.16470588743686676, 1.0): 1062, (0.960784375667572, 0.8901961445808411, 0.8705883026123047, 1.0): 954, (0.8000000715255737, 0.11764706671237946, 0.729411780834198, 1.0): 807, (0.9490196704864502, 0.9019608497619629, 0.29019609093666077, 1.0): 691})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 9 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001509.png, index: 1509
+
+Rendering scene 1509 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at 0.366402, 0.709153, within 0.798215
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at 2.833233, -1.880149, within 3.400319
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at 0.026934, 0.009652, within 0.028612
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at 1.731682, -1.145130, within 2.076065
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at -2.389064, 1.233492, within 2.688704
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at 0.342270, 2.407035, within 2.431248
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at -2.747846, -2.474615, within 3.697888
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at 0.340174, 1.212966, within 1.259764
+
+Trying to place object at -0.718342, -0.253455, within 0.761745
+
+Trying to place object at 1.591069, 2.405003, within 2.883668
+
+Trying to place object at 0.569550, 0.168398, within 0.593924
+
+Trying to place object at 0.531732, -2.240907, within 2.303129
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at 1.004823, -0.356650, within 1.066240
+
+Trying to place object at -0.803467, 1.469347, within 1.674676
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at 0.603436, 0.823565, within 1.020977
+
+Trying to place object at -0.104314, -0.011895, within 0.104990
+
+Trying to place object at -1.974317, -1.062659, within 2.242136
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at -2.579578, 1.524311, within 2.996289
+
+Trying to place object at -0.064277, 0.055171, within 0.084707
+
+Trying to place object at 0.160092, 0.034390, within 0.163744
+
+Trying to place object at -2.252644, -0.061900, within 2.253494
+
+Trying to place object at -0.025761, 0.037844, within 0.045780
+
+Trying to place object at 0.529569, 1.774404, within 1.851743
+
+Trying to place object at 1.783046, -3.593659, within 4.011688
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at -2.917928, 3.358346, within 4.448909
+
+Trying to place object at -3.730353, 1.213783, within 3.922857
+
+Trying to place object at -3.412609, 1.171613, within 3.608127
+
+Trying to place object at -2.329681, 3.422057, within 4.139793
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at -4.033877, 0.213401, within 4.039517
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at 1.584497, -2.261139, within 2.761046
+
+Trying to place object at -0.070734, 4.271633, within 4.272219
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at -0.357801, -0.490990, within 0.607530
+
+Trying to place object at 0.032135, -0.029549, within 0.043656
+
+Trying to place object at 2.008990, -0.199185, within 2.018841
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 287003, (0.5568627715110779, 0.8941177129745483, 0.9529412388801575, 1.0): 2890, (0.4784314036369324, 0.9960784912109375, 0.5372549295425415, 1.0): 2086, (0.960784375667572, 0.8509804606437683, 0.7490196228027344, 1.0): 1794, (0.3764706254005432, 0.5607843399047852, 0.7411764860153198, 1.0): 1566, (0.803921639919281, 0.8784314393997192, 0.9372549653053284, 1.0): 1530, (0.5882353186607361, 0.7254902124404907, 0.9137255549430847, 1.0): 1467, (0.3960784673690796, 0.8901961445808411, 0.46666669845581055, 1.0): 1392, (0.960784375667572, 0.6980392336845398, 0.3764706254005432, 1.0): 1358, (0.847058892250061, 0.12941177189350128, 0.8941177129745483, 1.0): 1147, (0.5176470875740051, 0.8000000715255737, 0.8078432083129883, 1.0): 1017, (0.6313725709915161, 0.9490196704864502, 0.658823549747467, 1.0): 901, (0.8392157554626465, 0.8313726186752319, 0.26274511218070984, 1.0): 901, (0.6352941393852234, 0.8980392813682556, 0.48235297203063965, 1.0): 847, (0.8078432083129883, 0.9803922176361084, 0.4274510145187378, 1.0): 704, (0.7372549176216125, 0.8274510502815247, 0.686274528503418, 1.0): 597})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 10 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001510.png, index: 1510
+
+Rendering scene 1510 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at 0.303459, -0.058230, within 0.308995
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at 1.170449, 2.343792, within 2.619792
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at 2.711535, 2.703158, within 3.828771
+
+Trying to place object at 0.540812, -2.176580, within 2.242762
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at 0.000865, -0.150986, within 0.150988
+
+Trying to place object at 0.091861, 2.705988, within 2.707547
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at -0.776755, 1.273484, within 1.491681
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at -0.780449, -0.534164, within 0.945744
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at 2.175718, 0.610791, within 2.259826
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at 3.053413, -1.078253, within 3.238204
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at 3.963226, 1.281676, within 4.165316
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at -0.500293, -1.330104, within 1.421080
+
+Trying to place object at -0.235239, -0.047861, within 0.240058
+
+Trying to place object at 2.609712, -0.925484, within 2.768956
+
+Trying to place object at -2.591019, 1.924671, within 3.227653
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at -1.687550, 3.765416, within 4.126280
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at 3.973157, 1.972577, within 4.435880
+
+Trying to place object at 1.775950, -0.822287, within 1.957078
+
+Trying to place object at -0.308787, -1.218003, within 1.256535
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at 3.276039, 0.639444, within 3.337862
+
+Trying to place object at -2.891030, -2.884567, within 4.083966
+
+Trying to place object at 0.218240, -1.890771, within 1.903324
+
+Trying to place object at 1.134442, 4.288421, within 4.435935
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at 2.569512, -0.852199, within 2.707146
+
+Trying to place object at 1.458684, 0.178847, within 1.469607
+
+Trying to place object at 0.465024, -1.640860, within 1.705482
+
+Trying to place object at 0.909689, -0.145112, within 0.921191
+
+Trying to place object at 0.389864, 0.464107, within 0.606127
+
+Trying to place object at 2.691610, 3.166555, within 4.155940
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at -3.657001, -0.382466, within 3.676947
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 287129, (0.9725490808486938, 0.6549019813537598, 0.3529411852359772, 1.0): 2540, (0.9921569228172302, 0.7058823704719543, 0.6313725709915161, 1.0): 2307, (0.729411780834198, 0.545098066329956, 0.4941176772117615, 1.0): 1836, (0.7254902124404907, 0.18039216101169586, 0.8313726186752319, 1.0): 1801, (0.917647123336792, 0.9921569228172302, 0.7803922295570374, 1.0): 1530, (0.38431376218795776, 0.9490196704864502, 0.8000000715255737, 1.0): 1312, (0.9529412388801575, 0.7960785031318665, 0.8156863451004028, 1.0): 1208, (0.13725490868091583, 0.5176470875740051, 0.803921639919281, 1.0): 1156, (0.7529412508010864, 0.8823530077934265, 0.8078432083129883, 1.0): 1094, (0.8901961445808411, 0.6627451181411743, 0.02352941408753395, 1.0): 1052, (0.7333333492279053, 0.529411792755127, 0.8431373238563538, 1.0): 965, (0.6980392336845398, 0.46274513006210327, 0.9725490808486938, 1.0): 897, (0.9450981020927429, 0.9254902601242065, 0.658823549747467, 1.0): 858, (0.5960784554481506, 0.3450980484485626, 0.30980393290519714, 1.0): 832, (0.7490196228027344, 0.5960784554481506, 0.24705883860588074, 1.0): 683})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 11 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001511.png, index: 1511
+
+Rendering scene 1511 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at 2.056333, -2.663982, within 3.365309
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at -0.145075, 0.021673, within 0.146685
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at 2.942080, 0.098646, within 2.943733
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at -3.514997, -0.085558, within 3.516039
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at -0.991167, -0.138698, within 1.000825
+
+Trying to place object at -2.214363, 1.471126, within 2.658499
+
+Trying to place object at -0.135315, -3.648864, within 3.651372
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at -0.016109, 0.003122, within 0.016409
+
+Trying to place object at -2.820444, -2.811874, within 3.982655
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at -2.045329, 3.227201, within 3.820758
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at -0.128430, -0.145928, within 0.194394
+
+Trying to place object at -2.578587, 0.563795, within 2.639503
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at 0.127816, 3.370977, within 3.373399
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at -0.024385, 0.069346, within 0.073508
+
+Trying to place object at 2.389990, -2.267539, within 3.294508
+
+Trying to place object at 1.174734, 0.655685, within 1.345334
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at -0.137965, 1.950934, within 1.955806
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at 1.597137, -1.730014, within 2.354527
+
+Trying to place object at -1.060058, -1.240059, within 1.631401
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at -2.920822, 2.668955, within 3.956579
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at -1.525982, -1.447221, within 2.103110
+
+Trying to place object at -1.107499, 0.383386, within 1.171980
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at -1.689974, 1.176665, within 2.059260
+
+Trying to place object at 1.305586, -0.011344, within 1.305636
+
+Trying to place object at 0.477872, 0.313327, within 0.571433
+
+Trying to place object at 1.013377, -1.134755, within 1.521382
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 284880, (0.8392157554626465, 0.8000000715255737, 0.5764706134796143, 1.0): 3078, (0.9254902601242065, 0.22352942824363708, 0.26274511218070984, 1.0): 2837, (0.8666667342185974, 0.7882353663444519, 0.5372549295425415, 1.0): 2266, (0.8588235974311829, 0.9921569228172302, 0.6274510025978088, 1.0): 2265, (0.5176470875740051, 0.9647059440612793, 0.7882353663444519, 1.0): 1428, (0.8823530077934265, 0.501960813999176, 0.847058892250061, 1.0): 1300, (0.44705885648727417, 0.5607843399047852, 0.5529412031173706, 1.0): 1213, (0.9568628072738647, 0.8156863451004028, 0.9411765336990356, 1.0): 1179, (0.6666666865348816, 0.9921569228172302, 0.9333333969116211, 1.0): 1157, (0.729411780834198, 0.2666666805744171, 0.45098042488098145, 1.0): 1110, (0.9333333969116211, 0.6313725709915161, 0.7764706611633301, 1.0): 1054, (0.8862745761871338, 0.6941176652908325, 0.1411764770746231, 1.0): 955, (0.847058892250061, 0.8588235974311829, 0.5372549295425415, 1.0): 850, (0.874509871006012, 0.4901961088180542, 0.8627451658248901, 1.0): 824, (0.23137256503105164, 0.5686274766921997, 0.6941176652908325, 1.0): 804})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 12 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001512.png, index: 1512
+
+Rendering scene 1512 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at 2.112950, -0.020189, within 2.113046
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at 1.975732, 3.267542, within 3.818422
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at 0.270885, -1.004089, within 1.039988
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at -0.613910, -1.173359, within 1.324257
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at 0.524935, 0.782490, within 0.942256
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at -0.425831, -2.876717, within 2.908064
+
+Trying to place object at -0.862306, -0.237276, within 0.894356
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at -0.073148, 1.255066, within 1.257196
+
+Trying to place object at 0.227211, -0.426864, within 0.483567
+
+Trying to place object at 0.123161, -3.243352, within 3.245689
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at 1.997469, 1.643798, within 2.586882
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at -4.083337, -1.499493, within 4.349957
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at 0.577622, -3.882352, within 3.925087
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at -2.827908, -3.185382, within 4.259545
+
+Trying to place object at -4.014674, -0.411005, within 4.035658
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at -0.504701, 0.849076, within 0.987752
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at -1.250871, -2.665693, within 2.944588
+
+Trying to place object at 3.179345, -2.021441, within 3.767553
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at 3.400158, 0.127933, within 3.402564
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at 3.125374, 1.955949, within 3.686964
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 282270, (0.6745098233222961, 0.35686275362968445, 0.4941176772117615, 1.0): 3441, (0.9294118285179138, 0.847058892250061, 0.6196078658103943, 1.0): 2330, (0.43529415130615234, 0.8941177129745483, 0.4431372880935669, 1.0): 2284, (0.6784313917160034, 0.760784387588501, 0.8980392813682556, 1.0): 2070, (0.6784313917160034, 0.917647123336792, 0.9333333969116211, 1.0): 1961, (0.8549020290374756, 0.686274528503418, 0.33725491166114807, 1.0): 1929, (0.6823529601097107, 0.7372549176216125, 0.37254902720451355, 1.0): 1770, (0.8862745761871338, 0.03921568766236305, 0.7686275243759155, 1.0): 1692, (0.5176470875740051, 0.7647059559822083, 0.6352941393852234, 1.0): 1232, (0.6745098233222961, 0.7450980544090271, 0.5607843399047852, 1.0): 1215, (0.9490196704864502, 0.4549019932746887, 0.988235354423523, 1.0): 1139, (0.4941176772117615, 0.1411764770746231, 0.9921569228172302, 1.0): 1048, (0.9372549653053284, 0.30980393290519714, 0.7058823704719543, 1.0): 944, (0.6078431606292725, 0.988235354423523, 0.9725490808486938, 1.0): 939, (0.8862745761871338, 0.6980392336845398, 0.9686275124549866, 1.0): 936})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 13 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001513.png, index: 1513
+
+Rendering scene 1513 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at 0.307060, -0.437078, within 0.534156
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at -1.758117, 4.066988, within 4.430730
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at 0.260201, 1.571436, within 1.592832
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at 3.091628, -2.488428, within 3.968682
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at 0.059409, -0.077183, within 0.097399
+
+Trying to place object at 3.072349, 1.405025, within 3.378376
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at 1.702544, 3.250231, within 3.669149
+
+Trying to place object at 2.681038, -3.524261, within 4.428135
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at 0.066128, 1.512084, within 1.513529
+
+Trying to place object at 3.176176, 0.296655, within 3.190000
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at 0.249714, 0.851950, within 0.887792
+
+Trying to place object at 3.151650, -2.079885, within 3.776085
+
+Trying to place object at -2.327344, 1.781202, within 2.930735
+
+Trying to place object at -0.150536, -2.971146, within 2.974957
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at 2.352547, 3.628817, within 4.324673
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at -3.466666, 1.535108, within 3.791350
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at 0.119464, -0.547808, within 0.560683
+
+Trying to place object at -0.736439, 0.453993, within 0.865131
+
+Trying to place object at -0.269808, 0.037575, within 0.272412
+
+Trying to place object at -0.328141, -0.043037, within 0.330952
+
+Trying to place object at -3.176587, 1.460202, within 3.496125
+
+Trying to place object at 0.860491, 0.483114, within 0.986836
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at -0.226525, 4.215400, within 4.221482
+
+Trying to place object at 3.466217, 0.043963, within 3.466495
+
+Trying to place object at 0.278352, -2.011590, within 2.030757
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at 0.144570, -0.019044, within 0.145819
+
+Trying to place object at -0.529408, -0.421231, within 0.676542
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at 0.106192, -0.322867, within 0.339882
+
+Trying to place object at 1.856688, 0.879439, within 2.054435
+
+Trying to place object at -1.314112, -0.743377, within 1.509801
+
+Trying to place object at -1.190349, 1.926150, within 2.264284
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at 2.033323, 1.086074, within 2.305202
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 282587, (0.5529412031173706, 0.7058823704719543, 0.6313725709915161, 1.0): 2648, (0.4705882668495178, 0.5490196347236633, 0.12156863510608673, 1.0): 2559, (0.5215686559677124, 0.501960813999176, 0.3019607961177826, 1.0): 2333, (0.8274510502815247, 0.18039216101169586, 0.8784314393997192, 1.0): 2232, (0.9686275124549866, 0.7529412508010864, 0.803921639919281, 1.0): 1824, (0.9215686917304993, 0.8705883026123047, 0.35686275362968445, 1.0): 1816, (0.917647123336792, 0.46666669845581055, 0.847058892250061, 1.0): 1646, (0.9843137860298157, 0.9372549653053284, 0.686274528503418, 1.0): 1528, (0.9843137860298157, 0.9960784912109375, 0.9333333969116211, 1.0): 1521, (0.9411765336990356, 0.8352941870689392, 0.8156863451004028, 1.0): 1474, (0.3450980484485626, 0.7490196228027344, 0.7215686440467834, 1.0): 1450, (0.6509804129600525, 0.8274510502815247, 0.5686274766921997, 1.0): 1418, (0.545098066329956, 0.6313725709915161, 0.364705890417099, 1.0): 821, (0.8313726186752319, 0.6039215922355652, 0.686274528503418, 1.0): 682, (0.9019608497619629, 0.9803922176361084, 0.874509871006012, 1.0): 661})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 14 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001514.png, index: 1514
+
+Rendering scene 1514 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at 0.572787, -1.295918, within 1.416859
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at -3.822040, -2.251094, within 4.435698
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at 4.286669, 1.223316, within 4.457806
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at 0.519749, 1.725409, within 1.801992
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at -0.051655, -0.508866, within 0.511481
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at 0.974667, 3.840170, within 3.961929
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at -0.192569, 1.247815, within 1.262587
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at -1.217095, -0.149729, within 1.226270
+
+Trying to place object at -1.060264, 0.549172, within 1.194048
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at -3.437141, -1.267532, within 3.663410
+
+Trying to place object at 1.001728, -1.659875, within 1.938722
+
+Trying to place object at 1.328158, 3.530973, within 3.772502
+
+Trying to place object at -2.724850, -0.224357, within 2.734071
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at 0.523827, -2.680080, within 2.730792
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at -0.683500, 0.773653, within 1.032333
+
+Trying to place object at 4.190966, 1.421149, within 4.425366
+
+Trying to place object at 1.845841, 0.544959, within 1.924606
+
+Trying to place object at 1.026335, -0.493835, within 1.138963
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at 2.580650, 2.299647, within 3.456607
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at -1.254901, 1.822958, within 2.213132
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at -1.842024, 2.157197, within 2.836644
+
+Trying to place object at 1.643030, 2.905153, within 3.337584
+
+Trying to place object at 2.394334, -2.403279, within 3.392430
+
+Trying to place object at -0.352219, -0.311628, within 0.470287
+
+Trying to place object at -1.799130, 1.495218, within 2.339347
+
+Trying to place object at 2.274567, 0.566738, within 2.344109
+
+Trying to place object at 0.846685, 0.682968, within 1.087806
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at -1.043320, 1.897974, within 2.165830
+
+Trying to place object at -3.541120, 0.920559, within 3.658819
+
+Trying to place object at 1.417577, -3.711650, within 3.973143
+
+Trying to place object at -2.178169, 3.183797, within 3.857588
+
+Trying to place object at 0.373595, -0.066453, within 0.379459
+
+Trying to place object at 2.243123, -0.510139, within 2.300400
+
+Trying to place object at -0.547646, 2.636045, within 2.692332
+
+Trying to place object at 2.820269, -2.534810, within 3.791989
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 282703, (0.8000000715255737, 0.8117647767066956, 0.27450981736183167, 1.0): 3835, (0.9411765336990356, 0.7960785031318665, 0.06666667014360428, 1.0): 2251, (0.5490196347236633, 0.4941176772117615, 0.8980392813682556, 1.0): 2219, (0.8078432083129883, 0.7372549176216125, 0.9254902601242065, 1.0): 2170, (0.988235354423523, 0.5411764979362488, 0.9450981020927429, 1.0): 1845, (0.8313726186752319, 0.7019608020782471, 0.21568629145622253, 1.0): 1503, (0.7960785031318665, 0.8588235974311829, 0.729411780834198, 1.0): 1448, (0.8313726186752319, 0.4745098352432251, 0.6352941393852234, 1.0): 1441, (0.7725490927696228, 0.8549020290374756, 0.9058824181556702, 1.0): 1352, (0.1568627506494522, 0.6666666865348816, 0.9098039865493774, 1.0): 1250, (0.5647059082984924, 0.7137255072593689, 0.9725490808486938, 1.0): 1102, (0.7647059559822083, 0.9725490808486938, 0.46666669845581055, 1.0): 1077, (0.49803924560546875, 0.9019608497619629, 0.3607843220233917, 1.0): 1058, (0.803921639919281, 0.5372549295425415, 0.7215686440467834, 1.0): 1006, (0.4901961088180542, 0.7098039388656616, 0.917647123336792, 1.0): 940})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 15 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001515.png, index: 1515
+
+Rendering scene 1515 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at 1.564378, 1.093675, within 1.908770
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at 1.599557, -2.084477, within 2.627475
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at 0.320351, -0.077399, within 0.329568
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at 3.867075, 1.454637, within 4.131614
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at 0.594859, -0.549211, within 0.809623
+
+Trying to place object at -1.051583, -1.594614, within 1.910136
+
+Trying to place object at 0.794247, -0.558090, within 0.970718
+
+Trying to place object at 1.329462, 0.539574, within 1.434786
+
+Trying to place object at 0.637762, -0.235846, within 0.679973
+
+Trying to place object at -2.200044, 0.451792, within 2.245954
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at -1.677446, 3.029482, within 3.462887
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at -0.004961, 0.000888, within 0.005040
+
+Trying to place object at -3.727112, 0.511506, within 3.762047
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at 1.875145, 2.605360, within 3.209996
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at 2.120143, -1.012058, within 2.349312
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at -4.321371, 0.115025, within 4.322901
+
+Trying to place object at -0.982733, 3.399249, within 3.538454
+
+Trying to place object at -1.816764, -3.606268, within 4.038045
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at -2.120700, 0.906089, within 2.306158
+
+Trying to place object at 0.224878, -0.362378, within 0.426483
+
+Trying to place object at -0.280640, -0.356736, within 0.453893
+
+Trying to place object at 0.584016, -3.223252, within 3.275734
+
+Trying to place object at 0.045733, 0.024691, within 0.051973
+
+Trying to place object at -0.079261, 0.309851, within 0.319828
+
+Trying to place object at -0.952308, -1.718050, within 1.964328
+
+Trying to place object at 0.542408, -2.086922, within 2.156258
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at -2.201860, -3.381519, within 4.035203
+
+Trying to place object at 2.106080, 2.324110, within 3.136408
+
+Trying to place object at 3.153914, 0.604263, within 3.211278
+
+Trying to place object at -0.041293, -0.187539, within 0.192032
+
+Trying to place object at -2.486269, 1.093795, within 2.716233
+
+Trying to place object at -2.862928, 0.023640, within 2.863026
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at -2.338092, 0.076284, within 2.339336
+
+Trying to place object at -1.020702, -1.303102, within 1.655266
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at -0.156208, 0.056732, within 0.166191
+
+Trying to place object at 1.691623, 2.153103, within 2.738145
+
+Trying to place object at -2.723773, 0.720537, within 2.817466
+
+Trying to place object at -2.230768, 1.326912, within 2.595577
+
+Trying to place object at -1.482392, 0.128522, within 1.487953
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at 1.229054, -1.720794, within 2.114640
+
+Trying to place object at 0.015837, -2.429975, within 2.430026
+
+Trying to place object at -0.181467, -2.923184, within 2.928811
+
+Trying to place object at -3.108764, 1.721547, within 3.553609
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 285604, (0.7960785031318665, 0.803921639919281, 0.9725490808486938, 1.0): 2452, (0.7803922295570374, 0.8784314393997192, 0.5215686559677124, 1.0): 2249, (0.6666666865348816, 0.4078431725502014, 0.6431372761726379, 1.0): 1996, (0.44705885648727417, 0.6980392336845398, 0.07450980693101883, 1.0): 1895, (0.33725491166114807, 0.5529412031173706, 0.9490196704864502, 1.0): 1818, (0.7843137979507446, 0.529411792755127, 0.5843137502670288, 1.0): 1753, (0.9058824181556702, 0.6627451181411743, 0.9019608497619629, 1.0): 1685, (0.6313725709915161, 0.6431372761726379, 0.686274528503418, 1.0): 1483, (0.33725491166114807, 0.917647123336792, 0.9137255549430847, 1.0): 1191, (0.9333333969116211, 0.847058892250061, 0.9686275124549866, 1.0): 1113, (0.4235294461250305, 0.5176470875740051, 0.9529412388801575, 1.0): 984, (0.5490196347236633, 0.7647059559822083, 0.7803922295570374, 1.0): 861, (0.5058823823928833, 0.48235297203063965, 0.7098039388656616, 1.0): 753, (0.35686275362968445, 0.7764706611633301, 0.6470588445663452, 1.0): 721, (0.9647059440612793, 0.8078432083129883, 0.7411764860153198, 1.0): 642})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 16 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001516.png, index: 1516
+
+Rendering scene 1516 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at -0.115892, 0.198891, within 0.230193
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at 1.755850, 0.245449, within 1.772923
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at -3.929531, 0.683071, within 3.988459
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at -2.119829, -0.467620, within 2.170794
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at 1.531772, 2.093376, within 2.593944
+
+Trying to place object at 4.216695, 1.409616, within 4.446069
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at 2.061845, -2.495917, within 3.237408
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at -2.369236, -3.807899, within 4.484794
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at -2.117803, 0.207400, within 2.127934
+
+Trying to place object at 4.049796, -1.561528, within 4.340416
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at 1.991295, 3.040776, within 3.634773
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at 1.447608, 1.487207, within 2.075416
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at 1.659861, 0.830786, within 1.856164
+
+Trying to place object at -0.579154, 0.323669, within 0.663462
+
+Trying to place object at 1.868100, 0.296716, within 1.891518
+
+Trying to place object at 1.753220, 2.110154, within 2.743452
+
+Trying to place object at -3.712912, -0.771479, within 3.792215
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at 3.582879, 1.092834, within 3.745839
+
+Trying to place object at 2.971333, -2.684647, within 4.004516
+
+Trying to place object at -3.074584, 0.784196, within 3.173016
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at -0.257628, 0.154257, within 0.300278
+
+Trying to place object at -0.484122, 3.116567, within 3.153944
+
+Trying to place object at -0.357122, 3.266690, within 3.286152
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at -0.030439, 0.393244, within 0.394420
+
+Trying to place object at 2.181812, -1.971834, within 2.940822
+
+Trying to place object at -2.369082, 0.936405, within 2.547431
+
+Trying to place object at 3.873530, -1.001293, within 4.000853
+
+Trying to place object at 0.756067, -2.947852, within 3.043266
+
+Trying to place object at -0.860743, 4.354120, within 4.438383
+
+Trying to place object at 1.733059, 2.662917, within 3.177204
+
+Trying to place object at 3.953091, -0.247855, within 3.960853
+
+Trying to place object at -0.126396, -0.495840, within 0.511696
+
+Trying to place object at -2.564637, 3.499125, within 4.338345
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at -0.506570, -0.508740, within 0.717934
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 284621, (0.9372549653053284, 0.9568628072738647, 0.874509871006012, 1.0): 2649, (0.5137255191802979, 0.8235294818878174, 0.7098039388656616, 1.0): 2492, (0.9568628072738647, 0.988235354423523, 0.23137256503105164, 1.0): 2098, (0.6549019813537598, 0.7764706611633301, 0.9490196704864502, 1.0): 2026, (0.8901961445808411, 0.7882353663444519, 0.7647059559822083, 1.0): 1719, (0.4941176772117615, 0.7490196228027344, 0.8196079134941101, 1.0): 1621, (0.7843137979507446, 0.2823529541492462, 0.8235294818878174, 1.0): 1607, (0.2823529541492462, 0.9764706492424011, 0.9725490808486938, 1.0): 1402, (0.7490196228027344, 0.8705883026123047, 0.803921639919281, 1.0): 1266, (0.7764706611633301, 0.8352941870689392, 1.0, 1.0): 1190, (0.7098039388656616, 0.5411764979362488, 0.3019607961177826, 1.0): 1184, (0.2823529541492462, 0.7960785031318665, 0.38431376218795776, 1.0): 969, (0.7411764860153198, 0.41568630933761597, 0.9098039865493774, 1.0): 950, (0.48235297203063965, 0.960784375667572, 0.27450981736183167, 1.0): 764, (0.9843137860298157, 0.9137255549430847, 0.7176470756530762, 1.0): 642})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 17 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001517.png, index: 1517
+
+Rendering scene 1517 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at -0.107041, 1.423076, within 1.427096
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at -0.507213, -4.318550, within 4.348234
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at 3.279432, -0.615911, within 3.336768
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at -1.952273, -0.529016, within 2.022678
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at 2.390601, 1.900855, within 3.054214
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at 0.537559, -0.268919, within 0.601072
+
+Trying to place object at -1.391467, 2.589222, within 2.939431
+
+Trying to place object at -0.024750, 0.104964, within 0.107843
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at 0.461230, -0.521135, within 0.695927
+
+Trying to place object at 2.153920, 1.008159, within 2.378183
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at 0.405625, 0.034156, within 0.407061
+
+Trying to place object at -1.678338, -1.611041, within 2.326429
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at -3.112789, 2.141060, within 3.778041
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at 3.347399, -0.886953, within 3.462913
+
+Trying to place object at 3.096419, 0.424088, within 3.125326
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at 1.267789, 3.235402, within 3.474927
+
+Trying to place object at -0.684368, -1.882677, within 2.003205
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at 0.256980, -0.236911, within 0.349522
+
+Trying to place object at -1.426868, 2.627149, within 2.989626
+
+Trying to place object at 3.902056, -0.048244, within 3.902354
+
+Trying to place object at -2.162211, 3.886790, within 4.447729
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at -1.135618, 2.387937, within 2.644215
+
+Trying to place object at -2.739820, -2.124254, within 3.466853
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at -3.999173, -1.286947, within 4.201145
+
+Trying to place object at -0.422342, -0.091225, within 0.432082
+
+Trying to place object at -2.382321, -0.783310, within 2.507794
+
+Trying to place object at -1.116053, -0.343765, within 1.167797
+
+Trying to place object at -2.131511, -0.684331, within 2.238671
+
+Trying to place object at 1.247398, 0.583177, within 1.376988
+
+Trying to place object at 1.191815, 0.355597, within 1.243733
+
+Trying to place object at -1.328948, -1.208841, within 1.796497
+
+Trying to place object at 0.015623, -0.028388, within 0.032403
+
+Trying to place object at -3.330091, -1.406040, within 3.614756
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at -1.324606, 2.085290, within 2.470428
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 286160, (0.8941177129745483, 0.7450980544090271, 0.6235294342041016, 1.0): 2899, (0.2705882489681244, 0.6627451181411743, 0.7647059559822083, 1.0): 2013, (0.6313725709915161, 0.6078431606292725, 0.5764706134796143, 1.0): 1950, (0.9294118285179138, 0.9725490808486938, 0.5176470875740051, 1.0): 1812, (0.5372549295425415, 0.9098039865493774, 0.24705883860588074, 1.0): 1796, (0.8509804606437683, 0.686274528503418, 0.8862745761871338, 1.0): 1553, (0.960784375667572, 1.0, 0.6274510025978088, 1.0): 1501, (0.5529412031173706, 0.8549020290374756, 0.4862745404243469, 1.0): 1274, (0.7529412508010864, 0.6627451181411743, 0.9411765336990356, 1.0): 1059, (0.8431373238563538, 0.8431373238563538, 0.8431373238563538, 1.0): 1023, (0.8588235974311829, 0.8235294818878174, 0.4784314036369324, 1.0): 958, (0.49803924560546875, 0.4431372880935669, 0.9450981020927429, 1.0): 923, (0.874509871006012, 0.9843137860298157, 0.5058823823928833, 1.0): 898, (0.7137255072593689, 0.4274510145187378, 0.874509871006012, 1.0): 763, (0.917647123336792, 0.6196078658103943, 0.4941176772117615, 1.0): 618})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 18 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001518.png, index: 1518
+
+Rendering scene 1518 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at -0.443850, -0.329713, within 0.552913
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at -1.766468, -2.442731, within 3.014522
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at 0.092221, -1.733271, within 1.735722
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at -0.939250, -0.460447, within 1.046041
+
+Trying to place object at 0.093513, -3.038121, within 3.039560
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at 0.053024, -0.780488, within 0.782288
+
+Trying to place object at 0.052661, 0.316334, within 0.320687
+
+Trying to place object at 4.010517, 1.628019, within 4.328359
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at -0.413580, 1.440316, within 1.498519
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at 3.339490, -0.437294, within 3.368000
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at 0.944663, 1.660423, within 1.910338
+
+Trying to place object at 1.175098, -0.602844, within 1.320711
+
+Trying to place object at -3.593979, -2.518216, within 4.388405
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at -0.552024, -0.067168, within 0.556095
+
+Trying to place object at -3.520587, -0.330015, within 3.536021
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at -0.148674, -3.556533, within 3.559639
+
+Trying to place object at -2.689681, -1.967808, within 3.332665
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at -0.254799, -3.469579, within 3.478923
+
+Trying to place object at 2.258612, -1.527575, within 2.726686
+
+Trying to place object at -0.456145, 0.478974, within 0.661426
+
+Trying to place object at -0.449205, -0.124681, within 0.466188
+
+Trying to place object at 0.577845, 2.400612, within 2.469178
+
+Trying to place object at 1.772505, -0.075393, within 1.774108
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at -2.209691, 2.857893, within 3.612518
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at 2.309207, -3.206060, within 3.951108
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at 0.876187, -0.232165, within 0.906424
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at -1.872401, -1.383187, within 2.327895
+
+Trying to place object at -1.289917, 2.210671, within 2.559483
+
+Trying to place object at -0.719127, 2.641293, within 2.737439
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 282318, (0.8549020290374756, 0.9568628072738647, 0.917647123336792, 1.0): 3593, (0.7490196228027344, 0.615686297416687, 0.7058823704719543, 1.0): 2889, (0.847058892250061, 0.5490196347236633, 0.4078431725502014, 1.0): 2548, (0.3490196168422699, 0.9647059440612793, 0.20000001788139343, 1.0): 2186, (0.658823549747467, 0.5568627715110779, 0.24313727021217346, 1.0): 1997, (0.6666666865348816, 0.3921568989753723, 0.7254902124404907, 1.0): 1635, (0.4705882668495178, 0.9215686917304993, 0.16470588743686676, 1.0): 1558, (0.874509871006012, 0.13725490868091583, 0.847058892250061, 1.0): 1277, (0.34117648005485535, 0.5921568870544434, 0.5529412031173706, 1.0): 1254, (0.24313727021217346, 0.40392160415649414, 0.34117648005485535, 1.0): 1213, (0.9686275124549866, 0.44705885648727417, 0.7137255072593689, 1.0): 1191, (0.6352941393852234, 0.5254902243614197, 0.8823530077934265, 1.0): 1022, (0.7058823704719543, 0.9568628072738647, 0.5882353186607361, 1.0): 919, (0.29411765933036804, 0.7411764860153198, 0.7725490927696228, 1.0): 917, (0.29019609093666077, 0.9686275124549866, 0.7254902124404907, 1.0): 683})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 19 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001519.png, index: 1519
+
+Rendering scene 1519 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at -1.028625, -0.221610, within 1.052226
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at 3.205730, -2.212985, within 3.895383
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at 2.406197, 0.977915, within 2.597326
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at 0.079371, -0.053569, within 0.095757
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at 1.542301, -0.957371, within 1.815283
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at -0.445595, 0.093073, within 0.455211
+
+Trying to place object at 0.475885, 1.091255, within 1.190506
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at -2.835952, -0.775986, within 2.940200
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at -0.597048, -0.396885, within 0.716927
+
+Trying to place object at -3.666136, 0.512206, within 3.701744
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at 0.941620, 0.880093, within 1.288880
+
+Trying to place object at 0.523712, 0.277011, within 0.592461
+
+Trying to place object at 1.963500, -3.568628, within 4.073136
+
+Trying to place object at 1.121485, -1.070035, within 1.550066
+
+Trying to place object at -1.290465, 2.821767, within 3.102848
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at -0.789692, 1.156763, within 1.400612
+
+Trying to place object at -2.765859, -1.320410, within 3.064875
+
+Trying to place object at -0.254480, 0.320026, within 0.408872
+
+Trying to place object at 1.381822, 0.341279, within 1.423342
+
+Trying to place object at -1.142249, 1.640273, within 1.998807
+
+Trying to place object at 0.137984, 0.024408, within 0.140126
+
+Trying to place object at 0.888121, 0.294109, within 0.935553
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at 0.183695, 0.877437, within 0.896459
+
+Trying to place object at -0.130578, 1.183170, within 1.190354
+
+Trying to place object at -1.840935, 2.136331, within 2.820098
+
+Trying to place object at -0.186168, 0.195150, within 0.269707
+
+Trying to place object at 1.876368, -1.657036, within 2.503303
+
+Trying to place object at 0.395103, -0.483251, within 0.624210
+
+Trying to place object at 0.046131, -0.053726, within 0.070814
+
+Trying to place object at -2.407178, -2.899392, within 3.768419
+
+Trying to place object at -0.002760, -0.003924, within 0.004797
+
+Trying to place object at 0.222037, -1.751124, within 1.765145
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at 2.019113, -2.103047, within 2.915411
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at -0.304306, 0.067535, within 0.311710
+
+Trying to place object at -0.275421, 1.182331, within 1.213987
+
+Trying to place object at 3.271320, 0.106807, within 3.273064
+
+Trying to place object at 1.095733, 0.369471, within 1.156347
+
+Trying to place object at 0.019003, -2.362474, within 2.362551
+
+Trying to place object at 2.200447, 3.248959, within 3.923990
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at 3.397065, 0.428504, within 3.423984
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at -0.472978, 0.426850, within 0.637110
+
+Trying to place object at 1.268954, 2.447316, within 2.756738
+
+Trying to place object at -1.116959, -2.395811, within 2.643389
+
+Trying to place object at -0.543313, -2.638402, within 2.693763
+
+Trying to place object at 2.833549, -0.599579, within 2.896289
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 285244, (0.7098039388656616, 0.9725490808486938, 0.46274513006210327, 1.0): 2464, (0.9254902601242065, 0.9215686917304993, 0.6431372761726379, 1.0): 2044, (0.6901960968971252, 0.8862745761871338, 0.6549019813537598, 1.0): 1991, (0.8784314393997192, 0.5686274766921997, 0.09803922474384308, 1.0): 1858, (0.5921568870544434, 0.7333333492279053, 0.8156863451004028, 1.0): 1840, (0.8823530077934265, 0.5921568870544434, 0.8823530077934265, 1.0): 1664, (0.9803922176361084, 0.6117647290229797, 0.960784375667572, 1.0): 1505, (0.48235297203063965, 0.5803921818733215, 0.3764706254005432, 1.0): 1397, (0.9254902601242065, 0.8117647767066956, 0.5960784554481506, 1.0): 1309, (0.7843137979507446, 0.30588236451148987, 0.6117647290229797, 1.0): 1224, (0.7686275243759155, 0.7803922295570374, 0.4745098352432251, 1.0): 1090, (0.0784313753247261, 0.5333333611488342, 0.658823549747467, 1.0): 1028, (0.7137255072593689, 0.5529412031173706, 0.9215686917304993, 1.0): 1025, (0.9450981020927429, 0.8235294818878174, 0.8392157554626465, 1.0): 835, (0.7529412508010864, 0.2980392277240753, 0.22352942824363708, 1.0): 682})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 20 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001520.png, index: 1520
+
+Rendering scene 1520 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at -2.140141, 1.005032, within 2.364380
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at -0.014291, 1.732700, within 1.732759
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at -0.841977, 0.001722, within 0.841979
+
+Trying to place object at -0.925925, -0.808299, within 1.229099
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at -0.576276, -2.877510, within 2.934648
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at 2.895789, 0.764677, within 2.995050
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at -2.549494, -2.260387, within 3.407238
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at 0.576326, 1.029876, within 1.180168
+
+Trying to place object at -2.142204, -0.099952, within 2.144534
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at 3.138029, 0.323315, within 3.154641
+
+Trying to place object at 1.337747, -1.690516, within 2.155785
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at 0.901063, -4.255562, within 4.349911
+
+Trying to place object at 1.639804, -1.439407, within 2.181937
+
+Trying to place object at 2.395608, 1.208639, within 2.683234
+
+Trying to place object at 0.833837, -1.238243, within 1.492826
+
+Trying to place object at 1.298190, 1.227011, within 1.786296
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at 1.433804, 0.231533, within 1.452378
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at 0.543609, -1.039966, within 1.173473
+
+Trying to place object at -2.157047, 1.844608, within 2.838209
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at -3.499522, -1.682451, within 3.882949
+
+Trying to place object at 2.415291, 2.804580, within 3.701257
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at 1.312740, 0.481703, within 1.398329
+
+Trying to place object at -3.329902, -2.771221, within 4.332195
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at -0.095956, -0.739247, within 0.745449
+
+Trying to place object at -0.673514, -3.146580, within 3.217855
+
+Trying to place object at -1.691608, -0.697933, within 1.829931
+
+Trying to place object at 1.478693, 2.036007, within 2.516319
+
+Trying to place object at 2.974587, 0.239462, within 2.984210
+
+Trying to place object at -1.623870, -3.187607, within 3.577400
+
+Trying to place object at 2.797044, -2.952084, within 4.066725
+
+Trying to place object at 0.226765, -1.395494, within 1.413798
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at -0.170955, 4.242814, within 4.246257
+
+Trying to place object at -4.240359, 0.990021, within 4.354399
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 288772, (0.8392157554626465, 0.874509871006012, 0.4392157196998596, 1.0): 2168, (0.4784314036369324, 0.8901961445808411, 0.8392157554626465, 1.0): 1488, (0.9294118285179138, 0.6039215922355652, 0.6000000238418579, 1.0): 1474, (0.7921569347381592, 0.6274510025978088, 0.7372549176216125, 1.0): 1396, (0.9725490808486938, 0.14509804546833038, 0.46666669845581055, 1.0): 1353, (0.572549045085907, 0.6235294342041016, 0.8549020290374756, 1.0): 1340, (0.16862745583057404, 0.5568627715110779, 0.8784314393997192, 1.0): 1228, (0.8862745761871338, 0.9254902601242065, 0.9254902601242065, 1.0): 1199, (0.9333333969116211, 0.3529411852359772, 0.7764706611633301, 1.0): 1090, (0.49803924560546875, 0.6666666865348816, 0.7843137979507446, 1.0): 1074, (0.9450981020927429, 0.9686275124549866, 0.7254902124404907, 1.0): 990, (0.8196079134941101, 0.6941176652908325, 0.9843137860298157, 1.0): 948, (0.9921569228172302, 0.9843137860298157, 0.5764706134796143, 1.0): 916, (0.9372549653053284, 0.960784375667572, 0.4117647409439087, 1.0): 892, (0.8784314393997192, 0.960784375667572, 0.9411765336990356, 1.0): 872})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 21 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001521.png, index: 1521
+
+Rendering scene 1521 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at 0.518295, -4.182671, within 4.214660
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at 0.327389, -2.986176, within 3.004069
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at 2.775053, 3.427626, within 4.410163
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at 1.155592, -0.029681, within 1.155973
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at 0.914547, 1.819546, within 2.036454
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at -0.214856, 2.281763, within 2.291857
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at 0.576228, 3.454196, within 3.501929
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at 1.347382, 1.494460, within 2.012176
+
+Trying to place object at -2.859287, 2.744189, within 3.963091
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at -2.807623, 0.657013, within 2.883472
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at 1.162841, -0.517172, within 1.272661
+
+Trying to place object at 0.021737, 1.618313, within 1.618459
+
+Trying to place object at -1.053297, 1.888936, within 2.162756
+
+Trying to place object at -0.826151, -0.838604, within 1.177193
+
+Trying to place object at -1.595190, 2.882483, within 3.294440
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at -0.343018, -2.054328, within 2.082768
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at -0.404546, 0.031683, within 0.405785
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at -1.189825, 0.204947, within 1.207347
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at -2.580048, 2.595909, within 3.659971
+
+Trying to place object at -1.297231, -3.902706, within 4.112654
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at -0.353783, 0.186027, within 0.399710
+
+Trying to place object at -1.524615, -2.199420, within 2.676173
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 285861, (0.6627451181411743, 0.8431373238563538, 0.7333333492279053, 1.0): 2924, (0.7137255072593689, 0.16862745583057404, 0.6274510025978088, 1.0): 2079, (0.6509804129600525, 0.8117647767066956, 0.37254902720451355, 1.0): 1745, (0.7764706611633301, 0.6784313917160034, 0.9058824181556702, 1.0): 1677, (0.729411780834198, 0.4941176772117615, 0.7843137979507446, 1.0): 1655, (0.6784313917160034, 0.6431372761726379, 0.545098066329956, 1.0): 1651, (0.529411792755127, 0.8549020290374756, 0.5960784554481506, 1.0): 1529, (0.9333333969116211, 0.8941177129745483, 0.6941176652908325, 1.0): 1309, (0.9215686917304993, 0.9254902601242065, 0.364705890417099, 1.0): 1177, (0.9803922176361084, 0.8352941870689392, 0.6745098233222961, 1.0): 1165, (0.8313726186752319, 0.5254902243614197, 0.6509804129600525, 1.0): 1108, (0.5490196347236633, 0.6705882549285889, 0.8431373238563538, 1.0): 1064, (0.9686275124549866, 0.46274513006210327, 0.3176470696926117, 1.0): 882, (0.9803922176361084, 0.9803922176361084, 0.12156863510608673, 1.0): 727, (0.5176470875740051, 0.6745098233222961, 0.9764706492424011, 1.0): 647})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 22 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001522.png, index: 1522
+
+Rendering scene 1522 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at 0.103569, 4.249457, within 4.250719
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at 1.737985, 3.667585, within 4.058543
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at -0.940979, 0.694530, within 1.169536
+
+Trying to place object at 2.307344, -1.195827, within 2.598815
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at 2.626796, -2.249044, within 3.458071
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at -1.229005, 1.091036, within 1.643416
+
+Trying to place object at -1.181233, 2.353949, within 2.633702
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at 0.012603, 0.842385, within 0.842479
+
+Trying to place object at -2.464293, -0.136971, within 2.468097
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at -0.978857, 1.109505, within 1.479582
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at -0.239131, -0.909418, within 0.940332
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at 2.663156, 0.288501, within 2.678737
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at -1.748595, 1.266077, within 2.158827
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at -3.709032, 2.408353, within 4.422339
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at 0.550046, -1.882233, within 1.960956
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at 4.271143, 1.127109, within 4.417357
+
+Trying to place object at -3.206917, -2.698607, within 4.191276
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at -1.304807, 0.242024, within 1.327064
+
+Trying to place object at -0.523601, -2.618263, within 2.670104
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at -1.243985, 0.119421, within 1.249704
+
+Trying to place object at 1.247863, -2.963152, within 3.215187
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 282804, (0.9254902601242065, 0.7921569347381592, 0.7137255072593689, 1.0): 3320, (0.9686275124549866, 0.6509804129600525, 0.6117647290229797, 1.0): 2695, (0.9333333969116211, 0.2352941334247589, 0.9803922176361084, 1.0): 2629, (0.5372549295425415, 0.9490196704864502, 0.5686274766921997, 1.0): 2344, (1.0, 0.7450980544090271, 0.8823530077934265, 1.0): 1809, (0.3686274588108063, 0.3803921937942505, 0.6509804129600525, 1.0): 1606, (0.658823549747467, 0.8117647767066956, 0.7725490927696228, 1.0): 1551, (0.7843137979507446, 0.5960784554481506, 0.4117647409439087, 1.0): 1379, (0.7372549176216125, 0.5843137502670288, 0.7843137979507446, 1.0): 1273, (0.7490196228027344, 0.11764706671237946, 0.9333333969116211, 1.0): 1134, (0.9725490808486938, 0.7215686440467834, 0.7921569347381592, 1.0): 1059, (0.9490196704864502, 0.501960813999176, 0.9019608497619629, 1.0): 1029, (0.9725490808486938, 0.5176470875740051, 0.6196078658103943, 1.0): 974, (0.3294117748737335, 0.7215686440467834, 0.7490196228027344, 1.0): 919, (0.8196079134941101, 0.7647059559822083, 0.8901961445808411, 1.0): 675})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 23 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001523.png, index: 1523
+
+Rendering scene 1523 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at 2.479984, -2.359798, within 3.423298
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at -2.152760, 1.420888, within 2.579399
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at 1.056214, 1.001794, within 1.455740
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at 3.889278, 1.016429, within 4.019901
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at 0.123399, -0.604620, within 0.617084
+
+Trying to place object at -0.425359, -0.782340, within 0.890498
+
+Trying to place object at -0.283096, 0.221523, within 0.359465
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at 0.057492, 0.013769, within 0.059118
+
+Trying to place object at 1.433809, -1.023049, within 1.761374
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at 1.520371, -1.113460, within 1.884495
+
+Trying to place object at 3.462381, 1.548962, within 3.793069
+
+Trying to place object at -2.783187, -2.344790, within 3.639255
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at -1.889208, 0.504740, within 1.955471
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at 0.592709, 1.758897, within 1.856077
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at 0.437151, -1.543977, within 1.604670
+
+Trying to place object at -3.148491, -2.284393, within 3.889917
+
+Trying to place object at -0.047237, -0.018529, within 0.050741
+
+Trying to place object at 1.144169, 2.157768, within 2.442352
+
+Trying to place object at 0.328069, 1.808067, within 1.837589
+
+Trying to place object at 1.929454, -1.816768, within 2.650177
+
+Trying to place object at -0.440341, 1.125929, within 1.208973
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at 2.797596, 0.384519, within 2.823897
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at 3.030569, 1.255383, within 3.280295
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at 2.864361, -0.495874, within 2.906967
+
+Trying to place object at -0.016065, 0.034820, within 0.038347
+
+Trying to place object at 0.836780, -4.168566, within 4.251722
+
+Trying to place object at 1.333200, -4.200254, within 4.406763
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at 0.151568, 0.787679, within 0.802129
+
+Trying to place object at -0.162010, -0.083161, within 0.182107
+
+Trying to place object at -1.519024, -0.935794, within 1.784136
+
+Trying to place object at -0.445118, 0.252619, within 0.511807
+
+Trying to place object at 1.476397, -1.156870, within 1.875659
+
+Trying to place object at 2.825250, 2.492531, within 3.767592
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at -1.842728, 0.101205, within 1.845505
+
+Trying to place object at -3.141850, 2.659410, within 4.116270
+
+Trying to place object at 1.621119, 0.643208, within 1.744060
+
+Trying to place object at -0.894146, 1.052156, within 1.380771
+
+Trying to place object at 3.026390, -0.501763, within 3.067704
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 279751, (0.4941176772117615, 0.8823530077934265, 0.7411764860153198, 1.0): 3632, (0.6313725709915161, 0.3529411852359772, 0.8000000715255737, 1.0): 3608, (0.8235294818878174, 0.7333333492279053, 0.6666666865348816, 1.0): 3055, (0.364705890417099, 0.8588235974311829, 0.5058823823928833, 1.0): 2116, (0.9529412388801575, 0.7215686440467834, 0.9843137860298157, 1.0): 1887, (0.4392157196998596, 0.38431376218795776, 0.9019608497619629, 1.0): 1816, (0.988235354423523, 0.8980392813682556, 0.7647059559822083, 1.0): 1631, (0.6039215922355652, 0.8000000715255737, 0.6392157077789307, 1.0): 1599, (0.8784314393997192, 0.8156863451004028, 0.9137255549430847, 1.0): 1589, (0.8196079134941101, 0.19607844948768616, 0.9058824181556702, 1.0): 1585, (0.12941177189350128, 0.803921639919281, 0.8823530077934265, 1.0): 1352, (0.6470588445663452, 0.874509871006012, 0.2705882489681244, 1.0): 974, (0.6980392336845398, 0.6666666865348816, 0.5803921818733215, 1.0): 903, (0.960784375667572, 0.9098039865493774, 0.9058824181556702, 1.0): 893, (0.6784313917160034, 0.8705883026123047, 0.5137255191802979, 1.0): 809})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 24 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001524.png, index: 1524
+
+Rendering scene 1524 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at -0.096201, 0.169642, within 0.195021
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at -0.253756, -0.502784, within 0.563191
+
+Trying to place object at -1.173903, 0.336355, within 1.221140
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at 2.181061, 0.868319, within 2.347553
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at -0.825487, -2.187797, within 2.338350
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at -0.099723, -0.291789, within 0.308360
+
+Trying to place object at -1.877663, -2.853003, within 3.415442
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at -1.182243, 3.731807, within 3.914599
+
+Trying to place object at 2.818832, 2.834847, within 3.997770
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at 1.073717, -2.744591, within 2.947142
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at -3.640769, 1.217926, within 3.839081
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at -2.334523, 2.357033, within 3.317470
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at -1.201933, -3.307581, within 3.519195
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at -1.173975, 1.173583, within 1.659974
+
+Trying to place object at 1.812660, 0.097097, within 1.815259
+
+Trying to place object at 3.864362, 0.979640, within 3.986601
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at -1.628376, 3.165659, within 3.559916
+
+Trying to place object at -1.526421, 2.858869, within 3.240848
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at 3.363855, 0.162674, within 3.367786
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at 0.908155, 3.570642, within 3.684322
+
+Trying to place object at 1.816541, 3.898364, within 4.300821
+
+Trying to place object at -1.361062, -1.071837, within 1.732433
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at -2.459371, 1.014988, within 2.660583
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 283958, (0.729411780834198, 0.7921569347381592, 0.8941177129745483, 1.0): 2939, (0.38431376218795776, 0.18039216101169586, 0.8431373238563538, 1.0): 2855, (0.7568628191947937, 0.22745099663734436, 0.988235354423523, 1.0): 2518, (0.7843137979507446, 0.5490196347236633, 0.5960784554481506, 1.0): 2179, (0.8980392813682556, 0.3529411852359772, 0.9647059440612793, 1.0): 1529, (0.4392157196998596, 0.572549045085907, 0.9294118285179138, 1.0): 1508, (0.5764706134796143, 0.803921639919281, 0.2823529541492462, 1.0): 1361, (0.5333333611488342, 0.8313726186752319, 0.8588235974311829, 1.0): 1356, (0.9568628072738647, 0.8627451658248901, 0.5882353186607361, 1.0): 1279, (0.5843137502670288, 0.8235294818878174, 0.9372549653053284, 1.0): 1142, (0.7450980544090271, 0.4549019932746887, 0.7333333492279053, 1.0): 1109, (0.572549045085907, 0.9764706492424011, 0.847058892250061, 1.0): 1018, (0.8705883026123047, 0.0941176563501358, 0.8549020290374756, 1.0): 976, (0.27450981736183167, 0.803921639919281, 0.9215686917304993, 1.0): 760, (0.9843137860298157, 0.729411780834198, 0.9372549653053284, 1.0): 713})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 25 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001525.png, index: 1525
+
+Rendering scene 1525 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at 0.411155, -0.587358, within 0.716964
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at 0.295398, 3.951898, within 3.962923
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at -2.346969, -0.223984, within 2.357632
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at -0.233648, 3.939643, within 3.946565
+
+Trying to place object at 2.275661, -1.186126, within 2.566228
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at 0.367845, -0.122761, within 0.387789
+
+Trying to place object at 3.693261, -0.266604, within 3.702872
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at -1.295692, 2.059803, within 2.433436
+
+Trying to place object at 3.597122, 2.148267, within 4.189790
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at 0.463765, -2.963314, within 2.999384
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at -0.457730, -0.060300, within 0.461685
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at -1.688005, -2.813682, within 3.281184
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at -1.479294, -0.048026, within 1.480073
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at -0.086023, -0.711213, within 0.716396
+
+Trying to place object at -1.947810, -1.484669, within 2.449124
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at -1.050352, -0.896624, within 1.381005
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at 2.402577, -2.501254, within 3.468234
+
+Trying to place object at 2.823057, 0.419796, within 2.854099
+
+Trying to place object at 0.107049, 1.367161, within 1.371346
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at -1.389836, -1.274503, within 1.885736
+
+Trying to place object at -0.512856, 0.011173, within 0.512978
+
+Trying to place object at -0.110406, 0.037260, within 0.116524
+
+Trying to place object at -0.002258, 0.000285, within 0.002276
+
+Trying to place object at -4.189725, -1.375397, within 4.409707
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at 3.133781, 0.515604, within 3.175915
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 284600, (0.29411765933036804, 0.7254902124404907, 0.9450981020927429, 1.0): 2816, (0.4078431725502014, 0.18039216101169586, 0.9960784912109375, 1.0): 2685, (0.6980392336845398, 0.7215686440467834, 0.8509804606437683, 1.0): 1965, (0.7803922295570374, 0.6039215922355652, 0.5607843399047852, 1.0): 1743, (0.027450982481241226, 0.8941177129745483, 0.9529412388801575, 1.0): 1686, (0.7137255072593689, 0.7921569347381592, 0.9803922176361084, 1.0): 1646, (0.4941176772117615, 0.458823561668396, 0.6431372761726379, 1.0): 1556, (0.9254902601242065, 0.9568628072738647, 0.6000000238418579, 1.0): 1442, (0.5764706134796143, 0.4392157196998596, 0.7411764860153198, 1.0): 1277, (0.8823530077934265, 0.5568627715110779, 0.9294118285179138, 1.0): 1250, (0.7254902124404907, 0.4274510145187378, 0.6196078658103943, 1.0): 1098, (0.6000000238418579, 0.5764706134796143, 0.49803924560546875, 1.0): 920, (0.24313727021217346, 0.9019608497619629, 0.9921569228172302, 1.0): 860, (0.7960785031318665, 0.8666667342185974, 0.960784375667572, 1.0): 860, (0.41568630933761597, 0.9215686917304993, 0.20784315466880798, 1.0): 796})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 26 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001526.png, index: 1526
+
+Rendering scene 1526 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at 0.503593, 1.120199, within 1.228190
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at 0.069912, 0.151999, within 0.167307
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at 2.311727, -2.091020, within 3.117122
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at 3.781689, -0.401029, within 3.802894
+
+Trying to place object at -1.175809, -0.319877, within 1.218543
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at 1.649726, 0.461825, within 1.713148
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at -0.962571, -1.906011, within 2.135280
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at 2.011894, -2.399717, within 3.131511
+
+Trying to place object at -0.955625, 2.014820, within 2.229959
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at 2.554044, 0.644684, within 2.634153
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at -0.670439, 0.948647, within 1.161645
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at -3.079525, -1.260765, within 3.327612
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at 0.087132, 0.128316, within 0.155103
+
+Trying to place object at 1.168363, 2.236890, within 2.523638
+
+Trying to place object at -0.798229, 1.550209, within 1.743651
+
+Trying to place object at 3.357872, -2.725365, within 4.324687
+
+Trying to place object at 1.149061, -0.234980, within 1.172842
+
+Trying to place object at -0.633299, 0.278762, within 0.691936
+
+Trying to place object at 2.822697, -2.068960, within 3.499745
+
+Trying to place object at 2.459835, -1.464168, within 2.862617
+
+Trying to place object at 3.199018, -1.491955, within 3.529822
+
+Trying to place object at 3.929880, -0.212543, within 3.935624
+
+Trying to place object at 2.366537, 0.050833, within 2.367083
+
+Trying to place object at 2.631366, 1.554211, within 3.056086
+
+Trying to place object at -0.185400, 0.161803, within 0.246076
+
+Trying to place object at -0.262866, 0.650899, within 0.701974
+
+Trying to place object at 0.690787, -0.069581, within 0.694282
+
+Trying to place object at 0.304549, 0.867276, within 0.919194
+
+Trying to place object at -2.265454, -3.307110, within 4.008648
+
+Trying to place object at 1.263789, 0.714218, within 1.451643
+
+Trying to place object at 1.215852, -0.354638, within 1.266517
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at 1.448426, 1.008822, within 1.765123
+
+Trying to place object at -2.290084, -3.330193, within 4.041617
+
+Trying to place object at 0.757732, 0.226088, within 0.790742
+
+Trying to place object at 1.300533, 0.843388, within 1.550061
+
+Trying to place object at -1.580783, 1.823029, within 2.412946
+
+Trying to place object at -0.542992, 0.184160, within 0.573372
+
+Trying to place object at 1.140018, 3.038150, within 3.244996
+
+Trying to place object at -0.007346, 0.030383, within 0.031258
+
+Trying to place object at -1.013061, -3.417712, within 3.564695
+
+Trying to place object at -1.000215, 0.172719, within 1.015018
+
+Trying to place object at 0.927944, 2.067262, within 2.265977
+
+Trying to place object at 1.918508, 2.292462, within 2.989324
+
+Trying to place object at -0.105273, -0.516572, within 0.527190
+
+Trying to place object at -2.313844, -3.552986, within 4.239998
+
+Trying to place object at -0.235719, -0.300623, within 0.382018
+
+Trying to place object at -0.786486, -1.870154, within 2.028802
+
+Trying to place object at 1.584026, -1.738976, within 2.352270
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at 0.246079, 0.299793, within 0.387854
+
+Trying to place object at 3.110830, 0.114882, within 3.112951
+
+Trying to place object at 0.268716, -1.990211, within 2.008270
+
+Trying to place object at -2.183033, 1.430090, within 2.609749
+
+Trying to place object at -2.216586, 3.770499, within 4.373776
+
+Trying to place object at 1.998349, 0.923498, within 2.201419
+
+Trying to place object at -1.450769, 0.103684, within 1.454470
+
+Trying to place object at -0.042543, -0.663390, within 0.664753
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at -1.025157, -0.440182, within 1.115665
+
+Trying to place object at -0.119788, -0.515717, within 0.529446
+
+Trying to place object at -0.773655, -3.962440, within 4.037261
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at 0.282455, 0.104660, within 0.301222
+
+Trying to place object at 1.816402, -2.165557, within 2.826473
+
+Trying to place object at -3.802267, -0.626518, within 3.853539
+
+Trying to place object at -1.210259, -1.991998, within 2.330834
+
+Trying to place object at -0.246151, -2.650644, within 2.662049
+
+Trying to place object at 1.854505, 0.270141, within 1.874077
+
+Trying to place object at -0.373885, 0.261747, within 0.456401
+
+Trying to place object at 0.519241, 0.275763, within 0.587925
+
+Trying to place object at 1.916589, 1.789492, within 2.622136
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 284569, (0.9490196704864502, 0.501960813999176, 0.9490196704864502, 1.0): 2876, (0.8352941870689392, 0.5215686559677124, 0.7098039388656616, 1.0): 2033, (0.545098066329956, 0.4392157196998596, 0.8666667342185974, 1.0): 1824, (0.6392157077789307, 0.9921569228172302, 0.8627451658248901, 1.0): 1774, (0.5960784554481506, 0.5372549295425415, 0.40000003576278687, 1.0): 1736, (0.5372549295425415, 0.3960784673690796, 0.40000003576278687, 1.0): 1646, (0.7764706611633301, 0.9647059440612793, 0.9725490808486938, 1.0): 1490, (0.7882353663444519, 0.33725491166114807, 0.9764706492424011, 1.0): 1433, (0.6392157077789307, 0.5372549295425415, 0.8862745761871338, 1.0): 1291, (0.917647123336792, 0.9333333969116211, 0.8117647767066956, 1.0): 1206, (0.9254902601242065, 0.6666666865348816, 0.6509804129600525, 1.0): 1199, (0.4431372880935669, 0.5686274766921997, 0.7960785031318665, 1.0): 1171, (0.7921569347381592, 0.9333333969116211, 0.16470588743686676, 1.0): 1080, (0.8980392813682556, 0.501960813999176, 0.7764706611633301, 1.0): 970, (0.9725490808486938, 0.24313727021217346, 0.8078432083129883, 1.0): 902})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 27 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001527.png, index: 1527
+
+Rendering scene 1527 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at 1.722566, 0.494661, within 1.792184
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at -0.066071, 4.310106, within 4.310612
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at 3.898145, 0.730752, within 3.966048
+
+Trying to place object at -3.163761, 1.358803, within 3.443215
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at -0.534514, 0.108909, within 0.545496
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at -0.480438, -0.727427, within 0.871763
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at 3.201948, -0.305301, within 3.216470
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at 0.706603, 0.098156, within 0.713388
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at -2.749057, -1.323628, within 3.051115
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at 2.268818, 0.844163, within 2.420774
+
+Trying to place object at 0.530442, 1.424235, within 1.519808
+
+Trying to place object at -1.924375, 2.121109, within 2.863969
+
+Trying to place object at -0.844066, -2.627847, within 2.760078
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at -0.130657, 0.318327, within 0.344098
+
+Trying to place object at 0.102082, 0.079696, within 0.129507
+
+Trying to place object at 0.255926, -0.075334, within 0.266783
+
+Trying to place object at 1.929487, -0.886653, within 2.123458
+
+Trying to place object at 0.805836, 2.226677, within 2.368008
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at 1.813292, 2.487006, within 3.077861
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at 0.976064, 1.152446, within 1.510243
+
+Trying to place object at 1.081017, -3.190886, within 3.369028
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at -3.274238, 1.713656, within 3.695572
+
+Trying to place object at 1.627800, 1.696042, within 2.350806
+
+Trying to place object at -0.695578, 0.070579, within 0.699149
+
+Trying to place object at 0.014922, -0.490943, within 0.491170
+
+Trying to place object at -1.173164, -1.416108, within 1.838934
+
+Trying to place object at -1.234829, -1.696586, within 2.098381
+
+Trying to place object at -2.258749, 1.663007, within 2.804913
+
+Trying to place object at -2.124454, -1.758071, within 2.757556
+
+Trying to place object at 0.416518, 0.246036, within 0.483757
+
+Trying to place object at 1.325749, 2.823940, within 3.119655
+
+Trying to place object at -3.603801, -1.264316, within 3.819146
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at 0.905220, 2.141350, within 2.324823
+
+Trying to place object at 3.358087, -0.128084, within 3.360529
+
+Trying to place object at -1.218490, -0.084215, within 1.221397
+
+Trying to place object at -1.069761, -0.207142, within 1.089631
+
+Trying to place object at 0.993494, -0.395872, within 1.069460
+
+Trying to place object at -0.155112, 2.967607, within 2.971658
+
+Trying to place object at -0.009832, 0.003622, within 0.010478
+
+Trying to place object at 0.605255, 2.090869, within 2.176710
+
+Trying to place object at 2.696097, 2.798055, within 3.885621
+
+Trying to place object at -2.188700, -0.441837, within 2.232852
+
+Trying to place object at -0.889244, 0.884085, within 1.253938
+
+Trying to place object at -0.170148, -0.970683, within 0.985482
+
+Trying to place object at -1.040330, -3.022731, within 3.196747
+
+Trying to place object at 0.532276, -0.935306, within 1.076158
+
+Trying to place object at -0.203930, 0.294899, within 0.358543
+
+Trying to place object at 1.033326, 0.319440, within 1.081575
+
+Trying to place object at 0.407108, -0.133670, within 0.428491
+
+Trying to place object at -2.029829, -0.948249, within 2.240398
+
+Trying to place object at 0.926932, 2.240638, within 2.424802
+
+Trying to place object at 0.099271, 0.361478, within 0.374861
+
+Trying to place object at 1.773619, -4.082519, within 4.451145
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at 0.093637, 0.425725, within 0.435900
+
+Trying to place object at -4.185086, -1.142990, within 4.338361
+
+Trying to place object at -0.018699, 0.042322, within 0.046268
+
+Trying to place object at -0.240663, -1.419943, within 1.440193
+
+Trying to place object at 1.673244, -0.405341, within 1.721641
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 284292, (0.8980392813682556, 0.847058892250061, 0.46274513006210327, 1.0): 2512, (0.9490196704864502, 0.8000000715255737, 0.4392157196998596, 1.0): 2131, (0.7725490927696228, 0.6705882549285889, 0.5137255191802979, 1.0): 2115, (0.9450981020927429, 0.9098039865493774, 0.729411780834198, 1.0): 1918, (0.7882353663444519, 0.458823561668396, 0.7490196228027344, 1.0): 1846, (0.5098039507865906, 0.9960784912109375, 0.6980392336845398, 1.0): 1774, (0.9843137860298157, 0.8509804606437683, 0.7411764860153198, 1.0): 1732, (0.05882353335618973, 0.8352941870689392, 0.43137258291244507, 1.0): 1592, (0.5137255191802979, 0.9137255549430847, 0.3921568989753723, 1.0): 1558, (0.7882353663444519, 0.4705882668495178, 0.6823529601097107, 1.0): 1064, (0.1568627506494522, 0.8549020290374756, 0.847058892250061, 1.0): 1026, (0.9803922176361084, 0.7647059559822083, 0.250980406999588, 1.0): 996, (0.8352941870689392, 0.7647059559822083, 0.6078431606292725, 1.0): 951, (0.30588236451148987, 0.7568628191947937, 0.6000000238418579, 1.0): 929, (0.5215686559677124, 0.8235294818878174, 0.9019608497619629, 1.0): 764})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 28 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001528.png, index: 1528
+
+Rendering scene 1528 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at 0.602971, 1.178949, within 1.324196
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at -1.008346, -1.284868, within 1.633293
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at -0.087551, 0.495024, within 0.502707
+
+Trying to place object at 0.535087, -0.368195, within 0.649527
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at 4.145082, 0.636109, within 4.193607
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at -0.877375, 2.551798, within 2.698419
+
+Trying to place object at -0.913086, 2.732354, within 2.880882
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at 2.366344, -1.130120, within 2.622357
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at 0.768472, 0.355636, within 0.846774
+
+Trying to place object at 1.901773, -2.873778, within 3.446062
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at -1.441767, 0.034215, within 1.442173
+
+Trying to place object at -2.026696, -0.265851, within 2.044058
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at -1.185954, 1.243477, within 1.718348
+
+Trying to place object at -2.887928, -1.349816, within 3.187810
+
+Trying to place object at -1.015409, -0.469056, within 1.118512
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at -1.354310, -2.417037, within 2.770600
+
+Trying to place object at 1.358220, -2.433040, within 2.786475
+
+Trying to place object at -0.608756, -2.109877, within 2.195943
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at -1.293068, 3.232460, within 3.481497
+
+Trying to place object at 0.277580, -1.893137, within 1.913379
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at 0.203787, 0.365791, within 0.418727
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at -0.123881, 0.205719, within 0.240139
+
+Trying to place object at 0.789571, 1.966259, within 2.118867
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at -0.055808, -4.114414, within 4.114793
+
+Trying to place object at 3.734690, 2.402533, within 4.440729
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at 0.948969, 3.675274, within 3.795811
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 282434, (0.9960784912109375, 0.9098039865493774, 0.8823530077934265, 1.0): 3482, (0.8274510502815247, 0.8862745761871338, 0.8352941870689392, 1.0): 2367, (0.7215686440467834, 0.1411764770746231, 0.7058823704719543, 1.0): 2096, (0.5529412031173706, 0.26274511218070984, 0.6039215922355652, 1.0): 2012, (0.7960785031318665, 0.6745098233222961, 0.9058824181556702, 1.0): 1855, (0.7647059559822083, 0.5098039507865906, 0.9450981020927429, 1.0): 1600, (0.8823530077934265, 0.7764706611633301, 0.847058892250061, 1.0): 1585, (0.4862745404243469, 0.6509804129600525, 0.847058892250061, 1.0): 1507, (0.9686275124549866, 0.7019608020782471, 0.8156863451004028, 1.0): 1421, (0.7843137979507446, 0.8823530077934265, 0.988235354423523, 1.0): 1370, (0.7647059559822083, 0.6078431606292725, 0.0470588281750679, 1.0): 1356, (0.8784314393997192, 0.5764706134796143, 0.5215686559677124, 1.0): 1266, (0.7568628191947937, 0.7568628191947937, 0.6039215922355652, 1.0): 1172, (0.34117648005485535, 0.8117647767066956, 0.9450981020927429, 1.0): 875, (0.8352941870689392, 0.8509804606437683, 0.5098039507865906, 1.0): 802})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 29 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001529.png, index: 1529
+
+Rendering scene 1529 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at -0.106415, -3.144727, within 3.146527
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at -2.829530, 3.206133, within 4.276158
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at -0.149032, 2.759154, within 2.763176
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at -3.599919, 0.641060, within 3.656552
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at -1.383380, -1.311754, within 1.906420
+
+Trying to place object at -0.048647, 0.029717, within 0.057006
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at 0.680469, 0.149213, within 0.696637
+
+Trying to place object at -0.214674, 0.183837, within 0.282632
+
+Trying to place object at -1.456333, -0.603981, within 1.576609
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at -1.455110, -0.344837, within 1.495412
+
+Trying to place object at 1.115275, -3.829890, within 3.988972
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at 2.921626, 1.368817, within 3.226385
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at 2.809002, -2.974217, within 4.091022
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at 1.645974, -1.869689, within 2.490977
+
+Trying to place object at -0.127071, 0.673767, within 0.685645
+
+Trying to place object at 0.061647, -0.418127, within 0.422647
+
+Trying to place object at -0.810445, -2.169790, within 2.316206
+
+Trying to place object at 0.639147, 3.128756, within 3.193371
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at 0.018619, -0.087355, within 0.089317
+
+Trying to place object at 2.241035, -0.335313, within 2.265981
+
+Trying to place object at -0.042790, 0.002853, within 0.042885
+
+Trying to place object at -1.167509, -1.157998, within 1.644395
+
+Trying to place object at -1.912693, 2.343112, within 3.024660
+
+Trying to place object at 0.558865, -0.970864, within 1.120226
+
+Trying to place object at -1.065458, 0.523143, within 1.186962
+
+Trying to place object at -1.659691, -2.225405, within 2.776149
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at 2.496344, 2.896966, within 3.824153
+
+Trying to place object at 2.117917, -3.458617, within 4.055564
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at 1.878735, -1.664500, within 2.510021
+
+Trying to place object at -1.030356, -1.015813, within 1.446896
+
+Trying to place object at -2.411728, 0.957041, within 2.594679
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at 0.726330, -1.412261, within 1.588092
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at 2.718217, -2.826065, within 3.921140
+
+Trying to place object at -0.029499, -0.151101, within 0.153953
+
+Trying to place object at -3.180211, 0.262300, within 3.191010
+
+Trying to place object at -0.337305, 0.864815, within 0.928267
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 283484, (0.5921568870544434, 0.658823549747467, 0.32156863808631897, 1.0): 3552, (0.6549019813537598, 0.6823529601097107, 0.5686274766921997, 1.0): 3126, (0.6078431606292725, 0.529411792755127, 0.3176470696926117, 1.0): 2363, (0.45098042488098145, 0.4549019932746887, 0.917647123336792, 1.0): 2147, (0.6039215922355652, 0.8352941870689392, 0.9411765336990356, 1.0): 1748, (0.8705883026123047, 0.5411764979362488, 0.9803922176361084, 1.0): 1551, (0.5568627715110779, 0.6666666865348816, 0.9294118285179138, 1.0): 1333, (0.6627451181411743, 0.7137255072593689, 0.9058824181556702, 1.0): 1329, (0.7882353663444519, 0.8549020290374756, 0.9019608497619629, 1.0): 1240, (0.7019608020782471, 0.6980392336845398, 0.5921568870544434, 1.0): 1210, (0.2862745225429535, 0.615686297416687, 0.960784375667572, 1.0): 1023, (0.874509871006012, 0.5686274766921997, 0.3294117748737335, 1.0): 947, (0.9490196704864502, 0.5921568870544434, 0.9490196704864502, 1.0): 851, (0.9411765336990356, 0.4235294461250305, 0.29019609093666077, 1.0): 689, (0.8627451658248901, 0.960784375667572, 0.2039215862751007, 1.0): 607})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 30 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001530.png, index: 1530
+
+Rendering scene 1530 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at 2.439094, -1.285342, within 2.757042
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at 0.865478, -0.098297, within 0.871043
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at 0.144972, -0.100661, within 0.176493
+
+Trying to place object at -0.413995, 0.143042, within 0.438011
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at 1.755817, 0.852160, within 1.951683
+
+Trying to place object at 0.257212, -0.618017, within 0.669405
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at -1.286897, -0.103455, within 1.291049
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at -0.347435, 2.243953, within 2.270691
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at 1.558766, 3.418938, within 3.757511
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at -1.648379, -0.475557, within 1.715607
+
+Trying to place object at -0.945176, 0.939501, within 1.332673
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at 2.910007, 0.662052, within 2.984368
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at 2.535492, 0.355855, within 2.560342
+
+Trying to place object at -2.794804, -1.842191, within 3.347327
+
+Trying to place object at -0.149304, 0.295913, within 0.331446
+
+Trying to place object at -2.039565, -0.444278, within 2.087393
+
+Trying to place object at 1.737343, -0.408852, within 1.784803
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at -1.086233, 0.383730, within 1.152020
+
+Trying to place object at -0.456487, 1.181093, within 1.266239
+
+Trying to place object at 0.011425, -0.071138, within 0.072049
+
+Trying to place object at -1.488912, -1.791218, within 2.329232
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at 0.217496, -0.393770, within 0.449844
+
+Trying to place object at 3.239011, 1.505796, within 3.571920
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at -1.717072, -1.756101, within 2.456060
+
+Trying to place object at -1.878555, -2.390323, within 3.040167
+
+Trying to place object at 0.261467, 1.002560, within 1.036095
+
+Trying to place object at 0.246304, 0.417192, within 0.484474
+
+Trying to place object at 2.213404, -3.801037, within 4.398527
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at 2.826545, -0.269692, within 2.839382
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at -0.071660, -1.546500, within 1.548160
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 283918, (0.9411765336990356, 0.7098039388656616, 0.9450981020927429, 1.0): 3439, (0.8156863451004028, 0.7843137979507446, 0.7882353663444519, 1.0): 2650, (0.25882354378700256, 0.545098066329956, 0.9843137860298157, 1.0): 2130, (0.4784314036369324, 0.8549020290374756, 0.9137255549430847, 1.0): 1681, (0.6313725709915161, 0.9490196704864502, 0.7372549176216125, 1.0): 1562, (0.7450980544090271, 0.7764706611633301, 0.9568628072738647, 1.0): 1529, (0.3960784673690796, 0.4392157196998596, 0.8823530077934265, 1.0): 1437, (0.501960813999176, 0.572549045085907, 0.7568628191947937, 1.0): 1422, (1.0, 0.8784314393997192, 0.760784387588501, 1.0): 1379, (0.4862745404243469, 0.7725490927696228, 0.6941176652908325, 1.0): 1265, (0.8431373238563538, 0.6509804129600525, 0.7450980544090271, 1.0): 1138, (0.6823529601097107, 0.1882353127002716, 0.08235294371843338, 1.0): 1130, (0.7529412508010864, 0.7176470756530762, 0.9215686917304993, 1.0): 1071, (0.3921568989753723, 0.26274511218070984, 0.9333333969116211, 1.0): 809, (0.3960784673690796, 0.458823561668396, 0.8549020290374756, 1.0): 640})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 31 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001531.png, index: 1531
+
+Rendering scene 1531 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at 0.110331, -0.203013, within 0.231057
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at -0.981996, 2.454445, within 2.643599
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at -1.437884, 1.033543, within 1.770796
+
+Trying to place object at 3.544661, -1.832093, within 3.990136
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at -2.740345, -3.107831, within 4.143441
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at 0.716480, -3.507278, within 3.579713
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at -0.001256, 0.061685, within 0.061698
+
+Trying to place object at -0.009628, 1.737246, within 1.737273
+
+Trying to place object at 2.816253, 0.048483, within 2.816670
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at 1.544034, -2.858321, within 3.248698
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at -1.306208, 2.505851, within 2.825857
+
+Trying to place object at 0.159805, -0.336057, within 0.372118
+
+Trying to place object at -1.660877, 3.989398, within 4.321320
+
+Trying to place object at -0.092593, -0.381511, within 0.392586
+
+Trying to place object at -0.007884, 0.016403, within 0.018199
+
+Trying to place object at -0.665719, -0.140656, within 0.680416
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at -3.677478, -2.295964, within 4.335354
+
+Trying to place object at 0.324693, -0.327568, within 0.461223
+
+Trying to place object at 1.781441, 2.402884, within 2.991218
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at 0.100674, 0.152120, within 0.182416
+
+Trying to place object at -0.208849, 0.106052, within 0.234232
+
+Trying to place object at 2.370860, 3.338800, within 4.094943
+
+Trying to place object at -0.429823, -0.055173, within 0.433350
+
+Trying to place object at -1.348742, 1.156111, within 1.776428
+
+Trying to place object at 1.982234, 2.635917, within 3.298077
+
+Trying to place object at 0.199775, -2.350201, within 2.358676
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at -0.339958, 0.851177, within 0.916555
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at -1.311192, -1.355898, within 1.886182
+
+Trying to place object at 0.022099, -0.003040, within 0.022307
+
+Trying to place object at -2.354183, -0.520949, within 2.411133
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at 2.253743, -3.768007, within 4.390585
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at -2.950200, 0.128564, within 2.953000
+
+Trying to place object at -2.797271, 1.177651, within 3.035060
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at -0.115351, -0.092840, within 0.148071
+
+Trying to place object at -1.873852, 0.312557, within 1.899740
+
+Trying to place object at 2.330774, -2.556396, within 3.459432
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 277511, (0.5098039507865906, 0.9019608497619629, 0.6980392336845398, 1.0): 4225, (0.9921569228172302, 0.9215686917304993, 0.6117647290229797, 1.0): 3899, (0.917647123336792, 0.9254902601242065, 0.2196078598499298, 1.0): 3201, (0.9098039865493774, 0.9294118285179138, 0.2392157018184662, 1.0): 3200, (0.874509871006012, 0.8784314393997192, 0.7137255072593689, 1.0): 2639, (0.6980392336845398, 0.9764706492424011, 0.8313726186752319, 1.0): 1786, (0.8784314393997192, 0.6549019813537598, 0.16470588743686676, 1.0): 1683, (0.8431373238563538, 0.5803921818733215, 0.8156863451004028, 1.0): 1564, (0.9843137860298157, 0.24705883860588074, 0.25882354378700256, 1.0): 1523, (0.4941176772117615, 0.8549020290374756, 0.7686275243759155, 1.0): 1454, (0.9215686917304993, 0.4901961088180542, 0.729411780834198, 1.0): 1175, (0.9372549653053284, 0.7254902124404907, 0.9764706492424011, 1.0): 907, (0.24705883860588074, 0.3960784673690796, 0.803921639919281, 1.0): 897, (0.8705883026123047, 0.847058892250061, 0.9960784912109375, 1.0): 802, (0.5803921818733215, 0.8549020290374756, 0.9019608497619629, 1.0): 734})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 32 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001532.png, index: 1532
+
+Rendering scene 1532 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at -0.434588, -1.292633, within 1.363732
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at 0.662507, -0.097292, within 0.669613
+
+Trying to place object at -2.581568, 0.085018, within 2.582968
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at -0.365040, -3.234967, within 3.255498
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at 1.483099, -0.634818, within 1.613250
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at -1.045571, -1.430106, within 1.771559
+
+Trying to place object at 0.445253, 0.373685, within 0.581283
+
+Trying to place object at -2.988178, -2.109584, within 3.657807
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at -2.501291, 2.575480, within 3.590203
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at -4.215839, 1.382956, within 4.436876
+
+Trying to place object at -0.508993, -2.022402, within 2.085469
+
+Trying to place object at -0.090185, 0.025107, within 0.093615
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at 3.113827, 3.226475, within 4.483978
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at 0.044312, 0.868411, within 0.869541
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at -0.855198, -3.985867, within 4.076579
+
+Trying to place object at -1.540772, 2.003144, within 2.527165
+
+Trying to place object at 0.075983, 0.001201, within 0.075993
+
+Trying to place object at -0.298179, 3.300466, within 3.313908
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at -0.235058, -0.152034, within 0.279940
+
+Trying to place object at 1.307517, 2.167079, within 2.530974
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at -0.471712, -1.953244, within 2.009396
+
+Trying to place object at -2.374834, 0.561330, within 2.440272
+
+Trying to place object at -0.382261, 2.341781, within 2.372775
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at 0.115630, 3.555268, within 3.557148
+
+Trying to place object at -4.403881, 0.442150, within 4.426022
+
+Trying to place object at -2.157425, -2.927650, within 3.636704
+
+Trying to place object at 2.434555, -3.731034, within 4.455073
+
+Trying to place object at -0.182427, -0.388053, within 0.428795
+
+Trying to place object at -0.724669, 1.034057, within 1.262703
+
+Trying to place object at 0.296110, -1.254274, within 1.288753
+
+Trying to place object at 0.205558, 0.277463, within 0.345311
+
+Trying to place object at 1.100239, -0.639782, within 1.272732
+
+Trying to place object at -1.167641, -0.064638, within 1.169429
+
+Trying to place object at 0.287382, 0.003053, within 0.287398
+
+Trying to place object at -0.781186, -0.345126, within 0.854028
+
+Trying to place object at 0.393348, 2.101630, within 2.138124
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at -1.560279, 1.301689, within 2.031961
+
+Trying to place object at -2.860128, 2.713774, within 3.942703
+
+Trying to place object at 0.892814, 1.442413, within 1.696370
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at -0.431088, -0.199619, within 0.475063
+
+Trying to place object at 0.146980, 0.333468, within 0.364423
+
+Trying to place object at 1.365379, -0.905822, within 1.638528
+
+Trying to place object at -0.498437, -1.843159, within 1.909365
+
+Trying to place object at -0.980331, -0.427632, within 1.069541
+
+Trying to place object at -1.814537, -1.870207, within 2.605805
+
+Trying to place object at 0.954749, -3.385562, within 3.517609
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 287688, (0.4941176772117615, 0.2392157018184662, 0.658823549747467, 1.0): 2844, (0.9529412388801575, 0.22745099663734436, 0.4862745404243469, 1.0): 2129, (1.0, 0.8196079134941101, 0.9490196704864502, 1.0): 1671, (0.019607843831181526, 0.9490196704864502, 0.6549019813537598, 1.0): 1520, (0.37254902720451355, 0.35686275362968445, 0.9294118285179138, 1.0): 1514, (0.6392157077789307, 0.8666667342185974, 0.8274510502815247, 1.0): 1382, (0.8549020290374756, 0.6431372761726379, 0.48235297203063965, 1.0): 1375, (0.7411764860153198, 0.40000003576278687, 0.6745098233222961, 1.0): 1258, (0.37254902720451355, 0.9019608497619629, 0.4901961088180542, 1.0): 1209, (0.3921568989753723, 0.7098039388656616, 0.7333333492279053, 1.0): 1031, (0.6509804129600525, 0.45098042488098145, 0.6039215922355652, 1.0): 793, (0.458823561668396, 0.7137255072593689, 0.4901961088180542, 1.0): 757, (0.5568627715110779, 0.8392157554626465, 0.7921569347381592, 1.0): 703, (0.7098039388656616, 0.9803922176361084, 0.572549045085907, 1.0): 676, (0.9764706492424011, 0.4784314036369324, 0.7019608020782471, 1.0): 650})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 33 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001533.png, index: 1533
+
+Rendering scene 1533 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at 0.141328, -1.377268, within 1.384500
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at -0.892697, -2.310627, within 2.477076
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at 1.566748, -1.653716, within 2.278043
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at -1.052752, 0.517170, within 1.172925
+
+Trying to place object at 1.895212, 3.363727, within 3.860892
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at -1.565112, 3.958564, within 4.256736
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at -0.068683, -0.163480, within 0.177321
+
+Trying to place object at -1.451202, -0.073224, within 1.453048
+
+Trying to place object at -0.714889, -3.564033, within 3.635024
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at 1.864397, -1.432683, within 2.351288
+
+Trying to place object at -2.060901, 2.146264, within 2.975528
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at -3.019326, 0.766781, within 3.115169
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at -2.291484, 3.448163, within 4.140137
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at 0.471293, 0.082374, within 0.478437
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at 0.262700, 1.079534, within 1.111038
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at 0.507007, 1.913595, within 1.979622
+
+Trying to place object at -0.022254, -0.075563, within 0.078772
+
+Trying to place object at 0.984117, 1.164759, within 1.524844
+
+Trying to place object at -0.157908, 1.590004, within 1.597826
+
+Trying to place object at 1.271043, -2.786098, within 3.062335
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at 0.526454, 1.672636, within 1.753529
+
+Trying to place object at -1.852614, -0.753850, within 2.000118
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at 2.603342, 0.997967, within 2.788069
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at -0.053958, -2.196110, within 2.196773
+
+Trying to place object at 2.160272, 2.744380, within 3.492621
+
+Trying to place object at 2.550563, -2.301159, within 3.435215
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 284661, (0.9019608497619629, 0.3490196168422699, 0.9843137860298157, 1.0): 3093, (0.8078432083129883, 0.8274510502815247, 0.3019607961177826, 1.0): 2464, (0.8509804606437683, 0.9450981020927429, 0.9098039865493774, 1.0): 2004, (0.21568629145622253, 0.7647059559822083, 0.6627451181411743, 1.0): 1833, (0.9921569228172302, 0.6352941393852234, 0.32549020648002625, 1.0): 1593, (0.9725490808486938, 0.615686297416687, 0.9372549653053284, 1.0): 1582, (0.9215686917304993, 0.760784387588501, 0.9803922176361084, 1.0): 1383, (0.4745098352432251, 0.34117648005485535, 0.8509804606437683, 1.0): 1326, (0.10588236153125763, 0.6549019813537598, 0.615686297416687, 1.0): 1300, (0.4941176772117615, 0.4862745404243469, 0.7725490927696228, 1.0): 1147, (0.658823549747467, 0.8078432083129883, 0.43137258291244507, 1.0): 1127, (0.6901960968971252, 0.4745098352432251, 0.9058824181556702, 1.0): 1004, (0.9254902601242065, 0.988235354423523, 0.9137255549430847, 1.0): 986, (0.2666666805744171, 0.9647059440612793, 0.8431373238563538, 1.0): 941, (0.3607843220233917, 0.9686275124549866, 0.5607843399047852, 1.0): 756})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 34 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n15_001534.png, index: 1534
+
+Rendering scene 1534 with 15 objects
+
+Adding object 0 of 15
+
+
+Trying to place object at -1.201793, 3.286358, within 3.499208
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 15
+
+
+Trying to place object at 0.350570, 1.695230, within 1.731099
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 15
+
+
+Trying to place object at 0.659847, 1.788639, within 1.906470
+
+Trying to place object at -0.284820, 0.338613, within 0.442472
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 15
+
+
+Trying to place object at -1.258573, 2.427527, within 2.734391
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 15
+
+
+Trying to place object at -0.798772, 1.044321, within 1.314779
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 5 of 15
+
+
+Trying to place object at -2.305837, 2.896388, within 3.702154
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 6 of 15
+
+
+Trying to place object at -1.089974, 0.811096, within 1.358646
+
+Trying to place object at 0.392254, -0.002923, within 0.392265
+
+Trying to place object at 2.143036, -2.702855, within 3.449352
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 7 of 15
+
+
+Trying to place object at -0.357622, 0.276073, within 0.451785
+
+Trying to place object at -0.151981, -0.573939, within 0.593721
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 8 of 15
+
+
+Trying to place object at -0.046785, 1.431970, within 1.432734
+
+Trying to place object at -0.026374, 1.095094, within 1.095411
+
+Trying to place object at 1.242098, -3.796767, within 3.994777
+
+Trying to place object at 2.260222, -2.539904, within 3.399958
+
+Trying to place object at -3.028208, 1.967317, within 3.611147
+
+Trying to place object at -0.244954, 2.494629, within 2.506627
+
+Trying to place object at 1.171092, -0.740033, within 1.385318
+
+Trying to place object at -0.030107, 0.199087, within 0.201351
+
+Trying to place object at -0.349833, 2.231181, within 2.258440
+
+Trying to place object at -1.388111, 0.543454, within 1.490703
+
+Trying to place object at -3.427929, -0.819887, within 3.524615
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 9 of 15
+
+
+Trying to place object at 3.002518, 2.187711, within 3.714996
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 10 of 15
+
+
+Trying to place object at 1.545117, 1.990272, within 2.519637
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 11 of 15
+
+
+Trying to place object at 2.333941, -0.375588, within 2.363969
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 12 of 15
+
+
+Trying to place object at 3.666344, -1.033944, within 3.809346
+
+Trying to place object at 0.020450, 0.071628, within 0.074490
+
+Trying to place object at -3.285067, 3.040054, within 4.475890
+
+Trying to place object at -2.114534, 0.206347, within 2.124579
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 13 of 15
+
+
+Trying to place object at 0.893632, -0.208996, within 0.917746
+
+Trying to place object at 3.304457, 2.618141, within 4.215933
+
+Trying to place object at 2.235356, -1.253812, within 2.562979
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 14 of 15
+
+
+Trying to place object at -0.402151, -0.932676, within 1.015682
+
+Trying to place object at 0.374876, -0.142581, within 0.401076
+
+Trying to place object at 0.821526, 3.497650, within 3.592835
+
+Trying to place object at -0.609825, 0.664413, within 0.901849
+
+Trying to place object at -0.231932, 0.551030, within 0.597851
+
+Trying to place object at -1.224250, 2.516060, within 2.798097
+
+Trying to place object at -0.357951, 0.226319, within 0.423496
+
+Trying to place object at -1.490781, -0.073815, within 1.492608
+
+Trying to place object at 0.835272, 0.858246, within 1.197608
+
+Trying to place object at 1.319354, 0.132788, within 1.326020
+
+Trying to place object at -1.167507, -0.572070, within 1.300129
+
+Trying to place object at -0.902026, 0.062347, within 0.904178
+
+Trying to place object at -0.111864, 0.352530, within 0.369853
+
+Trying to place object at -0.275115, -0.107816, within 0.295487
+
+Trying to place object at -0.346201, 1.583487, within 1.620891
+
+Trying to place object at -3.767784, 2.026528, within 4.278202
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 288000, (0.6705882549285889, 0.6352941393852234, 0.8431373238563538, 1.0): 3124, (0.9568628072738647, 0.988235354423523, 0.8666667342185974, 1.0): 1626, (0.6431372761726379, 0.7058823704719543, 0.5882353186607361, 1.0): 1581, (0.8666667342185974, 0.9254902601242065, 0.5137255191802979, 1.0): 1570, (0.6431372761726379, 0.33725491166114807, 0.8666667342185974, 1.0): 1495, (0.35686275362968445, 0.803921639919281, 0.9764706492424011, 1.0): 1285, (0.7411764860153198, 0.7568628191947937, 0.9058824181556702, 1.0): 1244, (0.8941177129745483, 0.760784387588501, 0.9764706492424011, 1.0): 1228, (0.9294118285179138, 0.8588235974311829, 0.5411764979362488, 1.0): 1097, (0.960784375667572, 0.572549045085907, 0.5529412031173706, 1.0): 945, (0.9568628072738647, 0.9529412388801575, 0.8235294818878174, 1.0): 910, (0.658823549747467, 0.22352942824363708, 0.125490203499794, 1.0): 909, (0.8784314393997192, 0.3450980484485626, 0.988235354423523, 1.0): 800, (0.7098039388656616, 0.9921569228172302, 0.8509804606437683, 1.0): 747, (0.6745098233222961, 0.7058823704719543, 0.760784387588501, 1.0): 639})
+
+Objects added

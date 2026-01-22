@@ -219,21 +219,72 @@ def summarize_visual_search(results_root: Path, model: str) -> Optional[pd.DataF
     return pd.concat(frames, ignore_index=True) if frames else None
 
 
+# def summarize_counting(results_root: Path, model: str) -> Optional[pd.DataFrame]:
+#     """Compute accuracy per set size for the 3D counting tasks."""
+#     tasks = {
+#         "counting_low_diversity": "low_entropy",
+#         "counting_high_diversity": "high_entropy",
+#         "counting_distinct": "distinct",
+#     }
+#     frames = []
+#     for task, label in tasks.items():
+#         df = load_if_exists(results_root / task / f"{model}.csv")
+#         if df is None:
+#             continue
+#         df["prediction"] = df["response"].apply(lambda x: token_to_int(extract_token(x)))
+#         df["n_objects"] = df["n_objects"].astype("Int64")
+#         df["correct_flag"] = df["prediction"] == df["n_objects"]
+#         grouped = (
+#             df.dropna(subset=["prediction"])
+#             .groupby("n_objects", as_index=False)["correct_flag"]
+#             .agg(["count", "sum"])
+#             .reset_index()
+#             .rename(columns={"count": "n_trials", "sum": "n_correct"})
+#         )
+#         grouped["accuracy"] = grouped["n_correct"] / grouped["n_trials"]
+#         grouped["task_name"] = task
+#         grouped["condition_label"] = label
+#         frames.append(grouped)
+#     return pd.concat(frames, ignore_index=True) if frames else None
+
 def summarize_counting(results_root: Path, model: str) -> Optional[pd.DataFrame]:
-    """Compute accuracy per set size for the 3D counting tasks."""
+    """Compute accuracy per set size for the 3D counting tasks.
+    Extracts ANY integer appearing in the response text.
+    """
+
+    def extract_any_int(text: Optional[str]) -> Optional[int]:
+        if not isinstance(text, str):
+            return None
+
+        # Find ALL integers in the string
+        numbers = re.findall(r"\d+", text)
+
+        if not numbers:
+            return None
+
+        # Use the LAST number (usually the answer)
+        try:
+            return int(numbers[-1])
+        except ValueError:
+            return None
+
     tasks = {
         "counting_low_diversity": "low_entropy",
         "counting_high_diversity": "high_entropy",
         "counting_distinct": "distinct",
     }
+
     frames = []
+
     for task, label in tasks.items():
         df = load_if_exists(results_root / task / f"{model}.csv")
         if df is None:
             continue
-        df["prediction"] = df["response"].apply(lambda x: token_to_int(extract_token(x)))
+
+        df["prediction"] = df["response"].apply(extract_any_int)
         df["n_objects"] = df["n_objects"].astype("Int64")
         df["correct_flag"] = df["prediction"] == df["n_objects"]
+
         grouped = (
             df.dropna(subset=["prediction"])
             .groupby("n_objects", as_index=False)["correct_flag"]
@@ -241,11 +292,14 @@ def summarize_counting(results_root: Path, model: str) -> Optional[pd.DataFrame]
             .reset_index()
             .rename(columns={"count": "n_trials", "sum": "n_correct"})
         )
+
         grouped["accuracy"] = grouped["n_correct"] / grouped["n_trials"]
         grouped["task_name"] = task
         grouped["condition_label"] = label
         frames.append(grouped)
+
     return pd.concat(frames, ignore_index=True) if frames else None
+
 
 
 def summarize_scene_description(results_root: Path, model: str) -> Optional[pd.DataFrame]:

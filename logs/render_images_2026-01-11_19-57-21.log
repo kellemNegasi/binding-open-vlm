@@ -1,0 +1,5672 @@
+
+Rendering image 0 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000500.png, index: 500
+
+Rendering scene 500 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -0.101181, -0.121148, within 0.157843
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 4.133949, 1.240918, within 4.316180
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 2.926541, 2.080031, within 3.590427
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 0.094432, 2.517714, within 2.519485
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -3.097004, 1.041374, within 3.267398
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 299618, (0.1882353127002716, 0.9254902601242065, 0.40000003576278687, 1.0): 2150, (0.8862745761871338, 0.8431373238563538, 0.7490196228027344, 1.0): 1887, (0.7058823704719543, 0.38431376218795776, 0.9960784912109375, 1.0): 1506, (0.847058892250061, 0.8627451658248901, 0.4901961088180542, 1.0): 1123, (0.5372549295425415, 0.6000000238418579, 0.7450980544090271, 1.0): 916})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 1 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000501.png, index: 501
+
+Rendering scene 501 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -1.751398, 2.043272, within 2.691163
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 4.393638, -0.403834, within 4.412158
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -3.755118, 0.378507, within 3.774147
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -0.407850, -2.628048, within 2.659508
+
+Trying to place object at -1.211865, 1.554055, within 1.970712
+
+Trying to place object at -1.533664, 2.867070, within 3.251494
+
+Trying to place object at -0.345543, -2.554921, within 2.578181
+
+Trying to place object at 0.326503, -1.816927, within 1.846030
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 0.280241, 1.022296, within 1.060011
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 299262, (0.686274528503418, 0.9137255549430847, 0.8196079134941101, 1.0): 2501, (0.8941177129745483, 0.5372549295425415, 0.6745098233222961, 1.0): 1527, (0.9568628072738647, 0.9803922176361084, 0.6784313917160034, 1.0): 1519, (0.529411792755127, 0.6549019813537598, 0.19215688109397888, 1.0): 1292, (0.8313726186752319, 0.43529415130615234, 0.458823561668396, 1.0): 1099})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 2 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000502.png, index: 502
+
+Rendering scene 502 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -0.186035, -0.472311, within 0.507629
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 1.662937, 0.612143, within 1.772027
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -0.905995, 3.104778, within 3.234265
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -2.998269, -2.378912, within 3.827380
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -2.689951, -2.985058, within 4.018260
+
+Trying to place object at -0.033994, 0.221305, within 0.223901
+
+Trying to place object at -0.254323, 0.638816, within 0.687580
+
+Trying to place object at -2.275711, 3.370541, within 4.066867
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 301292, (0.6745098233222961, 0.6078431606292725, 0.7529412508010864, 1.0): 1630, (0.5921568870544434, 0.9647059440612793, 0.9803922176361084, 1.0): 1229, (0.8313726186752319, 0.6941176652908325, 0.29411765933036804, 1.0): 1129, (0.8274510502815247, 0.8627451658248901, 0.1411764770746231, 1.0): 972, (0.917647123336792, 0.8156863451004028, 0.9647059440612793, 1.0): 948})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 3 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000503.png, index: 503
+
+Rendering scene 503 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 2.455123, -1.703030, within 2.987966
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -0.333486, 1.979545, within 2.007438
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 0.758681, -1.100173, within 1.336405
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 0.842542, -0.049605, within 0.844001
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 1.281824, -2.540221, within 2.845311
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 296364, (0.7450980544090271, 0.7058823704719543, 0.9843137860298157, 1.0): 3371, (0.4392157196998596, 0.5176470875740051, 0.8000000715255737, 1.0): 3104, (0.8862745761871338, 0.23137256503105164, 0.572549045085907, 1.0): 2087, (0.988235354423523, 0.458823561668396, 0.37254902720451355, 1.0): 1330, (0.8705883026123047, 0.917647123336792, 0.4078431725502014, 1.0): 944})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 4 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000504.png, index: 504
+
+Rendering scene 504 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -3.648047, -0.811839, within 3.737289
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -1.199857, 2.334022, within 2.624370
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -2.306594, 3.667600, within 4.332628
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -0.085181, -3.930017, within 3.930940
+
+Trying to place object at 3.310688, 2.239733, within 3.997131
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -0.053512, 1.333998, within 1.335070
+
+Trying to place object at 0.019424, -0.022297, within 0.029571
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 301422, (1.0, 0.9215686917304993, 0.8352941870689392, 1.0): 1651, (0.7137255072593689, 0.3607843220233917, 0.19607844948768616, 1.0): 1322, (0.5764706134796143, 0.615686297416687, 0.8627451658248901, 1.0): 1195, (0.2666666805744171, 0.8313726186752319, 0.2980392277240753, 1.0): 852, (0.2862745225429535, 0.8313726186752319, 0.5215686559677124, 1.0): 758})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 5 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000505.png, index: 505
+
+Rendering scene 505 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -1.742782, -1.943624, within 2.610548
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 3.749189, -0.160567, within 3.752625
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 0.875240, -0.454104, within 0.986031
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -0.547163, -3.905836, within 3.943975
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 0.869748, -1.364012, within 1.617711
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 297017, (0.4745098352432251, 0.9725490808486938, 0.686274528503418, 1.0): 2493, (0.4901961088180542, 0.9490196704864502, 0.5843137502670288, 1.0): 2160, (0.5333333611488342, 0.8274510502815247, 0.8627451658248901, 1.0): 2000, (0.364705890417099, 0.6627451181411743, 0.8156863451004028, 1.0): 1869, (0.8431373238563538, 0.4431372880935669, 0.8862745761871338, 1.0): 1661})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 6 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000506.png, index: 506
+
+Rendering scene 506 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -1.415511, -1.958507, within 2.416489
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -1.652932, -1.110601, within 1.991386
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -0.241157, -0.269740, within 0.361823
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -0.381833, 2.909865, within 2.934810
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 0.639171, 2.976836, within 3.044682
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 301007, (0.46666669845581055, 0.5960784554481506, 0.7450980544090271, 1.0): 1798, (0.20000001788139343, 0.8705883026123047, 0.545098066329956, 1.0): 1438, (0.9764706492424011, 0.7843137979507446, 0.07450980693101883, 1.0): 1190, (0.7882353663444519, 0.6470588445663452, 0.8549020290374756, 1.0): 986, (0.7137255072593689, 0.4901961088180542, 0.5058823823928833, 1.0): 781})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 7 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000507.png, index: 507
+
+Rendering scene 507 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 0.254793, 0.607038, within 0.658342
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 2.278518, 2.261064, within 3.209993
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -0.940223, -0.412155, within 1.026592
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -0.980714, 0.819907, within 1.278299
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -1.798487, 0.134707, within 1.803525
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 300805, (0.6901960968971252, 0.8235294818878174, 0.3294117748737335, 1.0): 1732, (0.8000000715255737, 0.686274528503418, 0.760784387588501, 1.0): 1537, (0.9058824181556702, 0.5921568870544434, 0.32156863808631897, 1.0): 1243, (0.5058823823928833, 0.4901961088180542, 0.8196079134941101, 1.0): 960, (0.9058824181556702, 0.9490196704864502, 0.8588235974311829, 1.0): 923})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 8 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000508.png, index: 508
+
+Rendering scene 508 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -2.535318, -3.361412, within 4.210336
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 1.397387, -0.544513, within 1.499728
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 0.374389, -2.374784, within 2.404115
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 0.042333, -0.495516, within 0.497321
+
+Trying to place object at 3.073782, -2.319467, within 3.850722
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 1.085628, 1.435002, within 1.799394
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 297510, (0.7921569347381592, 0.6627451181411743, 0.8941177129745483, 1.0): 2465, (0.9725490808486938, 0.572549045085907, 0.8392157554626465, 1.0): 2440, (0.9490196704864502, 0.43137258291244507, 0.6901960968971252, 1.0): 1748, (0.2980392277240753, 0.5882353186607361, 0.6901960968971252, 1.0): 1574, (0.9764706492424011, 0.2980392277240753, 0.8392157554626465, 1.0): 1463})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 9 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000509.png, index: 509
+
+Rendering scene 509 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -0.994990, 0.407025, within 1.075023
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 0.483480, -0.378326, within 0.613908
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -0.090328, 0.058389, within 0.107557
+
+Trying to place object at 1.028338, 0.230820, within 1.053925
+
+Trying to place object at 3.526886, -0.067817, within 3.527538
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -0.000500, -0.005723, within 0.005745
+
+Trying to place object at 0.014597, 0.206912, within 0.207427
+
+Trying to place object at -1.088407, -0.325847, within 1.136137
+
+Trying to place object at 0.011011, -0.016818, within 0.020102
+
+Trying to place object at 0.119538, 0.205470, within 0.237712
+
+Trying to place object at 0.285511, -2.284638, within 2.302409
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 0.862831, -0.091016, within 0.867618
+
+Trying to place object at -0.223399, -1.610923, within 1.626340
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 298025, (1.0, 0.9098039865493774, 0.545098066329956, 1.0): 3007, (0.3960784673690796, 0.4274510145187378, 0.5098039507865906, 1.0): 1846, (0.4235294461250305, 0.6666666865348816, 0.7803922295570374, 1.0): 1556, (0.988235354423523, 0.4117647409439087, 0.9333333969116211, 1.0): 1513, (0.6901960968971252, 0.14509804546833038, 0.7176470756530762, 1.0): 1253})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 10 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000510.png, index: 510
+
+Rendering scene 510 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -0.236793, 0.139032, within 0.274592
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -0.805001, -0.378574, within 0.889576
+
+Trying to place object at 0.314453, 1.019859, within 1.067236
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -3.390617, 2.319443, within 4.108054
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -1.479166, -3.228511, within 3.551227
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 0.808632, -0.585286, within 0.998221
+
+Trying to place object at 0.491863, -0.008739, within 0.491941
+
+Trying to place object at -0.111819, 2.840528, within 2.842728
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 301008, (0.874509871006012, 0.4941176772117615, 0.7921569347381592, 1.0): 1601, (0.7372549176216125, 0.7137255072593689, 0.32156863808631897, 1.0): 1373, (0.686274528503418, 0.9450981020927429, 0.9098039865493774, 1.0): 1200, (0.7764706611633301, 0.3490196168422699, 0.8392157554626465, 1.0): 1056, (0.9803922176361084, 0.6901960968971252, 0.07450980693101883, 1.0): 962})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 11 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000511.png, index: 511
+
+Rendering scene 511 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -0.838568, -0.783946, within 1.147941
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 1.703006, 3.884942, within 4.241816
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 0.819604, -3.204636, within 3.307785
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 0.683839, 1.108052, within 1.302081
+
+Trying to place object at -0.672184, -0.411275, within 0.788021
+
+Trying to place object at -0.009356, 1.544948, within 1.544976
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 3.393643, -0.871511, within 3.503761
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 297601, (0.5921568870544434, 0.6392157077789307, 0.5764706134796143, 1.0): 3103, (0.8117647767066956, 0.40392160415649414, 0.572549045085907, 1.0): 2983, (0.8274510502815247, 0.9843137860298157, 0.6823529601097107, 1.0): 1633, (0.22745099663734436, 0.9254902601242065, 0.3137255012989044, 1.0): 949, (0.9686275124549866, 0.9803922176361084, 0.7843137979507446, 1.0): 931})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 12 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000512.png, index: 512
+
+Rendering scene 512 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -0.249518, -0.181223, within 0.308385
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -0.671781, -4.028326, within 4.083956
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 0.465749, 1.794770, within 1.854217
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -0.020514, 0.479942, within 0.480380
+
+Trying to place object at 3.466103, 1.396725, within 3.736939
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -2.154658, 2.878734, within 3.595784
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 299275, (0.9647059440612793, 0.6627451181411743, 0.1411764770746231, 1.0): 1889, (0.24705883860588074, 0.21176472306251526, 0.4901961088180542, 1.0): 1838, (0.10196079313755035, 0.3294117748737335, 0.5137255191802979, 1.0): 1755, (0.5647059082984924, 0.23137256503105164, 0.6627451181411743, 1.0): 1451, (0.21176472306251526, 0.9019608497619629, 0.9372549653053284, 1.0): 992})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 13 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000513.png, index: 513
+
+Rendering scene 513 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -3.696183, 0.110787, within 3.697843
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 1.328771, 0.185458, within 1.341651
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 0.430905, -1.958008, within 2.004863
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 1.277409, 3.902468, within 4.106219
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -3.751852, -1.783636, within 4.154245
+
+Trying to place object at -0.372553, -0.653177, within 0.751955
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 300151, (0.3294117748737335, 0.6352941393852234, 0.5803921818733215, 1.0): 1999, (0.9686275124549866, 0.9960784912109375, 0.8588235974311829, 1.0): 1770, (0.6941176652908325, 0.8431373238563538, 0.6941176652908325, 1.0): 1270, (0.9725490808486938, 0.9803922176361084, 0.7764706611633301, 1.0): 1119, (0.8549020290374756, 0.9686275124549866, 0.7450980544090271, 1.0): 891})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 14 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000514.png, index: 514
+
+Rendering scene 514 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -0.412005, 0.300326, within 0.509847
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 0.865316, -1.735950, within 1.939663
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 0.176021, -0.132150, within 0.220107
+
+Trying to place object at -0.013646, -3.385144, within 3.385172
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -3.324007, -2.101172, within 3.932422
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -0.196461, 1.909658, within 1.919737
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 298563, (0.9529412388801575, 0.5333333611488342, 0.5607843399047852, 1.0): 2927, (0.027450982481241226, 0.5921568870544434, 0.46666669845581055, 1.0): 1669, (0.6823529601097107, 0.9411765336990356, 0.501960813999176, 1.0): 1632, (0.9215686917304993, 0.5686274766921997, 0.5647059082984924, 1.0): 1347, (0.9137255549430847, 0.5215686559677124, 0.7254902124404907, 1.0): 1062})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 15 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000515.png, index: 515
+
+Rendering scene 515 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -0.034405, -0.028496, within 0.044674
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 0.164183, -3.388896, within 3.392871
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -2.883001, 2.269608, within 3.669171
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -0.042823, -0.168757, within 0.174105
+
+Trying to place object at 1.136140, -2.147870, within 2.429847
+
+Trying to place object at -0.956314, -3.147786, within 3.289846
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -2.971514, 2.105648, within 3.641929
+
+Trying to place object at -4.130460, -1.564716, within 4.416904
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 300147, (0.8392157554626465, 0.9294118285179138, 0.7372549176216125, 1.0): 1738, (0.6666666865348816, 0.5921568870544434, 0.5098039507865906, 1.0): 1715, (0.3921568989753723, 0.8000000715255737, 0.9568628072738647, 1.0): 1432, (0.27450981736183167, 0.8823530077934265, 0.16078431904315948, 1.0): 1113, (0.33725491166114807, 0.7960785031318665, 0.8156863451004028, 1.0): 1055})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 16 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000516.png, index: 516
+
+Rendering scene 516 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 1.262517, -0.255535, within 1.288118
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 0.092892, -0.728639, within 0.734537
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 1.020248, 0.490156, within 1.131883
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -1.031294, 0.142849, within 1.041140
+
+Trying to place object at 3.186130, 2.528107, within 4.067278
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -0.717764, 0.295740, within 0.776304
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 300412, (0.6745098233222961, 0.803921639919281, 0.9294118285179138, 1.0): 1888, (0.250980406999588, 0.658823549747467, 0.8901961445808411, 1.0): 1357, (0.8078432083129883, 0.874509871006012, 0.803921639919281, 1.0): 1215, (0.7019608020782471, 0.6431372761726379, 0.6392157077789307, 1.0): 1195, (0.8431373238563538, 0.7843137979507446, 0.9019608497619629, 1.0): 1133})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 17 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000517.png, index: 517
+
+Rendering scene 517 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -1.059786, -2.754871, within 2.951688
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 3.926320, 2.127555, within 4.465701
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -0.032772, 0.084732, within 0.090849
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 0.365231, 2.331690, within 2.360121
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 1.495395, -0.005249, within 1.495404
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 298957, (0.250980406999588, 0.8941177129745483, 0.960784375667572, 1.0): 2310, (0.19607844948768616, 0.6352941393852234, 0.7568628191947937, 1.0): 1948, (0.8588235974311829, 0.6470588445663452, 0.05098039656877518, 1.0): 1823, (0.9058824181556702, 0.5607843399047852, 0.9411765336990356, 1.0): 1175, (0.3529411852359772, 0.6117647290229797, 0.615686297416687, 1.0): 987})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 18 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000518.png, index: 518
+
+Rendering scene 518 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -0.406667, 0.549939, within 0.683967
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -3.954047, -0.893297, within 4.053698
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 1.433512, -1.504173, within 2.077857
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 1.637846, 1.158636, within 2.006234
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -1.718351, 0.086449, within 1.720524
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 300064, (0.5960784554481506, 0.6078431606292725, 0.3686274588108063, 1.0): 2239, (0.9803922176361084, 0.7529412508010864, 0.4392157196998596, 1.0): 1504, (0.3176470696926117, 0.38823533058166504, 0.29019609093666077, 1.0): 1400, (0.9215686917304993, 0.8941177129745483, 0.25882354378700256, 1.0): 1196, (0.46274513006210327, 0.6392157077789307, 0.9490196704864502, 1.0): 797})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 19 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000519.png, index: 519
+
+Rendering scene 519 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 0.682879, -3.042981, within 3.118663
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 0.741201, 0.590653, within 0.947760
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 1.559593, 0.918073, within 1.809748
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -0.752284, -1.874911, within 2.020204
+
+Trying to place object at 3.393897, -0.487802, within 3.428774
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 1.256225, 1.168368, within 1.715571
+
+Trying to place object at 0.131914, 0.061168, within 0.145406
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 298385, (0.874509871006012, 0.847058892250061, 0.8666667342185974, 1.0): 2440, (0.7843137979507446, 0.9568628072738647, 0.6745098233222961, 1.0): 1856, (0.6666666865348816, 0.0, 0.7960785031318665, 1.0): 1815, (0.9686275124549866, 0.8078432083129883, 0.6352941393852234, 1.0): 1571, (0.6627451181411743, 0.9058824181556702, 0.8352941870689392, 1.0): 1133})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 20 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000520.png, index: 520
+
+Rendering scene 520 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -0.839293, 0.804905, within 1.162878
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 1.550361, -1.594659, within 2.224086
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -3.203122, 2.216688, within 3.895343
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 0.234203, -1.024503, within 1.050932
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -0.539476, 4.312791, within 4.346401
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 300445, (0.4078431725502014, 0.7725490927696228, 0.6941176652908325, 1.0): 1772, (0.8235294818878174, 0.6627451181411743, 0.9568628072738647, 1.0): 1432, (0.9294118285179138, 0.5686274766921997, 0.8274510502815247, 1.0): 1360, (0.8117647767066956, 0.988235354423523, 0.8392157554626465, 1.0): 1183, (0.6784313917160034, 0.40392160415649414, 0.9019608497619629, 1.0): 1008})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 21 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000521.png, index: 521
+
+Rendering scene 521 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -0.028996, -0.427355, within 0.428337
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 0.697227, -1.065046, within 1.272968
+
+Trying to place object at 0.192207, 2.340678, within 2.348556
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -0.068218, 0.018487, within 0.070678
+
+Trying to place object at 0.599717, 0.299247, within 0.670231
+
+Trying to place object at 0.917673, 0.483879, within 1.037431
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -2.963359, -0.000400, within 2.963359
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 1.886026, 1.164410, within 2.216516
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 300624, (0.8078432083129883, 0.7803922295570374, 0.6313725709915161, 1.0): 1692, (0.3176470696926117, 0.7137255072593689, 0.25882354378700256, 1.0): 1680, (0.9725490808486938, 0.9568628072738647, 0.7647059559822083, 1.0): 1598, (0.12941177189350128, 0.14509804546833038, 0.7215686440467834, 1.0): 852, (0.5568627715110779, 0.9411765336990356, 0.8235294818878174, 1.0): 754})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 22 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000522.png, index: 522
+
+Rendering scene 522 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -0.793353, -3.706214, within 3.790176
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -1.880009, 2.333261, within 2.996421
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -0.386930, 0.494388, within 0.627801
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 0.562919, -3.489564, within 3.534676
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -2.743479, 2.194774, within 3.513361
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 298516, (0.9333333969116211, 0.7921569347381592, 0.7333333492279053, 1.0): 2754, (0.6549019813537598, 0.6313725709915161, 0.5058823823928833, 1.0): 2231, (0.3490196168422699, 0.7058823704719543, 0.46666669845581055, 1.0): 1707, (0.9725490808486938, 0.9294118285179138, 0.8588235974311829, 1.0): 1164, (0.14509804546833038, 0.33725491166114807, 0.8509804606437683, 1.0): 828})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 23 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000523.png, index: 523
+
+Rendering scene 523 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 1.402327, -1.247948, within 1.877204
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 0.078872, 0.776210, within 0.780207
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -1.225419, -0.239713, within 1.248645
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 1.255543, 2.035088, within 2.391228
+
+Trying to place object at -2.260475, -1.881431, within 2.941008
+
+Trying to place object at -0.635589, -4.328043, within 4.374463
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -3.071123, -1.504611, within 3.419890
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 299434, (0.874509871006012, 0.9098039865493774, 0.8941177129745483, 1.0): 2404, (0.8627451658248901, 0.7803922295570374, 0.9137255549430847, 1.0): 1771, (0.27843138575553894, 0.6352941393852234, 0.6549019813537598, 1.0): 1383, (0.3803921937942505, 0.45098042488098145, 0.6901960968971252, 1.0): 1186, (0.5529412031173706, 0.874509871006012, 0.4235294461250305, 1.0): 1022})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 24 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000524.png, index: 524
+
+Rendering scene 524 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -0.725715, 1.795522, within 1.936637
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 2.202804, 1.004719, within 2.421117
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 2.349560, -1.451762, within 2.761892
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -0.977219, 0.358539, within 1.040916
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 2.139059, 3.842800, within 4.398032
+
+Trying to place object at -4.144487, -0.346502, within 4.158947
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 301090, (0.988235354423523, 0.7333333492279053, 0.7647059559822083, 1.0): 2127, (0.572549045085907, 0.9215686917304993, 0.988235354423523, 1.0): 1149, (0.9490196704864502, 0.9019608497619629, 0.12156863510608673, 1.0): 1092, (0.8509804606437683, 0.9450981020927429, 0.5882353186607361, 1.0): 894, (0.34117648005485535, 0.874509871006012, 0.9137255549430847, 1.0): 848})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 25 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000525.png, index: 525
+
+Rendering scene 525 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 1.892738, 0.168198, within 1.900197
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -0.239559, 0.842754, within 0.876141
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -1.295299, 3.027118, within 3.292604
+
+Trying to place object at -2.227149, 0.645735, within 2.318872
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -3.264674, -2.866556, within 4.344565
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 0.345239, -0.181826, within 0.390193
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 300024, (0.6392157077789307, 0.9294118285179138, 0.7215686440467834, 1.0): 2152, (0.8784314393997192, 0.5764706134796143, 0.9058824181556702, 1.0): 1834, (0.7137255072593689, 0.7490196228027344, 0.4705882668495178, 1.0): 1171, (0.9137255549430847, 0.686274528503418, 0.8901961445808411, 1.0): 1066, (0.8901961445808411, 0.8980392813682556, 0.760784387588501, 1.0): 953})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 26 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000526.png, index: 526
+
+Rendering scene 526 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 1.405184, 1.065303, within 1.763352
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -0.927458, 0.822476, within 1.239615
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 3.641542, 2.066746, within 4.187155
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 0.013695, -1.033666, within 1.033756
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -2.181766, -2.991173, within 3.702326
+
+Trying to place object at -0.098595, 1.923409, within 1.925934
+
+Trying to place object at 0.082674, 0.159287, within 0.179464
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 298609, (0.6039215922355652, 0.7882353663444519, 0.24313727021217346, 1.0): 2563, (0.7764706611633301, 0.6549019813537598, 0.4078431725502014, 1.0): 1904, (0.4745098352432251, 0.8509804606437683, 0.14901961386203766, 1.0): 1803, (0.5568627715110779, 0.5764706134796143, 0.501960813999176, 1.0): 1401, (0.4862745404243469, 0.9450981020927429, 0.9921569228172302, 1.0): 920})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 27 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000527.png, index: 527
+
+Rendering scene 527 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -0.419094, 2.025660, within 2.068560
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 1.220973, 1.463931, within 1.906271
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 4.139821, 1.249140, within 4.324172
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -0.339221, 0.841316, within 0.907129
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -0.298404, -1.094026, within 1.133992
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 299967, (0.8313726186752319, 0.6549019813537598, 0.8901961445808411, 1.0): 2396, (0.8588235974311829, 0.9098039865493774, 0.46274513006210327, 1.0): 1721, (0.8588235974311829, 0.3333333432674408, 0.30980393290519714, 1.0): 1117, (0.9372549653053284, 0.32549020648002625, 0.6078431606292725, 1.0): 1059, (0.529411792755127, 0.8274510502815247, 0.4078431725502014, 1.0): 940})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 28 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000528.png, index: 528
+
+Rendering scene 528 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 0.163343, -0.431086, within 0.460994
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 3.367222, -2.520832, within 4.206278
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -0.973930, -1.043407, within 1.427319
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 2.048992, 0.145682, within 2.054165
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 0.545558, -1.157433, within 1.279564
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 297460, (0.9450981020927429, 0.38823533058166504, 0.7882353663444519, 1.0): 2929, (0.8705883026123047, 0.20784315466880798, 0.8588235974311829, 1.0): 2165, (0.9372549653053284, 0.729411780834198, 0.9372549653053284, 1.0): 1620, (0.7960785031318665, 0.4431372880935669, 0.9843137860298157, 1.0): 1563, (0.9450981020927429, 0.5372549295425415, 0.7725490927696228, 1.0): 1463})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 29 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000529.png, index: 529
+
+Rendering scene 529 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -0.745125, -1.471679, within 1.649561
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -1.267283, -0.272870, within 1.296327
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 2.556037, 2.510423, within 3.582674
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -0.086188, -2.675000, within 2.676388
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -0.588062, -3.983289, within 4.026464
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 299013, (0.8941177129745483, 0.019607843831181526, 0.9843137860298157, 1.0): 2329, (0.3176470696926117, 0.6000000238418579, 0.9372549653053284, 1.0): 1837, (0.32549020648002625, 0.7960785031318665, 0.8666667342185974, 1.0): 1570, (0.6549019813537598, 0.35686275362968445, 0.7019608020782471, 1.0): 1479, (0.874509871006012, 0.917647123336792, 0.8705883026123047, 1.0): 972})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 30 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000530.png, index: 530
+
+Rendering scene 530 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -1.444515, -0.022509, within 1.444690
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 0.073315, -1.200406, within 1.202642
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -3.399916, -0.504739, within 3.437178
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 1.631517, -2.325800, within 2.840985
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 1.089451, -2.118334, within 2.382067
+
+Trying to place object at 4.226065, 0.720309, within 4.287012
+
+Trying to place object at -0.202598, -0.309055, within 0.369542
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 300157, (0.4745098352432251, 0.003921568859368563, 0.250980406999588, 1.0): 1832, (0.48235297203063965, 0.729411780834198, 0.03529411926865578, 1.0): 1463, (0.615686297416687, 0.9529412388801575, 0.02352941408753395, 1.0): 1372, (0.9568628072738647, 0.615686297416687, 0.729411780834198, 1.0): 1266, (0.07058823853731155, 0.9529412388801575, 0.6117647290229797, 1.0): 1110})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 31 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000531.png, index: 531
+
+Rendering scene 531 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -2.252818, -3.714509, within 4.344280
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -1.008347, -1.032818, within 1.443425
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -0.056004, 0.019839, within 0.059414
+
+Trying to place object at -1.057935, 3.403570, within 3.564199
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 1.736240, -2.806802, within 3.300404
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -0.577019, -1.484214, within 1.592433
+
+Trying to place object at 0.547656, -0.317618, within 0.633095
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 299593, (0.9843137860298157, 0.6235294342041016, 0.30980393290519714, 1.0): 1951, (0.9490196704864502, 0.49803924560546875, 0.8862745761871338, 1.0): 1805, (0.9843137860298157, 0.6431372761726379, 0.8549020290374756, 1.0): 1767, (0.8627451658248901, 0.5490196347236633, 0.4862745404243469, 1.0): 1067, (0.7803922295570374, 1.0, 0.6509804129600525, 1.0): 1017})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 32 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000532.png, index: 532
+
+Rendering scene 532 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 1.817714, 1.797870, within 2.556642
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 1.559659, -1.200015, within 1.967885
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -1.199402, -0.485020, within 1.293758
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -1.082740, -0.225940, within 1.106062
+
+Trying to place object at 3.207552, -0.089629, within 3.208804
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -3.361254, -0.574296, within 3.409962
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 299080, (0.7803922295570374, 0.8823530077934265, 0.6196078658103943, 1.0): 1862, (0.26274511218070984, 0.5764706134796143, 0.12941177189350128, 1.0): 1786, (0.8078432083129883, 0.4549019932746887, 0.8627451658248901, 1.0): 1696, (0.6117647290229797, 0.6509804129600525, 0.9450981020927429, 1.0): 1651, (0.8588235974311829, 0.7058823704719543, 0.4392157196998596, 1.0): 1125})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 33 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000533.png, index: 533
+
+Rendering scene 533 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 3.403910, -0.824872, within 3.502430
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -2.527965, 0.292057, within 2.544780
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 1.279895, 0.373149, within 1.333181
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 1.515384, -0.241740, within 1.534544
+
+Trying to place object at -1.581456, 4.021059, within 4.320870
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -2.571679, 0.210874, within 2.580310
+
+Trying to place object at -0.017734, 0.107050, within 0.108509
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 299516, (0.7882353663444519, 0.4549019932746887, 0.7647059559822083, 1.0): 2959, (0.5058823823928833, 0.22745099663734436, 0.760784387588501, 1.0): 1861, (0.8941177129745483, 0.7333333492279053, 0.6000000238418579, 1.0): 1412, (0.5490196347236633, 0.8274510502815247, 0.6705882549285889, 1.0): 801, (0.8705883026123047, 0.5803921818733215, 0.003921568859368563, 1.0): 651})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 34 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000534.png, index: 534
+
+Rendering scene 534 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -0.219617, -0.289246, within 0.363173
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 2.730091, -3.550185, within 4.478527
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -1.130641, 0.579534, within 1.270515
+
+Trying to place object at -1.704845, 2.290958, within 2.855694
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 0.407076, -0.602380, within 0.727030
+
+Trying to place object at 1.935434, -0.410309, within 1.978448
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -0.147459, 1.816231, within 1.822207
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 298961, (0.9058824181556702, 0.6392157077789307, 0.7137255072593689, 1.0): 2615, (0.3333333432674408, 0.6745098233222961, 0.3921568989753723, 1.0): 1636, (0.988235354423523, 0.9960784912109375, 0.27450981736183167, 1.0): 1460, (0.8627451658248901, 0.3490196168422699, 0.8941177129745483, 1.0): 1422, (0.5607843399047852, 0.4862745404243469, 0.9764706492424011, 1.0): 1106})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 35 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000535.png, index: 535
+
+Rendering scene 535 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 2.648108, 2.416380, within 3.584881
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -0.041857, -0.184153, within 0.188850
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 2.145489, 1.912510, within 2.874164
+
+Trying to place object at 1.335840, 0.427355, within 1.402534
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 0.664135, -2.663411, within 2.744966
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -0.223399, 0.556392, within 0.599566
+
+Trying to place object at -2.887841, 3.350528, within 4.423309
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 300027, (0.30980393290519714, 0.9803922176361084, 0.874509871006012, 1.0): 1846, (0.988235354423523, 0.3333333432674408, 0.7960785031318665, 1.0): 1826, (0.4784314036369324, 0.8823530077934265, 0.8627451658248901, 1.0): 1576, (0.35686275362968445, 0.0470588281750679, 0.8627451658248901, 1.0): 1070, (0.9490196704864502, 0.8901961445808411, 0.27843138575553894, 1.0): 855})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 36 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000536.png, index: 536
+
+Rendering scene 536 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -0.286260, 4.263045, within 4.272646
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -4.124908, -0.374268, within 4.141853
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -1.972801, 3.459759, within 3.982697
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -0.193526, -0.100965, within 0.218280
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 1.602694, -1.071272, within 1.927758
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 301523, (0.6117647290229797, 0.9725490808486938, 0.8313726186752319, 1.0): 2128, (0.988235354423523, 0.2862745225429535, 0.6666666865348816, 1.0): 1011, (0.9254902601242065, 0.9254902601242065, 0.6039215922355652, 1.0): 981, (0.7568628191947937, 0.23137256503105164, 0.8274510502815247, 1.0): 866, (0.7529412508010864, 0.572549045085907, 0.46666669845581055, 1.0): 691})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 37 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000537.png, index: 537
+
+Rendering scene 537 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 1.231215, -0.269259, within 1.260314
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -0.427192, 2.170940, within 2.212572
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 3.081026, 2.805188, within 4.166749
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 1.529356, 1.132102, within 1.902783
+
+Trying to place object at 0.083430, 0.026522, within 0.087544
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -0.233827, -3.272874, within 3.281216
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 298813, (0.6823529601097107, 0.41960787773132324, 0.8980392813682556, 1.0): 2545, (0.3450980484485626, 0.9137255549430847, 0.5764706134796143, 1.0): 2024, (0.9450981020927429, 0.9137255549430847, 0.9137255549430847, 1.0): 1825, (0.02352941408753395, 0.250980406999588, 0.9764706492424011, 1.0): 1124, (0.9411765336990356, 0.8431373238563538, 0.8235294818878174, 1.0): 869})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 38 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000538.png, index: 538
+
+Rendering scene 538 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -0.192222, -0.091394, within 0.212843
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -3.720242, 0.810576, within 3.807524
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 1.269827, 0.070079, within 1.271760
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 1.640522, 0.128661, within 1.645559
+
+Trying to place object at 0.392734, 1.079907, within 1.149104
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -0.096705, 0.627801, within 0.635206
+
+Trying to place object at -2.953701, 0.776544, within 3.054075
+
+Trying to place object at -3.571050, -2.556361, within 4.391740
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 300577, (0.7098039388656616, 0.3529411852359772, 0.9568628072738647, 1.0): 1769, (0.4862745404243469, 0.6941176652908325, 0.9372549653053284, 1.0): 1663, (0.6431372761726379, 0.8627451658248901, 0.8078432083129883, 1.0): 1539, (0.5333333611488342, 0.9725490808486938, 0.7333333492279053, 1.0): 975, (0.8313726186752319, 0.1725490242242813, 0.7490196228027344, 1.0): 677})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 39 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000539.png, index: 539
+
+Rendering scene 539 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 0.085553, -0.489543, within 0.496963
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -1.643353, 0.441327, within 1.701581
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 3.380928, 0.094971, within 3.382261
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -1.700835, -3.359259, within 3.765297
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 0.590814, 0.619137, within 0.855799
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 299719, (0.8823530077934265, 0.5882353186607361, 0.9294118285179138, 1.0): 2209, (0.7450980544090271, 0.6078431606292725, 0.615686297416687, 1.0): 1660, (0.847058892250061, 0.917647123336792, 0.8078432083129883, 1.0): 1556, (0.7372549176216125, 0.19607844948768616, 0.7058823704719543, 1.0): 1237, (0.8705883026123047, 0.6470588445663452, 0.25882354378700256, 1.0): 819})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 40 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000540.png, index: 540
+
+Rendering scene 540 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -1.858202, -0.462634, within 1.914927
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -0.889028, -0.070754, within 0.891839
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 1.036684, -1.461393, within 1.791755
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 0.099623, 0.373901, within 0.386945
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 0.840031, -0.158007, within 0.854762
+
+Trying to place object at 0.021160, 0.036415, within 0.042117
+
+Trying to place object at 0.508829, -0.909891, within 1.042501
+
+Trying to place object at -2.514623, 0.067867, within 2.515539
+
+Trying to place object at 0.485123, -0.670565, within 0.827648
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 299540, (0.6000000238418579, 0.9686275124549866, 0.7490196228027344, 1.0): 2316, (0.9803922176361084, 0.46666669845581055, 0.9215686917304993, 1.0): 1690, (0.7725490927696228, 0.9921569228172302, 0.917647123336792, 1.0): 1466, (0.9568628072738647, 0.9450981020927429, 0.6745098233222961, 1.0): 1134, (0.9960784912109375, 0.7568628191947937, 0.501960813999176, 1.0): 1054})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 41 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000541.png, index: 541
+
+Rendering scene 541 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -2.590632, -0.193338, within 2.597836
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 1.229173, 0.446525, within 1.307765
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 2.695429, 0.935034, within 2.853003
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 0.657126, 4.075383, within 4.128022
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 2.234887, 0.224926, within 2.246177
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 299370, (0.8431373238563538, 0.803921639919281, 0.729411780834198, 1.0): 2235, (0.3176470696926117, 0.9215686917304993, 0.7529412508010864, 1.0): 2229, (0.22352942824363708, 0.6705882549285889, 0.803921639919281, 1.0): 1298, (0.6823529601097107, 0.9137255549430847, 0.5098039507865906, 1.0): 1225, (0.5647059082984924, 0.4941176772117615, 0.7686275243759155, 1.0): 843})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 42 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000542.png, index: 542
+
+Rendering scene 542 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -0.268726, -1.501626, within 1.525482
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 0.294437, -3.099386, within 3.113340
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -2.051684, -0.301651, within 2.073740
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 3.277427, 1.316361, within 3.531902
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -3.517450, -1.540562, within 3.840024
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 299305, (0.729411780834198, 0.4745098352432251, 0.7843137979507446, 1.0): 1834, (0.8313726186752319, 0.7098039388656616, 0.686274528503418, 1.0): 1694, (0.847058892250061, 0.5921568870544434, 0.8352941870689392, 1.0): 1545, (0.6941176652908325, 0.5764706134796143, 0.8274510502815247, 1.0): 1417, (0.8117647767066956, 0.5490196347236633, 0.8000000715255737, 1.0): 1405})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 43 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000543.png, index: 543
+
+Rendering scene 543 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -4.101826, -1.223331, within 4.280364
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 1.504553, -0.643454, within 1.636371
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 1.753773, 0.271432, within 1.774654
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -0.393088, 1.701690, within 1.746501
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 0.114282, 1.273301, within 1.278419
+
+Trying to place object at 0.007346, 1.105694, within 1.105719
+
+Trying to place object at 3.520547, -2.793520, within 4.494219
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 297686, (0.33725491166114807, 0.4745098352432251, 0.960784375667572, 1.0): 4017, (0.847058892250061, 0.8235294818878174, 0.3686274588108063, 1.0): 2000, (0.6941176652908325, 0.8705883026123047, 0.35686275362968445, 1.0): 1381, (0.847058892250061, 0.9764706492424011, 0.35686275362968445, 1.0): 1246, (0.6784313917160034, 0.8549020290374756, 0.44705885648727417, 1.0): 870})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 44 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000544.png, index: 544
+
+Rendering scene 544 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 0.079675, -2.195165, within 2.196610
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -3.805942, -2.202088, within 4.397089
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -3.085394, 0.263621, within 3.096636
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -3.344011, 2.857045, within 4.398308
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -1.333841, 0.363288, within 1.382429
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 301124, (0.7803922295570374, 0.6235294342041016, 0.44705885648727417, 1.0): 2013, (0.686274528503418, 0.8156863451004028, 0.8235294818878174, 1.0): 1408, (0.7686275243759155, 0.9960784912109375, 0.8980392813682556, 1.0): 1048, (0.7215686440467834, 0.9803922176361084, 0.7215686440467834, 1.0): 981, (0.501960813999176, 0.9725490808486938, 0.847058892250061, 1.0): 626})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 45 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000545.png, index: 545
+
+Rendering scene 545 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 1.132233, 1.315186, within 1.735415
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -1.509494, 2.882298, within 3.253646
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 1.975963, -0.440585, within 2.024487
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 0.194042, -2.885759, within 2.892276
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 3.298500, -1.530753, within 3.636387
+
+Trying to place object at 3.258082, 2.531765, within 4.126128
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 298771, (0.5607843399047852, 0.9215686917304993, 0.9803922176361084, 1.0): 2264, (0.7254902124404907, 0.7803922295570374, 0.8705883026123047, 1.0): 2132, (0.9450981020927429, 0.7450980544090271, 0.8627451658248901, 1.0): 1704, (0.6392157077789307, 0.615686297416687, 0.9686275124549866, 1.0): 1594, (0.8156863451004028, 0.5333333611488342, 0.8549020290374756, 1.0): 735})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 46 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000546.png, index: 546
+
+Rendering scene 546 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -2.260110, -1.892726, within 2.947967
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -0.417607, 1.464094, within 1.522487
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -1.001339, 0.140166, within 1.011102
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -1.801368, -0.899234, within 2.013343
+
+Trying to place object at -0.363357, 1.761855, within 1.798933
+
+Trying to place object at 0.172914, -0.507504, within 0.536153
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 1.308250, -2.999114, within 3.272034
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 299034, (0.9529412388801575, 0.760784387588501, 0.7450980544090271, 1.0): 3095, (0.43529415130615234, 0.7803922295570374, 0.4901961088180542, 1.0): 1506, (0.7333333492279053, 0.3137255012989044, 0.7843137979507446, 1.0): 1346, (0.30588236451148987, 0.8156863451004028, 0.2980392277240753, 1.0): 1259, (0.40000003576278687, 0.8274510502815247, 0.8196079134941101, 1.0): 960})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 47 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000547.png, index: 547
+
+Rendering scene 547 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -0.358381, 2.411883, within 2.438364
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 3.056858, 0.276580, within 3.069345
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 1.353299, 0.665041, within 1.507879
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -1.336111, 2.731792, within 3.041033
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 2.978820, 3.217359, within 4.384606
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 299603, (0.9490196704864502, 0.8313726186752319, 0.18039216101169586, 1.0): 1968, (0.6941176652908325, 0.9490196704864502, 0.37254902720451355, 1.0): 1912, (0.6117647290229797, 0.9019608497619629, 0.9529412388801575, 1.0): 1663, (0.8549020290374756, 0.43137258291244507, 0.960784375667572, 1.0): 1282, (0.6509804129600525, 0.9921569228172302, 0.9764706492424011, 1.0): 772})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 48 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000548.png, index: 548
+
+Rendering scene 548 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 2.157268, 3.562901, within 4.165102
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -3.886250, -0.729898, within 3.954200
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 0.002206, -1.805285, within 1.805286
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -1.462465, -0.718654, within 1.629499
+
+Trying to place object at -3.638112, 1.343489, within 3.878250
+
+Trying to place object at -0.811518, -3.060548, within 3.166309
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 1.311641, -1.584885, within 2.057246
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 298239, (0.8156863451004028, 0.8705883026123047, 0.9843137860298157, 1.0): 2659, (0.7686275243759155, 0.6352941393852234, 0.7725490927696228, 1.0): 2305, (0.7019608020782471, 0.6627451181411743, 0.3921568989753723, 1.0): 1587, (0.4745098352432251, 0.18039216101169586, 0.2352941334247589, 1.0): 1559, (0.6745098233222961, 0.250980406999588, 0.988235354423523, 1.0): 851})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 49 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000549.png, index: 549
+
+Rendering scene 549 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -0.707275, 0.734485, within 1.019660
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -0.448031, -0.550831, within 0.710033
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 2.816322, -1.798794, within 3.341756
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 0.487346, 0.427708, within 0.648413
+
+Trying to place object at -1.221721, -1.205819, within 1.716566
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -2.971716, -0.964466, within 3.124306
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 298249, (0.6627451181411743, 0.43529415130615234, 0.22745099663734436, 1.0): 3494, (0.729411780834198, 0.7019608020782471, 0.22352942824363708, 1.0): 1587, (0.27843138575553894, 0.5882353186607361, 0.7725490927696228, 1.0): 1474, (0.7490196228027344, 0.9137255549430847, 0.6745098233222961, 1.0): 1205, (0.9215686917304993, 0.7411764860153198, 0.4431372880935669, 1.0): 1191})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 50 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000550.png, index: 550
+
+Rendering scene 550 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -0.892195, -0.305014, within 0.942892
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -1.072078, 2.648124, within 2.856906
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -2.802634, 1.296063, within 3.087804
+
+Trying to place object at -0.690379, -0.982772, within 1.201026
+
+Trying to place object at -2.154124, 1.279668, within 2.505554
+
+Trying to place object at 3.664181, 0.749999, within 3.740150
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 0.175948, 0.556027, within 0.583201
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 0.063487, -0.954299, within 0.956409
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 300408, (0.41960787773132324, 0.7490196228027344, 0.44705885648727417, 1.0): 2268, (0.6000000238418579, 0.20784315466880798, 0.658823549747467, 1.0): 1756, (0.8196079134941101, 0.6823529601097107, 0.9254902601242065, 1.0): 1021, (0.4745098352432251, 0.011764707043766975, 0.7137255072593689, 1.0): 1015, (0.8392157554626465, 0.6470588445663452, 0.6784313917160034, 1.0): 732})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 51 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000551.png, index: 551
+
+Rendering scene 551 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -0.635420, 3.594485, within 3.650217
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -0.919917, -0.542702, within 1.068070
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 2.374684, -2.174842, within 3.220103
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -0.103519, 0.601871, within 0.610708
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -2.698122, 0.052160, within 2.698626
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 299749, (0.9372549653053284, 0.8000000715255737, 0.6705882549285889, 1.0): 2928, (0.19607844948768616, 0.12156863510608673, 0.960784375667572, 1.0): 1336, (0.8117647767066956, 0.8980392813682556, 0.8509804606437683, 1.0): 1087, (0.529411792755127, 0.847058892250061, 0.6549019813537598, 1.0): 1071, (0.6431372761726379, 0.43529415130615234, 0.8666667342185974, 1.0): 1029})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 52 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000552.png, index: 552
+
+Rendering scene 552 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 0.783687, 1.603402, within 1.784675
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -2.524300, 2.474790, within 3.535064
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -3.005353, -1.309859, within 3.278396
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 0.230904, 2.709258, within 2.719080
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -2.341821, -0.244581, within 2.354558
+
+Trying to place object at 2.350761, -3.017519, within 3.825114
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 299146, (0.9921569228172302, 0.5333333611488342, 0.9568628072738647, 1.0): 3265, (0.6039215922355652, 0.22352942824363708, 0.7137255072593689, 1.0): 1714, (0.9098039865493774, 0.658823549747467, 0.8901961445808411, 1.0): 1452, (0.9019608497619629, 0.44705885648727417, 0.7333333492279053, 1.0): 910, (0.6196078658103943, 0.6627451181411743, 0.3960784673690796, 1.0): 713})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 53 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000553.png, index: 553
+
+Rendering scene 553 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -0.462719, -1.321312, within 1.399991
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -1.488933, -2.537747, within 2.942292
+
+Trying to place object at 1.167837, -2.610726, within 2.860023
+
+Trying to place object at -0.003498, -0.003563, within 0.004993
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 4.417889, 0.599105, within 4.458326
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -0.550674, -1.170135, within 1.293236
+
+Trying to place object at -1.734380, -2.688762, within 3.199611
+
+Trying to place object at -1.854379, 0.912077, within 2.066545
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -1.253406, 3.453580, within 3.673996
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 299627, (0.8823530077934265, 0.9215686917304993, 0.30980393290519714, 1.0): 2827, (0.9411765336990356, 0.8980392813682556, 0.9568628072738647, 1.0): 1846, (0.6823529601097107, 0.5803921818733215, 0.9843137860298157, 1.0): 1077, (0.4431372880935669, 0.8705883026123047, 0.8431373238563538, 1.0): 1014, (0.7725490927696228, 0.9764706492424011, 0.760784387588501, 1.0): 809})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 54 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000554.png, index: 554
+
+Rendering scene 554 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -1.515120, 1.941405, within 2.462649
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 1.887513, 0.395864, within 1.928578
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -0.193311, -0.988225, within 1.006954
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -0.543728, -1.730387, within 1.813803
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -1.618656, 3.740531, within 4.075736
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 300417, (0.5843137502670288, 0.6549019813537598, 0.7764706611633301, 1.0): 1934, (0.9098039865493774, 0.6274510025978088, 0.7921569347381592, 1.0): 1410, (0.10588236153125763, 0.615686297416687, 0.8156863451004028, 1.0): 1324, (0.7764706611633301, 0.9058824181556702, 0.8235294818878174, 1.0): 1223, (0.729411780834198, 0.7725490927696228, 0.8431373238563538, 1.0): 892})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 55 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000555.png, index: 555
+
+Rendering scene 555 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 0.904207, 2.490141, within 2.649225
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -0.328869, 0.261741, within 0.420313
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 0.597141, 3.999368, within 4.043701
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 0.003714, -0.014097, within 0.014578
+
+Trying to place object at -1.109577, -0.836841, within 1.389772
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 0.990381, -1.808904, within 2.062278
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 300558, (0.8705883026123047, 0.8431373238563538, 0.41568630933761597, 1.0): 2026, (0.8980392813682556, 0.7098039388656616, 0.615686297416687, 1.0): 1420, (0.46274513006210327, 0.30588236451148987, 0.8941177129745483, 1.0): 1214, (0.8980392813682556, 0.9686275124549866, 0.9411765336990356, 1.0): 1007, (0.7058823704719543, 0.7490196228027344, 0.1725490242242813, 1.0): 975})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 56 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000556.png, index: 556
+
+Rendering scene 556 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -0.231193, -0.215009, within 0.315720
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 0.213710, -0.669112, within 0.702412
+
+Trying to place object at 1.176373, -2.563226, within 2.820280
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -2.194853, 2.715253, within 3.491415
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 0.196701, 3.093662, within 3.099909
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -0.132088, -0.016610, within 0.133128
+
+Trying to place object at 0.771371, 0.598529, within 0.976346
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 299724, (0.458823561668396, 0.38823533058166504, 0.9686275124549866, 1.0): 1920, (0.458823561668396, 0.4392157196998596, 0.03921568766236305, 1.0): 1914, (0.8352941870689392, 0.9490196704864502, 0.16862745583057404, 1.0): 1772, (0.5686274766921997, 0.3764706254005432, 0.760784387588501, 1.0): 963, (0.8392157554626465, 0.5176470875740051, 0.6431372761726379, 1.0): 907})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 57 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000557.png, index: 557
+
+Rendering scene 557 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -1.430667, 3.510908, within 3.791211
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -1.172245, 3.498638, within 3.689800
+
+Trying to place object at 3.000784, 2.644383, within 3.999683
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 2.622602, -0.999030, within 2.806439
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -1.453144, 2.366961, within 2.777433
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 3.811220, 1.657576, within 4.156075
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 298829, (0.6274510025978088, 0.5647059082984924, 0.6470588445663452, 1.0): 2817, (0.988235354423523, 0.19215688109397888, 0.7843137979507446, 1.0): 2501, (0.24705883860588074, 0.8627451658248901, 0.9019608497619629, 1.0): 1260, (0.05490196496248245, 0.43137258291244507, 0.5803921818733215, 1.0): 1024, (0.4392157196998596, 0.18039216101169586, 0.501960813999176, 1.0): 769})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 58 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000558.png, index: 558
+
+Rendering scene 558 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -0.057118, 0.717245, within 0.719515
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -0.808598, -0.170887, within 0.826458
+
+Trying to place object at 0.340651, -3.321754, within 3.339176
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 0.027012, -0.099953, within 0.103539
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 1.484156, -3.890098, within 4.163602
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 0.720613, 2.407758, within 2.513282
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 297997, (0.7137255072593689, 0.5843137502670288, 0.5372549295425415, 1.0): 2461, (0.9568628072738647, 0.4941176772117615, 0.874509871006012, 1.0): 1870, (0.5803921818733215, 0.4901961088180542, 0.6705882549285889, 1.0): 1707, (0.6980392336845398, 0.1882353127002716, 0.03921568766236305, 1.0): 1599, (0.29411765933036804, 0.7647059559822083, 0.5568627715110779, 1.0): 1566})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 59 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000559.png, index: 559
+
+Rendering scene 559 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 0.694720, 2.083082, within 2.195875
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 0.342200, -0.480875, within 0.590204
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -1.104128, 2.989118, within 3.186523
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 0.591225, -1.333652, within 1.458826
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -2.067957, -2.549012, within 3.282363
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 299955, (0.7843137979507446, 0.8509804606437683, 0.8235294818878174, 1.0): 1655, (0.9568628072738647, 0.988235354423523, 0.5568627715110779, 1.0): 1649, (0.874509871006012, 0.729411780834198, 0.960784375667572, 1.0): 1437, (0.6313725709915161, 0.760784387588501, 0.7333333492279053, 1.0): 1273, (0.5333333611488342, 0.7764706611633301, 0.9647059440612793, 1.0): 1231})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 60 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000560.png, index: 560
+
+Rendering scene 560 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -0.063352, -0.161755, within 0.173718
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -2.370876, 1.996772, within 3.099702
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -1.143559, 3.197763, within 3.396088
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -1.946055, 0.873318, within 2.133030
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -0.181844, -0.763576, within 0.784930
+
+Trying to place object at 1.228676, 0.267810, within 1.257524
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 300627, (0.7843137979507446, 0.529411792755127, 0.7764706611633301, 1.0): 1982, (0.40000003576278687, 0.20000001788139343, 0.9921569228172302, 1.0): 1814, (0.18431372940540314, 0.8588235974311829, 0.7372549176216125, 1.0): 1192, (0.22352942824363708, 0.7686275243759155, 0.6941176652908325, 1.0): 842, (0.6980392336845398, 0.615686297416687, 0.917647123336792, 1.0): 743})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 61 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000561.png, index: 561
+
+Rendering scene 561 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 0.473069, 3.019228, within 3.056065
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -2.209589, 1.331199, within 2.579607
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 2.274351, 0.124272, within 2.277744
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -2.063171, 1.205705, within 2.389644
+
+Trying to place object at 0.948775, -0.189614, within 0.967536
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 0.098636, 0.352951, within 0.366475
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 299835, (0.6352941393852234, 0.32156863808631897, 0.09803922474384308, 1.0): 2450, (0.4117647409439087, 0.7176470756530762, 0.5960784554481506, 1.0): 1473, (0.7843137979507446, 0.8588235974311829, 0.6470588445663452, 1.0): 1322, (0.572549045085907, 0.8431373238563538, 0.7647059559822083, 1.0): 1313, (0.8352941870689392, 0.6000000238418579, 0.847058892250061, 1.0): 807})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 62 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000562.png, index: 562
+
+Rendering scene 562 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 1.141321, 1.937675, within 2.248821
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 0.199196, -0.208389, within 0.288280
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -1.613156, -4.162129, within 4.463809
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 1.441135, 1.031699, within 1.772364
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 2.804185, -1.945299, within 3.412864
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 298489, (0.9568628072738647, 0.4274510145187378, 0.6274510025978088, 1.0): 3042, (0.545098066329956, 0.9294118285179138, 0.5960784554481506, 1.0): 2081, (0.847058892250061, 0.8156863451004028, 0.45098042488098145, 1.0): 1304, (0.803921639919281, 0.8666667342185974, 0.37254902720451355, 1.0): 1151, (0.9333333969116211, 0.8823530077934265, 0.658823549747467, 1.0): 1133})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 63 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000563.png, index: 563
+
+Rendering scene 563 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -2.697332, 2.940552, within 3.990294
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 2.161750, -1.993595, within 2.940678
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -2.397902, 1.218249, within 2.689622
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -1.710978, 2.948762, within 3.409200
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 0.419207, 0.862951, within 0.959385
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 301401, (0.7490196228027344, 0.9254902601242065, 0.8509804606437683, 1.0): 1821, (0.6352941393852234, 0.9764706492424011, 0.917647123336792, 1.0): 1377, (0.7882353663444519, 0.9960784912109375, 0.8078432083129883, 1.0): 965, (0.6431372761726379, 0.7254902124404907, 0.3529411852359772, 1.0): 944, (0.529411792755127, 0.7372549176216125, 0.9137255549430847, 1.0): 692})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 64 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000564.png, index: 564
+
+Rendering scene 564 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 1.951363, -2.087210, within 2.857318
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 0.986433, 0.330161, within 1.040219
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 0.223009, -0.293034, within 0.368242
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 0.935300, -0.204492, within 0.957394
+
+Trying to place object at -2.772366, 1.114905, within 2.988148
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 1.605929, 0.180759, within 1.616069
+
+Trying to place object at -0.723655, -3.800078, within 3.868368
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 297483, (0.8784314393997192, 0.8627451658248901, 0.9686275124549866, 1.0): 3017, (0.9529412388801575, 0.7725490927696228, 0.08627451211214066, 1.0): 2640, (0.6627451181411743, 0.9254902601242065, 0.43137258291244507, 1.0): 1984, (0.5647059082984924, 0.8941177129745483, 0.8901961445808411, 1.0): 1285, (0.9960784912109375, 0.8392157554626465, 0.7019608020782471, 1.0): 791})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 65 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000565.png, index: 565
+
+Rendering scene 565 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -1.866229, 1.017091, within 2.125390
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -1.186528, 4.157329, within 4.323336
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -0.848077, 0.920044, within 1.251286
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 0.063150, -0.228077, within 0.236658
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 0.871979, 0.762014, within 1.158021
+
+Trying to place object at 0.111450, 0.053795, within 0.123754
+
+Trying to place object at 0.869371, -0.402921, within 0.958202
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 301171, (0.9254902601242065, 0.6470588445663452, 0.9764706492424011, 1.0): 1910, (0.8980392813682556, 0.7058823704719543, 1.0, 1.0): 1414, (0.6549019813537598, 0.5960784554481506, 0.7490196228027344, 1.0): 1081, (0.8352941870689392, 0.32549020648002625, 0.5647059082984924, 1.0): 956, (0.9803922176361084, 0.8980392813682556, 0.9764706492424011, 1.0): 668})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 66 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000566.png, index: 566
+
+Rendering scene 566 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 1.620865, 1.162647, within 1.994731
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -0.894363, -1.836469, within 2.042670
+
+Trying to place object at -2.180267, -1.214446, within 2.495685
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -1.720314, -0.009295, within 1.720340
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 2.518033, 2.936869, within 3.868552
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 0.369564, 0.089588, within 0.380268
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 299224, (0.9333333969116211, 0.8784314393997192, 0.8274510502815247, 1.0): 2042, (0.988235354423523, 0.7803922295570374, 0.9960784912109375, 1.0): 2021, (0.9647059440612793, 0.46274513006210327, 0.9529412388801575, 1.0): 1513, (0.2352941334247589, 0.8392157554626465, 0.7176470756530762, 1.0): 1289, (0.8313726186752319, 0.6666666865348816, 0.7372549176216125, 1.0): 1111})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 67 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000567.png, index: 567
+
+Rendering scene 567 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 2.738439, -0.200178, within 2.745746
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 1.186456, 2.356839, within 2.638630
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 2.504729, 0.023468, within 2.504839
+
+Trying to place object at 2.861929, 0.857326, within 2.987582
+
+Trying to place object at 2.059231, 3.162296, within 3.773665
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 1.565112, -1.514279, within 2.177755
+
+Trying to place object at -0.003017, 0.056187, within 0.056268
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -1.121955, -0.421326, within 1.198457
+
+Trying to place object at -0.010295, 0.048578, within 0.049657
+
+Trying to place object at 1.908830, -0.739068, within 2.046913
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 298670, (0.874509871006012, 0.6235294342041016, 0.9568628072738647, 1.0): 2659, (0.9333333969116211, 0.7568628191947937, 0.3803921937942505, 1.0): 2139, (0.8627451658248901, 0.7372549176216125, 0.6117647290229797, 1.0): 1586, (0.29411765933036804, 0.4784314036369324, 0.8705883026123047, 1.0): 1108, (0.8823530077934265, 0.9254902601242065, 0.9529412388801575, 1.0): 1038})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 68 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000568.png, index: 568
+
+Rendering scene 568 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -1.621482, 0.391000, within 1.667958
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 0.785168, -0.340924, within 0.855990
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -0.519517, 0.105591, within 0.530139
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 0.905623, -0.333550, within 0.965096
+
+Trying to place object at 0.130087, 0.223601, within 0.258689
+
+Trying to place object at 0.620425, 1.963423, within 2.059116
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 1.143007, -0.579425, within 1.281483
+
+Trying to place object at 2.254342, 0.999330, within 2.465912
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 300687, (0.6980392336845398, 0.6627451181411743, 0.3019607961177826, 1.0): 1935, (0.8509804606437683, 0.8352941870689392, 0.29411765933036804, 1.0): 1281, (0.7137255072593689, 0.6470588445663452, 0.7215686440467834, 1.0): 1200, (0.6509804129600525, 0.6509804129600525, 0.917647123336792, 1.0): 1174, (0.3529411852359772, 0.8392157554626465, 0.5058823823928833, 1.0): 923})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 69 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000569.png, index: 569
+
+Rendering scene 569 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 1.798257, 0.149033, within 1.804422
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -2.739171, 0.014774, within 2.739211
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -2.754843, -0.552568, within 2.809714
+
+Trying to place object at 2.299560, -1.664243, within 2.838605
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 1.742331, 2.279354, within 2.869002
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 0.727795, 1.600688, within 1.758376
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 297560, (0.8274510502815247, 0.6784313917160034, 0.9450981020927429, 1.0): 3273, (0.5333333611488342, 0.9647059440612793, 0.7960785031318665, 1.0): 2487, (0.847058892250061, 0.5372549295425415, 0.2980392277240753, 1.0): 1707, (0.9529412388801575, 0.4862745404243469, 0.3137255012989044, 1.0): 1256, (0.8235294818878174, 0.9294118285179138, 0.5607843399047852, 1.0): 917})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 70 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000570.png, index: 570
+
+Rendering scene 570 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 0.269629, -0.699690, within 0.749844
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 0.029536, 0.172509, within 0.175020
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 2.650988, 0.062617, within 2.651728
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 2.363024, -0.485904, within 2.412464
+
+Trying to place object at 0.599709, 0.086826, within 0.605961
+
+Trying to place object at -1.626081, 1.862497, within 2.472455
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -0.203521, -0.055334, within 0.210909
+
+Trying to place object at 0.163212, -2.662716, within 2.667714
+
+Trying to place object at 1.416706, 1.417245, within 2.003906
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 299892, (0.8235294818878174, 0.6980392336845398, 0.19607844948768616, 1.0): 2324, (0.7411764860153198, 0.9372549653053284, 0.5764706134796143, 1.0): 1601, (0.8352941870689392, 0.5921568870544434, 0.9725490808486938, 1.0): 1585, (0.9137255549430847, 0.364705890417099, 0.9647059440612793, 1.0): 1033, (0.1411764770746231, 0.7058823704719543, 0.874509871006012, 1.0): 765})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 71 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000571.png, index: 571
+
+Rendering scene 571 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -3.529633, -0.500956, within 3.565006
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -0.468084, 0.836691, within 0.958725
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -0.974333, 0.960316, within 1.368039
+
+Trying to place object at 0.409322, 3.048381, within 3.075739
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 0.381380, -2.716527, within 2.743168
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -4.086361, -1.567945, within 4.376848
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 300508, (0.7803922295570374, 0.29411765933036804, 0.8392157554626465, 1.0): 1782, (0.49803924560546875, 0.874509871006012, 0.5176470875740051, 1.0): 1321, (0.917647123336792, 0.7803922295570374, 0.40000003576278687, 1.0): 1318, (0.9254902601242065, 0.8156863451004028, 0.9019608497619629, 1.0): 1229, (0.7647059559822083, 0.6823529601097107, 0.6078431606292725, 1.0): 1042})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 72 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000572.png, index: 572
+
+Rendering scene 572 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -2.456317, -0.384053, within 2.486160
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 1.148845, -1.815661, within 2.148597
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 1.151191, -3.764337, within 3.936429
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 0.904326, -0.563029, within 1.065273
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 2.515453, 1.557266, within 2.958476
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 297974, (0.6274510025978088, 0.9254902601242065, 0.22352942824363708, 1.0): 2894, (0.5098039507865906, 0.9647059440612793, 0.9137255549430847, 1.0): 2127, (0.7882353663444519, 0.5607843399047852, 0.8509804606437683, 1.0): 1574, (0.8549020290374756, 0.7686275243759155, 0.7411764860153198, 1.0): 1320, (0.6784313917160034, 0.8588235974311829, 0.6823529601097107, 1.0): 1311})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 73 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000573.png, index: 573
+
+Rendering scene 573 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -2.676132, -0.644332, within 2.752607
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 0.972417, -0.069616, within 0.974906
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 0.362952, 0.271781, within 0.453430
+
+Trying to place object at -0.541357, -0.542141, within 0.766149
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -2.690934, -3.207396, within 4.186707
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -4.177238, 1.292095, within 4.372508
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 300747, (0.6823529601097107, 0.4784314036369324, 0.9764706492424011, 1.0): 1756, (0.37254902720451355, 0.4078431725502014, 0.9294118285179138, 1.0): 1294, (0.5411764979362488, 0.2039215862751007, 0.6745098233222961, 1.0): 1284, (0.5647059082984924, 0.7764706611633301, 0.7450980544090271, 1.0): 1183, (0.5372549295425415, 0.9529412388801575, 0.615686297416687, 1.0): 936})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 74 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000574.png, index: 574
+
+Rendering scene 574 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -1.065908, -2.924517, within 3.112710
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 1.507820, 1.207970, within 1.932023
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -0.725403, -0.186352, within 0.748957
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -0.539569, 1.783595, within 1.863423
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -2.326069, -3.160129, within 3.923903
+
+Trying to place object at -1.214959, -0.671336, within 1.388098
+
+Trying to place object at -0.057961, 0.419153, within 0.423141
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 299800, (0.8509804606437683, 0.6352941393852234, 0.6000000238418579, 1.0): 2211, (0.5843137502670288, 0.6313725709915161, 0.4705882668495178, 1.0): 1593, (0.49803924560546875, 0.16862745583057404, 0.6235294342041016, 1.0): 1546, (0.3803921937942505, 0.8392157554626465, 0.9019608497619629, 1.0): 1170, (0.8313726186752319, 0.8588235974311829, 0.9098039865493774, 1.0): 880})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 75 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000575.png, index: 575
+
+Rendering scene 575 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 2.053734, -3.337713, within 3.918947
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -1.005213, 1.361191, within 1.692127
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 0.351292, 0.837165, within 0.907883
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 0.842423, -0.688003, within 1.087669
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 0.807301, -0.201206, within 0.831997
+
+Trying to place object at -2.157488, 3.948725, within 4.499687
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 298807, (0.6078431606292725, 0.9647059440612793, 0.8431373238563538, 1.0): 3694, (0.2392157018184662, 0.41960787773132324, 0.9254902601242065, 1.0): 1457, (0.8666667342185974, 0.7333333492279053, 0.9372549653053284, 1.0): 1352, (0.7450980544090271, 0.7725490927696228, 0.9333333969116211, 1.0): 998, (0.8941177129745483, 0.5137255191802979, 0.7764706611633301, 1.0): 892})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 76 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000576.png, index: 576
+
+Rendering scene 576 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 1.242412, 3.211254, within 3.443216
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 0.001265, -0.001241, within 0.001772
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -0.226996, 0.145067, within 0.269391
+
+Trying to place object at -2.663182, -1.949455, within 3.300441
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 2.533640, 2.594122, within 3.626128
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 0.476162, -2.876386, within 2.915532
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 298889, (0.8549020290374756, 0.10588236153125763, 0.9098039865493774, 1.0): 2732, (0.6745098233222961, 0.5058823823928833, 0.7254902124404907, 1.0): 1626, (0.7647059559822083, 0.6392157077789307, 0.3333333432674408, 1.0): 1453, (0.803921639919281, 0.9411765336990356, 0.9098039865493774, 1.0): 1318, (0.6431372761726379, 0.9411765336990356, 0.20000001788139343, 1.0): 1182})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 77 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000577.png, index: 577
+
+Rendering scene 577 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -0.703708, 0.713833, within 1.002378
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 1.567021, -0.186520, within 1.578083
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -0.988372, 0.876438, within 1.320993
+
+Trying to place object at 1.800083, 2.364922, within 2.972062
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -0.070307, -4.102414, within 4.103016
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 0.542980, -0.760345, within 0.934319
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 299399, (0.6705882549285889, 0.5921568870544434, 0.5137255191802979, 1.0): 1766, (0.5254902243614197, 0.5411764979362488, 0.9372549653053284, 1.0): 1738, (0.4705882668495178, 0.14901961386203766, 0.874509871006012, 1.0): 1647, (0.8313726186752319, 0.9058824181556702, 0.8078432083129883, 1.0): 1371, (0.7254902124404907, 0.5254902243614197, 0.6039215922355652, 1.0): 1279})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 78 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000578.png, index: 578
+
+Rendering scene 578 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -0.538106, 0.544406, within 0.765465
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 0.986281, 0.000294, within 0.986281
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -0.477629, -1.179865, within 1.272875
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 2.349803, 1.699992, within 2.900267
+
+Trying to place object at -0.574258, -1.785660, within 1.875728
+
+Trying to place object at -2.124187, -1.440982, within 2.566827
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 1.008874, 0.099396, within 1.013758
+
+Trying to place object at -1.392976, 1.797376, within 2.273971
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 299756, (0.9921569228172302, 0.6000000238418579, 1.0, 1.0): 2015, (0.9529412388801575, 0.960784375667572, 0.2549019753932953, 1.0): 1633, (0.2980392277240753, 0.38823533058166504, 0.32549020648002625, 1.0): 1383, (0.1882353127002716, 0.6901960968971252, 0.9843137860298157, 1.0): 1284, (0.2196078598499298, 0.7725490927696228, 0.9529412388801575, 1.0): 1129})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 79 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000579.png, index: 579
+
+Rendering scene 579 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 0.264821, 3.323112, within 3.333647
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -0.619625, -0.046467, within 0.621365
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 1.462677, -2.670296, within 3.044652
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -1.779522, 0.743353, within 1.928541
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -3.135234, -1.509219, within 3.479574
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 300068, (0.847058892250061, 0.9686275124549866, 0.9803922176361084, 1.0): 2690, (0.7803922295570374, 0.13725490868091583, 0.7411764860153198, 1.0): 1388, (0.3686274588108063, 0.7137255072593689, 0.9450981020927429, 1.0): 1240, (0.960784375667572, 0.9803922176361084, 0.46666669845581055, 1.0): 1001, (0.6078431606292725, 0.9568628072738647, 0.7254902124404907, 1.0): 813})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 80 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000580.png, index: 580
+
+Rendering scene 580 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -0.020594, -0.098870, within 0.100992
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 2.880461, -0.654274, within 2.953833
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 1.878723, 1.639569, within 2.493549
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 2.281637, 2.817712, within 3.625654
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 0.660034, -1.257518, within 1.420210
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 297713, (0.7333333492279053, 0.7137255072593689, 0.8941177129745483, 1.0): 2179, (0.529411792755127, 0.6901960968971252, 0.2666666805744171, 1.0): 2165, (0.9647059440612793, 0.3019607961177826, 0.7058823704719543, 1.0): 2099, (0.5803921818733215, 0.8431373238563538, 0.7843137979507446, 1.0): 1737, (0.9960784912109375, 0.760784387588501, 0.38431376218795776, 1.0): 1307})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 81 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000581.png, index: 581
+
+Rendering scene 581 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 2.636239, 1.259851, within 2.921811
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -0.586250, 0.399926, within 0.709668
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -3.556426, 0.876212, within 3.662774
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -1.951554, -1.062527, within 2.222055
+
+Trying to place object at 0.923785, 3.122196, within 3.255993
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -2.202423, -0.420849, within 2.242272
+
+Trying to place object at 2.253701, -2.711423, within 3.525760
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 298448, (0.5215686559677124, 0.9137255549430847, 0.8784314393997192, 1.0): 3284, (0.7568628191947937, 0.9725490808486938, 0.8117647767066956, 1.0): 2321, (0.16862745583057404, 0.9137255549430847, 0.43529415130615234, 1.0): 1107, (0.658823549747467, 0.6823529601097107, 0.4862745404243469, 1.0): 1060, (1.0, 0.5137255191802979, 0.3803921937942505, 1.0): 980})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 82 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000582.png, index: 582
+
+Rendering scene 582 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 4.208709, 0.733554, within 4.272158
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -0.134520, 4.481419, within 4.483437
+
+Trying to place object at 0.821900, 0.739680, within 1.105734
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 0.220039, -2.583892, within 2.593244
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 0.990267, -3.123722, within 3.276930
+
+Trying to place object at 0.724906, 0.019602, within 0.725171
+
+Trying to place object at 3.875703, 2.265897, within 4.489472
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -0.457084, 1.050265, within 1.145418
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 298476, (0.6000000238418579, 0.8666667342185974, 0.6078431606292725, 1.0): 2717, (0.8666667342185974, 0.4549019932746887, 0.8509804606437683, 1.0): 2111, (0.4549019932746887, 0.10588236153125763, 0.9411765336990356, 1.0): 1468, (0.7686275243759155, 0.9686275124549866, 0.8078432083129883, 1.0): 1327, (0.8274510502815247, 0.7960785031318665, 1.0, 1.0): 1101})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 83 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000583.png, index: 583
+
+Rendering scene 583 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 0.548296, 4.238771, within 4.274086
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -1.488505, -0.818867, within 1.698878
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 0.361020, -3.858838, within 3.875689
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -0.317284, -0.421407, within 0.527497
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 3.607116, -1.763823, within 4.015266
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 297289, (0.8941177129745483, 0.9568628072738647, 0.8980392813682556, 1.0): 3854, (0.5333333611488342, 0.8705883026123047, 0.8784314393997192, 1.0): 2757, (0.2705882489681244, 0.6235294342041016, 0.03921568766236305, 1.0): 1140, (0.250980406999588, 0.43137258291244507, 0.4117647409439087, 1.0): 1130, (0.8274510502815247, 0.2862745225429535, 0.5686274766921997, 1.0): 1030})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 84 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000584.png, index: 584
+
+Rendering scene 584 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 0.967089, -0.620617, within 1.149098
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -0.723725, -1.082300, within 1.301980
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 0.178426, -2.489480, within 2.495866
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 0.395852, -2.187922, within 2.223444
+
+Trying to place object at 4.253772, 1.455170, within 4.495787
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -0.367309, 2.416558, within 2.444313
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 298725, (0.960784375667572, 0.41960787773132324, 0.8392157554626465, 1.0): 2181, (0.9647059440612793, 0.6705882549285889, 0.917647123336792, 1.0): 2064, (0.8352941870689392, 0.08627451211214066, 0.6470588445663452, 1.0): 1764, (0.4862745404243469, 0.6352941393852234, 0.8156863451004028, 1.0): 1341, (0.4941176772117615, 0.729411780834198, 0.4745098352432251, 1.0): 1125})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 85 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000585.png, index: 585
+
+Rendering scene 585 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -4.217492, -0.135614, within 4.219671
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 3.660413, -1.493621, within 3.953420
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -0.319367, -1.264202, within 1.303918
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -1.587442, 0.183932, within 1.598063
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 0.290765, -1.530233, within 1.557613
+
+Trying to place object at 2.251127, -3.176155, within 3.893011
+
+Trying to place object at -1.095793, -2.727922, within 2.939782
+
+Trying to place object at 0.791265, -4.204266, within 4.278078
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 296563, (0.9960784912109375, 0.7372549176216125, 0.9921569228172302, 1.0): 3881, (0.9686275124549866, 0.7215686440467834, 0.6196078658103943, 1.0): 2521, (0.49803924560546875, 0.41568630933761597, 0.6000000238418579, 1.0): 2100, (0.7372549176216125, 0.7764706611633301, 0.7490196228027344, 1.0): 1162, (0.8000000715255737, 0.5607843399047852, 0.9019608497619629, 1.0): 973})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 86 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000586.png, index: 586
+
+Rendering scene 586 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -0.903789, 2.011219, within 2.204957
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -1.870519, -1.101564, within 2.170780
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -2.288656, -2.476213, within 3.371880
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -1.432036, -4.202076, within 4.439389
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -0.286106, -0.189533, within 0.343190
+
+Trying to place object at 0.903164, -0.170753, within 0.919164
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 299531, (0.8392157554626465, 0.9960784912109375, 0.760784387588501, 1.0): 1919, (0.26274511218070984, 0.8196079134941101, 0.8627451658248901, 1.0): 1786, (0.4784314036369324, 0.8392157554626465, 0.5215686559677124, 1.0): 1615, (0.07058823853731155, 0.8549020290374756, 0.2862745225429535, 1.0): 1321, (0.8431373238563538, 0.3529411852359772, 0.874509871006012, 1.0): 1028})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 87 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000587.png, index: 587
+
+Rendering scene 587 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -1.692595, 0.271696, within 1.714263
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 0.962503, -0.491034, within 1.080521
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -1.995812, -1.747598, within 2.652803
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -0.751384, 1.114725, within 1.344318
+
+Trying to place object at -3.186860, -0.166999, within 3.191232
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 1.867785, -1.042908, within 2.139223
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 300139, (0.9490196704864502, 0.3529411852359772, 0.9686275124549866, 1.0): 2332, (0.8549020290374756, 0.7254902124404907, 0.7098039388656616, 1.0): 1598, (0.9921569228172302, 0.7568628191947937, 0.32549020648002625, 1.0): 1248, (0.7372549176216125, 0.16862745583057404, 0.917647123336792, 1.0): 1114, (0.9333333969116211, 0.5333333611488342, 0.7568628191947937, 1.0): 769})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 88 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000588.png, index: 588
+
+Rendering scene 588 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -1.829037, 1.095268, within 2.131898
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -1.808705, 1.786243, within 2.542061
+
+Trying to place object at 2.319058, -1.237207, within 2.628442
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 2.435617, -2.834634, within 3.737295
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -0.786403, 2.857169, within 2.963417
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 0.844544, -2.041159, within 2.208978
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 297644, (0.2549019753932953, 0.3764706254005432, 0.38431376218795776, 1.0): 3446, (0.9098039865493774, 0.9254902601242065, 0.7725490927696228, 1.0): 2429, (0.7647059559822083, 0.8862745761871338, 0.8705883026123047, 1.0): 1722, (0.2352941334247589, 0.6627451181411743, 0.5607843399047852, 1.0): 1202, (0.9764706492424011, 0.8705883026123047, 0.5647059082984924, 1.0): 757})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 89 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000589.png, index: 589
+
+Rendering scene 589 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -2.530079, -1.833241, within 3.124431
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -1.236553, -2.805552, within 3.065972
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -1.670049, 2.160535, within 2.730746
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -2.423204, -0.678907, within 2.516512
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -0.274169, -2.493132, within 2.508162
+
+Trying to place object at 1.655495, -0.301881, within 1.682794
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 300089, (0.6431372761726379, 0.44705885648727417, 0.4117647409439087, 1.0): 1988, (0.5607843399047852, 0.4235294461250305, 0.4862745404243469, 1.0): 1628, (0.7529412508010864, 0.7098039388656616, 0.2980392277240753, 1.0): 1346, (0.5764706134796143, 0.7529412508010864, 0.3803921937942505, 1.0): 1224, (0.7882353663444519, 0.9137255549430847, 0.4941176772117615, 1.0): 925})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 90 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000590.png, index: 590
+
+Rendering scene 590 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 0.810289, 1.809498, within 1.982638
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -1.360813, 0.355835, within 1.406567
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 1.004556, -1.753229, within 2.020630
+
+Trying to place object at 2.420794, -1.390768, within 2.791859
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -0.664764, -2.337522, within 2.430210
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 0.565221, -0.218917, within 0.606135
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 298887, (0.8431373238563538, 0.6431372761726379, 0.8000000715255737, 1.0): 2924, (0.7529412508010864, 0.4705882668495178, 0.6705882549285889, 1.0): 1699, (0.5843137502670288, 0.6000000238418579, 0.2980392277240753, 1.0): 1386, (0.6392157077789307, 0.6313725709915161, 0.9725490808486938, 1.0): 1375, (0.9725490808486938, 0.4901961088180542, 0.3607843220233917, 1.0): 929})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 91 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000591.png, index: 591
+
+Rendering scene 591 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -1.604329, -0.564764, within 1.700832
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -1.446539, 2.330479, within 2.742920
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -1.946602, -0.727905, within 2.078246
+
+Trying to place object at -1.231379, 0.679285, within 1.406315
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 1.741059, 0.752339, within 1.896655
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -3.755924, -1.963487, within 4.238189
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 300735, (0.803921639919281, 0.7568628191947937, 0.8862745761871338, 1.0): 1555, (0.21176472306251526, 0.9098039865493774, 0.40000003576278687, 1.0): 1529, (0.7882353663444519, 0.8627451658248901, 0.5215686559677124, 1.0): 1340, (0.24313727021217346, 0.7725490927696228, 0.9372549653053284, 1.0): 1273, (0.9019608497619629, 0.960784375667572, 0.4274510145187378, 1.0): 768})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 92 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000592.png, index: 592
+
+Rendering scene 592 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 0.578867, 1.187018, within 1.320643
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 2.165197, 0.475364, within 2.216765
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at 2.977943, 1.178815, within 3.202772
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 2.628087, 1.906468, within 3.246761
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -0.346632, -0.322749, within 0.473625
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 299744, (0.46274513006210327, 0.917647123336792, 0.7254902124404907, 1.0): 2020, (0.9843137860298157, 0.988235354423523, 0.18039216101169586, 1.0): 1671, (0.5490196347236633, 0.9137255549430847, 0.7843137979507446, 1.0): 1609, (0.9333333969116211, 0.8196079134941101, 0.9529412388801575, 1.0): 1347, (0.5137255191802979, 0.9019608497619629, 0.9529412388801575, 1.0): 809})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 93 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000593.png, index: 593
+
+Rendering scene 593 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 4.121439, 1.618196, within 4.427733
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 0.489885, -3.852545, within 3.883566
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -0.804266, -2.122925, within 2.270166
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 2.592342, 1.847747, within 3.183458
+
+Trying to place object at -0.000433, -0.071747, within 0.071748
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -0.441103, -0.723063, within 0.846990
+
+Trying to place object at -0.946848, 0.532087, within 1.086112
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 298687, (0.7568628191947937, 0.9725490808486938, 0.5803921818733215, 1.0): 2552, (0.8117647767066956, 0.8980392813682556, 0.9294118285179138, 1.0): 1883, (0.4901961088180542, 0.2980392277240753, 0.8666667342185974, 1.0): 1735, (0.5372549295425415, 0.9725490808486938, 0.5647059082984924, 1.0): 1241, (0.7843137979507446, 0.6784313917160034, 0.7333333492279053, 1.0): 1102})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 94 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000594.png, index: 594
+
+Rendering scene 594 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at -1.304748, -4.208150, within 4.405780
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 1.024662, -3.730078, within 3.868258
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -0.690054, 0.939579, within 1.165754
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at -0.381076, -3.612136, within 3.632182
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -0.355310, -1.692831, within 1.729718
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 297494, (0.9803922176361084, 0.8274510502815247, 0.5607843399047852, 1.0): 2325, (0.3921568989753723, 0.8627451658248901, 0.6705882549285889, 1.0): 2237, (0.8313726186752319, 0.8549020290374756, 0.250980406999588, 1.0): 1846, (0.5647059082984924, 0.3764706254005432, 0.8392157554626465, 1.0): 1814, (0.3450980484485626, 0.5686274766921997, 0.9725490808486938, 1.0): 1484})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 95 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000595.png, index: 595
+
+Rendering scene 595 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 0.218252, 3.114470, within 3.122108
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -0.330304, -1.683811, within 1.715902
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -3.897061, -1.267115, within 4.097885
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 1.053555, 2.729241, within 2.925532
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -2.232590, 1.513444, within 2.697215
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 301259, (0.501960813999176, 0.29411765933036804, 0.5882353186607361, 1.0): 1327, (0.7137255072593689, 0.38431376218795776, 0.6901960968971252, 1.0): 1284, (0.9921569228172302, 0.9372549653053284, 0.501960813999176, 1.0): 1161, (0.7372549176216125, 0.6705882549285889, 0.5764706134796143, 1.0): 1159, (0.45098042488098145, 0.7803922295570374, 0.4549019932746887, 1.0): 1010})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 96 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000596.png, index: 596
+
+Rendering scene 596 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 0.790977, 1.176973, within 1.418066
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -1.640794, 4.098968, within 4.415173
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -1.946175, -2.836832, within 3.440234
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 1.358692, -2.930164, within 3.229846
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -1.103708, -0.691535, within 1.302456
+
+Trying to place object at 0.195769, -2.800300, within 2.807135
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 298776, (0.7176470756530762, 0.7529412508010864, 0.9450981020927429, 1.0): 2326, (0.729411780834198, 0.7647059559822083, 0.9058824181556702, 1.0): 1966, (0.9568628072738647, 0.7921569347381592, 0.5843137502670288, 1.0): 1739, (0.7764706611633301, 0.9803922176361084, 0.760784387588501, 1.0): 1713, (0.6313725709915161, 0.5960784554481506, 0.4431372880935669, 1.0): 680})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 97 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000597.png, index: 597
+
+Rendering scene 597 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 0.007497, 1.883205, within 1.883220
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at 0.767155, -0.667184, within 1.016691
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -0.642658, -0.058056, within 0.645275
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 0.054030, 0.121267, within 0.132759
+
+Trying to place object at -0.904668, 0.619477, within 1.096438
+
+Trying to place object at 1.140662, 0.033119, within 1.141143
+
+Trying to place object at 3.551911, 2.562585, within 4.379831
+
+Trying to place object at -0.510131, 3.362082, within 3.400563
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -0.181806, 0.301080, within 0.351714
+
+Trying to place object at 3.300735, -0.213795, within 3.307652
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 299792, (0.572549045085907, 0.7568628191947937, 0.3137255012989044, 1.0): 2624, (0.7960785031318665, 0.6549019813537598, 0.6352941393852234, 1.0): 1426, (0.8627451658248901, 0.7450980544090271, 0.32156863808631897, 1.0): 1314, (0.9686275124549866, 0.6470588445663452, 0.8901961445808411, 1.0): 1272, (0.9921569228172302, 0.4705882668495178, 0.9803922176361084, 1.0): 772})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 98 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000598.png, index: 598
+
+Rendering scene 598 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 4.189512, 0.034881, within 4.189657
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -0.438913, -0.450243, within 0.628780
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -2.979671, -0.572866, within 3.034240
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 1.184083, 1.361107, within 1.804069
+
+Trying to place object at -0.114753, 2.877991, within 2.880278
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at 1.186912, 0.124043, within 1.193376
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 299049, (0.8901961445808411, 0.5607843399047852, 0.6941176652908325, 1.0): 3063, (0.5568627715110779, 0.8705883026123047, 0.7686275243759155, 1.0): 1854, (0.4745098352432251, 0.572549045085907, 0.6705882549285889, 1.0): 1296, (0.9529412388801575, 0.6823529601097107, 0.8705883026123047, 1.0): 1092, (0.8156863451004028, 0.6470588445663452, 0.8705883026123047, 1.0): 846})
+
+Objects added
+
+Starting rendering
+
+Rendering done
+
+Rendering image 99 / 100
+
+Image path: /gpfs/helios/home/zain/llama_vision/binding-open-vlm/data/vlm/3D/conjunctive_search/images/conjunctive_search_absent_n5_000599.png, index: 599
+
+Rendering scene 599 with 5 objects
+
+Adding object 0 of 5
+
+
+Trying to place object at 2.398490, -0.215519, within 2.408153
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 1 of 5
+
+
+Trying to place object at -2.825191, 2.533585, within 3.794833
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 2 of 5
+
+
+Trying to place object at -3.316935, -2.775062, within 4.324699
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Adding object 3 of 5
+
+
+Trying to place object at 0.613611, 0.094073, within 0.620780
+
+Adding object: sphere, green, [0.13, 0.75, 0.13, 1.0]
+Setting input Color: [0.13, 0.75, 0.13, 1.0]
+
+Adding object 4 of 5
+
+
+Trying to place object at -0.309737, 0.559619, within 0.639617
+
+Trying to place object at -1.698285, -2.173136, within 2.758023
+
+Adding object: cube, red, [0.75, 0.13, 0.13, 1.0]
+Setting input Color: [0.75, 0.13, 0.13, 1.0]
+
+Color count: Counter({(0.0, 0.0, 0.0, 1.0): 299596, (0.658823549747467, 0.6941176652908325, 0.6666666865348816, 1.0): 2531, (0.6901960968971252, 0.7372549176216125, 0.46666669845581055, 1.0): 1739, (0.8509804606437683, 0.7725490927696228, 0.9450981020927429, 1.0): 1455, (0.9137255549430847, 0.29019609093666077, 0.9725490808486938, 1.0): 1212, (0.6823529601097107, 0.32156863808631897, 0.7098039388656616, 1.0): 667})
+
+Objects added
+
+Starting rendering
+
+Rendering done
