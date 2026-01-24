@@ -16,3 +16,4 @@ blender-assets/
 analysis/results/
 *.log
 *.zip
+.ipynb_checkpoints
