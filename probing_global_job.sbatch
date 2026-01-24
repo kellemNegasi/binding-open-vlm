@@ -32,13 +32,13 @@ LAYERS="${LAYERS:-0,10,20}"
 OVR_N_JOBS="${OVR_N_JOBS:-4}"
 FEATURE_JOBS="${FEATURE_JOBS:-4}"
 
-# echo "[$(date --iso-8601=seconds)] 1) Extract image tokens (overwrite)"
-# bash scripts/extract_image_tokens.sh "$MODEL_KEY" "$MODEL_TAG" "$DATASET_DIR" \
-#   "data/probing/scene_description_balanced_2d_out_${MODEL_TAG}" \
-#   "prompts/scene_description_2D_parse.txt" "$LAYERS"
+echo "[$(date --iso-8601=seconds)] 1) Extract image tokens (overwrite)"
+bash scripts/extract_image_tokens.sh "$MODEL_KEY" "$MODEL_TAG" "$DATASET_DIR" \
+  "data/probing/scene_description_balanced_2d_out_${MODEL_TAG}" \
+  "prompts/scene_description_2D_parse.txt" "$LAYERS"
 
-# echo "[$(date --iso-8601=seconds)] 2) Build global embeddings + labels"
-# bash scripts/global_embedding_labels.sh "$MODEL_TAG" "$DATASET_DIR"
+echo "[$(date --iso-8601=seconds)] 2) Build global embeddings + labels"
+bash scripts/global_embedding_labels.sh "$MODEL_TAG" "$DATASET_DIR"
 
 echo "[$(date --iso-8601=seconds)] 3) Train multi-label global probe (per-sample + intermediates)"
 bash scripts/train_multi_label_probe_per_sample.sh "$MODEL_TAG"
