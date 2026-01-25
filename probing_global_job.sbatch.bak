@@ -1,0 +1,48 @@
+#SBATCH -J probing_global_internvl2-26b
+#SBATCH --output=slurm-%x.%j.out
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=16
+#SBATCH --partition=gpu
+#SBATCH --gres=gpu:1
+#SBATCH --mem=64G
+#SBATCH -t 10:00:00
+
+set -euo pipefail
+
+source ~/miniconda3/etc/profile.d/conda.sh
+conda activate vlm
+
+PROJECT_DIR="$HOME/binding-open-vlm"
+cd "$PROJECT_DIR"
+
+export PROJECT_ROOT="$PROJECT_DIR"
+export OMP_NUM_THREADS=1
+
+# ---- model identifiers ----
+MODEL_KEY="OpenGVLab/InternVL2-26B"   # HF repo
+MODEL_TAG="internvl2-26b"             # filesystem-safe tag
+
+DATASET_DIR="data/probing/scene_description_balanced_2d"
+
+# InternVL2-26B sensible probe layers
+LAYERS="12,24,36"
+
+echo "[$(date --iso-8601=seconds)] 1) Extract image tokens"
+bash scripts/extract_image_tokens.sh \
+  "$MODEL_KEY" \
+  "$MODEL_TAG" \
+  "$DATASET_DIR" \
+  "data/probing/scene_description_balanced_2d_out_${MODEL_TAG}" \
+  "prompts/scene_description_2D_parse.txt" \
+  "$LAYERS"
+
+echo "[$(date --iso-8601=seconds)] 2) Build global embeddings + labels"
+bash scripts/global_embedding_labels.sh \
+  "$MODEL_TAG" \
+  "$DATASET_DIR"
+
+echo "[$(date --iso-8601=seconds)] 3) Train multi-label global probe"
+bash scripts/train_multi_label_probe_per_sample.sh \
+  "$MODEL_TAG"
+
+echo "[$(date --iso-8601=seconds)] Done"

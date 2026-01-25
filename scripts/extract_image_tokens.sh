@@ -15,6 +15,5 @@ python probing/extract_image_tokens.py \
   --out_dir "$OUT_DIR" \
   --model "$MODEL_KEY" \
   --prompt_path "$PROMPT_PATH" \
-  --layers "$LAYERS" \
-  --device "$DEVICE" --dtype "$DTYPE" \
-  --overwrite
+  --layers "$LAYERS"
+

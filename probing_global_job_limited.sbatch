@@ -1,48 +1,59 @@
 #!/bin/bash
-# SLURM job for running the global illusory-conjunction probing pipeline
-# on the limited 2D dataset (max 4 shapes/colors).
-# Runs global embedding/label build, then multi-label probe training.
-
-#SBATCH -J probing_global_qwen3_30b_limited
+#SBATCH -J debug_extract_internvl2
 #SBATCH --output=slurm-%x.%j.out
-#SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=16
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
 #SBATCH --partition=gpu
-#SBATCH --gres=gpu:h200-141g
+#SBATCH --gres=gpu:h200-141g:1
 #SBATCH --mem=64G
-#SBATCH -t 10:00:00
+#SBATCH -t 00:20:00
 
 set -euo pipefail
 
-module load cuda/12.1
-module load python/3.12.3
+echo "===== JOB START $(date) ====="
 
-# Activate your virtual environment. Update the path if needed.
-source ~/binding-open-vlm/.venv/bin/activate
+# ---- conda ----
+source ~/miniconda3/etc/profile.d/conda.sh
+conda activate vlm
 
-# Change this to the absolute path of the repo on the cluster.
+# ---- project ----
 PROJECT_DIR="$HOME/binding-open-vlm"
 cd "$PROJECT_DIR"
 
 export PROJECT_ROOT="$PROJECT_DIR"
+export OMP_NUM_THREADS=1
+export CUDA_VISIBLE_DEVICES=0
 
-MODEL_KEY="${MODEL_KEY:-qwen2.5-VL-7B-Instruct}"
-MODEL_TAG="${MODEL_TAG:-qwen2.5-VL-7B-Instruct}"
-DATASET_DIR="${DATASET_DIR:-data/probing/scene_description_balanced_2d_limited}"
-LAYERS="${LAYERS:-0,10,20}"
+# ---- model / data ----
+MODEL_KEY="OpenGVLab/InternVL2-26B"
+MODEL_TAG="internvl2-26b"
 
-TOKENS_OUT_DIR="data/probing/scene_description_balanced_2d_limited_out_${MODEL_TAG}"
-GLOBAL_OUT_DIR="output/probing_global/scene_description_balanced_2d_limited_${MODEL_TAG}"
+DATASET_DIR="data/probing/scene_description_balanced_2d"
+OUT_DIR="data/probing/scene_description_balanced_2d_out_${MODEL_TAG}"
+PROMPT_PATH="prompts/scene_description_2D_parse.txt"
+LAYERS="0,10,20"
 
-echo "[$(date --iso-8601=seconds)] 1) Extract image tokens (overwrite)"
-bash scripts/extract_image_tokens.sh "$MODEL_KEY" "$MODEL_TAG" "$DATASET_DIR" \
-  "$TOKENS_OUT_DIR" "prompts/scene_description_2D_parse.txt" "$LAYERS"
+echo "=================================================="
+echo "MODEL_KEY   = $MODEL_KEY"
+echo "MODEL_TAG   = $MODEL_TAG"
+echo "DATASET     = $DATASET_DIR"
+echo "OUT_DIR     = $OUT_DIR"
+echo "PROMPT_PATH = $PROMPT_PATH"
+echo "LAYERS      = $LAYERS"
+echo "=================================================="
 
-echo "[$(date --iso-8601=seconds)] 2) Build global embeddings + labels"
-bash scripts/global_embedding_labels.sh "$MODEL_TAG" "$DATASET_DIR" \
-  "${TOKENS_OUT_DIR}/tokens" "$GLOBAL_OUT_DIR"
+# ---- create output dirs explicitly ----
+mkdir -p "$OUT_DIR/tokens"
 
-echo "[$(date --iso-8601=seconds)] 3) Train multi-label global probe"
-bash scripts/train_multi_label_probe.sh "$MODEL_TAG" "$GLOBAL_OUT_DIR"
+# ---- STEP 1 ONLY: extract image tokens (1 sample) ----
+echo "[$(date --iso-8601=seconds)] STEP 1: Extract image tokens (max_samples=1)"
 
-echo "[$(date --iso-8601=seconds)] Done"
+python -m probing.extract_image_tokens \
+  --model_key "$MODEL_KEY" \
+  --model_tag "$MODEL_TAG" \
+  --dataset_dir "$DATASET_DIR" \
+  --out_dir "$OUT_DIR" \
+  --layers "$LAYERS" \
+
+
+echo "===== JOB END $(date) ====="
