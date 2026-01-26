@@ -218,7 +218,7 @@ class LocalVLModel(Model):
     """
     def __init__(
         self,
-        task: Task,
+        task: Task = None,
         max_tokens: int = 512,
         batch_size: int = 32,
         weights_path: str = None,
@@ -227,7 +227,7 @@ class LocalVLModel(Model):
         model_name: str = None
     ):
         super().__init__(task)
-        self.results_file = self.task.results_path
+        self.results_file = self.task.results_path if self.task is not None else None
         self.max_tokens = max_tokens
         self.batch_size = batch_size
         self.weights_path = weights_path
@@ -237,7 +237,7 @@ class LocalVLModel(Model):
         self.model_name = model_name
 
         # shuffle and subsample the task dataset, if necessary
-        if self.shuffle:
+        if self.shuffle and self.task is not None:
             if self.n_trials and self.n_trials > 0:
                 self.task.results_df = self.task.results_df.sample(n=self.n_trials)
             else:

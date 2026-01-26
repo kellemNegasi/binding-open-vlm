@@ -1,0 +1,8 @@
+# Alias for config/model/qwen3_vl_30b.yaml (kept for convenience when using the HF model name).
+defaults:
+  - base_vlm_local
+  - _self_
+_target_: models.qwen_model.QwenModel
+model_name: qwen3-vl-30b-a3b-instruct
+weights_path: '${paths.root_dir}/model-weights/Qwen3-VL-30B-A3B-Instruct'
+prompt_format: qwen

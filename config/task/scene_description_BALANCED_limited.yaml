@@ -1,0 +1,11 @@
+defaults:
+  - base_vlm_task
+_target_: tasks.scene_description.SceneDescriptionBalanced
+task_name: 'scene_description_balanced_limited'
+n_objects: [4]
+n_trials: 100
+size: 40
+color_names: ['red', 'blue', 'black', 'green']
+shape_names: ['triangle', 'circle', 'X-shape', 'star']
+shape_inds: [9, 100, 24, 98]
+prompt_path: '${paths.root_dir}/prompts/scene_description_2D.txt'

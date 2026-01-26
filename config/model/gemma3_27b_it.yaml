@@ -3,6 +3,6 @@ defaults:
   - base_vlm_local
 _target_: models.gemma3_model.Gemma3Model
 model_name: gemma-3-27b-it
-weights_path: '${paths.root_dir}/model-weights/google_gemma-3-27b-it'
+weights_path: '${paths.root_dir}/model-weights/gemma-3-27b-it'
 batch_size: 4
 prompt_format: null

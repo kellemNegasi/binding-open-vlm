@@ -1,7 +1,7 @@
 #!/bin/bash
 # SLURM job for running Qwen2.5-VL tasks via run_vlm.py on Rocket.
 # Customize SBATCH directives below to match your quota and runtime needs.
-#SBATCH -J qwen2_5_vl_job
+#SBATCH -J deepseek_vl2_job
 #SBATCH --output=slurm-%x.%j.out
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=16
@@ -45,16 +45,16 @@ export HYDRA_FULL_ERROR=1
 export PROJECT_ROOT="$PROJECT_DIR"
 COUNTING_TASKS=(
   counting_control_shape
-  counting_control
-  counting_distinct
-  counting_high_diversity
-  counting_low_diversity
+  # counting_control
+  # counting_distinct
+  # counting_high_diversity
+  # counting_low_diversity
 )
 
 for TASK_NAME in "${COUNTING_TASKS[@]}"; do
   echo "[$(date --iso-8601=seconds)] Starting task ${TASK_NAME}"
   python run_vlm.py \
-    model=qwen3_vl_30b \
+    model=deepseek_vl2 \
     task="${TASK_NAME}" \
     paths.root_dir="$PROJECT_DIR" \
     paths.data_dir="$PROJECT_DIR/data" \
@@ -62,61 +62,61 @@ for TASK_NAME in "${COUNTING_TASKS[@]}"; do
   echo "[$(date --iso-8601=seconds)] Finished task ${TASK_NAME}"
 done
 
-SEARCH_TASKS=(
-  conjunctive_search
-  disjunctive_search
-  disjunctive_search_control
-)
+# SEARCH_TASKS=(
+#   conjunctive_search
+#   disjunctive_search
+#   disjunctive_search_control
+# )
 
-for TASK_NAME in "${SEARCH_TASKS[@]}"; do
-  echo "[$(date --iso-8601=seconds)] Starting task ${TASK_NAME}"
-  python run_vlm.py \
-    model=qwen3_vl_30b \
-    task="${TASK_NAME}" \
-    paths.root_dir="$PROJECT_DIR" \
-    paths.data_dir="$PROJECT_DIR/data" \
-    paths.output_dir="$PROJECT_DIR/output"
-  echo "[$(date --iso-8601=seconds)] Finished task ${TASK_NAME}"
-done
+# for TASK_NAME in "${SEARCH_TASKS[@]}"; do
+#   echo "[$(date --iso-8601=seconds)] Starting task ${TASK_NAME}"
+#   python run_vlm.py \
+#     model=qwen3_vl_30b \
+#     task="${TASK_NAME}" \
+#     paths.root_dir="$PROJECT_DIR" \
+#     paths.data_dir="$PROJECT_DIR/data" \
+#     paths.output_dir="$PROJECT_DIR/output"
+#   echo "[$(date --iso-8601=seconds)] Finished task ${TASK_NAME}"
+# done
 
-SCENE_TASKS=(
-  scene_description_BALANCED
-)
+# SCENE_TASKS=(
+#   scene_description_BALANCED
+# )
 
-for TASK_NAME in "${SCENE_TASKS[@]}"; do
-  echo "[$(date --iso-8601=seconds)] Starting task ${TASK_NAME}"
-  python run_vlm.py \
-    model=qwen3_vl_30b \
-    task="${TASK_NAME}" \
-    paths.root_dir="$PROJECT_DIR" \
-    paths.data_dir="$PROJECT_DIR/data" \
-    paths.output_dir="$PROJECT_DIR/output"
-  echo "[$(date --iso-8601=seconds)] Finished task ${TASK_NAME}"
-done
+# for TASK_NAME in "${SCENE_TASKS[@]}"; do
+#   echo "[$(date --iso-8601=seconds)] Starting task ${TASK_NAME}"
+#   python run_vlm.py \
+#     model=qwen3_vl_30b \
+#     task="${TASK_NAME}" \
+#     paths.root_dir="$PROJECT_DIR" \
+#     paths.data_dir="$PROJECT_DIR/data" \
+#     paths.output_dir="$PROJECT_DIR/output"
+#   echo "[$(date --iso-8601=seconds)] Finished task ${TASK_NAME}"
+# done
 
-RMTS_CONDITIONS=(
-  unified
-  decomposed
-)
+# RMTS_CONDITIONS=(
+#   unified
+#   decomposed
+# )
 
-RMTS_SUBTASKS=(
-  features
-  features2
-  relations
-  full
-)
+# RMTS_SUBTASKS=(
+#   features
+#   features2
+#   relations
+#   full
+# )
 
-for CONDITION in "${RMTS_CONDITIONS[@]}"; do
-  for SUBTASK in "${RMTS_SUBTASKS[@]}"; do
-    echo "[$(date --iso-8601=seconds)] Starting RMTS condition=${CONDITION} subtask=${SUBTASK}"
-    python run_vlm.py \
-      model=qwen3_vl_30b \
-      task=rmts \
-      task.condition="${CONDITION}" \
-      task.subtask="${SUBTASK}" \
-      paths.root_dir="$PROJECT_DIR" \
-      paths.data_dir="$PROJECT_DIR/data" \
-      paths.output_dir="$PROJECT_DIR/output"
-    echo "[$(date --iso-8601=seconds)] Finished RMTS condition=${CONDITION} subtask=${SUBTASK}"
-  done
-done
+# for CONDITION in "${RMTS_CONDITIONS[@]}"; do
+#   for SUBTASK in "${RMTS_SUBTASKS[@]}"; do
+#     echo "[$(date --iso-8601=seconds)] Starting RMTS condition=${CONDITION} subtask=${SUBTASK}"
+#     python run_vlm.py \
+#       model=qwen3_vl_30b \
+#       task=rmts \
+#       task.condition="${CONDITION}" \
+#       task.subtask="${SUBTASK}" \
+#       paths.root_dir="$PROJECT_DIR" \
+#       paths.data_dir="$PROJECT_DIR/data" \
+#       paths.output_dir="$PROJECT_DIR/output"
+#     echo "[$(date --iso-8601=seconds)] Finished RMTS condition=${CONDITION} subtask=${SUBTASK}"
+#   done
+# done
