@@ -1,0 +1,11 @@
+# config/model/qwen3_vl_30b.yaml
+defaults:
+  - base_vlm_local
+_target_: models.intern_model.InternModel
+model_name: InternVL2-26B
+weights_path: '${paths.root_dir}/model-weights/InternVL2-26B'
+# If `weights_path` doesn't exist, `InternModel` will download weights from Hugging Face.
+# Override this if you use a different repo / mirror.
+hf_repo_id: OpenGVLab/InternVL2-26B
+batch_size: 8            # adjust for VRAM
+prompt_format: null      # or set if the prompt needs wrapping

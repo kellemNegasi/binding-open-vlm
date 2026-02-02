@@ -153,6 +153,12 @@ Outputs:
 - `probe_results.json` reports micro/macro F1 and implied/non-implied FPRs, grouped by:
   - `triplet_count_per_sample`
   - `n_implied_absent_pairs_per_sample`
+- Per-seed intermediates are saved under `probes/intermediates/` (when enabled). To compute a macro-over-samples FPR by triplet (mean±std over seeds) for implied, non-implied, and overall absent pairs:
+
+```bash
+python probing/aggregate_macro_fpr_by_triplet.py \
+  --run_dir output/probing_global/scene_description_balanced_2d_qwen3-vl-30b-a3b-instruct/probes
+```
 
 ### Train/test splitting note
 

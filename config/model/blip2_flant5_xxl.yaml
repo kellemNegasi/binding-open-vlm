@@ -1,0 +1,7 @@
+defaults:
+  - base_vlm_local
+_target_: models.blip2_model.Blip2Model
+model_name: blip2-flan-t5-xxl
+weights_path: '${paths.root_dir}/model-weights/blip2-flan-t5-xxl'
+batch_size: 8
+prompt_format: null
