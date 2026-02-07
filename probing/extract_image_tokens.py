@@ -150,7 +150,9 @@ def main() -> None:
             for layer, emb in hs.cls_per_layer.items():
                 arrays[f"cls_{layer}"] = np.asarray(emb, dtype=np.float32)
 
-        tmp_path = save_path.with_suffix(save_path.suffix + ".tmp")
+        # Write atomically: ensure the temp filename still ends with `.npz` because
+        # NumPy appends `.npz` automatically when the provided path does not.
+        tmp_path = save_path.with_suffix(".tmp.npz")
         np.savez_compressed(tmp_path, **arrays)
         tmp_path.replace(save_path)
 
