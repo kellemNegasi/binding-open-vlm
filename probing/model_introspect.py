@@ -21,6 +21,74 @@ class ImageHiddenStates:
     w_patches: Optional[int] = None
 
 
+def _is_perfect_square(n: int) -> bool:
+    if n < 0:
+        return False
+    r = int(round(n**0.5))
+    return r * r == n
+
+
+def _sqrt_int(n: int) -> int | None:
+    if not _is_perfect_square(n):
+        return None
+    return int(round(n**0.5))
+
+
+def _internvl2_pixel_values(
+    image: Image.Image,
+    *,
+    device,
+    dtype,
+    size: int = 448,
+) -> "torch.Tensor":
+    import torch
+
+    img = image.convert("RGB").resize((size, size), resample=Image.BICUBIC)
+    arr = np.asarray(img).astype(np.float32) / 255.0  # HWC, [0,1]
+    # CHW
+    t = torch.from_numpy(arr).permute(2, 0, 1).contiguous()
+    mean = torch.tensor([0.485, 0.456, 0.406], dtype=t.dtype)[:, None, None]
+    std = torch.tensor([0.229, 0.224, 0.225], dtype=t.dtype)[:, None, None]
+    t = (t - mean) / std
+    t = t.unsqueeze(0)
+    return t.to(device=device, dtype=dtype)
+
+
+def _pixel_values_from_processor(processor, image: Image.Image):
+    """Best-effort creation of `pixel_values` from an HF processor.
+
+    Some processors require `text` even if we only need images; others can process images alone.
+    """
+    try:
+        from transformers import PreTrainedTokenizerBase
+
+        if isinstance(processor, PreTrainedTokenizerBase):
+            # Tokenizers accept arbitrary kwargs and will warn/ignore `images=...`.
+            return None
+    except Exception:
+        pass
+
+    # 1) Images-only path.
+    try:
+        out = processor(images=[image], return_tensors="pt")
+        pv = out.get("pixel_values", None)
+        if pv is not None:
+            return pv
+    except Exception:
+        pass
+
+    # 2) Multimodal path: blank text + image.
+    try:
+        out = processor(text=[""], images=[image], return_tensors="pt", padding=True)
+        pv = out.get("pixel_values", None)
+        if pv is not None:
+            return pv
+    except Exception:
+        pass
+
+    return None
+
+
 def load_model_from_hydra(model_name: str):
     """Instantiate a repo model wrapper via Hydra config (like `run_vlm.py`)."""
     from hydra import compose, initialize_config_dir
@@ -31,6 +99,85 @@ def load_model_from_hydra(model_name: str):
         cfg = compose(config_name="run", overrides=[f"model={model_name}", "task=default", "paths=default"])
     # Many wrappers require `task` at construction time; allow `task=None` for probing use-cases.
     return instantiate(cfg.model, task=None, prompt_format="qwen")
+
+
+class HfRepoModel:
+    """Minimal wrapper that exposes `get_hf_components()` for probing/introspection.
+
+    This allows probing to run directly from a Hugging Face repo id (or local model folder)
+    without requiring a Hydra config/model wrapper.
+    """
+
+    def __init__(self, weights_path: str, hf_repo_id: str | None = None):
+        self.weights_path = weights_path
+        self.hf_repo_id = hf_repo_id
+        self._hf_model = None
+        self._hf_processor = None
+        self._hf_components_key = None
+
+    def get_hf_components(self, device: str | None = None, dtype: str | None = None):
+        key = (device or "auto", dtype or "auto", self.weights_path)
+        if self._hf_model is not None and self._hf_processor is not None and self._hf_components_key == key:
+            return self._hf_model, self._hf_processor
+
+        try:
+            import torch
+            from transformers import AutoModel, AutoProcessor
+        except Exception as e:  # pragma: no cover
+            raise ImportError("Hidden-state introspection requires `torch` and `transformers`.") from e
+
+        if device is not None:
+            device = device.lower()
+
+        dtype_map = {
+            None: "auto",
+            "auto": "auto",
+            "float16": torch.float16,
+            "fp16": torch.float16,
+            "bfloat16": torch.bfloat16,
+            "bf16": torch.bfloat16,
+            "float32": torch.float32,
+            "fp32": torch.float32,
+        }
+        torch_dtype = dtype_map.get((dtype or "auto").lower(), "auto")
+
+        load_kwargs = dict(trust_remote_code=True)
+        if torch_dtype != "auto":
+            load_kwargs["torch_dtype"] = torch_dtype
+
+        if device in (None, "auto"):
+            load_kwargs["device_map"] = "auto"
+        elif device == "xpu":
+            load_kwargs["device_map"] = None
+        else:
+            raise ValueError(f"Unsupported device={device!r}. Use auto or xpu.")
+
+        hf_model = AutoModel.from_pretrained(self.weights_path, **load_kwargs)
+        if device == "xpu":
+            hf_model.to("xpu")
+        hf_model.eval()
+
+        processor = AutoProcessor.from_pretrained(self.weights_path, trust_remote_code=True)
+
+        self._hf_model = hf_model
+        self._hf_processor = processor
+        self._hf_components_key = key
+        return self._hf_model, self._hf_processor
+
+
+def load_model(model_name: str):
+    """Load a probing-compatible model wrapper.
+
+    - If `model_name` looks like a Hugging Face repo id (contains '/'), load directly via transformers.
+      If a matching local folder exists under `model-weights/<repo_name>`, prefer that to avoid downloads.
+    - Otherwise, treat `model_name` as a Hydra model key under `config/model/*.yaml`.
+    """
+    if "/" in model_name:
+        repo_name = model_name.split("/")[-1]
+        local_dir = root / "model-weights" / repo_name
+        weights_path = str(local_dir) if local_dir.exists() else model_name
+        return HfRepoModel(weights_path=weights_path, hf_repo_id=model_name)
+    return load_model_from_hydra(model_name)
 
 
 def _maybe_prepend_image_token(prompt: str) -> str:
@@ -89,7 +236,7 @@ def _infer_image_token_indices(tokenizer, input_ids) -> Any:
     # Qwen-VL style (common): a vision span demarcated by vision_start / vision_end,
     # or repeated pad tokens. Keep candidates extensible since different releases
     # may register these as "added" tokens rather than normal vocab entries.
-    candidates_pad = ["<|image_pad|>", "<|vision_pad|>"]
+    candidates_pad = ["<|image_pad|>", "<|vision_pad|>", "<image>"]
     candidates_vstart = ["<|vision_start|>"]
     candidates_vend = ["<|vision_end|>"]
 
@@ -142,6 +289,35 @@ def _infer_image_token_indices(tokenizer, input_ids) -> Any:
         idx = torch.where(input_ids[0] == pad_id)[0]
         if len(idx) > 0:
             return idx
+
+    # More general fallback: pick any special token id that appears repeatedly and looks vision-related.
+    try:
+        candidate_tokens = []
+        for needle in ("image", "vision", "img"):
+            candidate_tokens.extend(_discover_from_special_tokens(needle))
+        # preserve order, de-dupe
+        seen = set()
+        candidate_tokens = [t for t in candidate_tokens if not (t in seen or seen.add(t))]
+        candidate_ids = []
+        for t in candidate_tokens:
+            tid = _single_token_id(tokenizer, t)
+            if tid is not None:
+                candidate_ids.append(int(tid))
+
+        best = None  # (count, tid)
+        for tid in candidate_ids:
+            count = int((input_ids[0] == tid).sum().item())
+            if count <= 1:
+                continue
+            if best is None or count > best[0]:
+                best = (count, tid)
+        if best is not None:
+            _count, tid = best
+            idx = torch.where(input_ids[0] == tid)[0]
+            if len(idx) > 0:
+                return idx
+    except Exception:
+        pass
 
     # Some tokenizers expose a dedicated image/vision token id; try those as a last resort.
     attr_ids = [
@@ -237,7 +413,10 @@ def extract_image_hidden_states(
 ) -> ImageHiddenStates:
     """Extract per-layer hidden states for image tokens only.
 
-    Currently supports Qwen wrappers via `models/qwen_model.py:QwenModel.get_hf_components()`.
+    Supports:
+      - Tokenizer-based multimodal models (Qwen-VL style) via `processor.tokenizer` to locate image tokens.
+      - Vision-only extraction when the processor has no tokenizer but the HF model exposes a vision encoder
+        (e.g. InternVL2), in which case we extract patch-token hidden states from the vision transformer.
     """
     if not hasattr(model, "get_hf_components"):
         raise NotImplementedError(
@@ -255,7 +434,97 @@ def extract_image_hidden_states(
         target_device = getattr(hf_model, "device", None) or torch.device("cpu")
     tokenizer = getattr(processor, "tokenizer", None)
     if tokenizer is None:
-        raise NotImplementedError("Processor does not expose a tokenizer; cannot identify image tokens.")
+        # Vision-only fallback (used for InternVL2-style models).
+        vision = None
+        for attr in ("vision_model", "vision_encoder", "visual", "vision_tower"):
+            cand = getattr(hf_model, attr, None)
+            if cand is not None:
+                vision = cand
+                break
+        if vision is None:
+            raise NotImplementedError(
+                "Processor does not expose a tokenizer and no vision encoder was found on the model; "
+                "cannot identify image tokens."
+            )
+
+        # Use the processor to build pixel_values if possible (preferred), otherwise fall back to
+        # a known-good InternVL2 preprocessing recipe.
+        try:
+            vision_dtype = next(vision.parameters()).dtype
+        except Exception:  # pragma: no cover
+            vision_dtype = torch.float32
+
+        pixel_values = _pixel_values_from_processor(processor, image)
+        if pixel_values is None:
+            repo_hint = str(getattr(model, "hf_repo_id", "") or getattr(model, "weights_path", "") or "").lower()
+            if "internvl" in repo_hint:
+                pixel_values = _internvl2_pixel_values(
+                    image,
+                    device=target_device,
+                    dtype=vision_dtype,
+                    size=448,
+                )
+            else:
+                raise RuntimeError(
+                    "Processor did not produce `pixel_values`; cannot run vision encoder for hidden states. "
+                    "If this is an InternVL2 model, ensure the repo id contains 'InternVL' or add a custom preprocessor."
+                )
+
+        if torch.is_tensor(pixel_values):
+            pixel_values = pixel_values.to(device=target_device, dtype=vision_dtype)
+
+        # Run the vision transformer and collect hidden states.
+        with torch.no_grad():
+            try:
+                v_out = vision(pixel_values=pixel_values, output_hidden_states=True, return_dict=True)
+            except TypeError:
+                v_out = vision(pixel_values, output_hidden_states=True, return_dict=True)
+
+        hidden_states = getattr(v_out, "hidden_states", None)
+        if hidden_states is None:
+            raise RuntimeError(
+                "Vision encoder did not return `hidden_states`. Ensure `output_hidden_states=True` is supported."
+            )
+
+        # Most HF vision transformers return hidden_states as (embeddings, layer1, ..., layerN).
+        n_blocks = len(hidden_states) - 1
+        if n_blocks <= 0:
+            raise RuntimeError("Vision encoder returned too few hidden state tensors.")
+        if not layers or len(layers) == 0:
+            layers = list(range(n_blocks))
+
+        # Determine whether a CLS token exists (common): seq_len = 1 + (h*w).
+        hs0 = hidden_states[1]
+        if not (hasattr(hs0, "shape") and len(hs0.shape) == 3):
+            raise RuntimeError("Unexpected hidden state shape from vision encoder (expected [B, seq, d]).")
+        seq_len = int(hs0.shape[1])
+        if _is_perfect_square(seq_len - 1):
+            # Assume first token is CLS.
+            idx = torch.arange(1, seq_len, device=target_device, dtype=torch.long)
+            n_image_tokens = seq_len - 1
+            side = _sqrt_int(n_image_tokens)
+        else:
+            idx = torch.arange(0, seq_len, device=target_device, dtype=torch.long)
+            n_image_tokens = seq_len
+            side = _sqrt_int(n_image_tokens)
+
+        per_layer: Dict[int, Any] = {}
+        for layer in layers:
+            if layer < 0:
+                layer = n_blocks + layer
+            if layer < 0 or layer >= n_blocks:
+                raise ValueError(f"Requested layer {layer} out of range [0, {n_blocks - 1}]")
+            hs = hidden_states[layer + 1]  # [B, seq, d]
+            per_layer[int(layer)] = hs[0, idx, :].detach().cpu()
+
+        return ImageHiddenStates(
+            per_layer=per_layer,
+            cls_per_layer=None,
+            n_image_tokens=int(n_image_tokens),
+            image_token_indices=idx.detach().cpu(),
+            h_patches=None if side is None else int(side),
+            w_patches=None if side is None else int(side),
+        )
 
     # prompt = _maybe_prepend_image_token(prompt)
     # inputs = processor(text=[prompt], images=[image], return_tensors="pt", padding=True)

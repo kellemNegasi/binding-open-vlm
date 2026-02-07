@@ -2,7 +2,7 @@
 # SLURM job for running the global illusory-conjunction probing pipeline.
 # Runs global embedding/label build, then multi-label probe training.
 
-#SBATCH -J probing_global_qwen2.5-VL-32B-Instruct-persample
+#SBATCH -J probing_global_internvl2-26b_persample
 #SBATCH --output=slurm-%x.%j.out
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=16
@@ -26,8 +26,8 @@ cd "$PROJECT_DIR"
 export PROJECT_ROOT="$PROJECT_DIR"
 export OMP_NUM_THREADS=1
 
-MODEL_KEY="${MODEL_KEY:-qwen2.5-VL-32B-Instruct}"
-MODEL_TAG="${MODEL_TAG:-qwen2.5-VL-32B-Instruct}"
+MODEL_KEY="${MODEL_KEY:-OpenGVLab/InternVL2-26B}"
+MODEL_TAG="${MODEL_TAG:-internvl2-26b}"
 DATASET_DIR="${DATASET_DIR:-data/probing/scene_description_balanced_2d}"
 LAYERS="${LAYERS:-all}"
 OVR_N_JOBS="${OVR_N_JOBS:-4}"

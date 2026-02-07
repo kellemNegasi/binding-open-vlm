@@ -8,7 +8,7 @@ import pyrootutils
 
 root = pyrootutils.setup_root(__file__, dotenv=True, pythonpath=True)
 
-from probing.model_introspect import _infer_image_token_indices, _maybe_prepend_image_token, load_model_from_hydra
+from probing.model_introspect import _infer_image_token_indices, _maybe_prepend_image_token, load_model
 
 
 def _load_first_dataset_image(dataset_dir: Path) -> Image.Image | None:
@@ -82,7 +82,7 @@ def main() -> None:
     if image is None:
         image = Image.new("RGB", (256, 256), color=(255, 255, 255))
 
-    model = load_model_from_hydra(args.model)
+    model = load_model(args.model)
     # Only need the processor/tokenizer to inspect input_ids, so avoid loading HF model weights.
     if not getattr(model, "weights_path", None):
         raise ValueError(f"Model wrapper {type(model).__name__} does not expose `weights_path`; cannot load processor.")

@@ -10,7 +10,7 @@ import pyrootutils
 
 root = pyrootutils.setup_root(__file__, dotenv=True, pythonpath=True)
 
-from probing.model_introspect import extract_image_hidden_states, load_model_from_hydra
+from probing.model_introspect import extract_image_hidden_states, load_model
 
 
 def _parse_layers(s: str) -> list[int] | None:
@@ -43,6 +43,14 @@ def _infer_num_hidden_layers(hf_model) -> int:
         for attr in ("num_hidden_layers", "n_layer", "num_layers", "n_layers"):
             _maybe_add(getattr(subcfg, attr, None))
 
+    # Vision-only models (e.g. InternVL2) may store the transformer depth under vision_config.
+    for subcfg_name in ("vision_config", "visual_config", "vision_encoder_config"):
+        subcfg = getattr(cfg, subcfg_name, None)
+        if subcfg is None:
+            continue
+        for attr in ("num_hidden_layers", "n_layer", "num_layers", "n_layers"):
+            _maybe_add(getattr(subcfg, attr, None))
+
     if not candidates:
         raise RuntimeError(
             "Could not infer number of hidden layers from model config; "
@@ -68,7 +76,12 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Extract per-layer image-token hidden states for a probing dataset.")
     parser.add_argument("--dataset_dir", type=str, default="data/probing/scene_description_balanced_2d")
     parser.add_argument("--out_dir", type=str, default="data/probing/scene_description_balanced_2d_out")
-    parser.add_argument("--model", type=str, required=True, help="Hydra model key, e.g. qwen3_vl_30b")
+    parser.add_argument(
+        "--model",
+        type=str,
+        required=True,
+        help="Hydra model key (e.g. qwen3_vl_30b) or a Hugging Face repo id (e.g. OpenGVLab/InternVL2-26B).",
+    )
     parser.add_argument("--model_config", type=str, default=None, help="Optional config/model/*.yaml path (used to infer model key)")
     parser.add_argument("--prompt_path", type=str, default="prompts/scene_description_2D_parse.txt")
     parser.add_argument("--prompt_variant", type=str, default="auto", choices=["auto", "generic", "llava", "qwen"])
@@ -99,14 +112,12 @@ def main() -> None:
     tokens_dir = out_dir / "tokens"
     tokens_dir.mkdir(parents=True, exist_ok=True)
 
-    model = load_model_from_hydra(model_key)
+    model = load_model(model_key)
     # Resolve "all" layers to an explicit list once so we can validate/resume safely.
-    if layers is None:
-        hf_model, _ = model.get_hf_components(device=args.device, dtype=args.dtype)
-        n_blocks = _infer_num_hidden_layers(hf_model)
-        layers_to_extract = list(range(n_blocks))
-    else:
-        layers_to_extract = layers
+    #
+    # Note: some model configs misreport depth (especially vision encoders). For robustness,
+    # when `--layers all`, infer the layer keys from an actual forward pass on the first sample.
+    layers_to_extract: list[int] | None = None if layers is None else layers
 
     with meta_path.open("r") as f:
         records = [json.loads(line) for line in f if line.strip()]
@@ -114,7 +125,50 @@ def main() -> None:
     if args.max_samples is not None:
         records = records[: args.max_samples]
 
-    for rec in tqdm(records, desc="Extract"):
+    iterator = iter(records)
+    first_rec: dict | None = None
+    if layers_to_extract is None and records:
+        # Determine the actual layer keys by extracting the first sample once.
+        # This avoids relying on model config fields that differ across model families.
+        first_rec = next(iterator, None)
+        if first_rec is not None:
+            sample_id = int(first_rec.get("sample_id"))
+            image_path = dataset_dir / first_rec["image"]
+            image = Image.open(image_path).convert("RGB")
+
+            hs0 = extract_image_hidden_states(
+                model=model,
+                image=image,
+                prompt=prompt,
+                layers=None,
+                device=args.device,
+                dtype=args.dtype,
+                debug=args.debug,
+            )
+            inferred_layers = sorted(int(k) for k in hs0.per_layer.keys())
+            if not inferred_layers:
+                raise RuntimeError("Failed to infer layer keys from first sample extraction.")
+            layers_to_extract = inferred_layers
+
+            save_path = tokens_dir / f"sample_{sample_id:06d}.npz"
+            if not (save_path.exists() and not args.overwrite):
+                arrays = {
+                    "n_image_tokens": np.array(hs0.n_image_tokens, dtype=np.int32),
+                    "image_token_indices": np.asarray(hs0.image_token_indices, dtype=np.int32),
+                    "H_patches": np.array(-1 if hs0.h_patches is None else hs0.h_patches, dtype=np.int32),
+                    "W_patches": np.array(-1 if hs0.w_patches is None else hs0.w_patches, dtype=np.int32),
+                }
+                for layer, emb in hs0.per_layer.items():
+                    arrays[f"layer_{layer}"] = np.asarray(emb, dtype=np.float32)
+                if hs0.cls_per_layer:
+                    for layer, emb in hs0.cls_per_layer.items():
+                        arrays[f"cls_{layer}"] = np.asarray(emb, dtype=np.float32)
+
+                tmp_path = save_path.with_suffix(".tmp.npz")
+                np.savez_compressed(tmp_path, **arrays)
+                tmp_path.replace(save_path)
+
+    for rec in tqdm(iterator, desc="Extract", total=max(0, len(records) - (1 if first_rec is not None else 0))):
         sample_id = int(rec.get("sample_id"))
         image_path = dataset_dir / rec["image"]
         image = Image.open(image_path).convert("RGB")
