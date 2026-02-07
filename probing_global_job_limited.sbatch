@@ -29,12 +29,12 @@ export PROJECT_ROOT="$PROJECT_DIR"
 MODEL_KEY="${MODEL_KEY:-qwen2.5-VL-7B-Instruct}"
 MODEL_TAG="${MODEL_TAG:-qwen2.5-VL-7B-Instruct}"
 DATASET_DIR="${DATASET_DIR:-data/probing/scene_description_balanced_2d_limited}"
-LAYERS="${LAYERS:-0,10,20}"
+LAYERS="${LAYERS:-all}"
 
 TOKENS_OUT_DIR="data/probing/scene_description_balanced_2d_limited_out_${MODEL_TAG}"
 GLOBAL_OUT_DIR="output/probing_global/scene_description_balanced_2d_limited_${MODEL_TAG}"
 
-echo "[$(date --iso-8601=seconds)] 1) Extract image tokens (overwrite)"
+echo "[$(date --iso-8601=seconds)] 1) Extract image tokens (resume-safe; set OVERWRITE=1 to force)"
 bash scripts/extract_image_tokens.sh "$MODEL_KEY" "$MODEL_TAG" "$DATASET_DIR" \
   "$TOKENS_OUT_DIR" "prompts/scene_description_2D_parse.txt" "$LAYERS"
 

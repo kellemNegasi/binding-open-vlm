@@ -230,9 +230,10 @@ def extract_image_hidden_states(
     model,
     image: Image.Image,
     prompt: str,
-    layers: List[int],
+    layers: Optional[List[int]],
     device: str | None = None,
     dtype: str | None = None,
+    debug: bool = False,
 ) -> ImageHiddenStates:
     """Extract per-layer hidden states for image tokens only.
 
@@ -310,12 +311,14 @@ def extract_image_hidden_states(
     if input_ids is None:
         raise RuntimeError("Processor did not produce `input_ids`; cannot infer image token positions.")
     
-    tokens = tokenizer.convert_ids_to_tokens(input_ids[0].tolist())
-    print("vision_start in input_ids?", "<|vision_start|>" in tokens)
-    print("vision_end in input_ids?", "<|vision_end|>" in tokens)
-    print("image_pad count:", sum(t == "<|image_pad|>" for t in tokens))
-    print("vision_pad count:", sum(t == "<|vision_pad|>" for t in tokens))
-    print("First 120 tokens:", tokens[:120])
+    if debug:
+        tokens = tokenizer.convert_ids_to_tokens(input_ids[0].tolist())
+        print("vision_start in input_ids?", "<|vision_start|>" in tokens)
+        print("vision_end in input_ids?", "<|vision_end|>" in tokens)
+        print("image_pad count:", sum(t == "<|image_pad|>" for t in tokens))
+        print("vision_pad count:", sum(t == "<|vision_pad|>" for t in tokens))
+        print("First 120 tokens:", tokens[:120])
+
     image_token_indices = _infer_image_token_indices(tokenizer, input_ids)
     n_image_tokens = int(image_token_indices.shape[0])
 
@@ -338,6 +341,9 @@ def extract_image_hidden_states(
     if cls_index is not None:
         cls_per_layer = {}
     n_blocks = len(hidden_states) - 1  # hidden_states[0] is embeddings
+    if not layers or len(layers) == 0:
+        layers = list(range(n_blocks))
+
     for layer in layers:
         if layer < 0:
             layer = n_blocks + layer

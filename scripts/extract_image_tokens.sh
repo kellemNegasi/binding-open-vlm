@@ -17,4 +17,4 @@ python probing/extract_image_tokens.py \
   --prompt_path "$PROMPT_PATH" \
   --layers "$LAYERS" \
   --device "$DEVICE" --dtype "$DTYPE" \
-  --overwrite
+  $( [[ "${OVERWRITE:-0}" == "1" ]] && echo "--overwrite" )

@@ -28,6 +28,9 @@ python probing/extract_image_tokens.py \
   --model qwen3_vl_30b \
   --prompt_path prompts/scene_description_2D_parse.txt \
   --layers 0,10,20
+
+# To extract *all* transformer blocks:
+#   --layers all
 ```
 
 ### Optional: debug image-token positions
@@ -153,12 +156,9 @@ Outputs:
 - `probe_results.json` reports micro/macro F1 and implied/non-implied FPRs, grouped by:
   - `triplet_count_per_sample`
   - `n_implied_absent_pairs_per_sample`
-- Per-seed intermediates are saved under `probes/intermediates/` (when enabled). To compute a macro-over-samples FPR by triplet (mean±std over seeds) for implied, non-implied, and overall absent pairs:
-
-```bash
-python probing/aggregate_macro_fpr_by_triplet.py \
-  --run_dir output/probing_global/scene_description_balanced_2d_qwen3-vl-30b-a3b-instruct/probes
-```
+- `fpr_by_layer_triplet.csv` stores implied/non-implied FPR per (layer, triplet_count) pair.
+- `macro_fpr_by_layer.csv` stores macro/max FPR over triplet_count per layer.
+- Per-seed intermediates are saved under `probes/intermediates/` (when enabled) for any custom post-hoc aggregation.
 
 ### Train/test splitting note
 

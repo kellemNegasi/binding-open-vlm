@@ -1,5 +1,7 @@
 import argparse
+import csv
 import json
+import re
 from pathlib import Path
 
 import numpy as np
@@ -84,6 +86,113 @@ def _aggregate_group_metrics(
         mean_out[k] = float(np.mean(vals[finite]))
         std_out[k] = float(np.std(vals[finite]))
     return mean_out, std_out
+
+
+def _macro_mean(values: dict[str, float]) -> float:
+    vals = np.asarray(list(values.values()), dtype=float)
+    finite = np.isfinite(vals)
+    if not finite.any():
+        return float("nan")
+    return float(np.mean(vals[finite]))
+
+
+def _macro_max(values: dict[str, float]) -> float:
+    vals = np.asarray(list(values.values()), dtype=float)
+    finite = np.isfinite(vals)
+    if not finite.any():
+        return float("nan")
+    return float(np.max(vals[finite]))
+
+
+def _parse_feature_key(key: str) -> tuple[str, int | None]:
+    m = re.fullmatch(r"X_(\d+)", key)
+    if m:
+        return "patch_mean_pool", int(m.group(1))
+    m = re.fullmatch(r"X_cls_(\d+)", key)
+    if m:
+        return "cls", int(m.group(1))
+    return "unknown", None
+
+
+def _write_fpr_outputs(out_dir: Path, feature_keys: list[str], results: dict[str, dict]) -> None:
+    by_triplet_path = out_dir / "fpr_by_layer_triplet.csv"
+    with by_triplet_path.open("w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(
+            [
+                "feature_key",
+                "representation",
+                "layer",
+                "scene_complexity_triplet_count",
+                "implied_fpr_mean",
+                "implied_fpr_std",
+                "non_implied_fpr_mean",
+                "non_implied_fpr_std",
+            ]
+        )
+        for key in feature_keys:
+            r = results.get(str(key), {})
+            implied = r.get("implied_fpr_by_triplet", None)
+            non_implied = r.get("non_implied_fpr_by_triplet", None)
+            if not isinstance(implied, dict) or not isinstance(non_implied, dict):
+                continue
+            implied_std = r.get("implied_fpr_by_triplet_std", {}) or {}
+            non_implied_std = r.get("non_implied_fpr_by_triplet_std", {}) or {}
+            rep, layer = _parse_feature_key(str(key))
+            group_keys = sorted(
+                {*(implied or {}).keys(), *(non_implied or {}).keys()},
+                key=lambda x: int(x),
+            )
+            for g in group_keys:
+                w.writerow(
+                    [
+                        str(key),
+                        rep,
+                        "" if layer is None else int(layer),
+                        int(g),
+                        float(implied.get(g, np.nan)),
+                        float(implied_std.get(g, np.nan)),
+                        float(non_implied.get(g, np.nan)),
+                        float(non_implied_std.get(g, np.nan)),
+                    ]
+                )
+
+    macro_path = out_dir / "macro_fpr_by_layer.csv"
+    with macro_path.open("w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(
+            [
+                "feature_key",
+                "representation",
+                "layer",
+                "implied_fpr_macro_by_triplet_mean",
+                "implied_fpr_macro_by_triplet_std",
+                "non_implied_fpr_macro_by_triplet_mean",
+                "non_implied_fpr_macro_by_triplet_std",
+                "implied_fpr_max_by_triplet_mean",
+                "implied_fpr_max_by_triplet_std",
+                "non_implied_fpr_max_by_triplet_mean",
+                "non_implied_fpr_max_by_triplet_std",
+            ]
+        )
+        for key in feature_keys:
+            r = results.get(str(key), {})
+            rep, layer = _parse_feature_key(str(key))
+            w.writerow(
+                [
+                    str(key),
+                    rep,
+                    "" if layer is None else int(layer),
+                    float(r.get("implied_fpr_macro_by_triplet", np.nan)),
+                    float(r.get("implied_fpr_macro_by_triplet_std", np.nan)),
+                    float(r.get("non_implied_fpr_macro_by_triplet", np.nan)),
+                    float(r.get("non_implied_fpr_macro_by_triplet_std", np.nan)),
+                    float(r.get("implied_fpr_max_by_triplet", np.nan)),
+                    float(r.get("implied_fpr_max_by_triplet_std", np.nan)),
+                    float(r.get("non_implied_fpr_max_by_triplet", np.nan)),
+                    float(r.get("non_implied_fpr_max_by_triplet_std", np.nan)),
+                ]
+            )
 
 
 def main() -> None:
@@ -179,6 +288,10 @@ def main() -> None:
                 "non_implied_fpr_by_triplet": [],
                 "implied_fpr_by_implied_absent_count": [],
                 "non_implied_fpr_by_implied_absent_count": [],
+                "implied_fpr_macro_by_triplet": [],
+                "non_implied_fpr_macro_by_triplet": [],
+                "implied_fpr_max_by_triplet": [],
+                "non_implied_fpr_max_by_triplet": [],
                 "implied_mean_score_by_triplet": [],
                 "non_implied_mean_score_by_triplet": [],
                 "delta_mean_score_by_triplet": [],
@@ -232,6 +345,18 @@ def main() -> None:
                 )
                 per_seed_metrics["non_implied_fpr_by_triplet"].append(
                     _fpr_by_group(y_pred, non_implied_mask, triplet[idx_test])
+                )
+                per_seed_metrics["implied_fpr_macro_by_triplet"].append(
+                    _macro_mean(per_seed_metrics["implied_fpr_by_triplet"][-1])
+                )
+                per_seed_metrics["non_implied_fpr_macro_by_triplet"].append(
+                    _macro_mean(per_seed_metrics["non_implied_fpr_by_triplet"][-1])
+                )
+                per_seed_metrics["implied_fpr_max_by_triplet"].append(
+                    _macro_max(per_seed_metrics["implied_fpr_by_triplet"][-1])
+                )
+                per_seed_metrics["non_implied_fpr_max_by_triplet"].append(
+                    _macro_max(per_seed_metrics["non_implied_fpr_by_triplet"][-1])
                 )
                 per_seed_metrics["implied_fpr_by_implied_absent_count"].append(
                     _fpr_by_group(y_pred, implied_mask, implied_counts[idx_test])
@@ -314,6 +439,18 @@ def main() -> None:
                 "macro_f1": float(np.nanmean(per_seed_metrics["macro_f1"])),
                 "implied_fpr_overall": float(np.nanmean(per_seed_metrics["implied_fpr_overall"])),
                 "non_implied_fpr_overall": float(np.nanmean(per_seed_metrics["non_implied_fpr_overall"])),
+                "implied_fpr_macro_by_triplet": float(
+                    np.nanmean(per_seed_metrics["implied_fpr_macro_by_triplet"])
+                ),
+                "non_implied_fpr_macro_by_triplet": float(
+                    np.nanmean(per_seed_metrics["non_implied_fpr_macro_by_triplet"])
+                ),
+                "implied_fpr_max_by_triplet": float(
+                    np.nanmean(per_seed_metrics["implied_fpr_max_by_triplet"])
+                ),
+                "non_implied_fpr_max_by_triplet": float(
+                    np.nanmean(per_seed_metrics["non_implied_fpr_max_by_triplet"])
+                ),
             }
 
             for name in [
@@ -343,6 +480,18 @@ def main() -> None:
                 layer_result["non_implied_fpr_overall_std"] = float(
                     np.nanstd(per_seed_metrics["non_implied_fpr_overall"])
                 )
+                layer_result["implied_fpr_macro_by_triplet_std"] = float(
+                    np.nanstd(per_seed_metrics["implied_fpr_macro_by_triplet"])
+                )
+                layer_result["non_implied_fpr_macro_by_triplet_std"] = float(
+                    np.nanstd(per_seed_metrics["non_implied_fpr_macro_by_triplet"])
+                )
+                layer_result["implied_fpr_max_by_triplet_std"] = float(
+                    np.nanstd(per_seed_metrics["implied_fpr_max_by_triplet"])
+                )
+                layer_result["non_implied_fpr_max_by_triplet_std"] = float(
+                    np.nanstd(per_seed_metrics["non_implied_fpr_max_by_triplet"])
+                )
 
             return str(key), layer_result
 
@@ -364,6 +513,7 @@ def main() -> None:
     out_path.write_text(json.dumps(results, indent=2, sort_keys=True))
     per_sample_path = out_dir / "probe_results_per_sample.json"
     per_sample_path.write_text(json.dumps(results, indent=2, sort_keys=True))
+    _write_fpr_outputs(out_dir, feature_keys, results)
 
     header = ["feature", "micro_f1", "macro_f1", "implied_fpr", "non_implied_fpr"]
     print("\t".join(header))
