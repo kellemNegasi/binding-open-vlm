@@ -22,4 +22,5 @@ python probing/train_global_probe.py \
   --ovr_n_jobs "$OVR_N_JOBS" \
   --feature_jobs "$FEATURE_JOBS" \
   --save_intermediates \
+  $( [[ "${RESUME:-0}" == "1" ]] && echo "--resume" ) \
   $( [[ "$PROGRESS_STEPS" == "1" ]] && echo "--progress_steps" )

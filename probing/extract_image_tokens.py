@@ -73,6 +73,20 @@ def main() -> None:
     parser.add_argument("--prompt_path", type=str, default="prompts/scene_description_2D_parse.txt")
     parser.add_argument("--prompt_variant", type=str, default="auto", choices=["auto", "generic", "llava", "qwen"])
     parser.add_argument("--layers", type=str, default="0,10,20")
+    parser.add_argument(
+        "--save",
+        type=str,
+        default="tokens",
+        choices=["tokens", "pooled"],
+        help="What to store per layer: full token matrix or a pooled vector (faster + much smaller).",
+    )
+    parser.add_argument(
+        "--save_dtype",
+        type=str,
+        default="float32",
+        choices=["float16", "float32"],
+        help="Dtype used when saving embeddings to disk.",
+    )
     parser.add_argument("--max_samples", type=int, default=None)
     parser.add_argument("--device", type=str, default="auto")
     parser.add_argument("--dtype", type=str, default="auto")
@@ -138,17 +152,25 @@ def main() -> None:
             dtype=args.dtype,
             debug=args.debug,
         )
-        arrays = {
-            "n_image_tokens": np.array(hs.n_image_tokens, dtype=np.int32),
-            "image_token_indices": np.asarray(hs.image_token_indices, dtype=np.int32),
-            "H_patches": np.array(-1 if hs.h_patches is None else hs.h_patches, dtype=np.int32),
-            "W_patches": np.array(-1 if hs.w_patches is None else hs.w_patches, dtype=np.int32),
-        }
+        save_dtype = np.float16 if args.save_dtype == "float16" else np.float32
+
+        arrays = {"n_image_tokens": np.array(hs.n_image_tokens, dtype=np.int32)}
+        if args.save == "tokens":
+            arrays["image_token_indices"] = np.asarray(hs.image_token_indices, dtype=np.int32)
+            arrays["H_patches"] = np.array(-1 if hs.h_patches is None else hs.h_patches, dtype=np.int32)
+            arrays["W_patches"] = np.array(-1 if hs.w_patches is None else hs.w_patches, dtype=np.int32)
+
         for layer, emb in hs.per_layer.items():
-            arrays[f"layer_{layer}"] = np.asarray(emb, dtype=np.float32)
-        if hs.cls_per_layer:
+            arr = np.asarray(emb)
+            if args.save == "pooled":
+                # Mean pool image tokens now to avoid huge per-sample token matrices on disk.
+                # This is sufficient for the global probing pipeline.
+                arr = arr.mean(axis=0)
+            arrays[f"layer_{layer}"] = np.asarray(arr, dtype=save_dtype)
+
+        if args.save == "tokens" and hs.cls_per_layer:
             for layer, emb in hs.cls_per_layer.items():
-                arrays[f"cls_{layer}"] = np.asarray(emb, dtype=np.float32)
+                arrays[f"cls_{layer}"] = np.asarray(emb, dtype=save_dtype)
 
         # Write atomically: ensure the temp filename still ends with `.npz` because
         # NumPy appends `.npz` automatically when the provided path does not.

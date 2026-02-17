@@ -1,4 +1,4 @@
-# config/model/qwen3_vl_30b.yaml
+# config/model/internvl2_26b.yaml
 defaults:
   - base_vlm_local
 _target_: models.intern_model.InternModel

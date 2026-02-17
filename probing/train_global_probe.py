@@ -227,6 +227,14 @@ def main() -> None:
         help="Emit per-step progress within each seed (fit/predict/metrics/save).",
     )
     parser.add_argument(
+        "--resume",
+        action="store_true",
+        help=(
+            "Reuse existing per-seed intermediates when present (and matching the current split) "
+            "to avoid recomputing finished seeds/features."
+        ),
+    )
+    parser.add_argument(
         "--save_intermediates",
         action="store_true",
         default=True,
@@ -303,6 +311,106 @@ def main() -> None:
             for seed_idx, seed in enumerate(seeds, start=1):
                 print(f"  Seed {seed_idx}/{len(seeds)} (seed={seed})", flush=True)
                 idx_train, idx_test = split_by_seed[seed]
+
+                out_name = f"{key}_seed{seed}.npz"
+                intermediate_path = intermediates_dir / out_name
+                if args.resume and intermediate_path.exists():
+                    try:
+                        with np.load(intermediate_path) as inter:
+                            saved_idx_test = inter.get("idx_test", None)
+                            if saved_idx_test is None or not np.array_equal(
+                                np.asarray(saved_idx_test, dtype=np.int32),
+                                idx_test.astype(np.int32),
+                            ):
+                                raise ValueError("Split mismatch")
+
+                            y_true = np.asarray(inter["y_present"], dtype=np.int8)
+                            implied_mask = np.asarray(inter["y_implied_absent"], dtype=np.int8).astype(bool)
+                            non_implied_mask = np.asarray(inter["y_non_implied_absent"], dtype=np.int8).astype(bool)
+                            y_score = np.asarray(inter["y_score"], dtype=np.float32)
+                            y_pred = (y_score >= args.threshold).astype(np.int8)
+                            triplet_test = np.asarray(inter["triplet_count_per_sample"], dtype=np.int32)
+                            implied_counts_test = np.asarray(
+                                inter["n_implied_absent_pairs_per_sample"], dtype=np.int32
+                            )
+
+                        per_seed_metrics["micro_f1"].append(
+                            float(f1_score(y_true, y_pred, average="micro", zero_division=0))
+                        )
+                        per_seed_metrics["macro_f1"].append(
+                            float(f1_score(y_true, y_pred, average="macro", zero_division=0))
+                        )
+                        per_seed_metrics["implied_fpr_overall"].append(
+                            float(y_pred[implied_mask].mean()) if implied_mask.any() else float("nan")
+                        )
+                        per_seed_metrics["non_implied_fpr_overall"].append(
+                            float(y_pred[non_implied_mask].mean()) if non_implied_mask.any() else float("nan")
+                        )
+                        per_seed_metrics["implied_fpr_by_triplet"].append(
+                            _fpr_by_group(y_pred, implied_mask, triplet_test)
+                        )
+                        per_seed_metrics["non_implied_fpr_by_triplet"].append(
+                            _fpr_by_group(y_pred, non_implied_mask, triplet_test)
+                        )
+                        per_seed_metrics["implied_fpr_macro_by_triplet"].append(
+                            _macro_mean(per_seed_metrics["implied_fpr_by_triplet"][-1])
+                        )
+                        per_seed_metrics["non_implied_fpr_macro_by_triplet"].append(
+                            _macro_mean(per_seed_metrics["non_implied_fpr_by_triplet"][-1])
+                        )
+                        per_seed_metrics["implied_fpr_max_by_triplet"].append(
+                            _macro_max(per_seed_metrics["implied_fpr_by_triplet"][-1])
+                        )
+                        per_seed_metrics["non_implied_fpr_max_by_triplet"].append(
+                            _macro_max(per_seed_metrics["non_implied_fpr_by_triplet"][-1])
+                        )
+                        per_seed_metrics["implied_fpr_by_implied_absent_count"].append(
+                            _fpr_by_group(y_pred, implied_mask, implied_counts_test)
+                        )
+                        per_seed_metrics["non_implied_fpr_by_implied_absent_count"].append(
+                            _fpr_by_group(y_pred, non_implied_mask, implied_counts_test)
+                        )
+
+                        implied_mean_by_triplet = _mean_score_by_group(
+                            y_score, implied_mask, triplet_test
+                        )
+                        non_implied_mean_by_triplet = _mean_score_by_group(
+                            y_score, non_implied_mask, triplet_test
+                        )
+                        per_seed_metrics["implied_mean_score_by_triplet"].append(implied_mean_by_triplet)
+                        per_seed_metrics["non_implied_mean_score_by_triplet"].append(
+                            non_implied_mean_by_triplet
+                        )
+                        per_seed_metrics["delta_mean_score_by_triplet"].append(
+                            {
+                                k: float(implied_mean_by_triplet.get(k, np.nan))
+                                - float(non_implied_mean_by_triplet.get(k, np.nan))
+                                for k in implied_mean_by_triplet.keys()
+                            }
+                        )
+
+                        implied_mean_by_count = _mean_score_by_group(
+                            y_score, implied_mask, implied_counts_test
+                        )
+                        non_implied_mean_by_count = _mean_score_by_group(
+                            y_score, non_implied_mask, implied_counts_test
+                        )
+                        per_seed_metrics["implied_mean_score_by_implied_absent_count"].append(
+                            implied_mean_by_count
+                        )
+                        per_seed_metrics["non_implied_mean_score_by_implied_absent_count"].append(
+                            non_implied_mean_by_count
+                        )
+                        per_seed_metrics["delta_mean_score_by_implied_absent_count"].append(
+                            {
+                                k: float(implied_mean_by_count.get(k, np.nan))
+                                - float(non_implied_mean_by_count.get(k, np.nan))
+                                for k in implied_mean_by_count.keys()
+                            }
+                        )
+                        continue
+                    except Exception:
+                        pass
 
                 # Multi-label setting: one classifier per (color, shape) pair.
                 clf = OneVsRestClassifier(
@@ -431,8 +539,7 @@ def main() -> None:
                     if pair_shapes is not None:
                         out_payload["pair_shapes"] = pair_shapes
 
-                    out_name = f"{key}_seed{seed}.npz"
-                    np.savez_compressed(intermediates_dir / out_name, **out_payload)
+                    np.savez_compressed(intermediate_path, **out_payload)
 
             layer_result: dict[str, dict | float] = {
                 "micro_f1": float(np.nanmean(per_seed_metrics["micro_f1"])),

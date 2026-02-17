@@ -237,7 +237,9 @@ def extract_image_hidden_states(
 ) -> ImageHiddenStates:
     """Extract per-layer hidden states for image tokens only.
 
-    Currently supports Qwen wrappers via `models/qwen_model.py:QwenModel.get_hf_components()`.
+    Supports:
+    - Qwen-VL style HF processors (Qwen wrappers via `models/qwen_model.py:QwenModel.get_hf_components()`).
+    - InternVL2-style models that use `<IMG_CONTEXT>` placeholder tokens and take `pixel_values` directly.
     """
     if not hasattr(model, "get_hf_components"):
         raise NotImplementedError(
@@ -256,6 +258,113 @@ def extract_image_hidden_states(
     tokenizer = getattr(processor, "tokenizer", None)
     if tokenizer is None:
         raise NotImplementedError("Processor does not expose a tokenizer; cannot identify image tokens.")
+
+    def _has_token(tok: str) -> bool:
+        try:
+            tid = tokenizer.convert_tokens_to_ids(tok)
+            unk = getattr(tokenizer, "unk_token_id", None)
+            if tid is None:
+                return False
+            if unk is not None and int(tid) == int(unk):
+                return False
+            return True
+        except Exception:
+            return False
+
+    # InternVL2 branch: `<IMG_CONTEXT>` image placeholder tokens + `pixel_values` input.
+    # InternVL does not use a Qwen-like processor(images=..., text=...) API.
+    if _has_token("<IMG_CONTEXT>") and hasattr(processor, "image_processor"):
+        img_ctx_id = int(tokenizer.convert_tokens_to_ids("<IMG_CONTEXT>"))
+        # InternVLChatModel.forward expects `img_context_token_id` to be set.
+        try:
+            setattr(hf_model, "img_context_token_id", img_ctx_id)
+        except Exception:
+            pass
+
+        pixel_values = processor.image_processor(images=image, return_tensors="pt")["pixel_values"]
+        if torch.is_tensor(pixel_values):
+            # IMPORTANT: InternVL2's forward expects all relevant tensors on the same base device.
+            # With `device_map='auto'` the first parameter device is not reliable (models may shard
+            # across GPUs, and the vision path can end up on a different device than `target_device`).
+            # Use the input-embedding device as the base, since `forward()` begins by embedding `input_ids`.
+            try:
+                base_device = hf_model.language_model.get_input_embeddings().weight.device
+            except Exception:  # pragma: no cover
+                base_device = target_device
+
+            pixel_values = pixel_values.to(base_device)
+            try:
+                pixel_values = pixel_values.to(dtype=next(hf_model.parameters()).dtype)
+            except Exception:
+                pass
+
+        # Insert the expected image token block.
+        question = prompt
+        if "<image>" not in question:
+            question = "<image>\n" + question
+
+        num_image_token = getattr(hf_model, "num_image_token", None)
+        if num_image_token is None:
+            num_image_token = getattr(getattr(hf_model, "config", None), "num_image_token", None)
+        if num_image_token is None:
+            raise RuntimeError("InternVL model does not expose `num_image_token`; cannot build image token span.")
+
+        n_tiles = int(pixel_values.shape[0])
+        image_tokens = "<img>" + ("<IMG_CONTEXT>" * int(num_image_token) * n_tiles) + "</img>"
+        query = question.replace("<image>", image_tokens, 1)
+
+        tokenizer.padding_side = "left"
+        model_inputs = tokenizer([query], return_tensors="pt", padding=True)
+        input_ids = model_inputs["input_ids"].to(base_device)
+        attention_mask = model_inputs.get("attention_mask", None)
+        if attention_mask is not None:
+            attention_mask = attention_mask.to(base_device)
+
+        image_flags = torch.ones((n_tiles, 1), dtype=torch.long, device=base_device)
+
+        if debug:
+            idx = torch.where(input_ids[0] == img_ctx_id)[0]
+            print("InternVL: IMG_CONTEXT count:", int(idx.numel()))
+            print("InternVL: input length:", int(input_ids.shape[1]))
+
+        with torch.no_grad():
+            outputs = hf_model(
+                pixel_values=pixel_values,
+                input_ids=input_ids,
+                attention_mask=attention_mask,
+                image_flags=image_flags,
+                output_hidden_states=True,
+                return_dict=True,
+            )
+
+        hidden_states = getattr(outputs, "hidden_states", None)
+        if hidden_states is None:
+            raise RuntimeError("Model did not return `hidden_states`. Ensure `output_hidden_states=True` is supported.")
+
+        image_token_indices = torch.where(input_ids[0] == img_ctx_id)[0]
+        n_image_tokens = int(image_token_indices.numel())
+
+        per_layer: Dict[int, Any] = {}
+        n_blocks = len(hidden_states) - 1
+        if not layers or len(layers) == 0:
+            layers = list(range(n_blocks))
+
+        for layer in layers:
+            if layer < 0:
+                layer = n_blocks + layer
+            if layer < 0 or layer >= n_blocks:
+                raise ValueError(f"Requested layer {layer} out of range [0, {n_blocks - 1}]")
+            hs = hidden_states[layer + 1]  # [B, seq, d]
+            per_layer[int(layer)] = hs[0, image_token_indices, :].detach().cpu()
+
+        return ImageHiddenStates(
+            per_layer=per_layer,
+            cls_per_layer=None,
+            n_image_tokens=n_image_tokens,
+            image_token_indices=image_token_indices.detach().cpu(),
+            h_patches=None,
+            w_patches=None,
+        )
 
     # prompt = _maybe_prepend_image_token(prompt)
     # inputs = processor(text=[prompt], images=[image], return_tensors="pt", padding=True)

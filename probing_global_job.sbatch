@@ -2,14 +2,14 @@
 # SLURM job for running the global illusory-conjunction probing pipeline.
 # Runs global embedding/label build, then multi-label probe training.
 
-#SBATCH -J probing_global_qwen2.5-VL-32B-Instruct-persample
+#SBATCH -J probing_global_internvl2-26b-persample
 #SBATCH --output=slurm-%x.%j.out
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=16
+#SBATCH --cpus-per-task=24
 #SBATCH --partition=gpu
-#SBATCH --gres=gpu:a100-80g:2
+#SBATCH --gres=gpu:a100-80g:1
 #SBATCH --mem=64G
-#SBATCH -t 13:00:00
+#SBATCH -t 24:00:00
 
 set -euo pipefail
 
@@ -26,17 +26,21 @@ cd "$PROJECT_DIR"
 export PROJECT_ROOT="$PROJECT_DIR"
 export OMP_NUM_THREADS=1
 
-MODEL_KEY="${MODEL_KEY:-qwen2.5-VL-32B-Instruct}"
-MODEL_TAG="${MODEL_TAG:-qwen2.5-VL-32B-Instruct}"
+MODEL_KEY="${MODEL_KEY:-internvl2_26b}"
+MODEL_TAG="${MODEL_TAG:-internvl2-26b}"
 DATASET_DIR="${DATASET_DIR:-data/probing/scene_description_balanced_2d}"
 LAYERS="${LAYERS:-all}"
-OVR_N_JOBS="${OVR_N_JOBS:-4}"
+SAVE_MODE="${SAVE_MODE:-pooled}"
+SAVE_DTYPE="${SAVE_DTYPE:-float32}"
+OVR_N_JOBS="${OVR_N_JOBS:-6}"
 FEATURE_JOBS="${FEATURE_JOBS:-4}"
+RESUME="${RESUME:-1}"
+export RESUME
 
-echo "[$(date --iso-8601=seconds)] 1) Extract image tokens (resume-safe; set OVERWRITE=1 to force)"
+echo "[$(date --iso-8601=seconds)] 1) Extract image tokens"
 bash scripts/extract_image_tokens.sh "$MODEL_KEY" "$MODEL_TAG" "$DATASET_DIR" \
   "data/probing/scene_description_balanced_2d_out_${MODEL_TAG}" \
-  "prompts/scene_description_2D_parse.txt" "$LAYERS"
+  "prompts/scene_description_2D_parse.txt" "$LAYERS" "auto" "auto" "$SAVE_MODE" "$SAVE_DTYPE"
 
 echo "[$(date --iso-8601=seconds)] 2) Build global embeddings + labels"
 bash scripts/global_embedding_labels.sh "$MODEL_TAG" "$DATASET_DIR"

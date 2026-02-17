@@ -9,6 +9,8 @@ PROMPT_PATH="${5:-prompts/scene_description_2D_parse.txt}"
 LAYERS="${6:-0,10,20}"
 DEVICE="${7:-auto}"
 DTYPE="${8:-auto}"
+SAVE_MODE="${9:-tokens}"
+SAVE_DTYPE="${10:-float32}"
 
 python probing/extract_image_tokens.py \
   --dataset_dir "$DATASET_DIR" \
@@ -16,5 +18,7 @@ python probing/extract_image_tokens.py \
   --model "$MODEL_KEY" \
   --prompt_path "$PROMPT_PATH" \
   --layers "$LAYERS" \
+  --save "$SAVE_MODE" \
+  --save_dtype "$SAVE_DTYPE" \
   --device "$DEVICE" --dtype "$DTYPE" \
   $( [[ "${OVERWRITE:-0}" == "1" ]] && echo "--overwrite" )

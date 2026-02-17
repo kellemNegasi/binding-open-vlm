@@ -14,6 +14,9 @@ def _layer_keys(npz: np.lib.npyio.NpzFile) -> list[int]:
 
 
 def _pool_tokens(tokens: np.ndarray, mode: str) -> np.ndarray:
+    # If extraction already saved pooled embeddings (1D), keep as-is.
+    if tokens.ndim == 1:
+        return tokens
     if mode == "mean":
         return tokens.mean(axis=0)
     if mode == "first":

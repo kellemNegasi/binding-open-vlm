@@ -91,6 +91,7 @@ Key definitions:
 ### Recommended: use the sbatch jobs (cluster)
 
 - `probing_global_job.sbatch`: balanced 2D dataset, runs token extraction → global embeddings/labels → global probe training.
+- `probing_global_job_internvl2_26b.sbatch`: same pipeline with `MODEL_KEY=internvl2_26b` / `MODEL_TAG=InternVL2-26B`.
 - `probing_global_job_limited.sbatch`: limited-vocab balanced 2D dataset (max 4 colors × 4 shapes), same pipeline.
 
 Both jobs call the same underlying scripts in `scripts/`:
